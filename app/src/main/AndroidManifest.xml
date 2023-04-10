@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rosan.dhizuku">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+
+    <uses-sdk tools:overrideLibrary="rikka.shizuku.api, rikka.shizuku.provider, rikka.shizuku.shared, rikka.shizuku.aidl" />
+
+    <permission-group
+        android:name="com.rosan.dhizuku.permission-group.API"
+        android:description="@string/dhizuku_permission_group_dsp"
+        android:label="@string/dhizuku_permission_group_label" />
+
+    <permission
+        android:name="com.rosan.dhizuku.permission.API"
+        android:description="@string/dhizuku_permission_api_dsp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/dhizuku_permission_api_label"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dhizuku">
+
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.RequestPermissionActivity"
+            android:excludeFromRecents="false"
+            android:exported="true"
+            android:permission="com.rosan.dhizuku.permission.API"
+            android:theme="@style/Theme.Dhizuku.Translucent">
+            <intent-filter>
+                <action android:name="${applicationId}.action.request.permission" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.rosan.dhizuku.server.DhizukuProvider"
+            android:authorities="com.rosan.dhizuku.server.provider"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.rosan.dhizuku.permission.API">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </provider>
+
+        <receiver
+            android:name=".server.DhizukuDAReceiver"
+            android:exported="false"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    </application>
+
+</manifest>

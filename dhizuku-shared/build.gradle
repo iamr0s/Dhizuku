@@ -1,0 +1,25 @@
+plugins {
+    id('com.android.library')
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 33
+    }
+
+    buildFeatures {
+        buildConfig false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation(project(":dhizuku-aidl"))
+}

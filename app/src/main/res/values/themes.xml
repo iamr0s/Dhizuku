@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Dhizuku" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.Dhizuku.Translucent" parent="Theme.Dhizuku">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
