@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace 'com.rosan.dhizuku.aidl'
     compileSdkVersion 33
 
     defaultConfig {
@@ -11,7 +12,7 @@ android {
     }
 
     buildFeatures {
-        buildConfig false
+        aidl true
     }
 
     compileOptions {

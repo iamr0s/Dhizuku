@@ -2,13 +2,20 @@ plugins {
     id('com.android.library')
 }
 
+plugins.apply('maven-publish')
+plugins.apply('signing')
+
 android {
-    namespace 'com.rosan.dhizuku.shared'
+    namespace 'com.rosan.dhizuku.api'
     compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 33
+    }
+
+    buildFeatures {
+        aidl true
     }
 
     compileOptions {
@@ -19,4 +26,5 @@ android {
 
 dependencies {
     implementation(project(":dhizuku-aidl"))
+    api(project(":dhizuku-shared"))
 }

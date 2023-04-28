@@ -14,13 +14,11 @@ val keystoreProps = Properties().apply {
 
 @Suppress("UnstableApiUsage")
 android {
+    namespace = "com.rosan.dhizuku"
+
     compileSdk = 33
 
     defaultConfig {
-        // 你如果根据InstallerX的源码进行打包成apk或其他安装包格式
-        // 请换一个applicationId，不要和官方的任何发布版本产生冲突。
-        // If you use InstallerX source code, package it into apk or other installation package format
-        // Please change the applicationId to one that does not conflict with any official release.
         applicationId = "com.rosan.dhizuku"
         minSdk = 21
         targetSdk = 33
@@ -74,16 +72,18 @@ android {
     }
 
     compileOptions {
-        targetCompatibility = JavaVersion.VERSION_11
-        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
     }
 
     kotlin {
-        jvmToolchain(11)
+        jvmToolchain(17)
     }
 
     buildFeatures {
+        buildConfig = true
         compose = true
+        aidl = true
     }
 
     composeOptions {
@@ -99,6 +99,7 @@ android {
 }
 
 dependencies {
+    compileOnly(project(":hidden-api"))
     implementation(project(":dhizuku-aidl"))
     implementation(project(":dhizuku-shared"))
 

@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.rosan.dhizuku.R
+import com.rosan.dhizuku.ui.widget.setting.LabelWidget
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -18,14 +19,11 @@ fun PreferredPage(navController: NavController) {
         SnackbarHostState()
     }
     Scaffold(
-        modifier = Modifier
-            .fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(text = stringResource(id = R.string.preferred))
-                }
-            )
+            TopAppBar(title = {
+                Text(text = stringResource(id = R.string.preferred))
+            })
         },
         snackbarHost = { SnackbarHost(hostState = snackBarHostState) },
     ) {
@@ -34,6 +32,7 @@ fun PreferredPage(navController: NavController) {
                 .fillMaxSize()
                 .padding(it)
         ) {
+            item { LabelWidget(label = stringResource(id = R.string.basic)) }
         }
     }
 }

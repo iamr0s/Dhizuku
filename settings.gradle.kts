@@ -23,6 +23,9 @@ dependencyResolutionManagement {
 rootProject.name = "Dhizuku"
 include(
     ":app",
+    ":hidden-api",
     ":dhizuku-aidl",
     ":dhizuku-shared",
 )
+project(":dhizuku-aidl").projectDir = file("${rootDir.path}/api/dhizuku-aidl")
+project(":dhizuku-shared").projectDir = file("${rootDir.path}/api/dhizuku-shared")

@@ -48,4 +48,10 @@
     <string name="request_permission_text">【%1$s】正在申请使用 Dhizuku 权限。\n如无法决定是否授权，请拒绝！</string>
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>
+
+    <string name="basic">常规</string>
+    <string name="fix_user_profile">修复系统双开</string>
+
+    <string name="service_channel_name">后台服务</string>
+    <string name="service_running">Dhizuku正在运行</string>
 </resources>

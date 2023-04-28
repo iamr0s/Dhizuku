@@ -8,7 +8,7 @@
 # https://mvnrepository.com/
 
 [versions]
-agp = "7.4.2"
+agp = "8.0.0"
 kotlin = "1.8.10"
 compose = "1.4.0"
 room = "2.5.1"
