@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <uses-permission android:name="com.rosan.dhizuku.permission.API" />
-    <queries>
-        <provider android:authorities="com.rosan.dhizuku.provider" />
-    </queries>
-</manifest>
