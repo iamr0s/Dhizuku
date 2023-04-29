@@ -69,11 +69,7 @@
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"
-            android:permission="com.rosan.dhizuku.permission.API">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </provider>
+            tools:ignore="UnusedAttribute" />
 
         <receiver
             android:name=".server.DhizukuDAReceiver"

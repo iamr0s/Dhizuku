@@ -54,8 +54,10 @@ class App : Application(), KoinComponent {
     fun syncAppRepo() {
         scope.launch {
             appRepo.all().forEach {
-                if (packageManager.getPackagesForUid(it.uid).isNullOrEmpty())
-                    appRepo.delete(it)
+                if (
+                    packageManager.getPackagesForUid(it.uid).isNullOrEmpty() ||
+                    !it.allowApi
+                ) appRepo.delete(it)
             }
         }
     }
