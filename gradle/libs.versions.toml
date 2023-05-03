@@ -8,7 +8,7 @@
 # https://mvnrepository.com/
 
 [versions]
-agp = "8.0.0"
+agp = "8.0.1"
 kotlin = "1.8.10"
 compose = "1.4.0"
 room = "2.5.1"
@@ -51,13 +51,19 @@ accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist
 accompanist-drawablepainter = { group = "com.google.accompanist", name = "accompanist-drawablepainter", version.ref = "accompanist" }
 accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist" }
 
+# AndroidHiddenApiBypass
+# https://github.com/LSPosed/AndroidHiddenApiBypass
+lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hiddenapibypass", version = "4.3" }
+
 # XXPermissions
 # https://github.com/getActivity/XXPermissions
 xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", version = "16.6" }
 
-# Shizuku
-# https://github.com/getActivity/XXPermissions
 # Rikka Shizuku
 # https://github.com/RikkaApps/Shizuku-API
 rikka-shizuku-api = { group = "dev.rikka.shizuku", name = "api", version.ref = "rikka-shizuku" }
 rikka-shizuku-provider = { group = "dev.rikka.shizuku", name = "provider", version.ref = "rikka-shizuku" }
+
+# Commons CLI
+# https://search.maven.org/artifact/commons-cli/commons-cli
+commons-cli = { group = "commons-cli", name = "commons-cli", version = "1.5.0" }

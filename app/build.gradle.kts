@@ -22,8 +22,8 @@ android {
         applicationId = "com.rosan.dhizuku"
         minSdk = 21
         targetSdk = 33
-        versionCode = 2
-        versionName = "1.0.3"
+        versionCode = 3
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -128,8 +128,12 @@ dependencies {
     implementation(libs.accompanist.drawablepainter)
     implementation(libs.accompanist.systemuicontroller)
 
+    implementation(libs.lsposed.hiddenapibypass)
+
     implementation(libs.xxpermissions)
 
     implementation(libs.rikka.shizuku.api)
     implementation(libs.rikka.shizuku.provider)
+
+    implementation(libs.commons.cli)
 }

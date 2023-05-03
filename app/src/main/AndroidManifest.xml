@@ -64,11 +64,12 @@
         </activity>
 
         <provider
-            android:name="com.rosan.dhizuku.server.DhizukuProvider"
+            android:name=".server.DhizukuProvider"
             android:authorities="com.rosan.dhizuku.server.provider"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"
+            android:permission="com.rosan.dhizuku.permission.API"
             tools:ignore="UnusedAttribute" />
 
         <receiver
@@ -107,8 +108,9 @@
 
         <service
             android:name=".server.DhizukuService"
-            android:enabled="true"
-            android:exported="true">
+            android:directBootAware="true"
+            android:exported="false"
+            tools:ignore="UnusedAttribute">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

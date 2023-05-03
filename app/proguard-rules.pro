@@ -69,7 +69,7 @@
 -keep public class com.rosan.dhizuku.data.process.model.impl.** {
     public static void main(java.lang.String[]);
 }
-#-keep public class com.rosan.installer.data.process.model.impl.** extends com.rosan.installer.data.process.repo.ProcessRepo {
+#-keep public class com.rosan.installer.data.process.model.impl.** extends com.rosan.dhizuku.data.process.repo.ProcessRepo {
 #public static void main(java.lang.String[]);
 #}
 #-keep public class com.rosan.installer.** extends android.app.Service

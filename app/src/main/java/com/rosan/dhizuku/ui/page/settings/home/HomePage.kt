@@ -1,9 +1,9 @@
 package com.rosan.dhizuku.ui.page.settings.home
 
+import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.*
 import android.net.Uri
-import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.compose.animation.AnimatedContent
@@ -32,7 +32,6 @@ import com.rosan.dhizuku.data.console.repo.ConsoleRepo
 import com.rosan.dhizuku.data.console.util.ConsoleRepoUtil
 import com.rosan.dhizuku.data.console.util.ConsoleUtil
 import com.rosan.dhizuku.server.DhizukuDAReceiver
-import com.rosan.dhizuku.ui.activity.RequestPermissionActivity
 import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
 import com.rosan.dhizuku.util.toast
 import kotlinx.coroutines.Dispatchers
@@ -72,6 +71,7 @@ fun HomePage(navController: NavController) {
     }
 }
 
+@SuppressLint("MissingPermission")
 @Composable
 fun StatusWidget() {
     val context = LocalContext.current
@@ -96,7 +96,6 @@ fun StatusWidget() {
         else if (isDeviceAdminer) R.string.device_admin_granted
         else R.string.device_admin_denied
     )
-
     CardWidget(colors = CardDefaults.elevatedCardColors(
         containerColor = containerColor, contentColor = onContainerColor
     ), content = {
@@ -109,16 +108,6 @@ fun StatusWidget() {
             Spacer(modifier = Modifier.size(24.dp))
             Text(text = text, style = MaterialTheme.typography.titleMedium)
         }
-    }, onClick = {
-        context.startActivity(
-            Intent(context, RequestPermissionActivity::class.java).putExtra(
-                "bundle",
-                Bundle().apply {
-                    putInt("uid", 10330)
-                }).addFlags(
-                Intent.FLAG_ACTIVITY_NEW_TASK
-            )
-        )
     })
 }
 
@@ -184,6 +173,7 @@ fun ShizukuButton() {
                     exception is IllegalStateException && exception?.message == "binder haven't been received" -> stringResource(
                         R.string.shizuku_binder_not_received
                     )
+
                     else -> ByteArrayOutputStream().also {
                         exception?.printStackTrace(PrintStream(it))
                     }.toByteArray().decodeToString()
@@ -466,8 +456,7 @@ fun CardWidget(
             }
             if (buttons != null) {
                 FlowRow(
-                    modifier = Modifier
-                        .padding(horizontal = 12.dp),
+                    modifier = Modifier.padding(horizontal = 12.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     buttons()
