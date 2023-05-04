@@ -45,7 +45,7 @@
     <string name="binance">币安</string>
 
     <string name="request_permission_title">Dhizuku 授权</string>
-    <string name="request_permission_text">【%1$s】正在申请使用 Dhizuku 权限。\n如无法决定是否授权，请拒绝！</string>
+    <string name="request_permission_text"><![CDATA[授权<b>%1$s</b>使用 Dhizuku 吗？]]></string>
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>
 

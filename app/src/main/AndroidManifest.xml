@@ -53,8 +53,9 @@
 
         <activity
             android:name=".ui.activity.RequestPermissionActivity"
-            android:excludeFromRecents="false"
+            android:excludeFromRecents="true"
             android:exported="true"
+            android:launchMode="singleInstance"
             android:permission="com.rosan.dhizuku.permission.API"
             android:theme="@style/Theme.Dhizuku.Translucent">
             <intent-filter>
