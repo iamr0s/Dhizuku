@@ -57,6 +57,7 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
         connection: IDhizukuUserServiceConnection?,
         bundle: Bundle?
     ) {
+        requireCallingPermission("bind_user_service")
         bundle ?: return
         connection ?: return
         val uid = Binder.getCallingUid()
@@ -66,6 +67,7 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     }
 
     override fun unbindUserService(bundle: Bundle?) {
+        requireCallingPermission("unbind_user_service")
         bundle ?: return
         val uid = Binder.getCallingUid()
         val pid = Binder.getCallingPid()
