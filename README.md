@@ -1,6 +1,7 @@
 # Dhizuku
 
-[![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total)](https://github.com/iamr0s/Dhizuku/releases)
+[![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
+[![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
 
 ## 介绍
 
