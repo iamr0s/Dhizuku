@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.*
 import android.net.Uri
+import android.os.Build
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.compose.animation.AnimatedContent
@@ -137,7 +138,7 @@ fun ShizukuButton() {
                     command(
                         "dpm",
                         "set-device-owner",
-                        "${context.packageName}/${DhizukuDAReceiver::class.qualifiedName}"
+                        DhizukuDAReceiver.name.flattenToShortString()
                     )
                 }
                 console = letConsole
@@ -209,7 +210,7 @@ fun ADBButton() {
         mutableStateOf(false)
     }
     val command =
-        "adb shell dpm set-device-owner ${context.packageName}/${DhizukuDAReceiver::class.qualifiedName}"
+        "adb shell dpm set-device-owner ${DhizukuDAReceiver.name.flattenToShortString()}"
 
     Button(onClick = {
         showDialog = true
@@ -264,6 +265,11 @@ fun DeactivateButton() {
         val e = runCatching {
             val manager =
                 context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+            runCatching {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    manager.clearProfileOwner(DhizukuDAReceiver.name)
+                }
+            }
             manager.clearDeviceOwnerApp(context.packageName)
         }.exceptionOrNull()
         context.toast(if (e == null) R.string.deactivate_success else R.string.deactivate_failed)

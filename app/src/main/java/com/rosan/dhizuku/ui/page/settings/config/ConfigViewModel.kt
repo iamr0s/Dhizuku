@@ -45,8 +45,15 @@ class ConfigViewModel(
                 val map = mutableMapOf<Int, ConfigViewState.Data>()
                 apps.forEach {
                     val packageName = packageManager.getPackagesForUid(it.uid)?.first()
-                    map[it.uid] = if (packageName != null) {
-                        val packageInfo = packageManager.getPackageInfo(packageName, 0)
+                    val packageInfo = kotlin.runCatching {
+                        packageName?.let {
+                            packageManager.getPackageInfo(
+                                it,
+                                0
+                            )
+                        }
+                    }.getOrNull()
+                    map[it.uid] = if (packageInfo != null) {
                         val applicationInfo = packageInfo.applicationInfo
                         val uid = applicationInfo.uid
                         ConfigViewState.Data(
