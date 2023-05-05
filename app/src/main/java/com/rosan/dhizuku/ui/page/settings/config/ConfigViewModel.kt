@@ -1,7 +1,6 @@
 package com.rosan.dhizuku.ui.page.settings.config
 
 import android.content.Context
-import android.content.pm.PackageManager
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -67,24 +66,6 @@ class ConfigViewModel(
                             )!!,
                             allowApi = it.allowApi
                         )
-                    }
-                }
-                val packages =
-                    packageManager.getInstalledPackages(PackageManager.GET_PERMISSIONS or PackageManager.GET_ACTIVITIES)
-                packages.forEach { packageInfo ->
-                    packageInfo.requestedPermissions?.forEach {
-                        if (it == "com.rosan.dhizuku.permission.API") {
-                            val applicationInfo = packageInfo.applicationInfo
-                            val uid = applicationInfo.uid
-                            val data = map[uid]
-                            map[uid] = ConfigViewState.Data(
-                                uid = uid,
-                                packageName = packageInfo.packageName,
-                                label = applicationInfo.loadLabel(packageManager).toString(),
-                                icon = applicationInfo.loadIcon(packageManager),
-                                allowApi = data?.allowApi ?: false
-                            )
-                        }
                     }
                 }
                 state = ConfigViewState(data = map.values.sortedBy {

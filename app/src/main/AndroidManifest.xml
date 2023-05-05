@@ -18,18 +18,6 @@
 
     <uses-sdk tools:overrideLibrary="rikka.shizuku.api, rikka.shizuku.provider, rikka.shizuku.shared, rikka.shizuku.aidl" />
 
-    <permission-group
-        android:name="com.rosan.dhizuku.permission-group.API"
-        android:description="@string/dhizuku_permission_group_dsp"
-        android:label="@string/dhizuku_permission_group_label" />
-
-    <permission
-        android:name="com.rosan.dhizuku.permission.API"
-        android:description="@string/dhizuku_permission_api_dsp"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/dhizuku_permission_api_label"
-        android:protectionLevel="normal" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -56,7 +44,6 @@
             android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleInstance"
-            android:permission="com.rosan.dhizuku.permission.API"
             android:theme="@style/Theme.Dhizuku.Translucent">
             <intent-filter>
                 <action android:name="${applicationId}.action.request.permission" />
@@ -70,8 +57,7 @@
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"
-            android:permission="com.rosan.dhizuku.permission.API"
-            tools:ignore="UnusedAttribute" />
+            tools:ignore="ExportedContentProvider,UnusedAttribute" />
 
         <receiver
             android:name=".server.DhizukuDAReceiver"
