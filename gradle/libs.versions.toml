@@ -43,6 +43,10 @@ koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.4.0" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.4.0" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.4.3" }
 
+# Lottie for Android Compose
+# http://airbnb.io/lottie/#/android-compose
+lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.0.0" }
+
 # Pager layouts
 # https://google.github.io/accompanist/pager/
 accompanist = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }

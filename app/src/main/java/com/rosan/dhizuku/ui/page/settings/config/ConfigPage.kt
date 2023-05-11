@@ -5,14 +5,22 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 import com.rosan.dhizuku.R
 import org.koin.androidx.compose.getViewModel
@@ -39,7 +47,48 @@ fun ConfigPage(
         },
     ) {
         Box(modifier = Modifier.padding(it)) {
-            DataWidget(viewModel = viewModel)
+            if (viewModel.state.initialized && viewModel.state.data.isEmpty())
+                LottieWidget(
+                    spec = LottieCompositionSpec.RawRes(R.raw.empty_state),
+                    text = stringResource(R.string.empty_config_dsp)
+                )
+            else
+                DataWidget(viewModel = viewModel)
+        }
+    }
+}
+
+@Composable
+fun LottieWidget(
+    spec: LottieCompositionSpec,
+    text: String
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            val composition by rememberLottieComposition(spec)
+            val progress by animateLottieCompositionAsState(
+                composition = composition,
+                iterations = LottieConstants.IterateForever,
+            )
+            LottieAnimation(
+                modifier = Modifier
+                    .size(200.dp),
+                composition = composition,
+                progress = { progress }
+            )
+            Text(
+                text = text,
+                style = MaterialTheme.typography.titleLarge
+            )
         }
     }
 }

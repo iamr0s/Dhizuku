@@ -90,12 +90,6 @@ android {
 //        kotlinCompilerExtensionVersion = libs.versions.compose.get()
         kotlinCompilerExtensionVersion = "1.4.4"
     }
-
-    packagingOptions {
-        resources {
-            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
-        }
-    }
 }
 
 dependencies {
@@ -121,6 +115,8 @@ dependencies {
     implementation(libs.koin.core)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
+
+    implementation(libs.lottie.compose)
 
     implementation(libs.accompanist)
     implementation(libs.accompanist.navigationAnimation)

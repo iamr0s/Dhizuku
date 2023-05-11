@@ -20,7 +20,7 @@ class ConfigViewModel(
 ) : ViewModel(), KoinComponent {
     private val context by inject<Context>()
 
-    var state by mutableStateOf(ConfigViewState(emptyList()))
+    var state by mutableStateOf(ConfigViewState())
         private set
 
     fun dispatch(action: ConfigViewAction) {
@@ -75,9 +75,11 @@ class ConfigViewModel(
                         )
                     }
                 }
-                state = ConfigViewState(data = map.values.sortedBy {
-                    it.uid
-                })
+                state = ConfigViewState(
+                    initialized = true,
+                    data = map.values.sortedBy {
+                        it.uid
+                    })
             }
         }
     }

@@ -55,6 +55,8 @@
     <string name="toast_when_using_dhizuku_dsp">当有程序在调用 Dhizuku 时，弹出消息提示</string>
     <string name="toast_when_using_dhizuku_content">Dhizuku 权限正在被使用：%1$s </string>
 
+    <string name="empty_config_dsp">暂无应用申请 Dhizuku 权限</string>
+
     <string name="service_channel_name">后台服务</string>
     <string name="service_running">Dhizuku正在运行</string>
 </resources>
