@@ -1,3 +1,5 @@
+简体中文 | [English](README_EN.md)
+
 # Dhizuku
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
@@ -14,6 +16,12 @@ Android 5.0 ~ 13
 ## 致开发者（接入Dhizuku API）
 
 - [Dhizuku API](https://github.com/iamr0s/Dhizuku-API.git)
+
+## 参与翻译
+
+如果你想参与到Dhizuku的翻译工作中来，请前往[Weblate](https://hosted.weblate.org/engage/dhizuku/)
+
+[![status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
 
 ## 捐赠支持
 
