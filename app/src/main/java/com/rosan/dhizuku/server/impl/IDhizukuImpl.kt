@@ -1,9 +1,12 @@
 package com.rosan.dhizuku.server.impl
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Binder
 import android.os.Bundle
 import android.os.IBinder
 import android.os.Parcel
+import com.rosan.dhizuku.R
 import com.rosan.dhizuku.aidl.IDhizuku
 import com.rosan.dhizuku.aidl.IDhizukuClient
 import com.rosan.dhizuku.aidl.IDhizukuRemoteProcess
@@ -14,11 +17,21 @@ import com.rosan.dhizuku.server.DHIZUKU_SERVRE_VERSION_CODE
 import com.rosan.dhizuku.server.DhizukuUserServiceArgs
 import com.rosan.dhizuku.server.DhizukuUserServiceConnections
 import com.rosan.dhizuku.shared.DhizukuVariables
+import com.rosan.dhizuku.util.toast
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import org.koin.core.parameter.parametersOf
 import java.io.File
 
 class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub(), KoinComponent {
+    private var toastedWhenUsingDhizuku = false
+
+    private val sharedPreferences by inject<SharedPreferences> {
+        parametersOf("preferred")
+    }
+
+    private val context by inject<Context>()
+
     private val appRepo by inject<AppRepo>()
 
     override fun getVersionCode(): Int = DHIZUKU_SERVRE_VERSION_CODE
@@ -30,8 +43,17 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     }
 
     private fun requireCallingPermission(name: String) {
-        if (isPermissionGranted) return
-        throw IllegalStateException(SecurityException("uid '${Binder.getCallingUid()}' not allow use dhizuku api"))
+        if (!isPermissionGranted) throw IllegalStateException(SecurityException("uid '${Binder.getCallingUid()}' not allow use dhizuku api"))
+        if (toastedWhenUsingDhizuku ||
+            !sharedPreferences.getBoolean("toast_when_using_dhizuku", false)
+        ) return
+        val packageManager = context.packageManager
+        val packageName = (packageManager.getPackagesForUid(Binder.getCallingUid())
+            ?: emptyArray<String>()).first()
+        val label =
+            packageManager.getPackageInfo(packageName, 0).applicationInfo.loadLabel(packageManager)
+        context.toast(context.getString(R.string.toast_when_using_dhizuku_content, label))
+        toastedWhenUsingDhizuku = true
     }
 
     private fun targetTransact(
@@ -54,8 +76,7 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     }
 
     override fun bindUserService(
-        connection: IDhizukuUserServiceConnection?,
-        bundle: Bundle?
+        connection: IDhizukuUserServiceConnection?, bundle: Bundle?
     ) {
         requireCallingPermission("bind_user_service")
         bundle ?: return
