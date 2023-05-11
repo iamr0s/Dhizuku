@@ -1,10 +1,8 @@
 package com.rosan.dhizuku.ui.page.settings.home
 
 import android.annotation.SuppressLint
-import android.app.admin.DevicePolicyManager
 import android.content.*
 import android.net.Uri
-import android.os.Build
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.compose.animation.AnimatedContent
@@ -261,18 +259,22 @@ fun ADBButton() {
 @Composable
 fun DeactivateButton() {
     val context = LocalContext.current
+    var showDialog by remember {
+        mutableStateOf(false)
+    }
     Button(onClick = {
-        val e = runCatching {
-            val manager =
-                context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-            runCatching {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    manager.clearProfileOwner(DhizukuDAReceiver.name)
-                }
-            }
-            manager.clearDeviceOwnerApp(context.packageName)
-        }.exceptionOrNull()
-        context.toast(if (e == null) R.string.deactivate_success else R.string.deactivate_failed)
+        showDialog = true
+//        val e = runCatching {
+//            val manager =
+//                context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+//            runCatching {
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                    manager.clearProfileOwner(DhizukuDAReceiver.name)
+//                }
+//            }
+//            manager.clearDeviceOwnerApp(context.packageName)
+//        }.exceptionOrNull()
+//        context.toast(if (e == null) R.string.deactivate_success else R.string.deactivate_failed)
     }) {
         Icon(
             modifier = Modifier.size(16.dp),
@@ -282,6 +284,23 @@ fun DeactivateButton() {
         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
         Text(text = stringResource(id = R.string.deactivate))
     }
+    if (!showDialog) return
+    AlertDialog(onDismissRequest = {
+        showDialog = false
+    }, title = {
+        Text(stringResource(R.string.deactivate))
+    }, text = {
+        Text(stringResource(R.string.deactivate_dsp))
+    }, confirmButton = {
+        TextButton(onClick = {
+        }) {
+            Text(stringResource(R.string.confirm))
+        }
+    }, dismissButton = {
+        TextButton(onClick = { showDialog = false }) {
+            Text(stringResource(R.string.cancel))
+        }
+    })
 }
 
 @Composable

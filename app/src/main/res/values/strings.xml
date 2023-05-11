@@ -8,7 +8,7 @@
     <string name="device_admin_granted">未完全激活，已获得设备管理员</string>
     <string name="device_admin_denied">未激活</string>
 
-    <string name="active_func_dsp">设备拥有者（DeviceOwner）权限高于设备管理员（DeviceAdmin），一次激活永久有效，除非您主动取消激活。\n\n请谨慎授权给其余应用，设备管理员可通过代码修改诸多系统设置，比如：设置锁屏密码，恢复出厂设置，禁用软硬件功能等。</string>
+    <string name="active_func_dsp">设备所有者（DeviceOwner）权限高于设备管理员（DeviceAdmin），一次激活永久有效，除非您主动取消激活。\n\n请谨慎授权给其余应用，设备管理员可通过代码修改诸多系统设置，比如：禁用软硬件功能与监听用户行为等。</string>
 
     <string name="active">激活</string>
     <string name="cancel">取消</string>
@@ -24,6 +24,7 @@
     <string name="execution_end">执行结束，请检查是否激活。</string>
 
     <string name="deactivate">取消激活</string>
+    <string name="deactivate_dsp">确认要取消激活吗？</string>
     <string name="deactivate_success">取消激活成功</string>
     <string name="deactivate_failed">取消激活失败</string>
 
