@@ -21,7 +21,7 @@ class DhizukuProvider : ContentProvider(), KoinComponent {
                 putBinder(DhizukuVariables.PARAM_DHIZUKU_BINDER, IDhizukuImpl(client).asBinder())
             }
 
-            else -> null;
+            else -> null
         }
     }
 

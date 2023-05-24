@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dhizuku</string>
+    <string name="app_name" translatable="false">Dhizuku</string>
     <string name="home">主页</string>
     <string name="config">配置</string>
     <string name="preferred">设置</string>
@@ -31,11 +31,11 @@
     <string name="force_stop">强行停止</string>
     <string name="force_stop_dsp">当设备所有者激活成功后，系统没有权限强行停止设备所有者应用运行，但是更新应用需要先将应用停止，所以你需要先将 Dhizuku 强行停止，再更新 Dhizuku。</string>
 
-    <string name="dhizuku_permission_group_dsp">@string/dhizuku_permission_group_label</string>
     <string name="dhizuku_permission_group_label">Dhizuku 权限</string>
+    <string name="dhizuku_permission_group_dsp" translatable="false">@string/dhizuku_permission_group_label</string>
+    <string name="dhizuku_permission_api_label" translatable="false">@string/dhizuku_permission_group_label</string>
 
     <string name="dhizuku_permission_api_dsp">允许应用使用 Dhizuku。</string>
-    <string name="dhizuku_permission_api_label">@string/dhizuku_permission_group_label</string>
 
     <string name="copy">复制</string>
     <string name="copy_success">复制成功</string>

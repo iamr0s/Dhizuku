@@ -17,7 +17,6 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.selects.select
 import rikka.shizuku.Shizuku
-import rikka.sui.Sui
 
 object DhizukuUserServiceConnections {
     private fun onServiceConnected(args: DhizukuUserServiceArgs, service: UserService) {
