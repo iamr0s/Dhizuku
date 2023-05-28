@@ -9,4 +9,14 @@
     <string name="active_func_dsp">DeviceOwner имеет более высокие права, чем DeviceAdmin, а однократная активация является постоянной, если только вы активно не деактивируете ее.
 \n
 \nПожалуйста, будьте осторожны при авторизации других приложений, так как DeviceAdmin может изменять многие настройки системы с помощью кода, например, отключать аппаратные и программные функции и прослушивать поведение пользователя.</string>
+    <string name="active">Активация</string>
+    <string name="active_by_adb">Активация компьютера</string>
+    <string name="cancel">Отмена</string>
+    <string name="confirm">Подтверждение</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Чтобы настроить владельца устройства (подключенный компьютер) с помощью adb, перейдите по ссылке &lt;a href=https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn&gt;Android Debug Bridge ( ADB)&lt;/a&gt; для получения дополнительной информации об adb.</string>
+    <string name="active_by_shizuku">Активация Сидзуку</string>
+    <string name="finish">Полный</string>
+    <string name="shizuku_binder_not_received">Сначала проверьте, установлена ли, активирована ли Shizuku, и согласитесь с программным обеспечением, чтобы получить разрешения Shizuku.</string>
+    <string name="execution_end">Конец выполнения, пожалуйста, проверьте активацию.</string>
+    <string name="deactivate">Деактивация</string>
 </resources>
