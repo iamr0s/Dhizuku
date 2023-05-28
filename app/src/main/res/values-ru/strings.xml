@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="config">Конфигурация</string>
+    <string name="home">Главная</string>
+    <string name="device_admin_granted">Не полностью активирована, администратор устройства приобрел</string>
+    <string name="preferred">Настройки</string>
+    <string name="device_owner_granted">Разрешение владельца устройства получено</string>
+    <string name="device_admin_denied">Не активирован</string>
+    <string name="active_func_dsp">DeviceOwner имеет более высокие права, чем DeviceAdmin, а однократная активация является постоянной, если только вы активно не деактивируете ее.
+\n
+\nПожалуйста, будьте осторожны при авторизации других приложений, так как DeviceAdmin может изменять многие настройки системы с помощью кода, например, отключать аппаратные и программные функции и прослушивать поведение пользователя.</string>
+</resources>
