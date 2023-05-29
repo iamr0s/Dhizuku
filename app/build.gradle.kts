@@ -22,8 +22,8 @@ android {
         applicationId = "com.rosan.dhizuku"
         minSdk = 21
         targetSdk = 33
-        versionCode = 8
-        versionName = "2.5"
+        versionCode = 9
+        versionName = "2.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -129,8 +129,6 @@ dependencies {
 
     implementation(libs.rikka.shizuku.api)
     implementation(libs.rikka.shizuku.provider)
-
-    implementation(libs.commons.cli)
 
     implementation(libs.iamr0s.androidAppProcess)
 }

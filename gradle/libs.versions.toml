@@ -69,10 +69,6 @@ xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", vers
 rikka-shizuku-api = { group = "dev.rikka.shizuku", name = "api", version.ref = "rikka-shizuku" }
 rikka-shizuku-provider = { group = "dev.rikka.shizuku", name = "provider", version.ref = "rikka-shizuku" }
 
-# Commons CLI
-# https://search.maven.org/artifact/commons-cli/commons-cli
-commons-cli = { group = "commons-cli", name = "commons-cli", version = "1.5.0" }
-
 # Android app_process
 # https://github.com/iamr0s/AndroidAppProcess
 iamr0s-androidAppProcess = { group = "io.github.iamr0s", name = "AndroidAppProcess", version = "1.1" }
