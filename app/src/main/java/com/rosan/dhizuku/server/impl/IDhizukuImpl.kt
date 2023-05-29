@@ -14,6 +14,7 @@ import com.rosan.dhizuku.aidl.IDhizukuUserServiceConnection
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.server.DHIZUKU_SERVER_VERSION_NAME
 import com.rosan.dhizuku.server.DHIZUKU_SERVRE_VERSION_CODE
+import com.rosan.dhizuku.server.DhizukuProcess
 import com.rosan.dhizuku.server.DhizukuUserServiceArgs
 import com.rosan.dhizuku.server.DhizukuUserServiceConnections
 import com.rosan.dhizuku.shared.DhizukuVariables
@@ -21,7 +22,6 @@ import com.rosan.dhizuku.util.toast
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.parameter.parametersOf
-import java.io.File
 
 class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub(), KoinComponent {
     private var toastedWhenUsingDhizuku = false
@@ -59,19 +59,20 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     private fun targetTransact(
         iBinder: IBinder, code: Int, data: Parcel, reply: Parcel?, flags: Int
     ): Boolean {
-        requireCallingPermission("target_transact")
-        val id = clearCallingIdentity()
-        val result = iBinder.transact(code, data, reply, flags)
-        restoreCallingIdentity(id)
-        return result
+        return DhizukuProcess.binderWrapper(iBinder).transact(code, data, reply, flags)
     }
 
     override fun remoteProcess(
-        cmd: Array<out String>?, env: Array<out String>?, dir: String?
+        cmd: Array<out String>, env: Array<out String>?, dir: String?
     ): IDhizukuRemoteProcess {
         requireCallingPermission("remote_process")
-        val file = if (dir != null) File(dir) else null
-        val process = Runtime.getRuntime().exec(cmd, env, file)
+        val environment = mutableMapOf<String, String>()
+        if (env != null) for (envString in env) {
+            val index: Int = envString.indexOf('=')
+            if (index != -1) environment[envString.substring(0, index)] =
+                envString.substring(index + 1)
+        }
+        val process = DhizukuProcess.remoteProcess(cmd.toMutableList(), environment, dir)
         return IDhizukuRemoteProcessImpl(process, client?.asBinder() ?: this)
     }
 

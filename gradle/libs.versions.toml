@@ -8,11 +8,12 @@
 # https://mvnrepository.com/
 
 [versions]
-agp = "8.0.1"
-kotlin = "1.8.10"
-compose = "1.4.0"
+agp = "8.0.2"
+kotlin = "1.8.21"
+compose-compiler = "1.4.7"
+compose = "1.4.3"
 room = "2.5.1"
-accompanist = "0.30.0"
+accompanist = "0.30.1"
 rikka-shizuku = "13.1.0"
 
 [plugins]
@@ -22,16 +23,16 @@ kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 [libraries]
-androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.9.0" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.7.0" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.10.1" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.7.2" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.1" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
-compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.0.1" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.0" }
 compose-uiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose" }
 
 compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.5.3" }
-compose-materialIcons = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.4.0" }
+compose-materialIcons = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.4.3" }
 
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
@@ -41,7 +42,7 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 # https://insert-koin.io/docs/setup/koin
 koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.4.0" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.4.0" }
-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.4.3" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.4.4" }
 
 # Lottie for Android Compose
 # http://airbnb.io/lottie/#/android-compose
@@ -71,3 +72,7 @@ rikka-shizuku-provider = { group = "dev.rikka.shizuku", name = "provider", versi
 # Commons CLI
 # https://search.maven.org/artifact/commons-cli/commons-cli
 commons-cli = { group = "commons-cli", name = "commons-cli", version = "1.5.0" }
+
+# Android app_process
+# https://github.com/iamr0s/AndroidAppProcess
+iamr0s-androidAppProcess = { group = "io.github.iamr0s", name = "AndroidAppProcess", version = "1.1" }

@@ -50,14 +50,12 @@ class DhizukuService : Service(), KoinComponent {
 
     override fun onDestroy() {
         unregisterReceiver(packageReceiver)
-        unregisterReceiver(DhizukuProcessReceiver)
         super.onDestroy()
     }
 
     private suspend fun run() {
         runForeground()
         registerPackageReceiver()
-        registerProcessReceiver()
     }
 
     private fun registerPackageReceiver() {
@@ -66,11 +64,6 @@ class DhizukuService : Service(), KoinComponent {
         filter.addAction(Intent.ACTION_PACKAGE_REMOVED)
         filter.addDataScheme("package")
         registerReceiver(packageReceiver, filter)
-    }
-
-    private fun registerProcessReceiver() {
-        val filter = IntentFilter(DhizukuProcessReceiver.ACTION_USER_SERVICE)
-        registerReceiver(DhizukuProcessReceiver, filter)
     }
 
     private suspend fun runForeground() {

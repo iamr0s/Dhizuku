@@ -87,8 +87,7 @@ android {
     }
 
     composeOptions {
-//        kotlinCompilerExtensionVersion = libs.versions.compose.get()
-        kotlinCompilerExtensionVersion = "1.4.4"
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 }
 
@@ -132,4 +131,6 @@ dependencies {
     implementation(libs.rikka.shizuku.provider)
 
     implementation(libs.commons.cli)
+
+    implementation(libs.iamr0s.androidAppProcess)
 }

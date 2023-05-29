@@ -1,21 +1,13 @@
 package com.rosan.dhizuku.server
 
+import android.content.ComponentName
 import android.os.IBinder
+import com.rosan.dhizuku.BuildConfig
+import com.rosan.dhizuku.aidl.IDhizukuUserService
 import com.rosan.dhizuku.aidl.IDhizukuUserServiceConnection
-import com.rosan.dhizuku.aidl.IDhizukuUserServiceManager
-import com.rosan.dhizuku.data.process.model.impl.DhizukuUserServiceRepoImpl
-import com.rosan.dhizuku.data.process.util.ProcessUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.channels.awaitClose
-import kotlinx.coroutines.channels.trySendBlocking
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.callbackFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.selects.select
 import rikka.shizuku.Shizuku
 
 object DhizukuUserServiceConnections {
@@ -55,39 +47,15 @@ object DhizukuUserServiceConnections {
     private suspend fun startInner(args: DhizukuUserServiceArgs): UserService? {
         val scope = CoroutineScope(Dispatchers.IO)
         var process: Process? = null
-        val serviceResult = scope.async {
-            callbackFlow<UserService> {
-                val listener = object : DhizukuProcessReceiver.OnUserServiceReceiverListener {
-                    override fun onReceive(_args: DhizukuUserServiceArgs, service: UserService) {
-                        if (args.componentName.flattenToString() != _args.componentName.flattenToString()) return
-                        trySendBlocking(service)
-                        close()
-                    }
-                }
-                DhizukuProcessReceiver.addUserServiceListener(listener)
-                process = ProcessUtil.start(
-                    DhizukuUserServiceRepoImpl::class,
-                    "-c='${args.componentName.flattenToString()}'"
+        val manager = IDhizukuUserService.Stub.asInterface(
+            DhizukuProcess.startProcess(
+                ComponentName(
+                    BuildConfig.APPLICATION_ID, DhizukuUserService::class.java.name
                 )
-                awaitClose {
-                    DhizukuProcessReceiver.removeUserServiceListener(listener)
-                }
-            }.first()
-        }
-        val timeoutResult = scope.async {
-            delay(15 * 1000)
-            null
-        }
-        val service = select<UserService?> {
-            serviceResult.onAwait { it }
-            timeoutResult.onAwait { it }
-        }
-        scope.cancel()
-        if (service == null) {
-            kotlin.runCatching { process?.destroy() }
-        } else {
-            onServiceConnected(args, service)
-        }
+            ) ?: return null
+        )
+        val service = UserService(manager, manager.startService(args.componentName))
+        onServiceConnected(args, service)
         return service
     }
 
@@ -99,7 +67,7 @@ object DhizukuUserServiceConnections {
 
     private fun stop(token: String) {
         val service = services[token] ?: return
-        kotlin.runCatching { service.manager.destroy() }
+        kotlin.runCatching { service.manager.quit() }
     }
 
     fun bind(
@@ -154,5 +122,5 @@ object DhizukuUserServiceConnections {
         Shizuku.checkSelfPermission()
     }
 
-    data class UserService(val manager: IDhizukuUserServiceManager, val service: IBinder)
+    data class UserService(val manager: IDhizukuUserService, val service: IBinder)
 }
