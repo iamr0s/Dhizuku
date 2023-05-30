@@ -13,7 +13,7 @@
     <string name="active_by_adb">Активация компьютера</string>
     <string name="cancel">Отмена</string>
     <string name="confirm">Подтверждение</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Чтобы настроить владельца устройства (подключенный компьютер) с помощью adb, перейдите по ссылке &lt;a href=https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn&gt;Android Debug Bridge ( ADB)&lt;/a&gt; для получения дополнительной информации об adb.</string>
+    <string name="active_by_adb_dsp">%1$s&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;* Чтобы настроить владельца устройства (подключенный компьютер) с помощью adb, перейдите по ссылке &amp;lt;a href=https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn&amp;gt;Android Debug Bridge ( ADB)&amp;lt;/a&amp;gt; для получения дополнительной информации об adb.</string>
     <string name="active_by_shizuku">Активация Сидзуку</string>
     <string name="finish">Полный</string>
     <string name="shizuku_binder_not_received">Сначала проверьте, установлена ли, активирована ли Shizuku, и согласитесь с программным обеспечением, чтобы получить разрешения Shizuku.</string>
