@@ -36,7 +36,8 @@ class App : Application(), KoinComponent {
     var isProfileOwner by mutableStateOf(false)
         private set
 
-    val isOwner = isDeviceOwner || isProfileOwner
+    var isOwner by mutableStateOf(false)
+        private set
 
     override fun onCreate() {
         super.onCreate()
@@ -57,6 +58,7 @@ class App : Application(), KoinComponent {
         isDeviceAdminer = manager.isAdminActive(ComponentName(this, DhizukuDAReceiver::class.java))
         isDeviceOwner = manager.isDeviceOwnerApp(packageName)
         isProfileOwner = manager.isProfileOwnerApp(packageName)
+        isOwner = isDeviceOwner || isProfileOwner
     }
 
     fun syncAppRepo() {
