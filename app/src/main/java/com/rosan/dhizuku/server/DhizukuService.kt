@@ -14,6 +14,7 @@ import com.rosan.dhizuku.App
 import com.rosan.dhizuku.R
 import kotlinx.coroutines.runBlocking
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class DhizukuService : Service(), KoinComponent {
     companion object {
@@ -26,7 +27,7 @@ class DhizukuService : Service(), KoinComponent {
         }
     }
 
-    private lateinit var app: App
+    private val app by inject<App>()
 
     private val packageReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -42,7 +43,6 @@ class DhizukuService : Service(), KoinComponent {
 
     override fun onCreate() {
         super.onCreate()
-        app = applicationContext as App
         runBlocking {
             run()
         }

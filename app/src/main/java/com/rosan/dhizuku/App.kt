@@ -19,6 +19,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.context.startKoin
+import org.koin.dsl.module
 import rikka.sui.Sui
 
 class App : Application(), KoinComponent {
@@ -32,23 +33,30 @@ class App : Application(), KoinComponent {
     var isDeviceOwner by mutableStateOf(false)
         private set
 
+    var isProfileOwner by mutableStateOf(false)
+        private set
+
+    val isOwner = isDeviceOwner || isProfileOwner
+
     override fun onCreate() {
         super.onCreate()
-        syncDeviceOwnerStatus()
+        syncOwnerStatus()
         startKoin {
             androidLogger()
             androidContext(this@App)
             modules(appModules)
+            modules(module { single { this@App } })
         }
         Sui.init(packageName)
         syncAppRepo()
         DhizukuService.start(this)
     }
 
-    fun syncDeviceOwnerStatus() {
+    fun syncOwnerStatus() {
         val manager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         isDeviceAdminer = manager.isAdminActive(ComponentName(this, DhizukuDAReceiver::class.java))
-        isDeviceOwner = manager.isDeviceOwnerApp(this.packageName)
+        isDeviceOwner = manager.isDeviceOwnerApp(packageName)
+        isProfileOwner = manager.isProfileOwnerApp(packageName)
     }
 
     fun syncAppRepo() {

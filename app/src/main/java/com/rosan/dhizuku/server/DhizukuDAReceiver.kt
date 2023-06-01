@@ -18,7 +18,7 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
     override fun onEnabled(context: Context, intent: Intent) {
         super.onEnabled(context, intent)
-        app.syncDeviceOwnerStatus()
+        app.syncOwnerStatus()
     }
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -31,6 +31,6 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
     override fun onDisabled(context: Context, intent: Intent) {
         super.onDisabled(context, intent)
-        app.syncDeviceOwnerStatus()
+        app.syncOwnerStatus()
     }
 }
