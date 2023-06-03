@@ -2,10 +2,12 @@ pluginManagement {
     repositories {
 //        maven { setUrl("https://maven.aliyun.com/repository/public/") }
 //        maven { setUrl("https://jitpack.io") }
+        mavenLocal()
         gradlePluginPortal()
         google()
         mavenCentral()
         maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
+        mavenLocal()
     }
 }
 
@@ -14,6 +16,7 @@ dependencyResolutionManagement {
     repositories {
 //        maven { setUrl("https://maven.aliyun.com/repository/public/") }
 //        maven { setUrl("https://jitpack.io") }
+        mavenLocal()
         google()
         mavenCentral()
         maven { setUrl("https://maven.scijava.org/content/repositories/public/") }

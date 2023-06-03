@@ -59,6 +59,7 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     private fun targetTransact(
         iBinder: IBinder, code: Int, data: Parcel, reply: Parcel?, flags: Int
     ): Boolean {
+        requireCallingPermission("remote_transact")
         return DhizukuProcess.binderWrapper(iBinder).transact(code, data, reply, flags)
     }
 
