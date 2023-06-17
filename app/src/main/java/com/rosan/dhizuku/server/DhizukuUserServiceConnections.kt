@@ -51,7 +51,7 @@ object DhizukuUserServiceConnections {
             DhizukuProcess.startProcess(
                 ComponentName(
                     BuildConfig.APPLICATION_ID, DhizukuUserService::class.java.name
-                )
+                ), false
             ) ?: return null
         )
         val service = UserService(manager, manager.startService(args.componentName))
