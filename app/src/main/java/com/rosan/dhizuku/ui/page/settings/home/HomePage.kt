@@ -107,7 +107,11 @@ fun StatusWidget() {
                 contentDescription = null
             )
             Spacer(modifier = Modifier.size(24.dp))
-            Text(text = text, style = MaterialTheme.typography.titleMedium)
+            Text(
+                modifier = Modifier.align(Alignment.CenterVertically),
+                text = text,
+                style = MaterialTheme.typography.titleMedium
+            )
         }
     })
 }
