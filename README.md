@@ -13,6 +13,9 @@
 
 Android 5.0 ~ 13
 
+## 激活教程
+[Github Discussions](https://github.com/iamr0s/Dhizuku/discussions/16)
+
 ## 致开发者（接入Dhizuku API）
 
 - [Dhizuku API](https://github.com/iamr0s/Dhizuku-API.git)
