@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.ui.page.settings.config
 
 import android.content.Context
+import android.os.Build
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -9,6 +10,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
+import com.rosan.dhizuku.util.clearDelegatedScopes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -97,6 +99,9 @@ class ConfigViewModel(
                 return@launch
             }
             entity.allowApi = allowApi
+            if (!allowApi && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.clearDelegatedScopes(entity.uid)
+            }
             repo.update(entity)
         }
     }

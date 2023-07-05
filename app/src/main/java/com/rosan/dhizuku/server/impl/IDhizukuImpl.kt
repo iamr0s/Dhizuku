@@ -1,16 +1,20 @@
 package com.rosan.dhizuku.server.impl
 
+import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Binder
+import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
 import android.os.Parcel
+import androidx.annotation.RequiresApi
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.aidl.IDhizuku
 import com.rosan.dhizuku.aidl.IDhizukuClient
 import com.rosan.dhizuku.aidl.IDhizukuRemoteProcess
 import com.rosan.dhizuku.aidl.IDhizukuUserServiceConnection
+import com.rosan.dhizuku.data.reflect.repo.ReflectRepo
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.server.DHIZUKU_SERVER_VERSION_NAME
 import com.rosan.dhizuku.server.DHIZUKU_SERVRE_VERSION_CODE
@@ -31,6 +35,12 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     }
 
     private val context by inject<Context>()
+
+    private val reflect by inject<ReflectRepo>()
+
+    private val devicePolicyManager by lazy {
+        context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+    }
 
     private val appRepo by inject<AppRepo>()
 
@@ -96,6 +106,23 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
         val pid = Binder.getCallingPid()
         val args = DhizukuUserServiceArgs(bundle)
         DhizukuUserServiceConnections.unbind(uid, pid, args)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun getDelegatedScopes(packageName: String): Array<String> {
+        requireCallingPermission("get_delegated_scopes")
+        return devicePolicyManager.getDelegatedScopes(DhizukuVariables.COMPONENT_NAME, packageName)
+            .toTypedArray()
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun setDelegatedScopes(packageName: String, scopes: Array<out String>) {
+        requireCallingPermission("set_delegated_scopes")
+        return devicePolicyManager.setDelegatedScopes(
+            DhizukuVariables.COMPONENT_NAME,
+            packageName,
+            scopes.toList()
+        )
     }
 
     override fun onTransact(code: Int, data: Parcel, reply: Parcel?, flags: Int): Boolean {

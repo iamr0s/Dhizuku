@@ -1,17 +1,14 @@
 package com.rosan.dhizuku.ui.activity
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.imePadding
-import androidx.compose.material.AlertDialog
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.hjq.permissions.Permission
 import com.hjq.permissions.XXPermissions
-import com.rosan.dhizuku.server.DhizukuService
 import com.rosan.dhizuku.ui.page.settings.SettingsPage
 import com.rosan.dhizuku.ui.theme.InstallerTheme
 import kotlinx.coroutines.CoroutineScope

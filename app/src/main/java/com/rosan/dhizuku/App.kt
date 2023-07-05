@@ -2,15 +2,16 @@ package com.rosan.dhizuku
 
 import android.app.Application
 import android.app.admin.DevicePolicyManager
-import android.content.ComponentName
 import android.content.Context
+import android.os.Build
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.di.init.appModules
-import com.rosan.dhizuku.server.DhizukuDAReceiver
 import com.rosan.dhizuku.server.DhizukuService
+import com.rosan.dhizuku.shared.DhizukuVariables
+import com.rosan.dhizuku.util.clearDelegatedScopes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,6 +27,10 @@ class App : Application(), KoinComponent {
     private val scope = CoroutineScope(Dispatchers.IO)
 
     private val appRepo by inject<AppRepo>()
+
+    private val devicePolicyManager by lazy {
+        getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+    }
 
     var isDeviceAdminer by mutableStateOf(false)
         private set
@@ -54,10 +59,9 @@ class App : Application(), KoinComponent {
     }
 
     fun syncOwnerStatus() {
-        val manager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        isDeviceAdminer = manager.isAdminActive(ComponentName(this, DhizukuDAReceiver::class.java))
-        isDeviceOwner = manager.isDeviceOwnerApp(packageName)
-        isProfileOwner = manager.isProfileOwnerApp(packageName)
+        isDeviceAdminer = devicePolicyManager.isAdminActive(DhizukuVariables.COMPONENT_NAME)
+        isDeviceOwner = devicePolicyManager.isDeviceOwnerApp(packageName)
+        isProfileOwner = devicePolicyManager.isProfileOwnerApp(packageName)
         isOwner = isDeviceOwner || isProfileOwner
     }
 
@@ -67,7 +71,12 @@ class App : Application(), KoinComponent {
                 if (
                     packageManager.getPackagesForUid(it.uid).isNullOrEmpty() ||
                     !it.allowApi
-                ) appRepo.delete(it)
+                ) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        clearDelegatedScopes(it.uid)
+                    }
+                    appRepo.delete(it)
+                }
             }
         }
     }
