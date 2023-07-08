@@ -1,2 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="preferred">Ayarlar</string>
+    <string name="device_admin_denied">Aktivasyon için bekleniyor</string>
+    <string name="active_by_adb_dsp">*adb yardımıyla Dhizuku\'yu aktif etmek ve cihaz sahibini ayarlamak için aşağıdaki kodu kullanın : (bilgisayar bağlantısı gereklidir)
+\n&lt;br&gt;%1$s&lt;br&gt;
+\n
+\n*adb hakkında daha fazla bilgi öğrenmek için şu adrese gidebilirsiniz :&lt;a href=\"https://source.android.com/docs/setup/build/adb\?hl=tr\"&gt;Android Hata Ayıklama Köprüsü (ADB)&lt;/a&gt;</string>
+    <string name="active_by_shizuku">Shizuku ile aktivasyon</string>
+    <string name="shizuku_binder_not_received">Lütfen önce Shizuku\'nun yüklü ve etkin olduğundan emin olun, ardından Shizuku\'dan bu uygulamaya gerekli iznin verilip verilmediğini kontrol edin.</string>
+    <string name="execution_end">İşlem tamamlandı, aktivasyonu kontrol ediniz.</string>
+    <string name="deactivate">Devre dışı bırak</string>
+    <string name="deactivate_dsp">Devre dışı bırakmak istediğinize emin misiniz\?</string>
+    <string name="deactivate_success">Başarıyla devre dışı bırakıldı</string>
+    <string name="deactivate_failed">Devre dışı bırakılamadı</string>
+    <string name="force_stop">Zorla durdur</string>
+    <string name="dhizuku_permission_group_label">Dhizuku izni</string>
+    <string name="dhizuku_permission_api_dsp">Uygulamanın Dhizuku\'yu kullanmasına izin verin.</string>
+    <string name="copy">Kopyala</string>
+    <string name="copy_success">Kopyalandı</string>
+    <string name="donate">Bağış Yap</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">WeChat</string>
+    <string name="binance">Binance</string>
+    <string name="request_permission_text"><b>%1$s</b>, Dhizuku kullanılarak yetkilendirilsin mi\?</string>
+    <string name="agree">İzin ver</string>
+    <string name="refuse">Reddet</string>
+    <string name="request_permission_title">Dhizuku İsteği</string>
+    <string name="toast_when_using_dhizuku">İzin isteği</string>
+    <string name="toast_when_using_dhizuku_dsp">Bir program Dhizuku\'yu kullanmak isterse, ekranda bir açılır mesaj belirir</string>
+    <string name="toast_when_using_dhizuku_content">Dhizuku %1$s tarafından kullanılıyor</string>
+    <string name="empty_config_dsp">Dhizuku\'yu kullanmak için izin isteğinde bulunan herhangi bir uygulama yok</string>
+    <string name="service_channel_name">Arkaplan hizmeti</string>
+    <string name="service_running">Dhizuku çalışıyor</string>
+    <string name="basic">Normal</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="config">Yapılandırma</string>
+    <string name="active_func_dsp">Cihaz sahibi (DeviceOwner), cihaz yöneticisinden (DeviceAdmin) daha yüksek yetkiye sahiptir ve aktivasyonu kendi isteğinizle iptal etmediğiniz sürece tek seferlik aktivasyon kalıcı olarak geçerlidir.
+\n
+\nLütfen diğer uygulamaları yetkilendirirken dikkatli olun. Yetkilendirilmiş uygulamalar, yazılım ve donanım işlevlerini devre dışı bırakmak veya kullanıcı davranışlarını izlemek gibi birçok sistem ayarını kod aracılığıyla değiştirebilir.</string>
+    <string name="finish">Bitti</string>
+    <string name="active_by_adb">Bilgisayar ile aktivasyon</string>
+    <string name="confirm">Onayla</string>
+    <string name="active">Aktivasyon</string>
+    <string name="cancel">İptal</string>
+    <string name="device_owner_granted">Aktif edildi</string>
+    <string name="force_stop_dsp">Cihaz sahibi başarıyla etkinleştirildiyse sistem tarafından durdurulamaz. Fakat Dhizuku uygulamasını güncellemek için önce uygulamanın durdurulması gerekir, bu nedenle güncellemeden önce Dhizuku\'yu sizin zorla durdurmanız gerekir. (Dhizuku\'nun ana sayfasındaki tuş yardımıyla yapılabilir)</string>
+    <string name="device_admin_granted">Cihaz yöneticisi olarak aktif edildi fakat cihaz sahibi olarak aktif edilmesi gerekli</string>
+</resources>
