@@ -14,7 +14,7 @@ compose-compiler = "1.4.7"
 compose = "1.4.3"
 room = "2.5.1"
 accompanist = "0.30.1"
-rikka-shizuku = "13.1.0"
+rikka-shizuku = "13.1.4"
 
 [plugins]
 agp-lib = { id = "com.android.library", version.ref = "agp" }

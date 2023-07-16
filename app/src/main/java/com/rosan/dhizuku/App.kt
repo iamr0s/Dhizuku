@@ -11,7 +11,7 @@ import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.di.init.appModules
 import com.rosan.dhizuku.server.DhizukuService
 import com.rosan.dhizuku.shared.DhizukuVariables
-import com.rosan.dhizuku.util.clearDelegatedScopes
+import com.rosan.dhizuku.data.common.util.clearDelegatedScopes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

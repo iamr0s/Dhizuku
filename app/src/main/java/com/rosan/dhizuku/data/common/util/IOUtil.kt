@@ -1,4 +1,4 @@
-package com.rosan.dhizuku.util
+package com.rosan.dhizuku.data.common.util
 
 import android.os.ParcelFileDescriptor
 import java.io.IOException

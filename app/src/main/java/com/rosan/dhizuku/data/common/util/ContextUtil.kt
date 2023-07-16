@@ -1,4 +1,4 @@
-package com.rosan.dhizuku.util
+package com.rosan.dhizuku.data.common.util
 
 import android.app.admin.DevicePolicyManager
 import android.content.Context

@@ -22,7 +22,7 @@ import com.rosan.dhizuku.server.DhizukuProcess
 import com.rosan.dhizuku.server.DhizukuUserServiceArgs
 import com.rosan.dhizuku.server.DhizukuUserServiceConnections
 import com.rosan.dhizuku.shared.DhizukuVariables
-import com.rosan.dhizuku.util.toast
+import com.rosan.dhizuku.data.common.util.toast
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.parameter.parametersOf

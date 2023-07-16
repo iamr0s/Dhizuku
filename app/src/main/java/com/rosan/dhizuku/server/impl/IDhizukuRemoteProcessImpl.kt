@@ -3,7 +3,7 @@ package com.rosan.dhizuku.server.impl
 import android.os.IBinder
 import android.os.ParcelFileDescriptor
 import com.rosan.dhizuku.aidl.IDhizukuRemoteProcess
-import com.rosan.dhizuku.util.parcelable
+import com.rosan.dhizuku.data.common.util.parcelable
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 

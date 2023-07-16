@@ -30,7 +30,7 @@ import com.rosan.dhizuku.ui.theme.InstallerTheme
 import com.rosan.dhizuku.ui.widget.dialog.DialogButton
 import com.rosan.dhizuku.ui.widget.dialog.DialogButtons
 import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
-import com.rosan.dhizuku.util.toast
+import com.rosan.dhizuku.data.common.util.toast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

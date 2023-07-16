@@ -9,37 +9,38 @@ import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import androidx.navigation.NavController
 import com.rosan.dhizuku.App
 import com.rosan.dhizuku.R
-import com.rosan.dhizuku.data.console.model.entity.ConsoleError
-import com.rosan.dhizuku.data.console.repo.ConsoleRepo
-import com.rosan.dhizuku.data.console.util.ConsoleRepoUtil
-import com.rosan.dhizuku.data.console.util.ConsoleUtil
+import com.rosan.dhizuku.data.common.model.exception.ShizukuNotWorkException
+import com.rosan.dhizuku.data.common.util.setDeviceOwner
+import com.rosan.dhizuku.data.common.util.toast
 import com.rosan.dhizuku.server.DhizukuDAReceiver
 import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
-import com.rosan.dhizuku.util.toast
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import java.io.ByteArrayOutputStream
-import java.io.PrintStream
 import kotlin.system.exitProcess
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -121,7 +122,6 @@ fun StatusWidget() {
 fun ShizukuButton() {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var console: ConsoleRepo? = null
     var showDialog by remember {
         mutableStateOf(false)
     }
@@ -138,21 +138,7 @@ fun ShizukuButton() {
             exception = null
             showDialog = true
             exception = kotlin.runCatching {
-                val letConsole = ConsoleRepoUtil.shizuku {
-                    command(
-                        "dpm",
-                        "set-device-owner",
-                        DhizukuDAReceiver.name.flattenToShortString()
-                    )
-                }
-                console = letConsole
-                val util = ConsoleUtil(letConsole)
-                val inputJob = async { util.inputBytes() }
-                val errorJob = async { util.errorBytes() }
-                val input = inputJob.await().decodeToString()
-                val error = errorJob.await().decodeToString()
-                val code = letConsole.exitValue()
-                if (code != 0) throw ConsoleError(code, input, error)
+                setDeviceOwner(context, DhizukuDAReceiver.name)
             }.exceptionOrNull()
             inProgress = false
         }
@@ -171,38 +157,37 @@ fun ShizukuButton() {
         Text(stringResource(R.string.active_by_shizuku))
     }, leftText = {
         AnimatedContent(targetState = inProgress) {
+            val error = exception
             if (it) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-            else if (exception == null) Text(stringResource(R.string.execution_end))
-            else {
-                val text = when {
-                    exception is IllegalStateException && exception?.message == "binder haven't been received" -> stringResource(
-                        R.string.shizuku_binder_not_received
-                    )
-
-                    else -> ByteArrayOutputStream().also {
-                        exception?.printStackTrace(PrintStream(it))
-                    }.toByteArray().decodeToString()
+            else if (error == null) Text(stringResource(R.string.execution_end))
+            else CompositionLocalProvider(LocalContentColor provides MaterialTheme.colorScheme.onErrorContainer) {
+                val tip = when (error) {
+                    is ShizukuNotWorkException -> stringResource(R.string.shizuku_binder_not_received)
+                    else -> error.localizedMessage
                 }
                 SelectionContainer {
-                    LazyColumn {
-                        item {
-                            Text(text)
-                        }
+                    Column(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(12.dp))
+                            .background(MaterialTheme.colorScheme.errorContainer)
+                            .fillMaxWidth()
+                            .padding(12.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        if (tip != null) Text(tip, fontWeight = FontWeight.Bold)
+                        Text(
+                            error.stackTraceToString().trim(),
+                            modifier = Modifier.verticalScroll(rememberScrollState())
+                        )
                     }
                 }
             }
         }
     }, rightButton = {
         TextButton(onClick = {
-            console?.closeForcibly()
             showDialog = false
         }) {
-            Text(
-                stringResource(
-                    if (inProgress) R.string.cancel
-                    else R.string.finish
-                )
-            )
+            Text(stringResource(R.string.finish))
         }
     })
 }
