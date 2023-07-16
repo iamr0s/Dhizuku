@@ -18,7 +18,7 @@
     <string name="finish">Finish</string>
 
     <string name="active_by_adb">Activation by computer</string>
-    <string name="active_by_adb_dsp">%1$s&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;* Activation by adb (connect computer)，go to &amp;lt;a href=https://source.android.google.cn/docs/setup/build/adb&amp;gt;Android Debug Bridge&amp;lt;/a&amp;gt;or more adb related information.</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Activation by adb (connect computer)，go to &lt;a href=https://source.android.google.cn/docs/setup/build/adb&gt;Android Debug Bridge (ADB)&lt;/a&gt; for more adb related information.</string>
 
     <string name="active_by_shizuku">Activation by Shizuku</string>
     <string name="shizuku_binder_not_received">Check whether Shizuku is installed and activated, and allow the Dhizuku to obtain Shizuku permission.</string>
