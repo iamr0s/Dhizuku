@@ -28,10 +28,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.1" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
-compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.0" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.1" }
 compose-uiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose" }
 
-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.5.3" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.6.0" }
 compose-materialIcons = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.4.3" }
 
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
@@ -40,13 +40,13 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 
 # Koin Inject
 # https://insert-koin.io/docs/setup/koin
-koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.4.0" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.4.0" }
-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.4.4" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.4.2" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.4.2" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.4.5" }
 
 # Lottie for Android Compose
 # http://airbnb.io/lottie/#/android-compose
-lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.0.0" }
+lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.0.1" }
 
 # Pager layouts
 # https://google.github.io/accompanist/pager/
@@ -62,7 +62,7 @@ lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hidde
 
 # XXPermissions
 # https://github.com/getActivity/XXPermissions
-xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", version = "16.6" }
+xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", version = "18.2" }
 
 # Rikka Shizuku
 # https://github.com/RikkaApps/Shizuku-API
