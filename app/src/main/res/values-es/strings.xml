@@ -1,2 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="config">Configuración</string>
+    <string name="preferred">Ajustes</string>
+    <string name="device_owner_granted">Activado</string>
+    <string name="device_admin_granted">Admin del dispositivo activado, pero necesito el propietario del dispositivo</string>
+    <string name="device_admin_denied">A la espera de la activación</string>
+    <string name="active">Activar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">OK</string>
+    <string name="finish">Terminar</string>
+    <string name="active_by_adb">Activación por ordenador</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Activación por adb (conectar ordenador)，ir a &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\"&gt;Android Debug Bridge (ADB)&lt;/a&gt; para más información relacionada con adb.</string>
+    <string name="active_by_shizuku">Activar mediante Shizuku</string>
+    <string name="execution_end">OK, comprueba el estado de activación.</string>
+    <string name="deactivate_dsp">¿Seguro que quieres desactivar\?</string>
+    <string name="deactivate_success">Desactivación correcta</string>
+    <string name="deactivate_failed">Fallo de desactivación</string>
+    <string name="force_stop">Parada forzosa</string>
+    <string name="copy">Copiar</string>
+    <string name="copy_success">Copiado exitosamente</string>
+    <string name="donate">Donar</string>
+    <string name="wechat">Wechat</string>
+    <string name="request_permission_title">Solicitud de permiso de Dhizuku</string>
+    <string name="agree">Permitir</string>
+    <string name="refuse">Denegar</string>
+    <string name="basic">Normal</string>
+    <string name="toast_when_using_dhizuku">Solicitud de autorización</string>
+    <string name="service_channel_name">Servicio de fondo</string>
+    <string name="service_running">Dhizuku está en marcha</string>
+    <string name="home">Inicio</string>
+    <string name="request_permission_text">¿Acepta la solicitud de permiso Dhizuku de <b>%1$s</b> \?</string>
+    <string name="active_func_dsp">DeviceOwner tiene permisos más altos que DeviceAdmin. Los permisos no se perderán a menos que los desactives.
+\n
+\nAutorice otras aplicaciones con precaución. DeviceOwner puede modificar la configuración del sistema mediante códigos, como desactivar funciones de software y hardware y supervisar el comportamiento de los usuarios.</string>
+    <string name="shizuku_binder_not_received">Compruebe si Shizuku está instalado y activado, y permita que Dhizuku obtenga el permiso de Shizuku.</string>
+    <string name="deactivate">Desactivar</string>
+    <string name="dhizuku_permission_group_label">Permiso Dhizuku</string>
+    <string name="alipay">Alipay</string>
+    <string name="toast_when_using_dhizuku_content">Dhizuku está siendo utilizado por %1$s</string>
+    <string name="dhizuku_permission_api_dsp">Permitir que otras aplicaciones utilicen el permiso Dhizuku.</string>
+    <string name="binance">Binance</string>
+</resources>
