@@ -40,4 +40,6 @@
     <string name="toast_when_using_dhizuku_content">Dhizuku está siendo utilizado por %1$s</string>
     <string name="dhizuku_permission_api_dsp">Permitir que otras aplicaciones utilicen el permiso Dhizuku.</string>
     <string name="binance">Binance</string>
+    <string name="toast_when_using_dhizuku_dsp">Si un programa quiere usar Dhizuku, aparece un mensaje emergente</string>
+    <string name="force_stop_dsp">Después de que el propietario del dispositivo se active correctamente, el sistema no tiene permiso para detener por la fuerza la ejecución de la aplicación en ese dispositivo, pero la actualización de la aplicación requiere detener primero la aplicación, por lo que es necesario detener por la fuerza Dhizuku antes de actualizar Dhizuku.</string>
 </resources>
