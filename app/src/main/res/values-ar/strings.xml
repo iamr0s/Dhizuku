@@ -1,2 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="service_running">ديزوكو يعمل</string>
+    <string name="dhizuku_permission_api_dsp">السماح لتطبيق آخر باستخدام إذن Dhizuku.</string>
+    <string name="deactivate_failed">فشل إلغاء التنشيط</string>
+    <string name="active_by_shizuku">التفعيل بواسطة شيزوكو</string>
+    <string name="service_channel_name">خدمة الخلفية</string>
+    <string name="request_permission_title">طلب إذن ديزوكو</string>
+    <string name="deactivate_dsp">هل أنت متأكد من رغبتك في إلغاء التنشيط؟</string>
+    <string name="active_by_adb">التنشيط عن طريق الكمبيوتر</string>
+    <string name="wechat">Wechat-ويتشات</string>
+    <string name="agree">اعطاء</string>
+    <string name="copy_success">تم النسخ بنجاح</string>
+    <string name="copy">نسخ</string>
+    <string name="empty_config_dsp">لا يوجد تطبيق لطلب إذن Dhizuku</string>
+    <string name="config">تكوين</string>
+    <string name="finish">أنهى</string>
+    <string name="device_owner_granted">مفعل</string>
+    <string name="binance">Binance-بينانس</string>
+    <string name="refuse">منع</string>
+    <string name="device_admin_granted">تم تنشيط مشرف الجهاز، ولكن يحتاج إلى مالك الجهاز</string>
+    <string name="force_stop">فرض الإيقاف</string>
+    <string name="alipay">Alipay-علي باي</string>
+    <string name="active">تنشيط</string>
+    <string name="home">رئيسي</string>
+    <string name="cancel">إلغاء</string>
+    <string name="execution_end">حسنا ، تحقق من حالة التنشيط.</string>
+    <string name="confirm">موافق</string>
+    <string name="donate">تبرّع</string>
+    <string name="force_stop_dsp">بعد تنشيط مالك الجهاز بنجاح ، ليس لدى النظام إذن لإيقاف تشغيل تطبيق مالك الجهاز بالقوة ، ولكن تحديث التطبيق يتطلب إيقاف التطبيق أولا ، لذلك تحتاج إلى إيقاف Dhizuku بالقوة قبل تحديث Dhizuku.</string>
+    <string name="basic">عادي</string>
+    <string name="active_func_dsp">يمتلك مالك الجهاز إذنا أعلى من مسؤول الجهاز. لن تفقد الأذونات إلا إذا قمت بإلغاء تنشيطها.
+\n
+\nتخويل التطبيقات الأخرى بحذر. يمكن لمالك الجهاز تعديل إعدادات النظام باستخدام الأكواد، مثل تعطيل وظائف البرامج والأجهزة ومراقبة سلوكيات المستخدم.</string>
+    <string name="request_permission_text">الموافقة على طلب إذن Dhizuku الخاص بـ<b>%1$s</b>\?</string>
+    <string name="deactivate_success">تم الغاء التنشيط بناجح</string>
+    <string name="dhizuku_permission_group_label">إذن ديزوكو</string>
+    <string name="preferred">الإعدادات</string>
+    <string name="toast_when_using_dhizuku_dsp">عندما يستدعي أحد البرامج Dhizuku، تظهر رسالة منبثقة تطالبك</string>
+    <string name="toast_when_using_dhizuku">موجه الإذن</string>
+    <string name="deactivate">الغاء تنشيط</string>
+    <string name="shizuku_binder_not_received">تحقق مما إذا كان Shizuku مثبتا ومفعلا ، واسمح لـDhizuku بالحصول على إذن Shizuku.</string>
+    <string name="toast_when_using_dhizuku_content">يتم استخدام Dhizuku من قبل %1$s</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* تفعيل بواسطة adb(اتصال كمبيوتر) ，الإنتقال إلى &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn\"&gt;جسر تصحيح الاندرويد(ADB)&lt;/a&gt; لمزيد من المعلومات المتعلقة بـadb.</string>
+    <string name="device_admin_denied">في انتظار التفعيل</string>
+</resources>
