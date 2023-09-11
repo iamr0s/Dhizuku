@@ -41,6 +41,6 @@
     <string name="deactivate">الغاء تنشيط</string>
     <string name="shizuku_binder_not_received">تحقق مما إذا كان Shizuku مثبتا ومفعلا ، واسمح لـDhizuku بالحصول على إذن Shizuku.</string>
     <string name="toast_when_using_dhizuku_content">يتم استخدام Dhizuku من قبل %1$s</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* تفعيل بواسطة adb(اتصال كمبيوتر) ，الإنتقال إلى &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn\"&gt;جسر تصحيح الاندرويد(ADB)&lt;/a&gt; لمزيد من المعلومات المتعلقة بـadb.</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* تفعيل بواسطة adb (اتصال كمبيوتر)‘ الإنتقال إلى &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn\"&gt;جسر تصحيح الاندرويد (ADB)&lt;/a&gt; لمزيد من المعلومات المتعلقة بـadb.</string>
     <string name="device_admin_denied">في انتظار التفعيل</string>
 </resources>
