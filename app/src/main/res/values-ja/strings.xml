@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="preferred">設定</string>
+    <string name="service_running">Dhizuku は起動中です</string>
+    <string name="dhizuku_permission_api_dsp">他のアプリに Dhizuku の権限の使用を許可します。</string>
+    <string name="deactivate_failed">無効化に失敗しました</string>
+    <string name="active_by_shizuku">Shizuku による有効化</string>
+    <string name="service_channel_name">バックグラウンド サービス</string>
+    <string name="request_permission_title">Dhizuku への権限の要求</string>
+    <string name="deactivate_dsp">無効化してもよろしいですか？</string>
+    <string name="active_by_adb">コンピュータによる有効化</string>
+    <string name="wechat">WeChat</string>
+    <string name="agree">許可</string>
+    <string name="copy_success">コピーに成功しました</string>
+    <string name="copy">コピー</string>
+    <string name="empty_config_dsp">Dhizuku に権限の使用を要求したアプリはありません</string>
+    <string name="config">構成</string>
+    <string name="finish">完了</string>
+    <string name="device_owner_granted">有効化済み</string>
+    <string name="binance">Binance</string>
+    <string name="refuse">拒否</string>
+    <string name="device_admin_granted">端末管理者は有効化されていますが、端末所有者の権限が必要です</string>
+    <string name="force_stop">強制停止</string>
+    <string name="alipay">Alipay</string>
+    <string name="active">有効化</string>
+    <string name="home">ホーム</string>
+    <string name="cancel">キャンセル</string>
+    <string name="execution_end">完了しました。有効化状態を確認してください。</string>
+    <string name="confirm">OK</string>
+    <string name="donate">寄付</string>
+    <string name="force_stop_dsp">端末所有者が正常に有効化された後、システムには実行中の端末所有者アプリを強制的に停止する権限がありませんが、アプリを更新するには最初にアプリを停止する必要があるため、Dhizuku を更新する前に Dhizuku を強制的に停止する必要があります。</string>
+    <string name="basic">標準</string>
+    <string name="active_func_dsp">｢端末所有者｣ は ｢端末管理者｣ よりも高い権限を持っています。権限を無効化しない限り、権限は失われません。
+\n
+\n他のアプリを許可する場合は注意してください。端末所有者は、ソフトウェアおよびハードウェアの機能を無効にしたり、ユーザーの行動を監視したりするなど、コードを使用してシステム設定を変更できます。</string>
+    <string name="request_permission_text"><b>%1$s</b> による Dhizuku への権限の要求を許可しますか？</string>
+    <string name="deactivate_success">無効化に成功しました</string>
+    <string name="dhizuku_permission_group_label">Dhizuku の権限</string>
+    <string name="toast_when_using_dhizuku_dsp">プログラムが Dhizuku を呼び出すと、ポップアップ メッセージが表示されます</string>
+    <string name="toast_when_using_dhizuku">権限の許可画面</string>
+    <string name="deactivate">無効化</string>
+    <string name="shizuku_binder_not_received">Shizuku がインストールされ有効化されているかどうかを確認し、Dhizuku が Shizuku の権限を使用できるようにします。</string>
+    <string name="toast_when_using_dhizuku_content">Dhizuku を使用中：%1$s</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;※ADB での有効化 (コンピューターに接続)、ADB 関連の詳細については、&lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\?hl=ja\"&gt;Android Debug Bridge（ADB）&lt;/a&gt; にアクセスしてください。</string>
+    <string name="device_admin_denied">応答を待っています</string>
 </resources>
