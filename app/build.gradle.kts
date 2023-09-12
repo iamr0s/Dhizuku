@@ -19,7 +19,6 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.rosan.dhizuku"
         minSdk = 21
         targetSdk = 33
         versionCode = 11

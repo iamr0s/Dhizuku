@@ -11,6 +11,3 @@ android {
         minSdk = 19
     }
 }
-
-dependencies {
-}
