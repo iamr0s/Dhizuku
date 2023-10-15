@@ -1,2 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="service_running">Dhizuku 이(가) 작동중입니다</string>
+    <string name="dhizuku_permission_api_dsp">다른 앱이 Dhizuku 권한을 사용하도록 허용합니다.</string>
+    <string name="deactivate_failed">비활성화 실패</string>
+    <string name="active_by_shizuku">Shizuku를 통해 활성화</string>
+    <string name="service_channel_name">백그라운드 서비스</string>
+    <string name="request_permission_title">Dhizuku 권한 요청</string>
+    <string name="deactivate_dsp">정말로 비활성화 하시겠습니까\?</string>
+    <string name="active_by_adb">PC를 통해 활성화</string>
+    <string name="wechat">Wechat</string>
+    <string name="agree">허용</string>
+    <string name="copy_success">복사 완료</string>
+    <string name="copy">복사</string>
+    <string name="empty_config_dsp">Dhizuku 권한을 요청하는 어플리케이션이 없습니다</string>
+    <string name="config">구성</string>
+    <string name="finish">완료</string>
+    <string name="device_owner_granted">활성화됨</string>
+    <string name="binance">Binance</string>
+    <string name="refuse">취소</string>
+    <string name="device_admin_granted">디바이스 관리자는 활성화 되었지만, 아직 디바이스 오너가 활성화되지 않았습니다</string>
+    <string name="force_stop">강제 종료</string>
+    <string name="alipay">Alipay</string>
+    <string name="active">활성화</string>
+    <string name="home">홈</string>
+    <string name="cancel">취소</string>
+    <string name="execution_end">완료, Dhizuku를 다시 시작하여 활성화 상태를 확인하십시오.</string>
+    <string name="confirm">확인</string>
+    <string name="donate">후원</string>
+    <string name="force_stop_dsp">디바이스 오너가 성공적으로 활성화 되면, 시스템은 디바이스 오너 앱을 강제 종료할 권한이 없으므로 Dhizuku를 강제 종료 할 수 없습니다. 그러나, 앱을 업데이트 하려면 먼저 앱이 종료되어야 하므로, Dhizuku를 업데이트 하기 전 먼저 강제 종료해야 합니다.</string>
+    <string name="basic">보통</string>
+    <string name="active_func_dsp">디바이스 오너(DeviceOwner)는 디바이스 관리자(DeviceAdmin) 보다 높은 권한을 가집니다. 사용자가 직접 비활성화 하지 않으면, 디바이스 오너는 계속 유지됩니다.
+\n
+\n디바이스 오너는 소프트웨어 또는 하드웨어 기능을 비활성화 하는 등 시스템 설정을 조작하거나, 사용자 활동을 감시할 수 있습니다. 다른 어플리케이션을 연동할 때 주의하십시오.</string>
+    <string name="request_permission_text"><b>%1$s</b> 이(가) Dhizuku 권한을 사용할 수 있도록 허용하시겠습니까\?</string>
+    <string name="deactivate_success">비활성화 완료</string>
+    <string name="dhizuku_permission_group_label">Dhizuku 권한</string>
+    <string name="preferred">설정</string>
+    <string name="toast_when_using_dhizuku_dsp">어플리케이션이 Dhizuku를 호출하면, 팝업 메세지가 표시됩니다</string>
+    <string name="toast_when_using_dhizuku">권한 사용 토스트</string>
+    <string name="deactivate">비활성화</string>
+    <string name="shizuku_binder_not_received">Shizuku가 설치 및 활성화 되었는지 확인한 후, Dhizuku의 Shizuku 접근 권한을 활성화 해 주십시오.</string>
+    <string name="toast_when_using_dhizuku_content">Dhizuku 이(가) %1$s 에 의해 사용됨</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* ADB를 통해 활성화 (컴퓨터에 연결), ADB 관련 정보는 &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\"&gt;Android Debug Bridge (ADB)&lt;/a&gt; 에서 확인할 수 있습니다.</string>
+    <string name="device_admin_denied">활성화 대기중</string>
+</resources>
