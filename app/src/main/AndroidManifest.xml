@@ -52,6 +52,26 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:exported="true"
+            android:name=".ui.activity.FinalizeActivity"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.ADMIN_POLICY_COMPLIANCE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name=".ui.activity.ProvisioningActivity"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.GET_PROVISIONING_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name=".server.MyDhizukuProvider"
             android:authorities="${applicationId}.dhizuku_server.provider;${applicationId}.server.provider"
