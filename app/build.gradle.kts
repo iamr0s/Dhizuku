@@ -16,11 +16,11 @@ val keystoreProps = Properties().apply {
 android {
     namespace = "com.rosan.dhizuku"
 
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 11
         versionName = "2.8"
 
