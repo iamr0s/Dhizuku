@@ -15,7 +15,7 @@ A tool that can share DeviceOwner permissions to other application.
 
 ## Supported Versions
 
-Android 5.0 ~ 13
+Android 5.0 ~ 14
 
 ## For Developer（Join Dhizuku-API）
 
