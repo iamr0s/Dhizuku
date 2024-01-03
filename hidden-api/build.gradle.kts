@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.rosan.hidden_api"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 19
