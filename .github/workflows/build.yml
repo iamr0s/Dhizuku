@@ -1,16 +1,9 @@
 name: Build
 
 on:
-  push:
-    paths:
-      - '.github/workflows/build.yml'
-      - 'api/**'
-      - 'app/**'
-      - 'hidden-api/**'
-      - 'gradle/**'
-      - 'gradle.properties'
-      - '*.gradle.kts'
   workflow_dispatch:
+  push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -23,23 +16,17 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.gradle/caches/
-            ~/.gradle/wrapper/
-          key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
 
       - name: Build with Gradle
         run: |
-          ./gradlew aR --no-daemon
+          ./gradlew aR --stacktrace
           {
             echo "version=$(grep versionName app/build.gradle | awk '{print $2}' | tr -d \")"
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
