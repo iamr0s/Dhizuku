@@ -45,15 +45,10 @@ object DhizukuUserServiceConnections {
     }
 
     private suspend fun startInner(args: DhizukuUserServiceArgs): UserService? {
-        val scope = CoroutineScope(Dispatchers.IO)
-        var process: Process? = null
-        val manager = IDhizukuUserService.Stub.asInterface(
-            DhizukuProcess.startProcess(
-                ComponentName(
-                    BuildConfig.APPLICATION_ID, DhizukuUserService::class.java.name
-                ), false
-            ) ?: return null
-        )
+        val component =
+            ComponentName(BuildConfig.APPLICATION_ID, DhizukuUserService::class.java.name)
+        val binder = DhizukuProcess.startProcess(component, false) ?: return null
+        val manager = IDhizukuUserService.Stub.asInterface(binder)
         val service = UserService(manager, manager.startService(args.componentName))
         onServiceConnected(args, service)
         return service
