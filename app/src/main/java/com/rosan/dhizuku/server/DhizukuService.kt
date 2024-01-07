@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationChannelCompat
@@ -75,12 +76,18 @@ class DhizukuService : Service(), KoinComponent {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) manager.createNotificationChannel(
             channel
         )
-        startForeground(
-            1,
-            NotificationCompat.Builder(this, channel.id)
-                .setSmallIcon(R.drawable.round_hourglass_empty_black_24)
-                .setContentTitle(getString(R.string.service_running)).setAutoCancel(false)
-                .setOngoing(true).build()
+        val notificationId = 1
+        val notification = NotificationCompat.Builder(this, channel.id)
+            .setSmallIcon(R.drawable.round_hourglass_empty_black_24)
+            .setContentTitle(getString(R.string.service_running)).setAutoCancel(false)
+            .setOngoing(true).build()
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.UPSIDE_DOWN_CAKE) startForeground(
+            notificationId,
+            notification
+        ) else startForeground(
+            notificationId,
+            notification,
+            ServiceInfo.FOREGROUND_SERVICE_TYPE_REMOTE_MESSAGING
         )
     }
 }

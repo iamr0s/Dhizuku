@@ -9,12 +9,12 @@
 
 [versions]
 agp = "8.2.1"
-kotlin = "1.8.21"
-compose-compiler = "1.4.7"
-compose = "1.4.3"
-room = "2.5.1"
-accompanist = "0.30.1"
-rikka-shizuku = "13.1.4"
+kotlin = "1.9.21"
+compose-compiler = "1.5.7"
+compose = "1.5.4"
+room = "2.6.1"
+accompanist = "0.32.0"
+rikka-shizuku = "13.1.5"
 
 [plugins]
 agp-lib = { id = "com.android.library", version.ref = "agp" }
@@ -23,16 +23,16 @@ kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 [libraries]
-androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.10.1" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.7.2" }
-androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.1" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.12.0" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.8.2" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.2" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
-compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.1" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.2" }
 compose-uiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose" }
 
-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.6.0" }
-compose-materialIcons = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.4.3" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.7.6" }
+compose-materialIcons = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.5.4" }
 
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
@@ -41,12 +41,12 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 # Koin Inject
 # https://insert-koin.io/docs/setup/koin
 koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.4.2" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.4.2" }
-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.4.5" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.5.0" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "3.5.0" }
 
 # Lottie for Android Compose
 # http://airbnb.io/lottie/#/android-compose
-lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.0.1" }
+lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.2.0" }
 
 # Pager layouts
 # https://google.github.io/accompanist/pager/
@@ -62,7 +62,7 @@ lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hidde
 
 # XXPermissions
 # https://github.com/getActivity/XXPermissions
-xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", version = "18.2" }
+xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", version = "18.5" }
 
 # Rikka Shizuku
 # https://github.com/RikkaApps/Shizuku-API
