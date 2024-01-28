@@ -1,5 +1,4 @@
-import java.io.FileInputStream
-import java.util.*
+import java.util.Properties
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
@@ -8,8 +7,14 @@ plugins {
     id("kotlin-kapt")
 }
 
-val keystoreProps = Properties().apply {
-    load(FileInputStream(rootProject.file("keystore/r0s.properties")))
+val keystoreDir = "$rootDir/keystore"
+
+val keystoreProps = Properties()
+for (name in arrayOf("r0s.properties", "debug.properties")) {
+    val f = file("$keystoreDir/$name")
+    if (!f.exists()) continue
+    keystoreProps.load(f.inputStream())
+    break
 }
 
 android {
@@ -29,20 +34,24 @@ android {
     }
 
     signingConfigs {
+        val keyAlias = keystoreProps.getProperty("keyAlias")
+        val keyPassword = keystoreProps.getProperty("keyPassword")
+        val storeFile = file("$keystoreDir/${keystoreProps.getProperty("storeFile")}")
+        val storePassword = keystoreProps.getProperty("storePassword")
         getByName("debug") {
-            keyAlias = keystoreProps.getProperty("keyAlias")
-            keyPassword = keystoreProps.getProperty("keyPassword")
-            storeFile = file(keystoreProps.getProperty("storeFile"))
-            storePassword = keystoreProps.getProperty("storePassword")
+            this.keyAlias = keyAlias
+            this.keyPassword = keyPassword
+            this.storeFile = storeFile
+            this.storePassword = storePassword
             enableV1Signing = true
             enableV2Signing = true
         }
 
         create("release") {
-            keyAlias = keystoreProps.getProperty("keyAlias")
-            keyPassword = keystoreProps.getProperty("keyPassword")
-            storeFile = file(keystoreProps.getProperty("storeFile"))
-            storePassword = keystoreProps.getProperty("storePassword")
+            this.keyAlias = keyAlias
+            this.keyPassword = keyPassword
+            this.storeFile = storeFile
+            this.storePassword = storePassword
             enableV1Signing = true
             enableV2Signing = true
         }
