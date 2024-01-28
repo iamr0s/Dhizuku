@@ -8,9 +8,9 @@
 # https://mvnrepository.com/
 
 [versions]
-agp = "8.2.1"
-kotlin = "1.9.21"
-compose-compiler = "1.5.7"
+agp = "8.2.2"
+kotlin = "1.9.22"
+compose-compiler = "1.5.8"
 compose = "1.5.4"
 room = "2.6.1"
 accompanist = "0.32.0"
@@ -25,7 +25,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 [libraries]
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.12.0" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.8.2" }
-androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.2" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.7.0" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
 compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.2" }
@@ -71,4 +71,4 @@ rikka-shizuku-provider = { group = "dev.rikka.shizuku", name = "provider", versi
 
 # Android app_process
 # https://github.com/iamr0s/AndroidAppProcess
-iamr0s-androidAppProcess = { group = "io.github.iamr0s", name = "AndroidAppProcess", version = "1.2" }
+iamr0s-androidAppProcess = { group = "io.github.iamr0s", name = "AndroidAppProcess", version = "1.3" }
