@@ -28,7 +28,7 @@ jobs:
         run: |
           ./gradlew aR --stacktrace
           {
-            echo "version=$(grep versionName app/build.gradle | awk '{print $2}' | tr -d \")"
+            echo "version=$(grep versionName version.properties | sed 's/^[^=]*=//')"
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
           } >> $GITHUB_ENV
 

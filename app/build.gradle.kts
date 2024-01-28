@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.konan.properties.loadProperties
 import java.util.Properties
 
 @Suppress("DSL_SCOPE_VIOLATION")
@@ -25,8 +26,9 @@ android {
     defaultConfig {
         minSdk = 21
         targetSdk = 34
-        versionCode = 11
-        versionName = "2.8"
+        val versionProps = loadProperties("$rootDir/version.properties")
+        versionCode = versionProps.getProperty("versionCode").toInt()
+        versionName = versionProps.getProperty("versionName")
 
         vectorDrawables {
             useSupportLibrary = true
