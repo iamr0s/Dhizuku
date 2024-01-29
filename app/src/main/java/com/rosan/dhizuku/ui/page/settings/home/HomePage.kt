@@ -117,7 +117,6 @@ fun StatusWidget() {
     })
 }
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun ShizukuButton() {
     val context = LocalContext.current

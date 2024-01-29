@@ -14,7 +14,7 @@ import com.rosan.dhizuku.aidl.IDhizuku
 import com.rosan.dhizuku.aidl.IDhizukuClient
 import com.rosan.dhizuku.aidl.IDhizukuRemoteProcess
 import com.rosan.dhizuku.aidl.IDhizukuUserServiceConnection
-import com.rosan.dhizuku.data.reflect.repo.ReflectRepo
+import com.rosan.dhizuku.data.common.util.toast
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.server.DHIZUKU_SERVER_VERSION_NAME
 import com.rosan.dhizuku.server.DHIZUKU_SERVRE_VERSION_CODE
@@ -22,7 +22,6 @@ import com.rosan.dhizuku.server.DhizukuProcess
 import com.rosan.dhizuku.server.DhizukuUserServiceArgs
 import com.rosan.dhizuku.server.DhizukuUserServiceConnections
 import com.rosan.dhizuku.shared.DhizukuVariables
-import com.rosan.dhizuku.data.common.util.toast
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.koin.core.parameter.parametersOf
@@ -35,8 +34,6 @@ class IDhizukuImpl(private val client: IDhizukuClient? = null) : IDhizuku.Stub()
     }
 
     private val context by inject<Context>()
-
-    private val reflect by inject<ReflectRepo>()
 
     private val devicePolicyManager by lazy {
         context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager

@@ -20,9 +20,12 @@ suspend fun setDeviceOwner(context: Context, who: ComponentName) {
         val manager = IDevicePolicyManager.Stub.asInterface(binder)
         val ownerName = context.getString(R.string.app_name)
         val userId = Os.getuid() / 100000
+        val profileOwner = false
         manager.setActiveAdmin(who, true, userId)
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+                manager.setDeviceOwner(who, userId, profileOwner)
+            else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
                 manager.setDeviceOwner(who, ownerName, userId, false)
             else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                 manager.setDeviceOwner(who, ownerName, userId)

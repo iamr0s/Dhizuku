@@ -11,3 +11,7 @@ android {
         minSdk = 19
     }
 }
+
+dependencies {
+    compileOnly(libs.androidx.annotation)
+}
