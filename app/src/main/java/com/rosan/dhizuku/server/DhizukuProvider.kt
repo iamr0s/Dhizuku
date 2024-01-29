@@ -20,10 +20,9 @@ class DhizukuProvider : ContentProvider(), KoinComponent {
         if (!app.isOwner) return null
         return when (method) {
             DhizukuVariables.PROVIDER_METHOD_CLIENT -> Bundle().apply {
-                val clientIBinder = extras?.getBinder(DhizukuVariables.EXTRA_CLIENT)
-                val client =
-                    if (clientIBinder != null) IDhizukuClient.Stub.asInterface(clientIBinder)
-                    else null
+                val client = extras?.getBinder(DhizukuVariables.EXTRA_CLIENT)?.let {
+                    IDhizukuClient.Stub.asInterface(it)
+                } ?: return null
                 putBinder(DhizukuVariables.PARAM_DHIZUKU_BINDER, IDhizukuImpl(client).asBinder())
             }
 

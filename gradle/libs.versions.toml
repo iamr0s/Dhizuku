@@ -21,6 +21,7 @@ agp-lib = { id = "com.android.library", version.ref = "agp" }
 agp-app = { id = "com.android.application", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version = "1.9.22-1.0.17" }
 
 [libraries]
 androidx-annotation = { module = "androidx.annotation:annotation", version = "1.7.1" }

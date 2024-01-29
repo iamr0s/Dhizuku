@@ -8,6 +8,7 @@ data class ConfigViewState(
 ) {
     data class Data(
         val uid: Int,
+        val signature: String,
         val packageName: String,
         val label: String,
         val icon: Drawable,

@@ -2,12 +2,24 @@ package com.rosan.dhizuku.ui.page.settings.config
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.*
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Switch
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -115,7 +127,13 @@ fun DataItemWidget(viewModel: ConfigViewModel, data: ConfigViewState.Data) {
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable {
-                    viewModel.dispatch(ConfigViewAction.UpdateConfigByUID(data.uid, !data.allowApi))
+                    viewModel.dispatch(
+                        ConfigViewAction.UpdateConfigByUID(
+                            data.uid,
+                            data.signature,
+                            !data.allowApi
+                        )
+                    )
                 }
                 .padding(horizontal = 16.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -146,7 +164,13 @@ fun DataItemWidget(viewModel: ConfigViewModel, data: ConfigViewState.Data) {
                     .align(Alignment.CenterVertically),
                 checked = data.allowApi,
                 onCheckedChange = {
-                    viewModel.dispatch(ConfigViewAction.UpdateConfigByUID(data.uid, it))
+                    viewModel.dispatch(
+                        ConfigViewAction.UpdateConfigByUID(
+                            data.uid,
+                            data.signature,
+                            it
+                        )
+                    )
                 }
             )
         }

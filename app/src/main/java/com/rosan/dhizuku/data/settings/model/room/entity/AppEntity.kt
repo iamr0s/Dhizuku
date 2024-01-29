@@ -17,8 +17,12 @@ data class AppEntity(
     @ColumnInfo(name = "id")
     var id: Long = 0L,
     @ColumnInfo(name = "uid") var uid: Int,
+    @ColumnInfo(name = "signature", defaultValue = "") var signature: String,
     @ColumnInfo(name = "allow_api") var allowApi: Boolean,
     @ColumnInfo(name = "created_at") var createdAt: Long = System.currentTimeMillis(),
     @ColumnInfo(name = "modified_at") var modifiedAt: Long = System.currentTimeMillis(),
 ) {
+    companion object {
+        val DENY = AppEntity(uid = -1, signature = "", allowApi = false)
+    }
 }

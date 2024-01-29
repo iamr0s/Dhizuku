@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.agp.app)
     alias(libs.plugins.kotlin)
     id("kotlin-kapt")
+    alias(libs.plugins.ksp)
 }
 
 val keystoreDir = "$rootDir/keystore"
@@ -97,6 +98,10 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
+
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas")
+    }
 }
 
 dependencies {
@@ -116,7 +121,7 @@ dependencies {
     implementation(libs.compose.materialIcons)
 
     implementation(libs.room.runtime)
-    kapt(libs.room.compiler)
+    ksp(libs.room.compiler)
     implementation(libs.room.ktx)
 
     implementation(libs.koin.core)

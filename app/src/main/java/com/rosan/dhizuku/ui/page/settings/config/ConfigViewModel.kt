@@ -8,9 +8,9 @@ import androidx.compose.runtime.setValue
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.rosan.dhizuku.data.common.util.clearDelegatedScopes
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
-import com.rosan.dhizuku.data.common.util.clearDelegatedScopes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -28,7 +28,11 @@ class ConfigViewModel(
     fun dispatch(action: ConfigViewAction) {
         when (action) {
             ConfigViewAction.Init -> init()
-            is ConfigViewAction.UpdateConfigByUID -> updateConfigByUID(action.uid, action.allowApi)
+            is ConfigViewAction.UpdateConfigByUID -> updateConfigByUID(
+                action.uid,
+                action.signature,
+                action.allowApi
+            )
         }
     }
 
@@ -60,6 +64,7 @@ class ConfigViewModel(
                         val uid = applicationInfo.uid
                         ConfigViewState.Data(
                             uid = uid,
+                            signature = it.signature,
                             packageName = packageInfo.packageName,
                             label = applicationInfo.loadLabel(packageManager).toString(),
                             icon = applicationInfo.loadIcon(packageManager),
@@ -68,6 +73,7 @@ class ConfigViewModel(
                     } else {
                         ConfigViewState.Data(
                             uid = it.uid,
+                            signature = it.signature,
                             packageName = it.uid.toString(),
                             label = it.uid.toString(),
                             icon = ContextCompat.getDrawable(
@@ -86,13 +92,14 @@ class ConfigViewModel(
         }
     }
 
-    private fun updateConfigByUID(uid: Int, allowApi: Boolean) {
+    private fun updateConfigByUID(uid: Int, signature: String, allowApi: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
             val entity = repo.findByUID(uid)
             if (entity == null) {
                 repo.insert(
                     AppEntity(
                         uid = uid,
+                        signature = signature,
                         allowApi = allowApi
                     )
                 )

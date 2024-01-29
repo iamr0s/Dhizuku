@@ -1,5 +1,6 @@
 package com.rosan.dhizuku.data.settings.model.room
 
+import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -10,8 +11,10 @@ import org.koin.core.component.get
 
 @Database(
     entities = [AppEntity::class],
-    version = 1,
-    exportSchema = false
+    version = 2,
+    autoMigrations = [
+        AutoMigration(from = 1, to = 2)
+    ]
 )
 abstract class DhizukuRoom : RoomDatabase() {
     companion object : KoinComponent {

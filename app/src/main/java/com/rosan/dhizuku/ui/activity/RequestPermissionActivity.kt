@@ -23,6 +23,8 @@ import androidx.core.text.HtmlCompat
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.aidl.IDhizukuRequestPermissionListener
+import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
+import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.shared.DhizukuVariables
@@ -30,7 +32,6 @@ import com.rosan.dhizuku.ui.theme.InstallerTheme
 import com.rosan.dhizuku.ui.widget.dialog.DialogButton
 import com.rosan.dhizuku.ui.widget.dialog.DialogButtons
 import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
-import com.rosan.dhizuku.data.common.util.toast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -38,6 +39,8 @@ import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
 class RequestPermissionActivity : ComponentActivity(), KoinComponent {
+    private val coroutineScope = CoroutineScope(Dispatchers.IO)
+
     private val appRepo by inject<AppRepo>()
 
     private var grantResult: Int = PackageManager.PERMISSION_DENIED
@@ -46,39 +49,33 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val bundle = intent.getBundleExtra("bundle")
-        val clientUID = bundle?.getInt(DhizukuVariables.PARAM_CLIENT_UID)
-        if (clientUID == null) {
-            toast("please send client UID")
-            finish()
-            return
-        }
-        val packageName = packageManager.getPackagesForUid(clientUID)?.first()
-        if (packageName == null) {
-            toast("can not get package name for $clientUID")
-            finish()
-            return
-        }
-        val applicationInfo = packageManager.getPackageInfo(packageName, 0)?.applicationInfo
-        if (applicationInfo == null) {
-            toast("can not get application for $clientUID")
-            finish()
-            return
-        }
+        checkAndDisplay()
+    }
+
+    private fun checkAndDisplay(): Boolean {
+        val bundle = intent.getBundleExtra("bundle") ?: intent.extras ?: return false
+        val uid = bundle.getInt(DhizukuVariables.PARAM_CLIENT_UID)
+        val packageName = packageManager.getPackagesForUid(uid)?.first() ?: return false
+        val packageInfo = packageManager.getPackageInfoForUid(uid) ?: return false
+        val signature = packageInfo.signature ?: return false
+        val applicationInfo = packageInfo.applicationInfo
         val label = applicationInfo.loadLabel(packageManager)
         val icon = applicationInfo.loadIcon(packageManager)
         bundle.getBinder(DhizukuVariables.PARAM_CLIENT_REQUEST_PERMISSION_BINDER)?.let {
             listener = IDhizukuRequestPermissionListener.Stub.asInterface(it)
         }
+
         fun updateAppEntity() {
-            val allowApi = grantResult == PackageManager.PERMISSION_GRANTED
-            CoroutineScope(Dispatchers.IO).launch {
-                val entity = appRepo.findByUID(clientUID)
-                if (entity == null)
-                    appRepo.insert(AppEntity(uid = clientUID, allowApi = allowApi))
-                else appRepo.update(entity.copy(allowApi = allowApi))
+            coroutineScope.launch(Dispatchers.IO) {
+                val allowApi = grantResult == PackageManager.PERMISSION_GRANTED
+                val entity = appRepo.findByUID(uid)
+                if (entity == null) appRepo.insert(
+                    AppEntity(uid = uid, signature = signature, allowApi = allowApi)
+                )
+                else appRepo.update(entity.copy(signature = signature, allowApi = allowApi))
             }
         }
+
         setContent {
             // A surface based on material design theme.
             InstallerTheme {
@@ -129,6 +126,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
                 }
             }
         }
+        return true
     }
 
     override fun onPause() {
