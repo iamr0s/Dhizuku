@@ -7,11 +7,13 @@ import android.os.Build
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.rosan.dhizuku.data.common.util.clearDelegatedScopes
+import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
+import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.di.init.appModules
 import com.rosan.dhizuku.server.DhizukuService
 import com.rosan.dhizuku.shared.DhizukuVariables
-import com.rosan.dhizuku.data.common.util.clearDelegatedScopes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,7 +28,7 @@ import rikka.sui.Sui
 class App : Application(), KoinComponent {
     private val scope = CoroutineScope(Dispatchers.IO)
 
-    private val appRepo by inject<AppRepo>()
+    private val repo by inject<AppRepo>()
 
     private val devicePolicyManager by lazy {
         getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
@@ -65,19 +67,15 @@ class App : Application(), KoinComponent {
         isOwner = isDeviceOwner || isProfileOwner
     }
 
-    fun syncAppRepo() {
-        scope.launch {
-            appRepo.all().forEach {
-                if (
-                    packageManager.getPackagesForUid(it.uid).isNullOrEmpty() ||
-                    !it.allowApi
-                ) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        clearDelegatedScopes(it.uid)
-                    }
-                    appRepo.delete(it)
-                }
-            }
+    fun syncAppRepo() = scope.launch {
+        repo.all().forEach {
+            val packageInfo = packageManager.getPackageInfoForUid(it.uid)
+            if (it.allowApi &&
+                packageInfo != null &&
+                it.signature == packageInfo.signature
+            ) return@forEach
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) clearDelegatedScopes(it.uid)
+            repo.delete(it)
         }
     }
 }

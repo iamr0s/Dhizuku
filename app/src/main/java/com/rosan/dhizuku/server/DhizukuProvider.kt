@@ -18,16 +18,13 @@ class DhizukuProvider : ContentProvider(), KoinComponent {
     override fun call(method: String, arg: String?, extras: Bundle?): Bundle? {
         app.syncOwnerStatus()
         if (!app.isOwner) return null
-        return when (method) {
-            DhizukuVariables.PROVIDER_METHOD_CLIENT -> Bundle().apply {
-                val client = extras?.getBinder(DhizukuVariables.EXTRA_CLIENT)?.let {
-                    IDhizukuClient.Stub.asInterface(it)
-                } ?: return null
-                putBinder(DhizukuVariables.PARAM_DHIZUKU_BINDER, IDhizukuImpl(client).asBinder())
-            }
-
-            else -> null
-        }
+        if (method != DhizukuVariables.PROVIDER_METHOD_CLIENT) return null
+        val client = extras?.getBinder(DhizukuVariables.EXTRA_CLIENT)?.let {
+            IDhizukuClient.Stub.asInterface(it)
+        } ?: return null
+        val bundle = Bundle()
+        bundle.putBinder(DhizukuVariables.PARAM_DHIZUKU_BINDER, IDhizukuImpl(client).asBinder())
+        return bundle
     }
 
     override fun onCreate(): Boolean = true

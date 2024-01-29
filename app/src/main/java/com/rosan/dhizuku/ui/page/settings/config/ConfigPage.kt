@@ -111,7 +111,7 @@ fun DataWidget(viewModel: ConfigViewModel) {
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        items(viewModel.state.data) {
+        items(viewModel.state.data, { it.appEntity.uid }) {
             DataItemWidget(viewModel, it)
         }
     }
@@ -119,60 +119,47 @@ fun DataWidget(viewModel: ConfigViewModel) {
 
 @Composable
 fun DataItemWidget(viewModel: ConfigViewModel, data: ConfigViewState.Data) {
-    Box(
+    fun changeIt(allowApi: Boolean) {
+        viewModel.dispatch(ConfigViewAction.UpdateConfigByUID(data.appEntity.uid, allowApi))
+    }
+
+    Row(
         modifier = Modifier
-            .fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable {
-                    viewModel.dispatch(
-                        ConfigViewAction.UpdateConfigByUID(
-                            data.uid,
-                            data.signature,
-                            !data.allowApi
-                        )
-                    )
-                }
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Image(
-                painter = rememberDrawablePainter(drawable = data.icon),
-                modifier = Modifier
-                    .size(32.dp)
-                    .align(Alignment.CenterVertically),
-                contentDescription = data.label
-            )
-            Column(
-                modifier = Modifier
-                    .align(Alignment.CenterVertically)
-                    .weight(1f)
-            ) {
-                Text(
-                    text = data.label,
-                    style = MaterialTheme.typography.titleMedium
-                )
-                Text(
-                    text = data.packageName,
-                    style = MaterialTheme.typography.bodyMedium
-                )
+            .fillMaxWidth()
+            .clickable {
+                changeIt(!data.appEntity.allowApi)
             }
-            Switch(
-                modifier = Modifier
-                    .align(Alignment.CenterVertically),
-                checked = data.allowApi,
-                onCheckedChange = {
-                    viewModel.dispatch(
-                        ConfigViewAction.UpdateConfigByUID(
-                            data.uid,
-                            data.signature,
-                            it
-                        )
-                    )
-                }
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        Image(
+            painter = rememberDrawablePainter(drawable = data.icon),
+            modifier = Modifier
+                .size(32.dp)
+                .align(Alignment.CenterVertically),
+            contentDescription = data.label
+        )
+        Column(
+            modifier = Modifier
+                .align(Alignment.CenterVertically)
+                .weight(1f)
+        ) {
+            Text(
+                text = data.label,
+                style = MaterialTheme.typography.titleMedium
+            )
+            Text(
+                text = data.packageName,
+                style = MaterialTheme.typography.bodyMedium
             )
         }
+        Switch(
+            modifier = Modifier
+                .align(Alignment.CenterVertically),
+            checked = data.appEntity.allowApi,
+            onCheckedChange = {
+                changeIt(it)
+            }
+        )
     }
 }
