@@ -8,7 +8,6 @@ import android.os.Build
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -38,6 +37,7 @@ import com.rosan.dhizuku.data.common.model.exception.ShizukuNotWorkException
 import com.rosan.dhizuku.data.common.util.setDeviceOwner
 import com.rosan.dhizuku.data.common.util.toast
 import com.rosan.dhizuku.server.DhizukuDAReceiver
+import com.rosan.dhizuku.ui.theme.exclude
 import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -45,14 +45,22 @@ import kotlin.system.exitProcess
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomePage(navController: NavController) {
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
-        TopAppBar(
-            title = {
-                Text(text = stringResource(id = R.string.home))
-            },
-        )
-    }) {
+fun HomePage(
+    windowInsets: WindowInsets,
+    navController: NavController
+) {
+    Scaffold(
+        modifier = Modifier
+            .windowInsetsPadding(windowInsets.exclude(WindowInsetsSides.Bottom))
+            .fillMaxSize(),
+        contentWindowInsets = windowInsets.only(WindowInsetsSides.Bottom),
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = stringResource(id = R.string.home))
+                },
+            )
+        }) {
         LazyColumn(
             contentPadding = PaddingValues(16.dp),
             modifier = Modifier

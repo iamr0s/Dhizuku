@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Dhizuku" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Dhizuku" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+    </style>
 
     <style name="Theme.Dhizuku.Translucent" parent="Theme.Dhizuku">
         <item name="android:windowIsTranslucent">true</item>

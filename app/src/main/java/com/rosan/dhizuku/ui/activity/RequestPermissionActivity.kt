@@ -28,7 +28,7 @@ import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.shared.DhizukuVariables
-import com.rosan.dhizuku.ui.theme.InstallerTheme
+import com.rosan.dhizuku.ui.theme.DhizukuTheme
 import com.rosan.dhizuku.ui.widget.dialog.DialogButton
 import com.rosan.dhizuku.ui.widget.dialog.DialogButtons
 import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
@@ -78,7 +78,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
         setContent {
             // A surface based on material design theme.
-            InstallerTheme {
+            DhizukuTheme {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()

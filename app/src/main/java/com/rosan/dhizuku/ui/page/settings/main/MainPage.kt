@@ -5,9 +5,12 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
@@ -29,6 +32,7 @@ import com.rosan.dhizuku.R
 import com.rosan.dhizuku.ui.page.settings.config.ConfigPage
 import com.rosan.dhizuku.ui.page.settings.home.HomePage
 import com.rosan.dhizuku.ui.page.settings.preferred.PreferredPage
+import com.rosan.dhizuku.ui.theme.exclude
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -36,25 +40,28 @@ import kotlinx.coroutines.launch
 
 @OptIn(DelicateCoroutinesApi::class, ExperimentalFoundationApi::class)
 @Composable
-fun MainPage(navController: NavController) {
+fun MainPage(
+    windowInsets: WindowInsets,
+    navController: NavController
+) {
     val data = arrayOf(
         NavigationData(
             icon = Icons.TwoTone.Home,
             label = stringResource(id = R.string.home)
         ) {
-            HomePage(navController = navController)
+            HomePage(windowInsets = it, navController = navController)
         },
         NavigationData(
             icon = Icons.TwoTone.RoomPreferences,
             label = stringResource(id = R.string.config)
         ) {
-            ConfigPage(navController = navController)
+            ConfigPage(windowInsets = it, navController = navController)
         },
         NavigationData(
             icon = Icons.TwoTone.SettingsSuggest,
             label = stringResource(id = R.string.preferred)
         ) {
-            PreferredPage(navController = navController)
+            PreferredPage(windowInsets = it, navController = navController)
         }
     )
 
@@ -74,12 +81,23 @@ fun MainPage(navController: NavController) {
     ) {
         val isLandscapeScreen = maxHeight / maxWidth > 1.4
 
+        val navigationSide =
+            if (isLandscapeScreen) WindowInsetsSides.Bottom
+            else WindowInsetsSides.Left
+
+        val navigationWindowInsets = windowInsets.only(
+            (if (isLandscapeScreen) WindowInsetsSides.Horizontal
+            else WindowInsetsSides.Vertical) + navigationSide
+        )
+        val pageWindowInsets = windowInsets.exclude(navigationSide)
+
         Row(
             modifier = Modifier
                 .fillMaxSize()
         ) {
             if (!isLandscapeScreen) {
                 ColumnNavigation(
+                    windowInsets = navigationWindowInsets,
                     data = data,
                     currentPage = currentPage,
                     onPageChanged = { onPageChanged(it) }
@@ -98,10 +116,11 @@ fun MainPage(navController: NavController) {
                         .weight(1f)
                         .fillMaxSize()
                 ) {
-                    data[it].content.invoke()
+                    data[it].content.invoke(pageWindowInsets)
                 }
                 if (isLandscapeScreen) {
                     RowNavigation(
+                        windowInsets = navigationWindowInsets,
                         data = data,
                         currentPage = currentPage,
                         onPageChanged = { onPageChanged(it) }
@@ -114,6 +133,7 @@ fun MainPage(navController: NavController) {
 
 @Composable
 fun RowNavigation(
+    windowInsets: WindowInsets,
     data: Array<NavigationData>,
     currentPage: Int,
     onPageChanged: (Int) -> Unit
@@ -121,7 +141,8 @@ fun RowNavigation(
     NavigationBar(
         modifier = Modifier
             .fillMaxWidth()
-            .wrapContentSize()
+            .wrapContentSize(),
+        windowInsets = windowInsets
     ) {
         data.forEachIndexed { index, navigationData ->
             NavigationBarItem(
@@ -144,6 +165,7 @@ fun RowNavigation(
 
 @Composable
 fun ColumnNavigation(
+    windowInsets: WindowInsets,
     data: Array<NavigationData>,
     currentPage: Int,
     onPageChanged: (Int) -> Unit
@@ -151,7 +173,8 @@ fun ColumnNavigation(
     NavigationRail(
         modifier = Modifier
             .fillMaxHeight()
-            .wrapContentSize()
+            .wrapContentSize(),
+        windowInsets = windowInsets
     ) {
         Spacer(
             modifier = Modifier

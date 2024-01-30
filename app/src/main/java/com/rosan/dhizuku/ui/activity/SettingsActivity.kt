@@ -3,14 +3,15 @@ package com.rosan.dhizuku.ui.activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.hjq.permissions.Permission
 import com.hjq.permissions.XXPermissions
 import com.rosan.dhizuku.ui.page.settings.SettingsPage
-import com.rosan.dhizuku.ui.theme.InstallerTheme
+import com.rosan.dhizuku.ui.theme.DhizukuTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
@@ -27,13 +28,11 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
         }
         setContent {
             // A surface based on material design theme.
-            InstallerTheme {
+            DhizukuTheme {
                 Surface(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .imePadding()
+                    modifier = Modifier.fillMaxSize()
                 ) {
-                    SettingsPage()
+                    SettingsPage(windowInsets = WindowInsets.safeDrawing)
                 }
             }
         }

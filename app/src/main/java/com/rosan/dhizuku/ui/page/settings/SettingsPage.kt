@@ -1,38 +1,25 @@
 package com.rosan.dhizuku.ui.page.settings
 
-import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.ExperimentalComposeUiApi
-import com.google.accompanist.navigation.animation.AnimatedNavHost
-import com.google.accompanist.navigation.animation.composable
-import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.rosan.dhizuku.ui.page.settings.main.MainPage
 
-@OptIn(ExperimentalAnimationApi::class, ExperimentalComposeUiApi::class)
 @Composable
-fun SettingsPage() {
-    val navController = rememberAnimatedNavController()
+fun SettingsPage(windowInsets: WindowInsets) {
+    val navController = rememberNavController()
 
-    AnimatedNavHost(
+    NavHost(
         navController = navController,
         startDestination = SettingsScreen.Main.route,
     ) {
-        composable(
-            route = SettingsScreen.Main.route,
-            enterTransition = {
-                null
-            },
-            exitTransition = {
-                null
-            },
-            popEnterTransition = {
-                null
-            },
-            popExitTransition = {
-                null
-            }
-        ) {
-            MainPage(navController = navController)
+        composable(route = SettingsScreen.Main.route) {
+            MainPage(
+                windowInsets = windowInsets,
+                navController = navController
+            )
         }
     }
 }
