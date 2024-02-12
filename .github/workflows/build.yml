@@ -3,6 +3,9 @@ name: Build
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+      - docs/
+      - LICENSE
     branches: [ main ]
 
 jobs:
