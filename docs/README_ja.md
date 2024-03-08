@@ -30,8 +30,16 @@ Dhizukuの翻訳に参加したい場合は､ [Weblate](https://hosted.weblate.
 ## 寄付
 
 - [Alipay](https://qr.alipay.com/fkx18580lfpydiop04dze47)
-- [Wechat](https://missuo.ru/file/fee5df1381671c996b127.png)
-- [Binance](https://missuo.ru/file/28368c28d4ff28d59ed4b.jpg)
+
+<details><summary>WeChat</summary>
+
+[![WeChat](https://missuo.ru/file/fee5df1381671c996b127.png)](#)
+</details>
+
+<details><summary>Binance</summary>
+
+[![Binance](https://missuo.ru/file/28368c28d4ff28d59ed4b.jpg)](#)
+</details>
 
 ## ライセンス
 
