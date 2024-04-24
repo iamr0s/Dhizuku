@@ -1,0 +1,6 @@
+Dhizuku is a tool that allows you to share device owner permissions with other apps.
+
+<b>Enable service</b>
+You can use the following methods to enable the service:
+・Shizuku
+・ADB
