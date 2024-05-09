@@ -14,7 +14,7 @@
     <string name="confirm">确认</string>
     <string name="finish">完成</string>
     <string name="active_by_adb">电脑激活</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* 借助 adb 来设置设备所有者（连接电脑），前往&lt;a href=https://source.android.google.cn/docs/setup/build/adb\?hl=zh-cn&gt;Android 调试桥 (ADB)&lt;/a&gt;了解更多与 adb 相关的信息。</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* 借助 adb 来设置设备所有者（连接电脑），前往&lt;a href=\"https://source.android.google.cn/docs/setup/build/adb?hl=zh-cn\"&gt;Android 调试桥 (ADB)&lt;/a&gt;了解更多与 adb 相关的信息。</string>
     <string name="active_by_shizuku">Shizuku 激活</string>
     <string name="shizuku_binder_not_received">请先检查 Shizuku 是否安装、激活，并同意软件获取 Shizuku 权限。</string>
     <string name="execution_end">执行结束，请检查是否激活。</string>
