@@ -1,0 +1,2 @@
+1. 移除AndroidManifest.xml中对Dhizuku API权限的要求
+2. 优化权限请求对话框

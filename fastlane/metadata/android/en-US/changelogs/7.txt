@@ -1,0 +1,2 @@
+1. Added lock screen, camera disable, and global proxy permissions
+> Note: New permissions take effect only after you restart them

@@ -1,0 +1,3 @@
+1. Russian translation updated (@tommynok)
+2. fix a major bug
+3. fix a bug in MediaTek CPU
