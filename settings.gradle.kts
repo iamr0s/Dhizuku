@@ -7,7 +7,7 @@ pluginManagement {
         google()
         mavenCentral()
         maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
-        mavenLocal()
+        maven { setUrl("https://androidx.dev/storage/compose-compiler/repository/") }
     }
 }
 
@@ -20,6 +20,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
+        maven { setUrl("https://androidx.dev/storage/compose-compiler/repository/") }
     }
 }
 
