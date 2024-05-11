@@ -1,0 +1,3 @@
+1. Confirmation is required when deactivating
+2. When no application requests Dhizuku permissions, a prompt page is displayed
+3. English support (come from English poor man)

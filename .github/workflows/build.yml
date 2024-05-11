@@ -6,7 +6,9 @@ on:
     paths-ignore:
       - docs/**
       - LICENSE
-    branches: [ main ]
+    branches: main
+  pull_request:
+    branches: main
 
 jobs:
   build:
@@ -25,18 +27,18 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/actions/setup-gradle@v3
 
       - name: Build with Gradle
         run: |
-          ./gradlew aR --stacktrace
+          ./gradlew assembleRelease --stacktrace
           {
-            echo "version=$(grep versionName version.properties | sed 's/^[^=]*=//')"
+            echo "version=v$(grep versionName version.properties | sed 's/^[^=]*=//')"
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
           } >> $GITHUB_ENV
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Dhizuku(v${{ env.version }}@${{ env.commit }})
+          name: Dhizuku(${{ env.version }}@${{ env.commit }})
           path: app/build/outputs/apk/release/app-release.apk

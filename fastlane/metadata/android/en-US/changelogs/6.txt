@@ -1,0 +1,1 @@
+1. Fixed interface crash when applications using the Dhizuku API were frozen
