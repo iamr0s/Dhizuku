@@ -41,6 +41,6 @@
     <string name="deactivate">無効化</string>
     <string name="shizuku_binder_not_received">Shizuku がインストールされ有効化されているかどうかを確認し、Dhizuku に Shizuku の権限を付与してください。</string>
     <string name="toast_when_using_dhizuku_content">Dhizuku を使用中：%1$s</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;※PC から有効化する場合は ADB が必要です。ADB 関連の詳細については、&lt;a href=\\\"https://source.android.com/docs/setup/build/adb?hl=ja\\\"&gt;Android Debug Bridge（ADB）&lt;/a&gt; を参照してください。</string>
+    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;※PC から有効化する場合は ADB が必要です。ADB 関連の詳細については、&lt;a href=\"https://source.android.com/docs/setup/build/adb?hl=ja\"&gt;Android Debug Bridge（ADB）&lt;/a&gt; を参照してください。</string>
     <string name="device_admin_denied">Dhizuku は有効ではありません</string>
 </resources>
