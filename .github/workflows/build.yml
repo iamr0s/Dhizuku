@@ -31,14 +31,19 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          ./gradlew assembleRelease --stacktrace
+          ./gradlew assembleRelease bundleRelease --stacktrace
           {
             echo "version=v$(grep versionName version.properties | sed 's/^[^=]*=//')"
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
           } >> $GITHUB_ENV
 
-      - name: Upload APK
+      - name: Copy built artifacts
+        run: |
+          cp -v app/build/outputs/apk/release/app-release.apk Dhizuku-${{ env.version }}.apk
+          cp -v app/build/outputs/bundle/release/app-release.aab Dhizuku-${{ env.version }}.aab
+
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: Dhizuku(${{ env.version }}@${{ env.commit }})
-          path: app/build/outputs/apk/release/app-release.apk
+          path: Dhizuku-${{ env.version }}.a*

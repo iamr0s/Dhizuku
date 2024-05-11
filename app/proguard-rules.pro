@@ -38,3 +38,6 @@
 -keep class rikka.shizuku.ShizukuProvider
 
 -dontwarn **
+
+-keepattributes LineNumberTable,SourceFile
+-renamesourcefileattribute SourceFile
