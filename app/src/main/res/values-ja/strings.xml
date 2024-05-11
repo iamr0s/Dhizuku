@@ -16,10 +16,10 @@
     <string name="empty_config_dsp">Dhizuku にアクセスを要求したアプリはありません</string>
     <string name="config">構成</string>
     <string name="finish">完了</string>
-    <string name="device_owner_granted">有効化済み</string>
+    <string name="device_owner_granted">端末所有者が有効になりました</string>
     <string name="binance">Binance</string>
     <string name="refuse">拒否</string>
-    <string name="device_admin_granted">端末管理者は有効になっていますが、端末所有者の権限が必要です</string>
+    <string name="device_admin_granted">端末管理者の権限に加え、端末所有者の権限が必要です</string>
     <string name="force_stop">強制停止</string>
     <string name="alipay">Alipay</string>
     <string name="active">有効化</string>
