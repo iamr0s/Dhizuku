@@ -19,7 +19,7 @@
     <string name="device_owner_granted">有効化済み</string>
     <string name="binance">Binance</string>
     <string name="refuse">拒否</string>
-    <string name="device_admin_granted">端末管理者は有効になっていますが、端末所有者の権限が必要です</string>
+    <string name="device_admin_granted">端末管理者は有効化されていますが、端末所有者の権限の許可が必要です</string>
     <string name="force_stop">強制停止</string>
     <string name="alipay">Alipay</string>
     <string name="active">有効化</string>
