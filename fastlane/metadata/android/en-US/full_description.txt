@@ -1,8 +1,14 @@
-Dhizuku is a tool that allows you to share device owner permissions with other apps.
+<i>Dhizuku</i> is a tool that allows you to share device owner permissions with other apps.
 
-<b>Enable service</b>
+This app is similar to Shizuku (ADB) and Magisk (Root) but instead, it shares device owner permissions with other apps. An example use would be having a new Installer in the Aurora Store for allowing devices such as those sold in Japan (and those where normal package installation is blocked) to install apps from third-party app stores.
+
+Make sure to follow the <a href="https://github.com/iamr0s/Dhizuku/discussions/19">Activation tutorial</a>
+
+<b>Enable service:</b>
 You can use the following methods to enable the service:
 <ul>
-<li>Shizuku</li>
-<li>ADB</li>
+    <li>Shizuku</li>
+    <li>ADB</li>
 </ul>
+
+Several apps already use Dhizuku. If you want to integrate it with yours, take a look at the <a href="https://github.com/iamr0s/Dhizuku-API">Dhizuku API repository</a>

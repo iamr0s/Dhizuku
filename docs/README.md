@@ -9,6 +9,14 @@ English | [简体中文](README_zh_rCN.md) | [日本語](README_ja.md)
 
 A tool that can share DeviceOwner permissions to other application.
 
+## Download
+
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
+alt="Get it on IzzyOnDroid"
+height="80" />](https://apt.izzysoft.de/fdroid/index/apk/com.rosan.dhizuku)
+
+Or download from [GitHub releases](https://github.com/iamr0s/Dhizuku/releases).
+
 ## Activation tutorial
 
 - [Github Discussions](https://github.com/iamr0s/Dhizuku/discussions/19)
