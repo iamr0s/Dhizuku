@@ -46,13 +46,15 @@
             android:theme="@style/Theme.Dhizuku.Translucent">
             <intent-filter>
                 <action android:name="${applicationId}.action.request.permission" />
+                <action android:name="${applicationId}.action.REQUEST_DHIZUKU_PERMISSION" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <provider
             android:name=".server.MyDhizukuProvider"
-            android:authorities="com.rosan.dhizuku.server.provider"
+            android:authorities="${applicationId}.dhizuku_server.provider;${applicationId}.server.provider"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"
