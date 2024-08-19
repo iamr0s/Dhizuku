@@ -10,7 +10,7 @@ import android.os.Looper
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
-import com.rosan.dhizuku.shared.DhizukuVariables
+import com.rosan.dhizuku.server.DhizukuDAReceiver
 
 fun Context.openUrlInBrowser(url: String) {
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
@@ -34,7 +34,7 @@ fun Context.clearDelegatedScopes(uid: Int) {
     val devicePolicyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
     packageNames.forEach {
         devicePolicyManager.setDelegatedScopes(
-            DhizukuVariables.COMPONENT_NAME,
+            DhizukuDAReceiver.name,
             it,
             emptyList()
         )

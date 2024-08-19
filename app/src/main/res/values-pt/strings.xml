@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="service_running">Dhizuku está a funcionar</string>
-    <string name="dhizuku_permission_api_dsp">Permitir que outras aplicações usem a permissão do Dhizuku.</string>
-    <string name="deactivate_failed">Falha na desativação</string>
-    <string name="active_by_shizuku">Ativação por Shizuku</string>
     <string name="service_channel_name">Serviço em segundo plano</string>
-    <string name="request_permission_title">Solicitação de permissão para Dhizuku</string>
-    <string name="deactivate_dsp">Tem certeza de que deseja desativar?</string>
-    <string name="active_by_adb">Ativação por computador</string>
+    <string name="home_deactivate_dsp">Tem certeza de que deseja desativar?</string>
     <string name="wechat">Wechat</string>
     <string name="agree">Conceder</string>
-    <string name="copy_success">Copiado com sucesso</string>
     <string name="copy">Copiar</string>
-    <string name="empty_config_dsp">Não há nenhuma aplicação para solicitar a permissão do Dhizuku</string>
-    <string name="config">Configuração</string>
     <string name="finish">Terminar</string>
-    <string name="device_owner_granted">Ativado</string>
     <string name="binance">Binance</string>
     <string name="refuse">Negar</string>
-    <string name="device_admin_granted">O administrador do dispositivo está ativado, mas precisa do proprietário do dispositivo</string>
-    <string name="force_stop">Forçar paragem</string>
     <string name="alipay">Alipay</string>
-    <string name="active">Ativar</string>
-    <string name="home">Início</string>
     <string name="cancel">Cancelar</string>
-    <string name="execution_end">OK, verifique o estado da ativação.</string>
     <string name="confirm">OK</string>
     <string name="donate">Doação</string>
-    <string name="force_stop_dsp">Após a ativação bem-sucedida do proprietário do dispositivo, o sistema não tem permissão para interromper à força a execução da aplicação do proprietário do dispositivo, mas a atualização da aplicação requer a interrupção do aplicação primeiro, portanto, é necessário interromper à força o Dhizuku antes de atualizá-lo.</string>
-    <string name="basic">Normal</string>
-    <string name="active_func_dsp">DeviceOwner tem permissão mais alta do que DeviceAdmin. As permissões não serão perdidas, a menos que as desative.
-\n
-\nAutorize outras aplicações com cuidado. O proprietário do dispositivo pode modificar as configurações do sistema usando códigos, como desativar funções de software e hardware e monitorar o comportamento do utilizador.</string>
     <string name="request_permission_text">Concordar com a solicitação de permissão Dhizuku de <b>%1$s</b> ?</string>
-    <string name="deactivate_success">Desativação bem-sucedida</string>
-    <string name="dhizuku_permission_group_label">Permissão do Dhizuku</string>
-    <string name="preferred">Configurações</string>
-    <string name="toast_when_using_dhizuku_dsp">Quando um programa chama o Dhizuku, uma mensagem pop-up solicita</string>
-    <string name="toast_when_using_dhizuku">Solicitação de permissão</string>
-    <string name="deactivate">Desativar</string>
-    <string name="shizuku_binder_not_received">Verifique se o Shizuku está instalado e ativado e permita que o Dhizuku obtenha permissão do Shizuku.</string>
-    <string name="toast_when_using_dhizuku_content">O Dhizuku é usado por %1$s</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Ativação pelo adb (conecte o computador) ，Vá para &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\"&gt;Android Debug Bridge (ADB)&lt;/a&gt; para obter mais informações relacionadas ao adb.</string>
-    <string name="device_admin_denied">A aguardar ativação</string>
+    <string name="home_deactivate_title">Desativar</string>
 </resources>

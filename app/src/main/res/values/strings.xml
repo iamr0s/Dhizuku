@@ -1,63 +1,51 @@
 <resources>
     <string name="app_name" translatable="false">Dhizuku</string>
-    <string name="home">Home</string>
-    <string name="config">Configuration</string>
-    <string name="preferred">Settings</string>
 
-    <string name="device_owner_granted">Activated</string>
-    <string name="device_admin_granted">Device admin activated, but need device owner</string>
-    <string name="device_admin_denied">Waiting for activation</string>
-
-    <string name="active_func_dsp">DeviceOwner has higher permission than DeviceAdmin. Permissions will not be lost unless you deactivate them.
-\n
-\nAuthorize other applications with caution. Device owner can modify system Settings using codes, such as disable software and hardware functions and monitor user behaviors.</string>
-
-    <string name="active">Activate</string>
+    <!-- Commonly  used characters -->
+    <string name="copy">Copy</string>
     <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+
+    <!-- Home - Status -->
+    <string name="home_status_owner_granted">You are Owner!!!</string>
+    <string name="home_status_owner_denied">Waiting fot activation</string>
+
+    <!-- Home - Application Management -->
+    <string name="home_app_management_title">Application Management</string>
+    <string name="home_app_management_dsp">Apps that has requested or declared Dhizuku will show here.</string>
+
+    <!-- Home - Dhizuku -->
+    <string name="home_dhizuku_title">Activation by Dhizuku</string>
+    <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please &lt;a href=&quot;%1$s&quot;&gt;read the help&lt;/a&gt;.</string>
+
+    <!-- Home - Shizuku -->
+    <string name="home_shizuku_title">Activation by Shizuku</string>
+    <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please &lt;a href=&quot;%1$s&quot;&gt;read the help&lt;/a&gt;.</string>
+
+    <!-- Home - Adb -->
+    <string name="home_adb_title">Activation by ADB</string>
+    <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href=&quot;%1$s&quot;&gt;read the help&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">View command</string>
+
+    <!-- Home - Shutdown -->
+    <string name="home_shutdown_title">Shutdown</string>
+    <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
+
+    <!-- Home - Deactivate-->
+    <string name="home_deactivate_title">Deactivate</string>
+    <string name="home_deactivate_dsp">Are you sure you want to deactivate?</string>
+
     <string name="confirm">OK</string>
     <string name="finish">Finish</string>
-
-    <string name="active_by_adb">Activation by computer</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Activation by adb (connect computer)，go to &lt;a href=https://source.android.google.cn/docs/setup/build/adb&gt;Android Debug Bridge (ADB)&lt;/a&gt; for more adb related information.</string>
-
-    <string name="active_by_shizuku">Activation by Shizuku</string>
-    <string name="shizuku_binder_not_received">Check whether Shizuku is installed and activated, and allow the Dhizuku to obtain Shizuku permission.</string>
-
-    <string name="execution_end">OK, check the activation status.</string>
-
-    <string name="deactivate">Deactivate</string>
-    <string name="deactivate_dsp">Are you sure you want to deactivate?</string>
-    <string name="deactivate_success">Successful deactivation</string>
-    <string name="deactivate_failed">Deactivation failure</string>
-
-    <string name="force_stop">Force stop</string>
-    <string name="force_stop_dsp">After the device owner successfully activates, the system does not have permission to forcibly stop the device owner application running, but updating the application requires stopping the application first, so you need to forcibly stop Dhizuku before updating Dhizuku.</string>
-
-    <string name="dhizuku_permission_group_label">Dhizuku permission</string>
-    <string name="dhizuku_permission_group_dsp" translatable="false">@string/dhizuku_permission_group_label</string>
-    <string name="dhizuku_permission_api_label" translatable="false">@string/dhizuku_permission_group_label</string>
-
-    <string name="dhizuku_permission_api_dsp">Allow other application use Dhizuku permission.</string>
-
-    <string name="copy">Copy</string>
-    <string name="copy_success">Copy successfully</string>
 
     <string name="donate">Donate</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">Wechat</string>
     <string name="binance">Binance</string>
 
-    <string name="request_permission_title">Dhizuku Permission Request</string>
     <string name="request_permission_text"><![CDATA[Agree to the Dhizuku permission request of <b>%1$s</b>\?]]></string>
     <string name="agree">Grant</string>
     <string name="refuse">Deny</string>
-
-    <string name="basic">Normal</string>
-    <string name="toast_when_using_dhizuku">Permission prompt</string>
-    <string name="toast_when_using_dhizuku_dsp">When a program calls Dhizuku, a pop-up message prompts</string>
-    <string name="toast_when_using_dhizuku_content">The Dhizuku is being used by %1$s</string>
-
-    <string name="empty_config_dsp">There is no application to request for Dhizuku permission</string>
 
     <string name="service_channel_name">Background service</string>
     <string name="service_running">Dhizuku is running</string>

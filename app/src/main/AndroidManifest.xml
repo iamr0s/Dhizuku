@@ -51,12 +51,27 @@
         </activity>
 
         <provider
-            android:name=".server.DhizukuProvider"
+            android:name=".server.MyDhizukuProvider"
             android:authorities="com.rosan.dhizuku.server.provider"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"
-            tools:ignore="ExportedContentProvider,UnusedAttribute" />
+            tools:ignore="ExportedContentProvider,UnusedAttribute">
+            <intent-filter>
+                <action android:name="com.rosan.dhizuku.server.provider" />
+            </intent-filter>
+        </provider>
+
+        <service
+            android:name=".server.RunningService"
+            android:directBootAware="true"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging"
+            tools:ignore="UnusedAttribute">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
 
         <receiver
             android:name=".server.DhizukuDAReceiver"
@@ -64,7 +79,7 @@
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
-                android:resource="@xml/device_admin" />
+                android:resource="@xml/dhizuku_device_admin" />
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
                 <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
@@ -91,17 +106,6 @@
             android:exported="true"
             android:multiprocess="false"
             android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
-
-        <service
-            android:name=".server.DhizukuService"
-            android:directBootAware="true"
-            android:exported="false"
-            android:foregroundServiceType="remoteMessaging"
-            tools:ignore="UnusedAttribute">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </service>
 
     </application>
 

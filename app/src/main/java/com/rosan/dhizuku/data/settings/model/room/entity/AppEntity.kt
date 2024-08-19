@@ -21,8 +21,4 @@ data class AppEntity(
     @ColumnInfo(name = "allow_api") var allowApi: Boolean,
     @ColumnInfo(name = "created_at") var createdAt: Long = System.currentTimeMillis(),
     @ColumnInfo(name = "modified_at") var modifiedAt: Long = System.currentTimeMillis(),
-) {
-    companion object {
-        val DENY = AppEntity(uid = -1, signature = "", allowApi = false)
-    }
-}
+)

@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="service_running">Dhizuku je spustený</string>
-    <string name="dhizuku_permission_api_dsp">Povoľte ostatným aplikáciám používať povolenie Dhizuku.</string>
-    <string name="deactivate_failed">Zlyhanie deaktivácie</string>
-    <string name="active_by_shizuku">Aktivácia od Shizuku</string>
     <string name="service_channel_name">Základná služba</string>
-    <string name="request_permission_title">Žiadosť o povolenie Dhizuku</string>
-    <string name="deactivate_dsp">Určite chcete deaktivovať?</string>
-    <string name="active_by_adb">Aktivácia pomocou počítača</string>
+    <string name="home_deactivate_dsp">Určite chcete deaktivovať?</string>
     <string name="wechat">Wechat</string>
     <string name="agree">Príspevok</string>
-    <string name="copy_success">Úspešné kopírovanie</string>
     <string name="copy">Kopírovať</string>
-    <string name="empty_config_dsp">Neexistuje žiadna žiadosť o povolenie Dhizuku</string>
-    <string name="config">Konfigurácia</string>
     <string name="finish">Dokončiť</string>
-    <string name="device_owner_granted">Aktivovaný</string>
     <string name="binance">Binance</string>
     <string name="refuse">Odmietnuť</string>
-    <string name="device_admin_granted">Správca zariadenia aktivovaný, ale potrebujete vlastníka zariadenia</string>
-    <string name="force_stop">Vynútiť zastavenie</string>
     <string name="alipay">Alipay</string>
-    <string name="active">Aktivácia</string>
-    <string name="home">Domov</string>
     <string name="cancel">Zrušiť</string>
-    <string name="execution_end">V poriadku, skontrolujte stav aktivácie.</string>
     <string name="confirm">OK</string>
     <string name="donate">Darovať</string>
-    <string name="force_stop_dsp">Po úspešnej aktivácii vlastníka zariadenia systém nemá oprávnenie na násilné zastavenie spustenej aplikácie vlastníka zariadenia, ale aktualizácia aplikácie vyžaduje najprv zastavenie aplikácie, takže pred aktualizáciou aplikácie Dhizuku musíte aplikáciu Dhizuku násilne zastaviť.</string>
-    <string name="basic">Normálne</string>
-    <string name="active_func_dsp">Vlastník zariadenia (DeviceOwner) má vyššie oprávnenie ako správca zariadenia (DeviceAdmin). Oprávnenia sa nestratia, pokiaľ ich nedeaktivujete.
-\n
-\nOstatné aplikácie autorizujte opatrne. Vlastník zariadenia môže upravovať systémové nastavenia pomocou kódov, napríklad vypínať softvérové a hardvérové funkcie a sledovať správanie používateľov.</string>
     <string name="request_permission_text">Súhlasíte so žiadosťou o povolenie Dhizuku <b>%1$s</b>\?</string>
-    <string name="deactivate_success">Úspešná deaktivácia</string>
-    <string name="dhizuku_permission_group_label">Povolenie Dhizuku</string>
-    <string name="preferred">Nastavenia</string>
-    <string name="toast_when_using_dhizuku_dsp">Keď program zavolá Dhizuku, zobrazí sa vyskakovacie okno s výzvou</string>
-    <string name="toast_when_using_dhizuku">Výzva na povolenie</string>
-    <string name="deactivate">Deaktivácia</string>
-    <string name="shizuku_binder_not_received">Skontrolujte, či je Shizuku nainštalovaný a aktivovaný, a povoľte Dhizuku získať povolenie Shizuku.</string>
-    <string name="toast_when_using_dhizuku_content">Dhizuku používa %1$s</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Aktivácia pomocou adb (pripojenie počítača), pre viac informácií týkajúcich sa adb prejdite na &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\"&gt;Android Debug Bridge (ADB)&lt;/a&gt;.</string>
-    <string name="device_admin_denied">Čaká sa na aktiváciu</string>
+    <string name="home_deactivate_title">Deaktivácia</string>
 </resources>

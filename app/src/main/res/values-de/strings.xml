@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="service_running">Dhizuku is running</string>
-    <string name="active_by_shizuku">Aktivierung über Shizuku</string>
     <string name="service_channel_name">Hintergrunddienst</string>
-    <string name="request_permission_title">Dhizuku Berechtigungsanfrage</string>
-    <string name="active_by_adb">Aktivierung über den PC</string>
     <string name="wechat">Wechat</string>
     <string name="agree">Bewilligen</string>
-    <string name="empty_config_dsp">Es existiert keine Applikation zum Anfragen der Dhizuku Berechtigung</string>
-    <string name="config">Konfiguration</string>
-    <string name="device_owner_granted">Aktiv</string>
     <string name="binance">Binance</string>
     <string name="refuse">Ablehnen</string>
-    <string name="device_admin_granted">Geräte-Administrator ist aktiv, es wird jedoch der Geräte-Besitzer benötigt</string>
     <string name="alipay">Alipay</string>
-    <string name="active">Aktivieren</string>
-    <string name="home">Hauptmenü</string>
     <string name="cancel">Abbrechen</string>
     <string name="confirm">OK</string>
     <string name="donate">Spenden</string>
-    <string name="basic">Normal</string>
-    <string name="active_func_dsp">DeviceOwner verfügt über höhere Zugriffsberechtigungen als DeviceAdmin. Berechtigungen können nur durchs Deaktivieren aufgehoben werden.
-\n
-\nBleiben sie vorsichtig, wenn Sie Applikationen Authorisieren. Der DeviceOwner kann per Code System-Einstellungen ändern, wodurch zB Soft-/Hardware Funktionen deaktiviert oder das User-Verhalten überwacht werden kann.</string>
     <string name="request_permission_text">Folgende Dhizuku Berechtigungsanfrage annehmen: <b>%1$s</b>\?</string>
-    <string name="preferred">Einstellungen</string>
-    <string name="toast_when_using_dhizuku_dsp">Öffnet Pop-Up, sobald Programme eine Anfrage an Dhizuku schicken</string>
-    <string name="toast_when_using_dhizuku">Berechtigungsanfrage</string>
-    <string name="toast_when_using_dhizuku_content">Dhizuku wird gerade von %1$s verwendet</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Aktivieren über ADB (Computerverbindung)，siehe &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\"&gt;Android Debug Bridge (ADB)&lt;/a&gt; für weitere Informationen.</string>
-    <string name="device_admin_denied">Wartet auf Aktivierung</string>
     <string name="finish">Beendet</string>
-    <string name="execution_end">OK, Aktivierungsstatus prüfen.</string>
-    <string name="deactivate">Deaktivieren</string>
-    <string name="deactivate_dsp">Sind Sie sicher, dass Sie es deaktivieren wollen?</string>
-    <string name="deactivate_success">Deaktivierung erfolgreich</string>
-    <string name="deactivate_failed">Deaktivierung fehlgeschlagen</string>
-    <string name="dhizuku_permission_group_label">Dhizuku Berechtigung</string>
-    <string name="dhizuku_permission_api_dsp">Erlaube anderen Applikationen die Dhizuku Berechtigung zu nutzen.</string>
-    <string name="copy_success">Kopieren erfolgreich</string>
+    <string name="home_deactivate_title">Deaktivieren</string>
+    <string name="home_deactivate_dsp">Sind Sie sicher, dass Sie es deaktivieren wollen?</string>
     <string name="copy">Kopie</string>
-    <string name="shizuku_binder_not_received">Überprüfen Sie, ob Shizuku installiert und aktiviert ist. Erlauben Sie Dhizuku, die Shizuku-Berechtigung zu erhalten.</string>
-    <string name="force_stop">Beenden erzwingen</string>
-    <string name="force_stop_dsp">Nach der erfolgreichen Aktivierung des Gerätebesitzers verfügt das System nicht über die Berechtigung, die Ausführung der Anwendung des Gerätebesitzers zu erzwingen. Das Aktualisieren der Anwendung erfordert jedoch zuerst das Beenden der Anwendung, sodass Sie das Beenden von Dhizuku erzwingen müssen, bevor Sie Dhizuku aktualisieren.</string>
 </resources>

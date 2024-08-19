@@ -5,7 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 
 fun PackageManager.getPackageNameForUid(uid: Int): String? =
-    getNameForUid(uid) ?: getPackagesForUid(uid)?.first()
+    getPackagesForUid(uid)?.first()
 
 fun PackageManager.getPackageInfoForUid(
     uid: Int,

@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.konan.properties.loadProperties
 import java.util.Properties
 
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.agp.app)
     alias(libs.plugins.kotlin)
     id("kotlin-kapt")
     alias(libs.plugins.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 val keystoreDir = "$rootDir/keystore"
@@ -22,11 +22,11 @@ for (name in arrayOf("r0s.properties", "debug.properties")) {
 android {
     namespace = "com.rosan.dhizuku"
 
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         val versionProps = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
@@ -92,16 +92,11 @@ android {
     buildFeatures {
         buildConfig = true
         compose = true
-        aidl = true
     }
 
     dependenciesInfo {
         includeInApk = false
         includeInBundle = false
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 
     ksp {
@@ -111,8 +106,6 @@ android {
 
 dependencies {
     compileOnly(project(":hidden-api"))
-    implementation(project(":dhizuku-aidl"))
-    implementation(project(":dhizuku-shared"))
 
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle)
@@ -133,8 +126,6 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
 
-    implementation(libs.lottie.compose)
-
     implementation(libs.accompanist)
     implementation(libs.accompanist.navigationAnimation)
     implementation(libs.accompanist.flowlayout)
@@ -148,5 +139,5 @@ dependencies {
     implementation(libs.rikka.shizuku.api)
     implementation(libs.rikka.shizuku.provider)
 
-    implementation(libs.iamr0s.androidAppProcess)
+    implementation(libs.iamr0s.dhizuku.api)
 }

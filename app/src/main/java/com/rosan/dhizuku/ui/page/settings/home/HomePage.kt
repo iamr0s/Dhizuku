@@ -1,46 +1,82 @@
 package com.rosan.dhizuku.ui.page.settings.home
 
-import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
-import android.content.*
-import android.net.Uri
-import android.os.Build
-import android.text.method.LinkMovementMethod
-import android.widget.TextView
+import android.content.Context
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.lazy.LazyItemScope
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.selection.SelectionContainer
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.twotone.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.twotone.Adb
+import androidx.compose.material.icons.twotone.AttachMoney
+import androidx.compose.material.icons.twotone.Cancel
+import androidx.compose.material.icons.twotone.Code
+import androidx.compose.material.icons.twotone.DoNotDisturbOn
+import androidx.compose.material.icons.twotone.MoreVert
+import androidx.compose.material.icons.twotone.RoomPreferences
+import androidx.compose.material.icons.twotone.SentimentVeryDissatisfied
+import androidx.compose.material.icons.twotone.SentimentVerySatisfied
+import androidx.compose.material.icons.twotone.SwapHorizontalCircle
+import androidx.compose.material.icons.twotone.Terminal
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardColors
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonColors
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ProvideTextStyle
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.fromHtml
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.text.HtmlCompat
 import androidx.navigation.NavController
-import com.rosan.dhizuku.App
 import com.rosan.dhizuku.R
-import com.rosan.dhizuku.data.common.model.exception.ShizukuNotWorkException
-import com.rosan.dhizuku.data.common.util.setDeviceOwner
-import com.rosan.dhizuku.data.common.util.toast
+import com.rosan.dhizuku.data.common.util.openUrlInBrowser
 import com.rosan.dhizuku.server.DhizukuDAReceiver
+import com.rosan.dhizuku.server.DhizukuState
+import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.exclude
-import com.rosan.dhizuku.ui.widget.dialog.PositionDialog
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,6 +85,7 @@ fun HomePage(
     windowInsets: WindowInsets,
     navController: NavController
 ) {
+    val dhizukuState = DhizukuState.state
     Scaffold(
         modifier = Modifier
             .windowInsetsPadding(windowInsets.exclude(WindowInsetsSides.Bottom))
@@ -57,8 +94,11 @@ fun HomePage(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(id = R.string.home))
+                    Text(stringResource(R.string.app_name))
                 },
+                actions = {
+                    OverflowMenu()
+                }
             )
         }) {
         LazyColumn(
@@ -68,422 +108,308 @@ fun HomePage(
                 .padding(it),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            item {
-                StatusWidget()
+            item("dhizuku_state") {
+                DhizukuStateWidget()
             }
-            item {
-                ActiveWidget()
+            if (dhizukuState.owner) item("app_management") {
+                AppManagementWidget(navController)
             }
-            item {
-                DonateWidget()
+            item("dhizuku") {
+                DhizukuWidget(navController)
+            }
+            item("shizuku") {
+                ShizukuWidget(navController)
+            }
+            item("adb") {
+                AdbWidget()
+            }
+            if (dhizukuState.owner) item("home_deactivate_title") {
+                DeactivateWidget()
             }
         }
     }
 }
 
-@SuppressLint("MissingPermission")
 @Composable
-fun StatusWidget() {
+private fun OverflowMenu() {
     val context = LocalContext.current
-    val app = context.applicationContext as App
-    val isDeviceAdminer = app.isDeviceAdminer
-    val isDeviceOwner = app.isDeviceOwner
+    var menuExpanded by remember { mutableStateOf(false) }
+    var shutdownDialogShow by remember { mutableStateOf(false) }
 
-    val containerColor = if (isDeviceOwner) MaterialTheme.colorScheme.primaryContainer
-    else if (isDeviceAdminer) MaterialTheme.colorScheme.tertiaryContainer
-    else MaterialTheme.colorScheme.errorContainer
-
-    val onContainerColor = if (isDeviceOwner) MaterialTheme.colorScheme.onPrimaryContainer
-    else if (isDeviceAdminer) MaterialTheme.colorScheme.onTertiaryContainer
-    else MaterialTheme.colorScheme.onErrorContainer
-
-    val icon = if (isDeviceOwner) Icons.TwoTone.SentimentVerySatisfied
-    else if (isDeviceAdminer) Icons.TwoTone.SentimentNeutral
-    else Icons.TwoTone.SentimentVeryDissatisfied
-
-    val text = stringResource(
-        id = if (isDeviceOwner) R.string.device_owner_granted
-        else if (isDeviceAdminer) R.string.device_admin_granted
-        else R.string.device_admin_denied
-    )
-    CardWidget(colors = CardDefaults.elevatedCardColors(
-        containerColor = containerColor, contentColor = onContainerColor
-    ), content = {
-        Row(modifier = Modifier.padding(horizontal = 24.dp)) {
-            Icon(
-                modifier = Modifier.align(Alignment.CenterVertically),
-                imageVector = icon,
-                contentDescription = null
-            )
-            Spacer(modifier = Modifier.size(24.dp))
-            Text(
-                modifier = Modifier.align(Alignment.CenterVertically),
-                text = text,
-                style = MaterialTheme.typography.titleMedium
-            )
-        }
-    })
-}
-
-@Composable
-fun ShizukuButton() {
-    val context = LocalContext.current
-    val scope = rememberCoroutineScope()
-    var showDialog by remember {
-        mutableStateOf(false)
+    IconButton(onClick = { menuExpanded = true }) {
+        Icon(Icons.TwoTone.MoreVert, null)
     }
-    var inProgress by remember {
-        mutableStateOf(false)
-    }
-    var exception: Throwable? by remember {
-        mutableStateOf(null)
-    }
+    DropdownMenu(
+        expanded = menuExpanded,
+        onDismissRequest = { menuExpanded = false }) {
+        DropdownMenuItem(text = {
+            Text(stringResource(R.string.home_shutdown_title))
+        }, leadingIcon = {
+            Icon(Icons.TwoTone.Cancel, null)
+        }, onClick = {
+            menuExpanded = false
+            shutdownDialogShow = true
+        })
 
-    Button(onClick = {
-        scope.launch(Dispatchers.IO) {
-            inProgress = true
-            exception = null
-            showDialog = true
-            exception = kotlin.runCatching {
-                setDeviceOwner(context, DhizukuDAReceiver.name)
-            }.exceptionOrNull()
-            inProgress = false
-        }
-    }) {
-        Icon(
-            modifier = Modifier.size(16.dp),
-            imageVector = Icons.TwoTone.Key,
-            contentDescription = null
-        )
-        Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-        Text(text = stringResource(id = R.string.active_by_shizuku))
-    }
-
-    if (!showDialog) return
-    PositionDialog(onDismissRequest = {}, centerTitle = {
-        Text(stringResource(R.string.active_by_shizuku))
-    }, leftText = {
-        AnimatedContent(targetState = inProgress) {
-            val error = exception
-            if (it) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-            else if (error == null) Text(stringResource(R.string.execution_end))
-            else CompositionLocalProvider(LocalContentColor provides MaterialTheme.colorScheme.onErrorContainer) {
-                val tip = when (error) {
-                    is ShizukuNotWorkException -> stringResource(R.string.shizuku_binder_not_received)
-                    else -> error.localizedMessage
-                }
-                SelectionContainer {
-                    Column(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(12.dp))
-                            .background(MaterialTheme.colorScheme.errorContainer)
-                            .fillMaxWidth()
-                            .padding(12.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        if (tip != null) Text(tip, fontWeight = FontWeight.Bold)
-                        Text(
-                            error.stackTraceToString().trim(),
-                            modifier = Modifier.verticalScroll(rememberScrollState())
-                        )
-                    }
-                }
-            }
-        }
-    }, rightButton = {
-        TextButton(onClick = {
-            showDialog = false
-        }) {
-            Text(stringResource(R.string.finish))
-        }
-    })
-}
-
-@Composable
-fun ADBButton() {
-    val context = LocalContext.current
-    var showDialog by remember {
-        mutableStateOf(false)
-    }
-    val command =
-        "adb shell dpm set-device-owner ${DhizukuDAReceiver.name.flattenToShortString()}"
-
-    Button(onClick = {
-        showDialog = true
-    }) {
-        Icon(
-            modifier = Modifier.size(16.dp),
-            imageVector = Icons.TwoTone.Adb,
-            contentDescription = null
-        )
-        Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-        Text(text = stringResource(id = R.string.active_by_adb))
-    }
-    if (showDialog) {
-        AlertDialog(onDismissRequest = {
-            showDialog = false
-        }, title = {
-            Text(text = stringResource(id = R.string.active_by_adb))
-        }, text = {
-            val textColor = AlertDialogDefaults.textContentColor.toArgb()
-            AndroidView(factory = {
-                val view = TextView(it)
-                view.movementMethod = LinkMovementMethod.getInstance()
-                view.setTextColor(textColor)
-                view.text = HtmlCompat.fromHtml(
-                    it.getString(R.string.active_by_adb_dsp, command),
-                    HtmlCompat.FROM_HTML_MODE_COMPACT
-                )
-                return@AndroidView view
-            })
-        }, confirmButton = {
-            TextButton(onClick = {
-                val manager =
-                    context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                manager.setPrimaryClip(ClipData.newPlainText("Label", command))
-                context.toast(R.string.copy_success)
-                showDialog = false
-            }) {
-                Text(text = stringResource(id = R.string.copy))
-            }
-        }, dismissButton = {
-            TextButton(onClick = { showDialog = false }) {
-                Text(text = stringResource(id = R.string.cancel))
-            }
+        R.string.wechat
+        R.string.alipay
+        R.string.binance
+        DropdownMenuItem(text = {
+            Text(stringResource(R.string.donate))
+        }, leadingIcon = {
+            Icon(Icons.TwoTone.AttachMoney, null)
+        }, onClick = {
+            menuExpanded = false
+            context.openUrlInBrowser("https://github.com/iamr0s/Dhizuku")
         })
     }
-}
 
-@Composable
-fun DeactivateButton() {
-    val context = LocalContext.current
-    var showDialog by remember {
-        mutableStateOf(false)
-    }
-    Button(onClick = {
-        showDialog = true
-    }) {
-        Icon(
-            modifier = Modifier.size(16.dp),
-            imageVector = Icons.TwoTone.Outlet,
-            contentDescription = null
-        )
-        Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-        Text(text = stringResource(id = R.string.deactivate))
-    }
-    if (!showDialog) return
+    if (!shutdownDialogShow) return
     AlertDialog(onDismissRequest = {
-        showDialog = false
-    }, title = {
-        Text(stringResource(R.string.deactivate))
-    }, text = {
-        Text(stringResource(R.string.deactivate_dsp))
+        shutdownDialogShow = false
     }, confirmButton = {
         TextButton(onClick = {
-            val e = runCatching {
-                val manager =
-                    context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-                runCatching {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        manager.clearProfileOwner(DhizukuDAReceiver.name)
-                    }
-                }
-                manager.clearDeviceOwnerApp(context.packageName)
-            }.exceptionOrNull()
-            context.toast(if (e == null) R.string.deactivate_success else R.string.deactivate_failed)
+            shutdownDialogShow = false
         }) {
-            Text(stringResource(R.string.confirm))
-        }
-    }, dismissButton = {
-        TextButton(onClick = { showDialog = false }) {
             Text(stringResource(R.string.cancel))
         }
-    })
-}
-
-@Composable
-fun ForceStopButton() {
-    val context = LocalContext.current
-    var showDialog by remember {
-        mutableStateOf(false)
-    }
-
-    Button(onClick = {
-        showDialog = true
-    }) {
-        Icon(
-            modifier = Modifier.size(16.dp),
-            imageVector = Icons.TwoTone.Close,
-            contentDescription = null
-        )
-        Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
-        Text(text = stringResource(id = R.string.force_stop))
-    }
-    if (!showDialog) return
-    AlertDialog(onDismissRequest = {
-        showDialog = false
-    }, title = {
-        Text(text = stringResource(id = R.string.force_stop))
-    }, text = {
-        Text(stringResource(R.string.force_stop_dsp))
-    }, confirmButton = {
         TextButton(onClick = {
             exitProcess(0)
         }) {
-            Text(text = stringResource(id = R.string.confirm))
+            Text(stringResource(R.string.confirm))
         }
-    }, dismissButton = {
-        TextButton(onClick = { showDialog = false }) {
-            Text(text = stringResource(id = R.string.cancel))
-        }
-    })
-}
-
-@Composable
-fun ActiveWidget() {
-    CardWidget(title = {
-        Text(text = stringResource(id = R.string.active))
+    }, title = {
+        Text(stringResource(R.string.home_shutdown_title))
     }, text = {
-        Text(text = stringResource(id = R.string.active_func_dsp))
-    }, buttons = {
-        ShizukuButton()
-        ADBButton()
-        DeactivateButton()
-        ForceStopButton()
+        Text(stringResource(R.string.home_shutdown_dsp))
     })
 }
 
-fun openUrl(context: Context, url: String) {
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(intent)
+@Composable
+private fun LazyItemScope.DhizukuStateWidget() {
+    val isOwner = DhizukuState.state.owner
+
+    @Suppress("AnimateAsStateLabel")
+    val iconContainerColor by animateColorAsState(
+        if (isOwner) MaterialTheme.colorScheme.primaryContainer
+        else MaterialTheme.colorScheme.errorContainer
+    )
+
+    @Suppress("AnimateAsStateLabel")
+    val iconColor by animateColorAsState(
+        if (isOwner) MaterialTheme.colorScheme.onPrimaryContainer
+        else MaterialTheme.colorScheme.onErrorContainer
+    )
+    CardWidget(colors = CardDefaults.cardColors(
+        containerColor = iconContainerColor
+    ), icon = {
+        Icon(
+            imageVector = Icons.TwoTone.run {
+                if (isOwner) SentimentVerySatisfied
+                else SentimentVeryDissatisfied
+            },
+            contentDescription = null
+        )
+    }, iconColors = IconButtonDefaults.iconButtonColors(
+        containerColor = iconContainerColor,
+        contentColor = iconColor
+    ), title = {
+        @Suppress("AnimatedContentLabel")
+        AnimatedContent(targetState = isOwner) {
+            Text(stringResource(if (it) R.string.home_status_owner_granted else R.string.home_status_owner_denied))
+        }
+    })
 }
 
 @Composable
-fun DonateWidget() {
+private fun LazyItemScope.AppManagementWidget(navController: NavController) {
+    CardWidget(onClick = {
+        navController.navigate(SettingsRoute.AppManagement.route)
+    }, icon = {
+        Icon(imageVector = Icons.TwoTone.RoomPreferences, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.home_app_management_title))
+    }, text = {
+        Text(stringResource(R.string.home_app_management_dsp))
+    })
+}
+
+@Composable
+private fun LazyItemScope.DhizukuWidget(navController: NavController) {
+    CardWidget(onClick = {
+        navController.navigate(SettingsRoute.Activate.route(SettingsRoute.Activate.Mode.Dhizuku))
+    }, icon = {
+        Icon(imageVector = Icons.TwoTone.SwapHorizontalCircle, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.home_dhizuku_title))
+    }, text = {
+        HtmlText(stringResource(R.string.home_dhizuku_dsp, "https://github.com/iamr0s/Dhizuku"))
+    })
+}
+
+@Composable
+private fun LazyItemScope.ShizukuWidget(navController: NavController) {
+    CardWidget(onClick = {
+        navController.navigate(SettingsRoute.Activate.route(SettingsRoute.Activate.Mode.Shizuku))
+    }, icon = {
+        Icon(imageVector = Icons.TwoTone.Terminal, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.home_shizuku_title))
+    }, text = {
+        HtmlText(stringResource(R.string.home_shizuku_dsp, "https://shizuku.rikka.app/"))
+    })
+}
+
+@Composable
+private fun LazyItemScope.AdbWidget() {
+    val command = "adb shell dpm set-device-owner ${DhizukuDAReceiver.name.flattenToShortString()}"
+    var state by remember {
+        mutableStateOf(false)
+    }
+    CardWidget(icon = {
+        Icon(imageVector = Icons.TwoTone.Adb, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.home_adb_title))
+    }, content = {
+        HtmlText(
+            stringResource(
+                R.string.home_adb_dsp,
+                "https://developer.android.com/tools/adb"
+            )
+        )
+        TextButton(onClick = { state = true }) {
+            Icon(imageVector = Icons.TwoTone.Code, contentDescription = null)
+            Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+            Text(stringResource(R.string.home_adb_btn_view_command))
+        }
+    })
+    if (!state) return
+    AlertDialog(onDismissRequest = {
+        state = false
+    }, confirmButton = {
+        TextButton(onClick = {
+            state = false
+        }) {
+            Text(stringResource(R.string.cancel))
+        }
+        val manager = LocalClipboardManager.current
+        TextButton(onClick = {
+            manager.setText(AnnotatedString(command))
+            state = false
+        }) {
+            Text(stringResource(R.string.copy))
+        }
+    }, title = {
+        Text(stringResource(R.string.home_adb_btn_view_command))
+    }, text = {
+        Text(command)
+    })
+}
+
+@Composable
+private fun LazyItemScope.DeactivateWidget() {
     val context = LocalContext.current
-    ItemsCardWidget(
-        title = {
-            Text(text = stringResource(id = R.string.donate))
-        }, items = listOf(
-            HomeCardItem(label = stringResource(id = R.string.alipay), onClick = {
-                openUrl(context, "https://qr.alipay.com/fkx18580lfpydiop04dze47")
-            }),
-            HomeCardItem(label = stringResource(id = R.string.wechat), onClick = {
-                openUrl(context, "https://missuo.ru/file/fee5df1381671c996b127.png")
-            }),
-            HomeCardItem(label = stringResource(id = R.string.binance), onClick = {
-                openUrl(context, "https://missuo.ru/file/28368c28d4ff28d59ed4b.jpg")
-            }),
+    val manager = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+    var state by remember {
+        mutableStateOf(false)
+    }
+    CardWidget(onClick = {
+        state = true
+    }, icon = {
+        Icon(imageVector = Icons.TwoTone.DoNotDisturbOn, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.home_deactivate_title))
+    })
+    if (!state) return
+    AlertDialog(onDismissRequest = {
+        state = false
+    }, confirmButton = {
+        TextButton(onClick = {
+            state = false
+        }) {
+            Text(stringResource(R.string.cancel))
+        }
+        TextButton(onClick = {
+            @Suppress("DEPRECATION")
+            manager.clearDeviceOwnerApp(context.packageName)
+            state = false
+        }) {
+            Text(stringResource(R.string.confirm))
+        }
+    }, title = {
+        Text(stringResource(R.string.home_deactivate_title))
+    }, text = {
+        Text(stringResource(R.string.home_deactivate_dsp))
+    })
+}
+
+@Composable
+private fun HtmlText(text: String) {
+    Text(
+        AnnotatedString.fromHtml(
+            text,
+            TextLinkStyles(
+                SpanStyle(
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold,
+                    textDecoration = TextDecoration.Underline
+                )
+            )
         )
     )
 }
 
 @Composable
-fun ItemsCardWidget(
+private fun LazyItemScope.CardWidget(
+    modifier: Modifier = Modifier,
     colors: CardColors = CardDefaults.elevatedCardColors(),
-    onClick: (() -> Unit)? = null,
-    showItemIcon: Boolean = false,
-    icon: (@Composable () -> Unit)? = null,
-    title: (@Composable () -> Unit)? = null,
-    items: List<HomeCardItem>,
-    buttons: (@Composable () -> Unit)? = null
-) {
-    CardWidget(
-        colors = colors, onClick = onClick, icon = icon, title = title, content = {
-            @Composable
-            fun ItemWidget(item: HomeCardItem) {
-                Row(
-                    modifier = Modifier
-                        .clickable(enabled = item.onClick != null, onClick = item.onClick ?: {})
-                        .padding(horizontal = 24.dp, vertical = 12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(24.dp)
-                ) {
-                    if (showItemIcon) {
-                        if (item.icon != null) {
-                            Icon(imageVector = item.icon, contentDescription = item.label)
-                        } else {
-                            Spacer(modifier = Modifier.size(32.dp))
-                        }
-                    }
-                    Column(
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Text(text = item.label, style = MaterialTheme.typography.bodyLarge)
-                        if (item.content != null) {
-                            Text(text = item.content, style = MaterialTheme.typography.bodyMedium)
-                        }
-                    }
-                }
-            }
-            Column {
-                items.forEach {
-                    ItemWidget(it)
-                }
-            }
-        }, buttons = buttons
-    )
-}
-
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-fun CardWidget(
-    colors: CardColors = CardDefaults.elevatedCardColors(),
-    onClick: (() -> Unit)? = null,
-    icon: (@Composable () -> Unit)? = null,
-    title: (@Composable () -> Unit)? = null,
-    content: (@Composable () -> Unit)? = null,
+    onClick: () -> Unit = {},
+    icon: @Composable () -> Unit,
+    iconColors: IconButtonColors = IconButtonDefaults.iconButtonColors(
+        containerColor = MaterialTheme.colorScheme.primaryContainer
+    ),
+    title: @Composable () -> Unit,
     text: (@Composable () -> Unit)? = null,
-    buttons: (@Composable () -> Unit)? = null
+    content: (@Composable () -> Unit)? = null
 ) {
     ElevatedCard(
-        colors = colors
+        modifier = modifier.animateItem(),
+        colors = colors, onClick = onClick
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .clickable(enabled = onClick != null, onClick = onClick ?: {})
-                .padding(vertical = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)
+                .padding(16.dp)
+                .animateContentSize(),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            if (icon != null || title != null) {
-                Row(
-                    modifier = Modifier
-                        .padding(horizontal = 24.dp)
-                        .align(Alignment.CenterHorizontally)
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Surface(
+                    shape = RoundedCornerShape(40.dp),
+                    color = iconColors.containerColor,
+                    contentColor = iconColors.contentColor
                 ) {
-                    if (icon != null) {
-                        Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                            icon()
-                        }
+                    Box(Modifier.padding(8.dp)) {
+                        icon.invoke()
                     }
-                    if (icon != null && title != null) {
-                        Spacer(modifier = Modifier.size(24.dp))
+                }
+                Column {
+                    ProvideTextStyle(MaterialTheme.typography.titleMedium) {
+                        title.invoke()
                     }
-                    if (title != null) {
-                        ProvideTextStyle(value = MaterialTheme.typography.titleLarge) {
-                            Box(modifier = Modifier.align(Alignment.CenterVertically)) {
-                                title()
-                            }
+                    ProvideTextStyle(MaterialTheme.typography.bodyMedium) {
+                        @Suppress("AnimatedContentLabel")
+                        AnimatedContent(targetState = text) {
+                            it?.invoke()
                         }
                     }
                 }
             }
-            if (content != null || text != null) {
-                if (content != null) Box {
-                    content()
-                }
-                else Box(modifier = Modifier.padding(horizontal = 24.dp)) {
-                    ProvideTextStyle(value = MaterialTheme.typography.bodyMedium) {
-                        text?.invoke()
-                    }
-                }
-            }
-            if (buttons != null) {
-                FlowRow(
-                    modifier = Modifier.padding(horizontal = 12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    buttons()
-                }
+            ProvideTextStyle(MaterialTheme.typography.bodyMedium) {
+                content?.invoke()
             }
         }
     }

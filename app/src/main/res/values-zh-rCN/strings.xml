@@ -1,46 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home">主页</string>
-    <string name="config">配置</string>
-    <string name="preferred">设置</string>
-    <string name="device_owner_granted">已获得设备所有者权限</string>
-    <string name="device_admin_granted">未完全激活，已获得设备管理员</string>
-    <string name="device_admin_denied">未激活</string>
-    <string name="active_func_dsp">设备所有者（DeviceOwner）权限高于设备管理员（DeviceAdmin），一次激活永久有效，除非您主动取消激活。
-\n
-\n请谨慎授权给其余应用，设备管理员可通过代码修改诸多系统设置，比如：禁用软硬件功能与监听用户行为等。</string>
-    <string name="active">激活</string>
+    <!-- Commonly  used characters -->
+    <string name="copy">复制</string>
     <string name="cancel">取消</string>
+    <string name="retry">重试</string>
+
+    <!-- Home - Status -->
+    <string name="home_status_owner_granted">已成为所有者！！！</string>
+    <string name="home_status_owner_denied">等待激活</string>
+
+    <!-- Home - Application Management -->
+    <string name="home_app_management_title">应用管理</string>
+    <string name="home_app_management_dsp">请求或声明了Dhizuku的应用将在这里显示</string>
+
+    <!-- Home - Shutdown -->
+    <string name="home_shutdown_title">关闭</string>
+    <string name="home_shutdown_dsp">除非 Dhizuku 自愿关闭，否则系统将无法关闭 Dhizuku。</string>
+    <!-- Home - Dhizuku -->
+    <string name="home_dhizuku_title">激活（通过 Dhizuku）</string>
+    <string name="home_dhizuku_dsp">如果您安装了其他的Dhizuku实现，您可以随意在它们之间切换。请&lt;a href=&quot;%1$s&quot;&gt;阅读帮助&lt;/a&gt;.</string>
+
+    <!-- Home - Shizuku -->
+    <string name="home_shizuku_title">激活（通过 Shizuku）</string>
+    <string name="home_shizuku_dsp">使用Shizuku，您无需计算机就可以运行ADB命令。请&lt;a href=&quot;%1$s&quot;&gt;阅读帮助&lt;/a&gt;.</string>
+
+    <!-- Home - Adb -->
+    <string name="home_adb_title">激活（通过 ADB）</string>
+    <string name="home_adb_dsp">通过ADB (Android Debug Bridge)连接，可以执行一些特权命令。请&lt;a href=&quot;%1$s&quot;&gt;阅读帮助&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">查看命令</string>
+
     <string name="confirm">确认</string>
     <string name="finish">完成</string>
-    <string name="active_by_adb">电脑激活</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* 借助 adb 来设置设备所有者（连接电脑），前往&lt;a href=\"https://source.android.google.cn/docs/setup/build/adb?hl=zh-cn\"&gt;Android 调试桥 (ADB)&lt;/a&gt;了解更多与 adb 相关的信息。</string>
-    <string name="active_by_shizuku">Shizuku 激活</string>
-    <string name="shizuku_binder_not_received">请先检查 Shizuku 是否安装、激活，并同意软件获取 Shizuku 权限。</string>
-    <string name="execution_end">执行结束，请检查是否激活。</string>
-    <string name="deactivate">取消激活</string>
-    <string name="deactivate_dsp">确认要取消激活吗？</string>
-    <string name="deactivate_success">取消激活成功</string>
-    <string name="deactivate_failed">取消激活失败</string>
-    <string name="force_stop">强行停止</string>
-    <string name="force_stop_dsp">当设备所有者激活成功后，系统没有权限强行停止设备所有者应用运行，但是更新应用需要先将应用停止，所以你需要先将 Dhizuku 强行停止，再更新 Dhizuku。</string>
-    <string name="dhizuku_permission_group_label">Dhizuku 权限</string>
-    <string name="dhizuku_permission_api_dsp">允许应用使用 Dhizuku。</string>
-    <string name="copy">复制</string>
-    <string name="copy_success">复制成功</string>
+    <string name="home_deactivate_title">取消激活</string>
+    <string name="home_deactivate_dsp">确认要取消激活吗？</string>
     <string name="donate">捐赠</string>
     <string name="alipay">支付宝</string>
     <string name="wechat">微信</string>
     <string name="binance">币安</string>
-    <string name="request_permission_title">Dhizuku 授权</string>
     <string name="request_permission_text"><![CDATA[授权<b>%1$s</b>使用 Dhizuku 吗？]]></string>
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>
-    <string name="basic">常规</string>
-    <string name="toast_when_using_dhizuku">权限提示</string>
-    <string name="toast_when_using_dhizuku_dsp">当有程序在调用 Dhizuku 时，弹出消息提示</string>
-    <string name="toast_when_using_dhizuku_content">Dhizuku 权限正在被使用：%1$s </string>
-    <string name="empty_config_dsp">暂无应用申请 Dhizuku 权限</string>
     <string name="service_channel_name">后台服务</string>
     <string name="service_running">Dhizuku正在运行</string>
 </resources>

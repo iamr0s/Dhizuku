@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="preferred">Setelan</string>
-    <string name="config">Konfigurasi</string>
-    <string name="device_admin_denied">Menunggu aktivasi</string>
-    <string name="active">Aktifkan</string>
     <string name="cancel">Batal</string>
     <string name="confirm">Oke</string>
-    <string name="execution_end">Oke, periksa status aktivasi.</string>
-    <string name="deactivate">Nonaktifkan</string>
-    <string name="deactivate_dsp">Apakah Anda yakin ingin menonaktifkan\?</string>
-    <string name="deactivate_failed">Gagal menonaktifkan</string>
-    <string name="force_stop">Paksa berhenti</string>
-    <string name="copy_success">Berhasil menyalin</string>
+    <string name="home_deactivate_title">Nonaktifkan</string>
+    <string name="home_deactivate_dsp">Apakah Anda yakin ingin menonaktifkan\?</string>
     <string name="donate">Donasi</string>
     <string name="binance">Binance</string>
     <string name="agree">Izinkan</string>
     <string name="refuse">Tolak</string>
-    <string name="home">Beranda</string>
-    <string name="device_owner_granted">Diaktifkan</string>
-    <string name="device_admin_granted">Admin perangkat telah aktif, namun membutuhkan pemilik perangkat</string>
-    <string name="active_func_dsp">Pemilik perangkat memiliki akses perizinan tertinggi dibandingkan Admin perangkat. Perizinan tidak akan hilang kecuali Anda menonaktifkannya.
-\n
-\nBerikan otorisasi aplikasi lain dengan hati-hati. Pemilik perangkat dapat memodifikasi Setelan sistem menggunakan kode, seperti menonaktifkan fungsi perangkat lunak dan perangkat keras serta memantau perilaku pengguna.</string>
     <string name="copy">Salin</string>
     <string name="finish">Selesai</string>
-    <string name="active_by_adb">Aktivasi dengan komputer</string>
-    <string name="active_by_adb_dsp">%1$s&lt;br&gt;&lt;br&gt;* Aktivasi dengan adb (hubungkan komputer)，Buka &lt;a href=\"https://source.android.google.cn/docs/setup/build/adb\"&gt;Android Debug Bridge (ADB)&lt;/a&gt; untuk informasi lebih lanjut mengenai adb.</string>
-    <string name="active_by_shizuku">Aktivasi dengan Shizuku</string>
-    <string name="shizuku_binder_not_received">Periksa apakah Shizuku telah dipasang dan diaktifkan, dan izinkan Dhizuku untuk mendapatkan perizinan Shizuku.</string>
-    <string name="deactivate_success">Berhasil menonaktifkan</string>
-    <string name="toast_when_using_dhizuku_dsp">Saat sebuah program memanggil Dhizuku, pesan pop-up akan muncul</string>
-    <string name="dhizuku_permission_group_label">Perizinan Dhizuku</string>
-    <string name="force_stop_dsp">Setelah pemilik perangkat berhasil melakukan aktivasi, sistem tidak memiliki izin untuk menghentikan paksa aplikasi pemilik perangkat yang sedang berjalan, tetapi memperbarui aplikasi mengharuskan untuk menghentikan aplikasi terlebih dahulu, jadi Anda perlu menghentikan Dhizuku secara paksa sebelum memperbarui Dhizuku.</string>
-    <string name="dhizuku_permission_api_dsp">Izinkan aplikasi lain menggunakan perizinan Dhizuku.</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="service_channel_name">Layanan latar belakang</string>
-    <string name="request_permission_title">Permintaan Izin Dhizuku</string>
-    <string name="basic">Normal</string>
     <string name="request_permission_text">Menyetujui permintaan izin Dhizuku dari <b>%1$s</b>\?</string>
-    <string name="toast_when_using_dhizuku">Permintaan izin</string>
-    <string name="toast_when_using_dhizuku_content">Dhizuku sedang digunakan oleh %1$s</string>
-    <string name="empty_config_dsp">Tidak ada aplikasi yang meminta izin Dhizuku</string>
     <string name="service_running">Dhizuku sedang berjalan</string>
 </resources>
