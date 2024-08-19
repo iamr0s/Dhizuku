@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.data.common.util
 
 import android.app.admin.DevicePolicyManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -32,9 +33,10 @@ fun Context.toast(@StringRes resId: Int, duration: Int = Toast.LENGTH_SHORT) {
 fun Context.clearDelegatedScopes(uid: Int) {
     val packageNames = packageManager.getPackagesForUid(uid) ?: emptyArray()
     val devicePolicyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+    val component = ComponentName(this, DhizukuDAReceiver::class.java)
     packageNames.forEach {
         devicePolicyManager.setDelegatedScopes(
-            DhizukuDAReceiver.name,
+            component,
             it,
             emptyList()
         )

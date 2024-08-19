@@ -7,7 +7,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.rosan.dhizuku.BuildConfig
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
@@ -48,7 +47,7 @@ class AppManagementViewModel : ViewModel(), KoinComponent {
                 val data = packageManager
                     .getInstalledPackages(PackageManager.GET_META_DATA or PackageManager.GET_PERMISSIONS)
                     .mapNotNull { packageInfo ->
-                        if (packageInfo.packageName == BuildConfig.APPLICATION_ID) return@mapNotNull null
+                        if (packageInfo.packageName == context.packageName) return@mapNotNull null
                         val applicationInfo =
                             packageInfo.applicationInfo ?: return@mapNotNull null
 

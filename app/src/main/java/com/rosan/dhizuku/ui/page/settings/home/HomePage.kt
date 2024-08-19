@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.ui.page.settings.home
 
 import android.app.admin.DevicePolicyManager
+import android.content.ComponentName
 import android.content.Context
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
@@ -262,7 +263,8 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
 
 @Composable
 private fun LazyItemScope.AdbWidget() {
-    val command = "adb shell dpm set-device-owner ${DhizukuDAReceiver.name.flattenToShortString()}"
+    val component = ComponentName(LocalContext.current, DhizukuDAReceiver::class.java)
+    val command = "adb shell dpm set-device-owner ${component.flattenToShortString()}"
     var state by remember {
         mutableStateOf(false)
     }

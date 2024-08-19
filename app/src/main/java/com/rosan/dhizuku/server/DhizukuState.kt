@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.server
 
 import android.app.admin.DevicePolicyManager
+import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -17,8 +18,9 @@ data object DhizukuState {
     var state by mutableStateOf(State())
         private set
 
-    fun sync(devicePolicyManager: DevicePolicyManager) {
-        val packageName = BuildConfig.APPLICATION_ID
+    fun sync(context: Context) {
+        val devicePolicyManager = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
+        val packageName = context.packageName
         state = State(
             device = devicePolicyManager.isDeviceOwnerApp(packageName),
             profile = devicePolicyManager.isProfileOwnerApp(packageName)

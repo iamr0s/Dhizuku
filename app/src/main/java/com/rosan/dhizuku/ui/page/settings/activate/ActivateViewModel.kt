@@ -133,7 +133,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             }) {
                 it.transferOwnership(Dhizuku.getOwnerComponent(), comp, null)
             }
-            DhizukuState.sync(devicePolicyManager)
+            DhizukuState.sync(context)
         }
 
     @SuppressLint("PrivateApi")
