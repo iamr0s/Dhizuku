@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="service_running">ديزوكو يعمل</string>
+    <string name="service_running">Dhizuku قيد التشغيل</string>
     <string name="service_channel_name">خدمة الخلفية</string>
-    <string name="home_deactivate_dsp">هل أنت متأكد من رغبتك في إلغاء التنشيط؟</string>
-    <string name="wechat">Wechat-ويشات</string>
-    <string name="agree">اعطاء</string>
+    <string name="home_deactivate_dsp">هل أنت متأكد أنك تريد إلغاء التنشيط؟</string>
+    <string name="wechat">Wechat</string>
+    <string name="agree">منح</string>
     <string name="copy">نسخ</string>
-    <string name="finish">أنهى</string>
-    <string name="binance">Binance-بينانس</string>
-    <string name="refuse">منع</string>
-    <string name="alipay">Alipay-علي باي</string>
+    <string name="finish">إنهاء</string>
+    <string name="binance">Binance</string>
+    <string name="refuse">رفض</string>
+    <string name="alipay">Alipay</string>
     <string name="cancel">إلغاء</string>
     <string name="confirm">موافق</string>
-    <string name="donate">تبرّع</string>
-    <string name="request_permission_text">الموافقة على طلب إذن Dhizuku الخاص بـ<b>%1$s</b>\?</string>
-    <string name="home_deactivate_title">الغاء تنشيط</string>
-    <string name="home_status_owner_denied">في انتظار التفعيل</string>
-    <string name="home_app_management_dsp">هنا ستظهر التطبيقات التي طلبت Dhizuku.</string>
+    <string name="donate">تبرع</string>
+    <string name="request_permission_text">هل توافق على طلب إذن Dhizuku من <b>%1$s</b></string>
+    <string name="home_deactivate_title">إلغاء التنشيط</string>
+    <string name="home_status_owner_denied">في انتظار التنشيط</string>
+    <string name="home_app_management_dsp">التطبيقات التي طلبت أو أعلنت Dhizuku ستظهر هنا.</string>
     <string name="home_dhizuku_title">التنشيط بواسطة Dhizuku</string>
     <string name="home_shizuku_title">التنشيط بواسطة Shizuku</string>
-    <string name="home_shizuku_dsp">من خلال Shizuku، سيكون لديك القدرة على تشغيل أوامر ADB بدو ن الحاجة إلى كمبيوتر. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">مع Shizuku، لديك القدرة على تشغيل أوامر ADB دون الحاجة إلى جهاز كمبيوتر. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
     <string name="home_adb_title">التنشيط بواسطة ADB</string>
-    <string name="home_status_owner_granted">أنت الماك!!!</string>
+    <string name="home_status_owner_granted">أنت المالك!!!</string>
     <string name="retry">إعادة المحاولة</string>
     <string name="home_app_management_title">إدارة التطبيقات</string>
+    <string name="home_dhizuku_dsp">إذا كان لديك تطبيقات أخرى من Dhizuku مثبتة، يمكنك التبديل بينها كما تشاء. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">عرض الأمر</string>
+    <string name="home_shutdown_title">إيقاف التشغيل</string>
+    <string name="home_adb_dsp">من خلال اتصال ADB (جسر تصحيح أخطاء أندرويد)، يمكنك تنفيذ بعض الأوامر المميزة. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
+    <string name="home_shutdown_dsp">لن يتمكن النظام من إيقاف تشغيل Dhizuku ما لم تقم Dhizuku بذلك طواعية.</string>
 </resources>
