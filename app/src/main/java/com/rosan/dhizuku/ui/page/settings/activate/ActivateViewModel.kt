@@ -65,9 +65,9 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         collectDataJob = viewModelScope.launch(Dispatchers.IO) {
             // http://aospxref.com/android-14.0.0_r2/xref/packages/apps/Settings/src/com/android/settings/applications/specialaccess/deviceadmin/DeviceAdminListPreferenceController.java#271
 
-            var flags = PackageManager.GET_META_DATA
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                flags = flags or PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS
+            val flags =
+                (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) PackageManager.MATCH_UNINSTALLED_PACKAGES
+                else 0) or PackageManager.GET_META_DATA
 
             val data = packageManager.queryBroadcastReceivers(
                 Intent(DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED),
