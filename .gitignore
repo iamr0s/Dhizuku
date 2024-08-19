@@ -2,8 +2,8 @@
 .gradle
 /.idea
 .DS_Store
-/build
+build
 /captures
 .externalNativeBuild
 .cxx
-local.propertiesq
+local.properties
