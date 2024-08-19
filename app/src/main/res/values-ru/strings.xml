@@ -4,7 +4,7 @@
     <string name="confirm">ОК</string>
     <string name="finish">Готово</string>
     <string name="home_deactivate_title">Деактивация</string>
-    <string name="home_deactivate_dsp">Подтвердить деактивацию\?</string>
+    <string name="home_deactivate_dsp">Подтвердить деактивацию?</string>
     <string name="binance">Binance</string>
     <string name="request_permission_text">Разрешить <b>%1$s</b> использовать Dhizuku\?</string>
     <string name="agree">Разрешить</string>

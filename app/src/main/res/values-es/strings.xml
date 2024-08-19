@@ -3,7 +3,7 @@
     <string name="cancel">Cancelar</string>
     <string name="confirm">OK</string>
     <string name="finish">Terminar</string>
-    <string name="home_deactivate_dsp">¿Seguro que quieres desactivar\?</string>
+    <string name="home_deactivate_dsp">¿Estás seguro de que quieres desactivarlo?</string>
     <string name="copy">Copiar</string>
     <string name="donate">Donar</string>
     <string name="wechat">Wechat</string>
@@ -15,4 +15,18 @@
     <string name="home_deactivate_title">Desactivar</string>
     <string name="alipay">Alipay</string>
     <string name="binance">Binance</string>
+    <string name="retry">Reintentar</string>
+    <string name="home_status_owner_granted">¡Eres dueño!</string>
+    <string name="home_status_owner_denied">Esperando la activación</string>
+    <string name="home_app_management_title">Gestión de aplicaciones</string>
+    <string name="home_app_management_dsp">Las aplicaciones que soliciten o declaren Dhizuku se mostrarán aquí</string>
+    <string name="home_dhizuku_title">Activación por Dhizuku</string>
+    <string name="home_shizuku_title">Activación por Shizuku</string>
+    <string name="home_adb_title">Activación a través de ADB</string>
+    <string name="home_adb_dsp">A través de la conexión ADB (Android Debug Bridge), puedes ejecutar algunos comandos privilegiados. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Ver comando</string>
+    <string name="home_shutdown_title">Detener</string>
+    <string name="home_dhizuku_dsp">Si tienes otras implementaciones de Dhizuku instaladas, puedes cambiar entre ellas a voluntad. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">Con Shizuku, tienes la capacidad de ejecutar comandos ADB sin necesidad de un ordenador. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
+    <string name="home_shutdown_dsp">El sistema no podrá detener Dhizuku a menos que Dhizuku lo haga voluntariamente.</string>
 </resources>

@@ -4,31 +4,25 @@
     <string name="copy">复制</string>
     <string name="cancel">取消</string>
     <string name="retry">重试</string>
-
     <!-- Home - Status -->
     <string name="home_status_owner_granted">已成为所有者！！！</string>
     <string name="home_status_owner_denied">等待激活</string>
-
     <!-- Home - Application Management -->
     <string name="home_app_management_title">应用管理</string>
     <string name="home_app_management_dsp">请求或声明了Dhizuku的应用将在这里显示</string>
-
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">关闭</string>
     <string name="home_shutdown_dsp">除非 Dhizuku 自愿关闭，否则系统将无法关闭 Dhizuku。</string>
     <!-- Home - Dhizuku -->
     <string name="home_dhizuku_title">激活（通过 Dhizuku）</string>
-    <string name="home_dhizuku_dsp">如果您安装了其他的Dhizuku实现，您可以随意在它们之间切换。请&lt;a href=&quot;%1$s&quot;&gt;阅读帮助&lt;/a&gt;.</string>
-
+    <string name="home_dhizuku_dsp">如果您安装了其他的Dhizuku实现，您可以随意在它们之间切换。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
     <!-- Home - Shizuku -->
     <string name="home_shizuku_title">激活（通过 Shizuku）</string>
-    <string name="home_shizuku_dsp">使用Shizuku，您无需计算机就可以运行ADB命令。请&lt;a href=&quot;%1$s&quot;&gt;阅读帮助&lt;/a&gt;.</string>
-
+    <string name="home_shizuku_dsp">使用Shizuku，您无需计算机就可以运行ADB命令。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
     <!-- Home - Adb -->
     <string name="home_adb_title">激活（通过 ADB）</string>
-    <string name="home_adb_dsp">通过ADB (Android Debug Bridge)连接，可以执行一些特权命令。请&lt;a href=&quot;%1$s&quot;&gt;阅读帮助&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">通过ADB (Android Debug Bridge)连接，可以执行一些特权命令。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">查看命令</string>
-
     <string name="confirm">确认</string>
     <string name="finish">完成</string>
     <string name="home_deactivate_title">取消激活</string>

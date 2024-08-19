@@ -15,4 +15,13 @@
     <string name="donate">تبرّع</string>
     <string name="request_permission_text">الموافقة على طلب إذن Dhizuku الخاص بـ<b>%1$s</b>\?</string>
     <string name="home_deactivate_title">الغاء تنشيط</string>
+    <string name="home_status_owner_denied">في انتظار التفعيل</string>
+    <string name="home_app_management_dsp">هنا ستظهر التطبيقات التي طلبت Dhizuku.</string>
+    <string name="home_dhizuku_title">التنشيط بواسطة Dhizuku</string>
+    <string name="home_shizuku_title">التنشيط بواسطة Shizuku</string>
+    <string name="home_shizuku_dsp">من خلال Shizuku، سيكون لديك القدرة على تشغيل أوامر ADB بدو ن الحاجة إلى كمبيوتر. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
+    <string name="home_adb_title">التنشيط بواسطة ADB</string>
+    <string name="home_status_owner_granted">أنت الماك!!!</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="home_app_management_title">إدارة التطبيقات</string>
 </resources>
