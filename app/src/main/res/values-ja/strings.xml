@@ -15,4 +15,18 @@
     <string name="donate">寄付</string>
     <string name="request_permission_text"><b>%1$s</b> による Dhizuku へのアクセスを許可しますか？</string>
     <string name="home_deactivate_title">無効化</string>
+    <string name="home_status_owner_denied">有効化を待機中</string>
+    <string name="home_app_management_dsp">Dhizuku を要求または宣言したアプリがここに表示されます。</string>
+    <string name="home_dhizuku_title">Dhizuku による有効化</string>
+    <string name="home_shizuku_title">Shizuku による有効化</string>
+    <string name="home_adb_title">ADB による有効化</string>
+    <string name="home_adb_btn_view_command">コマンドを表示</string>
+    <string name="home_shutdown_title">停止</string>
+    <string name="home_shutdown_dsp">Dhizuku は自発的に停止しない限り、システムは Dhizuku を停止できません。</string>
+    <string name="retry">再試行</string>
+    <string name="home_status_owner_granted">所有者になりました！</string>
+    <string name="home_app_management_title">アプリの管理</string>
+    <string name="home_dhizuku_dsp">他の Dhizuku 統合アプリがインストールされている場合、それらを自由に切り替えることができます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
+    <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用に ADB コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
+    <string name="home_adb_dsp">ADB (Android Debug Bridge) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
 </resources>
