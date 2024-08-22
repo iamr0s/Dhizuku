@@ -1,4 +1,4 @@
-English | [简体中文](README_zh_rCN.md) | [日本語](README_ja.md)
+English | [简体中文](README_zh_rCN.md) | [日本語](README_ja.md) | [Русский](README_ru.md)
 
 # Dhizuku
 
