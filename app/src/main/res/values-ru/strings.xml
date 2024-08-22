@@ -15,4 +15,18 @@
     <string name="service_channel_name">Фоновая служба</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">Wechat</string>
+    <string name="home_app_management_title">Управление приложениями</string>
+    <string name="home_app_management_dsp">Приложения, которые запросили Dhizuku будут отображаться здесь.</string>
+    <string name="home_shizuku_title">Активация через Shizuku</string>
+    <string name="home_shizuku_dsp">С Shizuku у вас есть возможность запускать ADB команды без помощи компьютера. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
+    <string name="home_adb_title">Активация через ADB</string>
+    <string name="home_adb_btn_view_command">Посмотреть команду</string>
+    <string name="retry">Попробовать снова</string>
+    <string name="home_dhizuku_title">Активация через Dhizuku</string>
+    <string name="home_dhizuku_dsp">Если у вас установлены другие реализации Dhizuku, вы можете переключаться между ними по желанию. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Через ADB (Android Debug Bridge) подключение, вы можете запускать некоторые привилегированные команды. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
+    <string name="home_status_owner_granted">Вы владелец!!!</string>
+    <string name="home_shutdown_dsp">Система не сможет завершить Dhizuku, если Dhizuku не сделает этого самостоятельно.</string>
+    <string name="home_shutdown_title">Завершение</string>
+    <string name="home_status_owner_denied">Ожидается активация</string>
 </resources>
