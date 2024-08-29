@@ -15,4 +15,18 @@
     <string name="donate">Doação</string>
     <string name="request_permission_text">Concordar com a solicitação de permissão Dhizuku de <b>%1$s</b> ?</string>
     <string name="home_deactivate_title">Desativar</string>
+    <string name="retry">Tentar novamente</string>
+    <string name="home_status_owner_granted">Você é o Dono!!!</string>
+    <string name="home_status_owner_denied">Aguardando ativação</string>
+    <string name="home_app_management_title">Gerenciamento de aplicativos</string>
+    <string name="home_dhizuku_title">Ativação por Dhizuku</string>
+    <string name="home_adb_title">Ativação por ADB</string>
+    <string name="home_adb_dsp">Por meio da conexão ADB (Android Debug Bridge), você pode executar alguns comandos privilegiados. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
+    <string name="home_shutdown_title">Sair</string>
+    <string name="home_app_management_dsp">Os aplicativos que solicitaram ou declararam Dhizuku serão exibidos aqui.</string>
+    <string name="home_shizuku_title">Ativação por Shizuku</string>
+    <string name="home_shizuku_dsp">Com o Shizuku, você tem a habilidade de executar comandos ADB sem precisar de um computador. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
+    <string name="home_shutdown_dsp">O sistema não conseguirá desligar o Dhizuku a menos que ele o faça voluntariamente.</string>
+    <string name="home_adb_btn_view_command">Ver comando</string>
+    <string name="home_dhizuku_dsp">Se você tiver outras implementações do Dhizuku instaladas, você pode alternar entre elas à vontade. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
 </resources>
