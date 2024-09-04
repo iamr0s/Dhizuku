@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="service_running">Dhizuku is running</string>
+    <string name="service_running">Dhizuku ist aktiv</string>
     <string name="service_channel_name">Hintergrunddienst</string>
     <string name="wechat">Wechat</string>
     <string name="agree">Bewilligen</string>
@@ -15,4 +15,17 @@
     <string name="home_deactivate_title">Deaktivieren</string>
     <string name="home_deactivate_dsp">Sind Sie sicher, dass Sie es deaktivieren wollen?</string>
     <string name="copy">Kopie</string>
+    <string name="home_status_owner_granted">Dhizuku ist Device Owner!!!</string>
+    <string name="home_status_owner_denied">Warte auf aktivierung</string>
+    <string name="home_app_management_title">Application Management</string>
+    <string name="home_app_management_dsp">Apps die Device Admin über Dhizuku angefragt haben, werden hier angezeigt.</string>
+    <string name="home_dhizuku_dsp">Wenn du andere Dhizuku implementationen installiert hast, kannst du zwischen ihnen wechseln. Bitte dafür die Hilfe lesen&lt;a href=%1$s&gt;&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Aktivierung durch Shizuku</string>
+    <string name="home_dhizuku_title">Aktivierung durch Dhizuku</string>
+    <string name="home_shizuku_dsp">Mit Shizuku hast du die Möglichkeit ADB befehle ohne einen Computer auszuführen. Bitte die Hilfe für mehr infos lesen &lt;a href=%1$s&gt;&lt;/a&gt;.</string>
+    <string name="home_adb_title">Aktivierung über ADB</string>
+    <string name="home_adb_dsp">Mit ADB(Android Debug Bridge) kannst du privelegierte befehle ausführen. Bitte &lt;a href=%1$s&gt;die Hilfe lesen&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Befehl anzeigen</string>
+    <string name="home_shutdown_title">Herunterfahren</string>
+    <string name="home_shutdown_dsp">Das System kann Dhizuku nur dann abschalten, wenn Dhizuku dies freiwillig tut.</string>
 </resources>
