@@ -15,4 +15,11 @@
     <string name="donate">Darowizna</string>
     <string name="request_permission_text">Czy wyrażasz zgodę na prośbę o pozwolenie Dhizuku od <b>%1$s</b>\?</string>
     <string name="home_deactivate_title">Dezaktywuj</string>
+    <string name="home_status_owner_granted">Jesteś właścicielem!!!</string>
+    <string name="retry">Ponów</string>
+    <string name="home_status_owner_denied">Oczekiwanie na aktywację</string>
+    <string name="home_app_management_title">Zarządzanie aplikacjami</string>
+    <string name="home_shizuku_dsp">Z aplikacją Shizuku, masz możliwość wydawania poleceń ADB bez dostępu do komputera. Proszę &lt;a href=%1$s&gt;przeczytać pomoc&lt;/a&gt;.</string>
+    <string name="home_app_management_dsp">Aplikacje korzystające z Dhizuku pojawią się tutaj.</string>
+    <string name="home_adb_title">Aktywacja przez ADB</string>
 </resources>
