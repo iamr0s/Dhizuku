@@ -1,5 +1,7 @@
 package com.rosan.dhizuku.data.settings.model.room
 
+import android.content.Context
+import android.os.Build
 import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
@@ -19,8 +21,13 @@ import org.koin.core.component.get
 abstract class DhizukuRoom : RoomDatabase() {
     companion object : KoinComponent {
         fun createInstance(): DhizukuRoom {
+            val context = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                get<Context>().createDeviceProtectedStorageContext()
+            } else {
+                get()
+            }
             return Room.databaseBuilder(
-                get(),
+                context,
                 DhizukuRoom::class.java,
                 "dhizuku.db",
             ).build()
