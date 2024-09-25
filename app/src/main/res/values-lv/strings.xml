@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="copy">Kopēt</string>
+    <string name="cancel">Atcelt</string>
+    <string name="retry">Mēģināt vēlreiz</string>
+    <string name="home_status_owner_granted">Tu esi īpašnieks!!!</string>
+    <string name="home_status_owner_denied">Gaida aktivizāciju</string>
+    <string name="home_app_management_title">Lietotņu pārvaldība</string>
+    <string name="home_app_management_dsp">Šeit tiek uzskaitītas lietotnes, kuras ir pieprasījušas vai paziņojušas par Dhizuku.</string>
+    <string name="home_dhizuku_dsp">Ja ir uzstādītas citas Dhizuku implementācijas, varat pārslēgties starp tām pēc vēlēšanās. Lūdzu, &lt;a href=%1$s&gt;izlasiet dokumentāciju&lt;/a&gt;.</string>
+    <string name="home_dhizuku_title">Aktivizēšana izmantojot Dhizuku</string>
+    <string name="home_adb_title">Aktivizēšana izmantojot ADB</string>
+    <string name="home_adb_btn_view_command">Skatīt komandu</string>
+    <string name="home_shutdown_title">Izslēgšana</string>
+    <string name="home_adb_dsp">Izmantojot ADB (Android Debug Bridge) savienojumu, varat izpildīt dažas priviliģētas komandas. Lūdzu, &lt;a href=%1$s&gt;izlasiet dokumentāciju&lt;/a&gt;.</string>
+    <string name="home_shutdown_dsp">Sistēma nevarēs izslēgt Dhizuku, ja vien Dhizuku to neizdarīs pats.</string>
+    <string name="confirm">Labi</string>
+    <string name="finish">Pabeigts</string>
+    <string name="donate">Ziedot</string>
+    <string name="request_permission_text">Vai atļaut <b>%1$s</b> izmantot Dhizuku?</string>
+    <string name="agree">Atļaut</string>
+    <string name="refuse">Liegt</string>
+    <string name="service_channel_name">Fona pakalpojums</string>
+    <string name="service_running">Dhizuku palaists</string>
+    <string name="home_shizuku_title">Aktivizēšana izmantojot Shizuku</string>
+    <string name="home_shizuku_dsp">Izmantojot Shizuku, jums ir iespēja palaist ADB komandas bez datora palīdzības. Lūdzu, &lt;a href=%1$s&gt;izlasiet dokumentāciju&lt;/a&gt;.</string>
+    <string name="home_deactivate_title">Deaktivizēt</string>
+    <string name="home_deactivate_dsp">Vai tiešām vēlaties deaktivizēt?</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">Wechat</string>
+    <string name="binance">Binance</string>
+</resources>
