@@ -2,4 +2,5 @@
 <resources>
     <string name="copy">העתקה</string>
     <string name="cancel">ביטול</string>
+    <string name="request_permission_text">להסכים לבקשת הרשאת Dhizuku של <b>%1$s</b>\?</string>
 </resources>
