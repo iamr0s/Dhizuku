@@ -58,7 +58,13 @@ class AppRepoImpl(
         val packageNames = packageManager.getPackagesForUid(entity.uid) ?: emptyArray()
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
         packageNames.forEach {
-            devicePolicyManager.setDelegatedScopes(DhizukuState.component, it, emptyList())
+            kotlin.runCatching {
+                devicePolicyManager.setDelegatedScopes(
+                    DhizukuState.component,
+                    it,
+                    emptyList()
+                )
+            }
         }
     }
 }

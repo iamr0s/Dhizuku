@@ -2,7 +2,6 @@ package com.rosan.dhizuku.ui.page.settings.app_management
 
 import android.content.Context
 import android.content.pm.PackageManager
-import android.os.Build
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -45,9 +44,7 @@ class AppManagementViewModel : ViewModel(), KoinComponent {
         collectRepoJob?.cancel()
         collectRepoJob = viewModelScope.launch(Dispatchers.IO) {
             repo.flowAll().collect {
-                val flags =
-                    (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) PackageManager.MATCH_UNINSTALLED_PACKAGES
-                    else 0) or PackageManager.GET_META_DATA or PackageManager.GET_PERMISSIONS
+                val flags = PackageManager.GET_META_DATA or PackageManager.GET_PERMISSIONS
                 val data = packageManager
                     .getInstalledPackages(flags)
                     .mapNotNull { packageInfo ->
