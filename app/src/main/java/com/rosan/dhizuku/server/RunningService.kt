@@ -1,12 +1,13 @@
 package com.rosan.dhizuku.server
 
+import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.ServiceInfo
 import android.os.Build
-import androidx.core.app.JobIntentService
+import android.os.IBinder
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -21,12 +22,13 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-
-class RunningService : JobIntentService(), KoinComponent {
+class RunningService : Service(), KoinComponent {
     companion object {
-        private const val JOB_ID = 1
         fun start(context: Context) {
-            enqueueWork(context, RunningService::class.java, JOB_ID, Intent())
+            val intent = Intent(context, RunningService::class.java)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                context.startForegroundService(intent)
+            else context.startService(intent)
         }
     }
 
@@ -48,19 +50,19 @@ class RunningService : JobIntentService(), KoinComponent {
         }
     }
 
+    override fun onBind(intent: Intent?): IBinder? {
+        return null
+    }
+
     override fun onCreate() {
         super.onCreate()
-    //    runForeground()
-    //    registerPackageReceiver()
+        runForeground()
+        registerPackageReceiver()
     }
 
     override fun onDestroy() {
         unregisterReceiver(packageReceiver)
         super.onDestroy()
-    }
-
-    override fun onHandleWork(intent: Intent) {
-        registerPackageReceiver()
     }
 
     private fun registerPackageReceiver() {
@@ -88,5 +90,35 @@ class RunningService : JobIntentService(), KoinComponent {
             return false
 
         return true
+    }
+
+    private fun runForeground() {
+        val manager = NotificationManagerCompat.from(this)
+        val channelName = "running_service_channel"
+        val channel: NotificationChannelCompat =
+            NotificationChannelCompat.Builder(channelName, NotificationManagerCompat.IMPORTANCE_MAX)
+                .setName(getString(R.string.service_channel_name))
+                .setVibrationEnabled(false)
+                .setSound(null, null)
+                .setShowBadge(false)
+                .build()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+            manager.createNotificationChannel(channel)
+        val notificationId = 1
+        val notification = NotificationCompat.Builder(this, channel.id)
+            .setSmallIcon(R.drawable.round_hourglass_empty_black_24)
+            .setContentTitle(getString(R.string.service_running))
+            .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_DEFERRED)
+            .setPriority(NotificationCompat.PRIORITY_MIN)
+            .setAutoCancel(false)
+            .setOngoing(true)
+            .build()
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+            startForeground(notificationId, notification)
+        else startForeground(
+            notificationId,
+            notification,
+            ServiceInfo.FOREGROUND_SERVICE_TYPE_REMOTE_MESSAGING
+        )
     }
 }
