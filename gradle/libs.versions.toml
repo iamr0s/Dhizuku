@@ -11,7 +11,7 @@
 # https://androidx.dev/storage/compose-compiler/repository/
 
 [versions]
-agp = "8.6.1"
+agp = "8.7.0"
 kotlin = "2.0.0"
 compose = "1.7.3"
 room = "2.6.1"
@@ -20,6 +20,7 @@ rikka-shizuku = "13.1.5"
 koin = "3.5.6"
 
 [plugins]
+toolchains-resolver = { id = "org.gradle.toolchains.foojay-resolver-convention", version = "0.4.0" }
 agp-lib = { id = "com.android.library", version.ref = "agp" }
 agp-app = { id = "com.android.application", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
