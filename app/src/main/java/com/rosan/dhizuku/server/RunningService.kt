@@ -22,13 +22,15 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+
 class RunningService : Service(), KoinComponent {
     companion object {
         fun start(context: Context) {
-            val intent = Intent(context, RunningService::class.java)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                context.startForegroundService(intent)
-            else context.startService(intent)
+           // val intent = Intent(context, RunningService::class.java)
+          //  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+           //     context.startForegroundService(intent)
+           // else context.startService(intent)
+            context.startService(Intent(context, RunningService::class.java))
         }
     }
 
@@ -50,10 +52,6 @@ class RunningService : Service(), KoinComponent {
         }
     }
 
-    override fun onBind(intent: Intent?): IBinder? {
-        return null
-    }
-
     override fun onCreate() {
         super.onCreate()
         runForeground()
@@ -64,6 +62,8 @@ class RunningService : Service(), KoinComponent {
         unregisterReceiver(packageReceiver)
         super.onDestroy()
     }
+
+    override fun onBind(intent: Intent?): IBinder? = null
 
     private fun registerPackageReceiver() {
         scope.launch {

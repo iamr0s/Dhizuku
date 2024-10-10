@@ -15,4 +15,18 @@
     <string name="donate">Darovať</string>
     <string name="request_permission_text">Súhlasíte so žiadosťou o povolenie Dhizuku <b>%1$s</b>\?</string>
     <string name="home_deactivate_title">Deaktivácia</string>
+    <string name="retry">Znovu</string>
+    <string name="home_dhizuku_dsp">Ak máte nainštalované iné implementácie Dhizuku, môžete medzi nimi ľubovoľne prepínať. Prosím, &lt;a href=%1$s&gt;prečítajte si nápovedu&lt;/a&gt;.</string>
+    <string name="home_status_owner_granted">Ste vlastníkom!!!</string>
+    <string name="home_status_owner_denied">Čaká na aktiváciu</string>
+    <string name="home_app_management_title">Správa aplikácií</string>
+    <string name="home_app_management_dsp">Zobrazia sa tu aplikácie, ktoré požaduje alebo oznámil Dhizuku.</string>
+    <string name="home_dhizuku_title">Aktivácia programom Dhizuku</string>
+    <string name="home_shizuku_title">Aktivácia pomocou Shizuku</string>
+    <string name="home_shizuku_dsp">Pomocou aplikácie Shizuku môžete spúšťať príkazy ADB bez potreby počítača. Prečítajte si &lt;a href=%1$s&gt;nápovedu&lt;/a&gt;.</string>
+    <string name="home_adb_title">Aktivácia prostredníctvom ADB</string>
+    <string name="home_adb_dsp">Prostredníctvom pripojenia ADB (Android Debug Bridge) môžete vykonávať niektoré privilegované príkazy. Prečítajte si &lt;a href=%1$s&gt;nápovedu&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Zobraziť príkaz</string>
+    <string name="home_shutdown_title">Vypnutie</string>
+    <string name="home_shutdown_dsp">Systém nebude môcť vypnúť Dhizuku, pokiaľ tak Dhizuku neurobí dobrovoľne.</string>
 </resources>

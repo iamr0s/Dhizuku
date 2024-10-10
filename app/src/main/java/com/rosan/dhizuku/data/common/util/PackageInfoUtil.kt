@@ -9,9 +9,8 @@ fun PackageManager.getPackageNameForUid(uid: Int): String? =
 
 fun PackageManager.getPackageInfoForUid(
     uid: Int,
-    flags: Int = (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) PackageManager.MATCH_UNINSTALLED_PACKAGES
-    else 0) or (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) PackageManager.GET_SIGNING_CERTIFICATES
-    else PackageManager.GET_SIGNATURES)
+    flags: Int = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) PackageManager.GET_SIGNING_CERTIFICATES
+    else PackageManager.GET_SIGNATURES
 ): PackageInfo? = kotlin.runCatching {
     getPackageInfo(getPackageNameForUid(uid) ?: return null, flags)
 }.getOrNull()

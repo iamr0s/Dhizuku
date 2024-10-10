@@ -21,10 +21,11 @@ import org.koin.core.component.get
 abstract class DhizukuRoom : RoomDatabase() {
     companion object : KoinComponent {
         fun createInstance(): DhizukuRoom {
-            val context = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                get<Context>().createDeviceProtectedStorageContext()
-            } else {
-                get()
+            var context: Context = get()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+                && context.isDeviceProtectedStorage
+            ) {
+                context = context.createDeviceProtectedStorageContext()
             }
             return Room.databaseBuilder(
                 context,

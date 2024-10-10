@@ -15,7 +15,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -73,6 +75,8 @@ fun DhizukuTheme(
                 WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        WindowCompat.getInsetsController(window,window.decorView)
 
         window.statusBarColor = Color.Transparent.toArgb()
         WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars =
