@@ -26,10 +26,10 @@ import org.koin.core.component.inject
 class RunningService : Service(), KoinComponent {
     companion object {
         fun start(context: Context) {
-           // val intent = Intent(context, RunningService::class.java)
-          //  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-           //     context.startForegroundService(intent)
-           // else context.startService(intent)
+            val intent = Intent(context, RunningService::class.java)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                context.startForegroundService(intent)
+            else context.startService(intent)
             context.startService(Intent(context, RunningService::class.java))
         }
     }
