@@ -1,5 +1,22 @@
 English | [简体中文](README_zh_rCN.md) | [日本語](README_ja.md) | [Русский](README_ru.md)
 
+# Fork description
+This is a version of Dhizuku with some fixes to make it work in BFU mode and deletable version of an app.
+
+## Apps versions:
+Dhizuku-usual - can be installed as usual apk file. If you will install this app and grant owner rights, you will not be able to disable these rights and uninstall the app.
+
+Dhizuku-ADB - requires installation via ADB. Can be uninstalled.
+
+## Installation via ADB
+1. Download [SDK Platform tools](https://developer.android.com/tools/releases/platform-tools) on your PC
+2. Unzip the archive 
+3. Download the version of the application that requires installation via ADB to your computer 
+4. On your mobile device, [unlock developer settings](https://developer.android.com/studio/debug/dev-options)
+5. Open the developer settings and allow debugging via USB
+6. Connect devices and allow USB debugging for your PC
+7. Open the command prompt and enter the command \<path to platform-tools folder\>/adb[.exe] install -t \<path to apk file\>.
+
 # Dhizuku
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
