@@ -16,7 +16,7 @@
     <string name="request_permission_text"><b>%1$s</b> による Dhizuku へのアクセスを許可しますか？</string>
     <string name="home_deactivate_title">無効化</string>
     <string name="home_status_owner_denied">有効化を待機中</string>
-    <string name="home_app_management_dsp">Dhizuku を要求または使用宣言したアプリがここに表示されます。</string>
+    <string name="home_app_management_dsp">Dhizuku の使用を宣言したアプリがここに表示されます。</string>
     <string name="home_dhizuku_title">Dhizuku による有効化</string>
     <string name="home_shizuku_title">Shizuku による有効化</string>
     <string name="home_adb_title">ADB による有効化</string>
