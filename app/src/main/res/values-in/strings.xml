@@ -15,4 +15,14 @@
     <string name="service_channel_name">Layanan latar belakang</string>
     <string name="request_permission_text">Menyetujui permintaan izin Dhizuku dari <b>%1$s</b>\?</string>
     <string name="service_running">Dhizuku sedang berjalan</string>
+    <string name="home_dhizuku_dsp">Jika Anda memiliki implementasi Dhizuku lain yang terinstal, Anda dapat beralih di antara keduanya sesuka hati. Silakan <a href="%1$s">baca bantuan</a>.</string>
+    <string name="home_status_owner_denied">Menunggu aktivasi fot</string>
+    <string name="home_shizuku_dsp">Dengan Shizuku, Anda dapat menjalankan perintah ADB tanpa memerlukan komputer. Silakan <a href="%1$s">baca bantuan</a>.</string>
+    <string name="retry">Coba lagi</string>
+    <string name="home_status_owner_granted">Anda adalah Pemilik !!!</string>
+    <string name="home_app_management_title">Manajemen Aplikasi</string>
+    <string name="home_app_management_dsp">Aplikasi yang telah meminta atau mendeklarasikan Dhizuku akan ditampilkan di sini.</string>
+    <string name="home_dhizuku_title">Aktivasi oleh Dhizuku</string>
+    <string name="home_shizuku_title">Aktivasi oleh Shizuku</string>
+    <string name="home_adb_title">Aktivasi oleh ADB</string>
 </resources>
