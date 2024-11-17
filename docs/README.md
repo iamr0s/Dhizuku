@@ -36,3 +36,5 @@ If you would like to get involved in translating Dhizuku, head over to [Weblate]
 ## License
 
 Dhizuku is licensed under the [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) , And promises to continue to keep it open source in the future.
+
+Dhizuku's [icon](https://github.com/lutianyu2001/DhizukuIcon) is licensed under the [![CC BY-NC-SA 4.0](https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
