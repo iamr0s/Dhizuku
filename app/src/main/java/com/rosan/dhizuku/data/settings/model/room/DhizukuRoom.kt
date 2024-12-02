@@ -23,7 +23,7 @@ abstract class DhizukuRoom : RoomDatabase() {
         fun createInstance(): DhizukuRoom {
             var context: Context = get()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
-                && context.isDeviceProtectedStorage
+                && !context.isDeviceProtectedStorage
             ) {
                 context = context.createDeviceProtectedStorageContext()
             }
