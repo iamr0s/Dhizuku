@@ -36,3 +36,7 @@
 ## Лицензия
 
 Dhizuku распространяется под условиями лицензии [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) и обещает поддерживать его исходный код открытым и дальше в будущем.
+
+## Благодарности
+
+- Tianyu (Sky) Lu: Создал [иконку](https://github.com/lutianyu2001/DhizukuIcon) (лицензировано под [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/))
