@@ -3,4 +3,30 @@
     <string name="copy">העתקה</string>
     <string name="cancel">ביטול</string>
     <string name="request_permission_text">להסכים לבקשת הרשאת Dhizuku של <b>%1$s</b>\?</string>
+    <string name="confirm">בסדר</string>
+    <string name="finish">סיום</string>
+    <string name="binance">Binance</string>
+    <string name="retry">נסה שוב</string>
+    <string name="home_status_owner_granted">אתה הבעלים!!!</string>
+    <string name="home_app_management_title">ניהול יישומים</string>
+    <string name="home_dhizuku_dsp">אם מותקנות גרסאות dhizuku אחרות ניתן להחליף בינהן כשרוצים נא &lt;a href=%1$s&gt;לקרוא את העזרה&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">הפעלה באמצעות shizuku</string>
+    <string name="home_shizuku_dsp">עם shizuku יש את האפשרות להריץ פקודות ADB ללא הצורך במחשב. נא a href=%1$s&gt;לקרוא את העזרה&lt;/a&gt;.</string>
+    <string name="home_adb_title">הפעלה באמצעות ADB</string>
+    <string name="home_adb_dsp">דרך חיבור הADB (android debugging bridge), ניתן לבצע כמה פקודות מוגנות. נא &lt;a href=%1$s&gt;לקרוא את העזרה&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">הצגת הפקודה</string>
+    <string name="home_shutdown_dsp">המערכת לא תוכל לכבות את Dhizuku אלא אם Dhizuku יתכבה בעצמו.</string>
+    <string name="home_deactivate_title">הסרה</string>
+    <string name="home_deactivate_dsp">האם אתם בטוחים שאתם רוצים להסיר?</string>
+    <string name="donate">לתרום</string>
+    <string name="alipay">Alipay</string>
+    <string name="agree">הענקה</string>
+    <string name="refuse">דחייה</string>
+    <string name="service_running">Dhizuku פועל</string>
+    <string name="home_shutdown_title">כיבוי</string>
+    <string name="wechat">Wechat</string>
+    <string name="service_channel_name">שירות רקע</string>
+    <string name="home_app_management_dsp">אפליקציות שביקשו או הכריזו dhizuku יופיעו כאן</string>
+    <string name="home_status_owner_denied">מחכה להפעלה</string>
+    <string name="home_dhizuku_title">הפעלה באמצעות dhizuku</string>
 </resources>
