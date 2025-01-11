@@ -18,7 +18,7 @@
     <string name="retry">Znovu</string>
     <string name="home_dhizuku_dsp">Ak máte nainštalované iné implementácie Dhizuku, môžete medzi nimi ľubovoľne prepínať. Prosím, &lt;a href=%1$s&gt;prečítajte si nápovedu&lt;/a&gt;.</string>
     <string name="home_status_owner_granted">Ste vlastníkom!!!</string>
-    <string name="home_status_owner_denied">Čaká na aktiváciu</string>
+    <string name="home_status_owner_denied">Čakanie na aktiváciu</string>
     <string name="home_app_management_title">Správa aplikácií</string>
     <string name="home_app_management_dsp">Zobrazia sa tu aplikácie, ktoré požaduje alebo oznámil Dhizuku.</string>
     <string name="home_dhizuku_title">Aktivácia programom Dhizuku</string>
