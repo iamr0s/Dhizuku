@@ -2,6 +2,7 @@ package com.rosan.dhizuku.ui.page.settings.home
 
 import android.app.admin.DevicePolicyManager
 import android.content.Context
+import android.os.Build
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
@@ -329,8 +330,20 @@ private fun LazyItemScope.DeactivateWidget() {
             Text(stringResource(R.string.cancel))
         }
         TextButton(onClick = {
-            @Suppress("DEPRECATION")
-            manager.clearDeviceOwnerApp(context.packageName)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                try {
+                    @Suppress("DEPRECATION")
+                    manager.clearProfileOwner(DhizukuState.component)
+                } catch (e: Throwable) {
+                    e.printStackTrace()
+                }
+            }
+            try {
+                @Suppress("DEPRECATION")
+                manager.clearDeviceOwnerApp(context.packageName)
+            } catch (e: Throwable) {
+                e.printStackTrace()
+            }
             state = false
         }) {
             Text(stringResource(R.string.confirm))
