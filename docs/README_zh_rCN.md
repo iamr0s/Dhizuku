@@ -36,3 +36,7 @@ Android 5.0 ~ 14
 ## 开源协议
 
 Dhizuku目前基于 [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) 开源，且保证未来依然继续遵循此协议开源。
+
+## 致谢
+
+- Tianyu (Sky) Lu：制作了[图标](https://github.com/lutianyu2001/DhizukuIcon)（基于[**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/)协议）
