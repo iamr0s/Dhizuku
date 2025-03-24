@@ -2,8 +2,8 @@
 <resources>
     <string name="service_running">Dhizuku 이(가) 작동중입니다</string>
     <string name="service_channel_name">백그라운드 서비스</string>
-    <string name="home_deactivate_dsp">정말로 비활성화 하시겠습니까\?</string>
-    <string name="wechat">Wechat</string>
+    <string name="home_deactivate_dsp">정말로 비활성화 하시겠습니까?</string>
+    <string name="wechat">WeChat</string>
     <string name="agree">허용</string>
     <string name="copy">복사</string>
     <string name="finish">완료</string>
@@ -15,4 +15,18 @@
     <string name="donate">후원</string>
     <string name="request_permission_text"><b>%1$s</b> 이(가) Dhizuku 권한을 사용할 수 있도록 허용하시겠습니까\?</string>
     <string name="home_deactivate_title">비활성화</string>
+    <string name="retry">재시도</string>
+    <string name="home_status_owner_granted">기기 소유자가 되었습니다！</string>
+    <string name="home_app_management_title">애플리케이션 관리</string>
+    <string name="home_dhizuku_title">Dhizuku에 의한 활성화</string>
+    <string name="home_shizuku_title">Shizuku에 의한 활성화</string>
+    <string name="home_shizuku_dsp">Shizuku를 사용하면 컴퓨터 없이도 ADB 명령을 실행할 수 있습니다. &lt;a href=%1$s&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
+    <string name="home_adb_title">ADB에 의한 활성화</string>
+    <string name="home_adb_dsp">ADB(Android Debug Bridge) 연결을 통해 일부 특권 명령을 실행할 수 있습니다. &lt;a href=%1$s&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">명령 보기</string>
+    <string name="home_shutdown_title">일시 휴업</string>
+    <string name="home_shutdown_dsp">Dhizuku가 자발적으로 그렇게 하지 않는 한, 시스템은 Dhizuku를 종료할 수 없습니다.</string>
+    <string name="home_app_management_dsp">Dhizuku를 요청하거나 선언한 앱이 여기에 표시됩니다.</string>
+    <string name="home_dhizuku_dsp">다른 Dhizuku 구현이 설치되어 있는 경우, 원하는 대로 전환할 수 있습니다. &lt;a href=%1$s&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
+    <string name="home_status_owner_denied">활성화를 기다리는 중</string>
 </resources>
