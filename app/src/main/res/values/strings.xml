@@ -31,7 +31,7 @@
     <string name="finish">Finish</string>
     <string name="donate">Donate</string>
     <string name="alipay">Alipay</string>
-    <string name="wechat">Wechat</string>
+    <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
     <string name="request_permission_text"><![CDATA[Agree to the Dhizuku permission request of <b>%1$s</b>\?]]></string>
     <string name="agree">Grant</string>
