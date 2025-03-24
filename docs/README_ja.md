@@ -15,7 +15,7 @@
 
 ## 対応バージョン
 
-Android 5.0 ~ 14
+Android 5.0 ~ 15
 
 ## 開発者向け（Dhizuku-API を使用）
 

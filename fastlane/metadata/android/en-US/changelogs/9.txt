@@ -1,2 +1,0 @@
-1. Russian translation added (@T8RIN)
-2. fix a major bug

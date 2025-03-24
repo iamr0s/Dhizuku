@@ -26,7 +26,7 @@ android {
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 35
+        targetSdk = compileSdk
         val versionProps = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
@@ -34,6 +34,10 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        proguardFiles(
+            getDefaultProguardFile("proguard-android-optimize.txt"),
+            "proguard-rules.pro"
+        )
     }
 
     signingConfigs {
@@ -49,7 +53,6 @@ android {
             enableV1Signing = true
             enableV2Signing = true
         }
-
         create("release") {
             this.keyAlias = keyAlias
             this.keyPassword = keyPassword
@@ -64,30 +67,27 @@ android {
         getByName("debug") {
             signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
         }
 
         getByName("release") {
             signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
         }
     }
 
     java {
         toolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
+            languageVersion.set(JavaLanguageVersion.of(21))
         }
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
     kotlin {
-        jvmToolchain(17)
+        jvmToolchain(21)
     }
 
     buildFeatures {
@@ -111,13 +111,12 @@ dependencies {
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.activity.compose)
-    implementation(libs.compose.ui)
-    implementation(libs.compose.material)
-    implementation(libs.compose.material3)
-    implementation(libs.compose.uiToolingPreview)
 
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.tooling)
     implementation(libs.compose.navigation)
     implementation(libs.compose.materialIcons)
+    implementation(libs.compose.material3)
 
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)
@@ -127,7 +126,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
 
-    implementation(libs.accompanist)
+    implementation(libs.accompanist.pager)
     implementation(libs.accompanist.navigationAnimation)
     implementation(libs.accompanist.flowlayout)
     implementation(libs.accompanist.drawablepainter)
@@ -141,4 +140,8 @@ dependencies {
     implementation(libs.rikka.shizuku.provider)
 
     implementation(libs.iamr0s.dhizuku.api)
+}
+
+tasks.withType<JavaCompile> {
+    options.compilerArgs.addAll(arrayOf("-Xlint:deprecation", "-Xlint:unchecked"))
 }

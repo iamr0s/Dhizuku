@@ -1,28 +1,24 @@
 pluginManagement {
     repositories {
-//        maven { setUrl("https://maven.aliyun.com/repository/public/") }
-//        maven { setUrl("https://jitpack.io") }
         mavenLocal()
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
-        maven { setUrl("https://androidx.dev/storage/compose-compiler/repository/") }
     }
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    @Suppress("UnstableApiUsage")
     repositories {
-//        maven { setUrl("https://maven.aliyun.com/repository/public/") }
-//        maven { setUrl("https://jitpack.io") }
         mavenLocal()
         google()
         mavenCentral()
-        maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
-        maven { setUrl("https://androidx.dev/storage/compose-compiler/repository/") }
+        maven {
+            name = "jitpack.io"
+            url = uri("https://jitpack.io")
+        }
     }
 }
 
 rootProject.name = "Dhizuku"
-include(":app", ":hidden-api")
+include("app", "hidden-api")

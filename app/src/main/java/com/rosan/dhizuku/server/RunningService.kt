@@ -8,20 +8,23 @@ import android.content.IntentFilter
 import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
+
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-
 
 class RunningService : Service(), KoinComponent {
     companion object {

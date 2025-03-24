@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+
 import com.rosan.dhizuku.ui.page.settings.activate.ActivatePage
 import com.rosan.dhizuku.ui.page.settings.app_management.AppManagementPage
 import com.rosan.dhizuku.ui.page.settings.home.HomePage

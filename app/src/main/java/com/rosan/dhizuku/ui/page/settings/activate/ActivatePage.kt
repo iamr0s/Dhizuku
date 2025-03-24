@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.ui.page.settings.activate
 
 import android.content.ComponentName
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.scaleIn
@@ -56,11 +57,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.AppIconCache
 import com.rosan.dhizuku.ui.theme.exclude
 import com.rosan.dhizuku.ui.theme.plus
+
 import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)

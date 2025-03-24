@@ -25,6 +25,8 @@ import android.os.Looper;
 import android.os.UserHandle;
 import android.view.Display;
 
+import androidx.annotation.NonNull;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -32,6 +34,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+/** @noinspection RedundantThrows*/
 public class ContextImpl extends Context {
     @Override
     public AssetManager getAssets() {
@@ -314,7 +317,7 @@ public class ContextImpl extends Context {
     }
 
     @Override
-    public void sendOrderedBroadcast(Intent intent, String receiverPermission, BroadcastReceiver resultReceiver, Handler scheduler, int initialCode, String initialData, Bundle initialExtras) {
+    public void sendOrderedBroadcast(@NonNull Intent intent, String receiverPermission, BroadcastReceiver resultReceiver, Handler scheduler, int initialCode, String initialData, Bundle initialExtras) {
 
     }
 
@@ -404,62 +407,62 @@ public class ContextImpl extends Context {
     }
 
     @Override
-    public boolean bindService(Intent service, ServiceConnection conn, int flags) {
+    public boolean bindService(@NonNull Intent service, @NonNull ServiceConnection conn, int flags) {
         return false;
     }
 
     @Override
-    public void unbindService(ServiceConnection conn) {
+    public void unbindService(@NonNull ServiceConnection conn) {
 
     }
 
     @Override
-    public boolean startInstrumentation(ComponentName className, String profileFile, Bundle arguments) {
+    public boolean startInstrumentation(@NonNull ComponentName className, String profileFile, Bundle arguments) {
         return false;
     }
 
     @Override
-    public Object getSystemService(String name) {
+    public Object getSystemService(@NonNull String name) {
         return null;
     }
 
     @Override
-    public String getSystemServiceName(Class<?> serviceClass) {
+    public String getSystemServiceName(@NonNull Class<?> serviceClass) {
         return null;
     }
 
     @Override
-    public int checkPermission(String permission, int pid, int uid) {
-        return 0;
+    public int checkPermission(@NonNull String permission, int pid, int uid) {
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
-    public int checkCallingPermission(String permission) {
-        return 0;
+    public int checkCallingPermission(@NonNull String permission) {
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
-    public int checkCallingOrSelfPermission(String permission) {
-        return 0;
+    public int checkCallingOrSelfPermission(@NonNull String permission) {
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
-    public int checkSelfPermission(String permission) {
-        return 0;
+    public int checkSelfPermission(@NonNull String permission) {
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
-    public void enforcePermission(String permission, int pid, int uid, String message) {
-
-    }
-
-    @Override
-    public void enforceCallingPermission(String permission, String message) {
+    public void enforcePermission(@NonNull String permission, int pid, int uid, String message) {
 
     }
 
     @Override
-    public void enforceCallingOrSelfPermission(String permission, String message) {
+    public void enforceCallingPermission(@NonNull String permission, String message) {
+
+    }
+
+    @Override
+    public void enforceCallingOrSelfPermission(@NonNull String permission, String message) {
 
     }
 
@@ -480,22 +483,22 @@ public class ContextImpl extends Context {
 
     @Override
     public int checkUriPermission(Uri uri, int pid, int uid, int modeFlags) {
-        return 0;
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
     public int checkCallingUriPermission(Uri uri, int modeFlags) {
-        return 0;
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
     public int checkCallingOrSelfUriPermission(Uri uri, int modeFlags) {
-        return 0;
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
     public int checkUriPermission(Uri uri, String readPermission, String writePermission, int pid, int uid, int modeFlags) {
-        return 0;
+        return PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
@@ -529,12 +532,12 @@ public class ContextImpl extends Context {
     }
 
     @Override
-    public Context createConfigurationContext(Configuration overrideConfiguration) {
+    public Context createConfigurationContext(@NonNull Configuration overrideConfiguration) {
         return null;
     }
 
     @Override
-    public Context createDisplayContext(Display display) {
+    public Context createDisplayContext(@NonNull Display display) {
         return null;
     }
 

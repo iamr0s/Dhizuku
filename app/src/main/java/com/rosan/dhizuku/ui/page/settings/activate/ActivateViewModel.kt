@@ -14,30 +14,36 @@ import android.os.Build
 import android.os.IBinder
 import android.os.IInterface
 import android.system.Os
+
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+
 import com.rosan.dhizuku.api.Dhizuku
 import com.rosan.dhizuku.data.common.util.has
 import com.rosan.dhizuku.data.common.util.requireDhizukuPermissionGranted
 import com.rosan.dhizuku.data.common.util.requireShizukuPermissionGranted
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
+
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+
 import org.xmlpull.v1.XmlPullParserException
-import rikka.shizuku.ShizukuBinderWrapper
+
 import java.io.IOException
 import java.lang.reflect.Field
 import java.lang.reflect.InvocationTargetException
 
+import rikka.shizuku.ShizukuBinderWrapper
 
 class ActivateViewModel : ViewModel(), KoinComponent {
     private val context by inject<Context>()

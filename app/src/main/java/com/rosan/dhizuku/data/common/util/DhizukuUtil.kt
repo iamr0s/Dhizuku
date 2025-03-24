@@ -1,9 +1,11 @@
 package com.rosan.dhizuku.data.common.util
 
 import android.content.pm.PackageManager
+
 import com.rosan.dhizuku.api.Dhizuku
 import com.rosan.dhizuku.api.DhizukuRequestPermissionListener
 import com.rosan.dhizuku.data.common.model.exception.DhizukuNotWorkException
+
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.catch
