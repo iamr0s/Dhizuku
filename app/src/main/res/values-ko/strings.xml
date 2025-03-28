@@ -13,7 +13,7 @@
     <string name="cancel">취소</string>
     <string name="confirm">확인</string>
     <string name="donate">후원</string>
-    <string name="request_permission_text"><b>%1$s</b> 이(가) Dhizuku 권한을 사용할 수 있도록 허용하시겠습니까\?</string>
+    <string name="request_permission_text"><b>%1$s</b> 이(가) Dhizuku 권한을 사용할 수 있도록 허용하시겠습니까?</string>
     <string name="home_deactivate_title">비활성화</string>
     <string name="retry">재시도</string>
     <string name="home_status_owner_granted">기기 소유자가 되었습니다！</string>
