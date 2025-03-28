@@ -11,7 +11,7 @@
     <string name="refuse">Denegar</string>
     <string name="service_channel_name">Servicio de fondo</string>
     <string name="service_running">Dhizuku está en marcha</string>
-    <string name="request_permission_text">¿Acepta la solicitud de permiso Dhizuku de <b>%1$s</b> \?</string>
+    <string name="request_permission_text">¿Acepta la solicitud de permiso Dhizuku de <b>%1$s</b> ?</string>
     <string name="home_deactivate_title">Desactivar</string>
     <string name="alipay">Alipay</string>
     <string name="binance">Binance</string>
