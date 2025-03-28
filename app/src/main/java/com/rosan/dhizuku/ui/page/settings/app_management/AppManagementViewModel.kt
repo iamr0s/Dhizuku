@@ -2,19 +2,23 @@ package com.rosan.dhizuku.ui.page.settings.app_management
 
 import android.content.Context
 import android.content.pm.PackageManager
+
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.shared.DhizukuVariables
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
 import org.koin.core.component.inject
@@ -24,11 +28,11 @@ class AppManagementViewModel : ViewModel(), KoinComponent {
         get<Context>()
     }
 
-    val packageManager by lazy {
+    private val packageManager: PackageManager by lazy {
         context.packageManager
     }
 
-    val repo by inject<AppRepo>()
+    private val repo by inject<AppRepo>()
 
     var state by mutableStateOf(AppManagementViewState())
         private set

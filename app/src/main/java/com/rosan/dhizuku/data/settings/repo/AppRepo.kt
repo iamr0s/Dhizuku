@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.data.settings.repo
 
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
+
 import kotlinx.coroutines.flow.Flow
 
 interface AppRepo {

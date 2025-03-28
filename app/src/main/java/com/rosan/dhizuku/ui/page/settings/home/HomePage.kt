@@ -3,6 +3,7 @@ package com.rosan.dhizuku.ui.page.settings.home
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.os.Build
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
@@ -72,11 +73,13 @@ import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.data.common.util.openUrlInBrowser
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.exclude
+
 import kotlin.system.exitProcess
 
 @OptIn(ExperimentalMaterial3Api::class)

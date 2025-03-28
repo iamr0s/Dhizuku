@@ -1,1 +1,0 @@
-A tool that can share DeviceOwner permissions to other application.

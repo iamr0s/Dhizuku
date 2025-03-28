@@ -35,6 +35,8 @@
 #-keep class androidx.core.content.FileProvider {*;}
 #-keep interface androidx.core.content.FileProvider$PathStrategy {*;}
 
+-keep class com.hjq.permissions.** {*;}
+
 -keep class rikka.shizuku.ShizukuProvider
 
 -dontwarn **

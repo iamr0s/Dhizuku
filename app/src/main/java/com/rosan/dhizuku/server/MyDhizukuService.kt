@@ -2,12 +2,15 @@ package com.rosan.dhizuku.server
 
 import android.content.ComponentName
 import android.content.Context
+
 import com.rosan.dhizuku.aidl.IDhizukuClient
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.server_api.DhizukuService
+
 import kotlinx.coroutines.runBlocking
+
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
@@ -30,8 +33,6 @@ class MyDhizukuService(context: Context?, admin: ComponentName?, client: IDhizuk
             ?: return false
         this.signature = signature
 
-        if (signature != entity.signature) return false
-
-        return true
+        return signature == entity.signature
     }
 }
