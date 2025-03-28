@@ -16,7 +16,7 @@
     <string name="request_permission_text">Menyetujui permintaan izin Dhizuku dari <b>%1$s</b>\?</string>
     <string name="service_running">Dhizuku sedang berjalan</string>
     <string name="home_dhizuku_dsp">Jika Anda memiliki implementasi Dhizuku lain yang terinstal, Anda dapat beralih di antara keduanya sesuka hati. Silakan <a href="%1$s">baca bantuan</a>.</string>
-    <string name="home_status_owner_denied">Menunggu aktivasi fot</string>
+    <string name="home_status_owner_denied">Menunggu Aktivasi</string>
     <string name="home_shizuku_dsp">Dengan Shizuku, Anda dapat menjalankan perintah ADB tanpa memerlukan komputer. Silakan <a href="%1$s">baca bantuan</a>.</string>
     <string name="retry">Coba lagi</string>
     <string name="home_status_owner_granted">Anda adalah Pemilik !!!</string>
