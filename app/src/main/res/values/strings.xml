@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name" translatable="false">Dhizuku</string>
-    <string name="permission_name">Use Dhizuku\'s API</string>
+    <string name="permission_description">Use Dhizuku\'s API</string>
     <!-- Commonly  used characters -->
     <string name="copy">Copy</string>
     <string name="cancel">Cancel</string>

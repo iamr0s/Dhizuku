@@ -3,7 +3,7 @@
 # Android SDK
 /local.properties
 # Kotlin
-/.Kotlin/
+/.kotlin/
 # Gradle Build
 /*/build/
 # AGP Lint
