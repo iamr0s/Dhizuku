@@ -7,7 +7,7 @@
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
-    <string name="request_permission_text"><b>%1$s</b>, Dhizuku kullanılarak yetkilendirilsin mi\?</string>
+    <string name="request_permission_text"><b>%1$s</b>, Dhizuku kullanılarak yetkilendirilsin mi?</string>
     <string name="agree">İzin ver</string>
     <string name="refuse">Reddet</string>
     <string name="service_channel_name">Arkaplan hizmeti</string>
