@@ -6,7 +6,7 @@
     <string name="home_deactivate_dsp">¿Estás seguro de que quieres desactivarlo?</string>
     <string name="copy">Copiar</string>
     <string name="donate">Donar</string>
-    <string name="wechat">Wechat</string>
+    <string name="wechat">WeChat</string>
     <string name="agree">Permitir</string>
     <string name="refuse">Denegar</string>
     <string name="service_channel_name">Servicio de fondo</string>
@@ -17,7 +17,7 @@
     <string name="binance">Binance</string>
     <string name="retry">Reintentar</string>
     <string name="home_status_owner_granted">¡Eres dueño!</string>
-    <string name="home_status_owner_denied">Esperando la activación</string>
+    <string name="home_status_owner_denied">Esperando activación</string>
     <string name="home_app_management_title">Gestión de aplicaciones</string>
     <string name="home_app_management_dsp">Las aplicaciones que soliciten o declaren Dhizuku se mostrarán aquí</string>
     <string name="home_dhizuku_title">Activación por Dhizuku</string>

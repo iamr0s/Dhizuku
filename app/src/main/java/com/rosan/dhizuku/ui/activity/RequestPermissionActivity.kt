@@ -3,6 +3,7 @@ package com.rosan.dhizuku.ui.activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
@@ -29,7 +30,9 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
+
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.aidl.IDhizukuRequestPermissionListener
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
@@ -38,9 +41,11 @@ import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.shared.DhizukuVariables
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

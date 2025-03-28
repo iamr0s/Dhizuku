@@ -1,14 +1,17 @@
 package com.rosan.dhizuku
 
 import android.app.Application
+
 import com.rosan.dhizuku.di.init.appModules
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.server.RunningService
+
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.component.KoinComponent
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
+
 import rikka.sui.Sui
 
 class App : Application(), KoinComponent {

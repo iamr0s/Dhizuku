@@ -14,7 +14,7 @@
     <string name="service_running">Dhizuku запущен</string>
     <string name="service_channel_name">Фоновая служба</string>
     <string name="alipay">Alipay</string>
-    <string name="wechat">Wechat</string>
+    <string name="wechat">WeChat</string>
     <string name="home_app_management_title">Управление приложениями</string>
     <string name="home_app_management_dsp">Приложения, которые запросили Dhizuku будут отображаться здесь.</string>
     <string name="home_shizuku_title">Активация через Shizuku</string>

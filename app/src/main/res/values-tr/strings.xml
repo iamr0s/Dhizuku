@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_deactivate_title">Devre dışı bırak</string>
-    <string name="home_deactivate_dsp">Devre dışı bırakmak istediğinize emin misiniz\?</string>
+    <string name="home_deactivate_dsp">Devre dışı bırakmak istediğinize emin misiniz?</string>
     <string name="copy">Kopyala</string>
     <string name="donate">Bağış Yap</string>
     <string name="alipay">Alipay</string>
@@ -15,4 +15,18 @@
     <string name="finish">Bitti</string>
     <string name="confirm">Onayla</string>
     <string name="cancel">İptal</string>
+    <string name="retry">Yeniden dene</string>
+    <string name="home_status_owner_granted">Yöneticisiniz!!</string>
+    <string name="home_app_management_title">Uygulama Yönetimi</string>
+    <string name="home_app_management_dsp">Shizuku\'yu talep eden veya bildiren uygulamalar burada gösterilecektir.</string>
+    <string name="home_dhizuku_title">Shizuku\'yla Aktivasyon</string>
+    <string name="home_shizuku_title">Shizuku\'yla Aktivasyon</string>
+    <string name="home_shizuku_dsp">Shizuku ile bilgisayara ihtiyaç duymadan ADB komutlarını çalıştırma olanağına sahipsiniz. Lütfen &lt;a href=%1$s&gt;yardımı okuyun&lt;/a&gt;.</string>
+    <string name="home_adb_title">ADB tarafından Aktivasyon</string>
+    <string name="home_adb_btn_view_command">Komutu görüntüle</string>
+    <string name="home_shutdown_title">Kapat</string>
+    <string name="home_shutdown_dsp">Dhizuku bunu gönüllü olarak yapmadığı sürece sistem Dhizuku\'yu kapatamayacaktır.</string>
+    <string name="home_status_owner_denied">Aktivasyon için bekleniyor</string>
+    <string name="home_dhizuku_dsp">Kurulu başka Dhizuku uygulamalarınız varsa, bunlar arasında istediğiniz zaman geçiş yapabilirsiniz. Lütfen &lt;a href=%1$s&gt;yardımı okuyun&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">ADB (Android Hata Ayıklama Köprüsü) bağlantısı aracılığıyla bazı ayrıcalıklı komutları çalıştırabilirsiniz. Lütfen &lt;a href=%1$s&gt;yardımı okuyun&lt;/a&gt;.</string>
 </resources>

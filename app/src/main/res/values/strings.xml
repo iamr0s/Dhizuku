@@ -1,52 +1,42 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name" translatable="false">Dhizuku</string>
-
+    <string name="permission_description">Use Dhizuku\'s API</string>
     <!-- Commonly  used characters -->
     <string name="copy">Copy</string>
     <string name="cancel">Cancel</string>
     <string name="retry">Retry</string>
-
     <!-- Home - Status -->
     <string name="home_status_owner_granted">You are Owner!!!</string>
-    <string name="home_status_owner_denied">Waiting fot activation</string>
-
+    <string name="home_status_owner_denied">Waiting for activation</string>
     <!-- Home - Application Management -->
     <string name="home_app_management_title">Application Management</string>
     <string name="home_app_management_dsp">Apps that has requested or declared Dhizuku will show here.</string>
-
     <!-- Home - Dhizuku -->
     <string name="home_dhizuku_title">Activation by Dhizuku</string>
-    <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please &lt;a href=&quot;%1$s&quot;&gt;read the help&lt;/a&gt;.</string>
-
+    <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
     <!-- Home - Shizuku -->
     <string name="home_shizuku_title">Activation by Shizuku</string>
-    <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please &lt;a href=&quot;%1$s&quot;&gt;read the help&lt;/a&gt;.</string>
-
+    <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
     <!-- Home - Adb -->
     <string name="home_adb_title">Activation by ADB</string>
-    <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href=&quot;%1$s&quot;&gt;read the help&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">View command</string>
-
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
     <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
-
     <!-- Home - Deactivate-->
     <string name="home_deactivate_title">Deactivate</string>
     <string name="home_deactivate_dsp">Are you sure you want to deactivate?</string>
-
     <string name="confirm">OK</string>
     <string name="finish">Finish</string>
-
     <string name="donate">Donate</string>
     <string name="alipay">Alipay</string>
-    <string name="wechat">Wechat</string>
+    <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
-
     <string name="request_permission_text"><![CDATA[Agree to the Dhizuku permission request of <b>%1$s</b>\?]]></string>
     <string name="agree">Grant</string>
     <string name="refuse">Deny</string>
-
     <string name="service_channel_name">Background service</string>
     <string name="service_running">Dhizuku is running</string>
 </resources>

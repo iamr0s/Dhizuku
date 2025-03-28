@@ -2,12 +2,15 @@ package com.rosan.dhizuku.data.settings.model.room
 
 import android.content.Context
 import android.os.Build
+
 import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+
 import com.rosan.dhizuku.data.settings.model.room.dao.AppDao
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
+
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
 

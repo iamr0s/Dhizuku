@@ -5,7 +5,9 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
+
 import kotlinx.coroutines.flow.Flow
 
 @Dao

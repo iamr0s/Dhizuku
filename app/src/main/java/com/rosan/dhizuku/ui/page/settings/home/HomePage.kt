@@ -2,6 +2,8 @@ package com.rosan.dhizuku.ui.page.settings.home
 
 import android.app.admin.DevicePolicyManager
 import android.content.Context
+import android.os.Build
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
@@ -71,11 +73,13 @@ import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.data.common.util.openUrlInBrowser
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.exclude
+
 import kotlin.system.exitProcess
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -329,8 +333,20 @@ private fun LazyItemScope.DeactivateWidget() {
             Text(stringResource(R.string.cancel))
         }
         TextButton(onClick = {
-            @Suppress("DEPRECATION")
-            manager.clearDeviceOwnerApp(context.packageName)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                try {
+                    @Suppress("DEPRECATION")
+                    manager.clearProfileOwner(DhizukuState.component)
+                } catch (e: Throwable) {
+                    e.printStackTrace()
+                }
+            }
+            try {
+                @Suppress("DEPRECATION")
+                manager.clearDeviceOwnerApp(context.packageName)
+            } catch (e: Throwable) {
+                e.printStackTrace()
+            }
             state = false
         }) {
             Text(stringResource(R.string.confirm))

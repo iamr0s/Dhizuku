@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="home_status_owner_granted">நீங்கள் உரிமையாளர் !!!</string>
+    <string name="home_status_owner_denied">செயல்படுத்தலுக்காக காத்திருக்கிறது</string>
+    <string name="home_app_management_title">பயன்பாட்டு மேலாண்மை</string>
+    <string name="home_dhizuku_title">திசுகுவால் செயல்படுத்தல்</string>
+    <string name="home_dhizuku_dsp">உங்களிடம் பிற திசுகு செயலாக்கங்கள் நிறுவப்பட்டிருந்தால், நீங்கள் அவர்களுக்கு இடையே விருப்பப்படி மாறலாம். தயவுசெய்து &lt;a href =%1$s&gt; உதவியைப் படியுங்கள் &lt;/a&gt;.</string>
+    <string name="home_shizuku_title">சிசுகு எழுதிய ஒரு அசி வி.ஏ.வின் வெப்பநிலை</string>
+    <string name="home_adb_dsp">ADB (Android பிழைத்திருத்த பாலம்) இணைப்பு மூலம், நீங்கள் சில சலுகை பெற்ற கட்டளைகளை இயக்கலாம். தயவுசெய்து &lt;a href =%1$s&gt; உதவியைப் படியுங்கள் &lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">கட்டளையைக் காண்க</string>
+    <string name="home_shutdown_title">பணிநிறுத்தம்</string>
+    <string name="home_shutdown_dsp">திசுகு தானாக முன்வந்து அவ்வாறு செய்யாவிட்டால் இந்த அமைப்பு திசுகுவை மூட முடியாது.</string>
+    <string name="alipay">அலிபே</string>
+    <string name="wechat">வெச்சாட்</string>
+    <string name="binance">பைன்ச்</string>
+    <string name="request_permission_text">&lt;! [சி.டி.ஏ.டி.ஏ [&lt;b&gt;%1$s &lt;/b&gt; \\?]] இன் திசுகு இசைவு கோரிக்கையை ஒப்புக்கொள்கிறேன்]&gt;</string>
+    <string name="agree">மானியம்</string>
+    <string name="refuse">மறுக்கவும்</string>
+    <string name="service_channel_name">பின்னணி பணி</string>
+    <string name="service_running">திசுகு இயங்குகிறது</string>
+    <string name="copy">நகலெடு</string>
+    <string name="cancel">ரத்துசெய்</string>
+    <string name="retry">மீண்டும் முயற்சிக்கவும்</string>
+    <string name="home_app_management_dsp">திசுகு கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
+    <string name="home_shizuku_dsp">சிசுகுவுடன், கணினியின் தேவை இல்லாமல் ADB கட்டளைகளை இயக்கும் திறன் உங்களுக்கு உள்ளது. தயவுசெய்து &lt;a href =%1$s&gt; உதவியைப் படியுங்கள் &lt;/a&gt;.</string>
+    <string name="home_adb_title">ADB ஆல் செயல்படுத்தல்</string>
+    <string name="home_deactivate_title">செயலிழக்கச் செய்யுங்கள்</string>
+    <string name="home_deactivate_dsp">நீங்கள் நிச்சயமாக செயலிழக்க விரும்புகிறீர்களா?</string>
+    <string name="confirm">சரி</string>
+    <string name="finish">முடிக்க</string>
+    <string name="donate">நன்கொடை</string>
+</resources>
