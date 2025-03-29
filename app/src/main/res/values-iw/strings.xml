@@ -29,4 +29,5 @@
     <string name="home_app_management_dsp">אפליקציות שביקשו או הכריזו על dhizuku יופיעו כאן</string>
     <string name="home_status_owner_denied">מחכה להפעלה</string>
     <string name="home_dhizuku_title">הפעלה באמצעות dhizuku</string>
+    <string name="permission_description">השתמש ב-API של Dhizuku</string>
 </resources>
