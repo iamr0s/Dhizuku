@@ -19,7 +19,7 @@
     <string name="home_status_owner_granted">¡Eres dueño!</string>
     <string name="home_status_owner_denied">Esperando activación</string>
     <string name="home_app_management_title">Gestión de aplicaciones</string>
-    <string name="home_app_management_dsp">Las aplicaciones que soliciten o declaren Dhizuku se mostrarán aquí</string>
+    <string name="home_app_management_dsp">Las aplicaciones que soliciten o declaren Dhizuku se mostrarán aquí.</string>
     <string name="home_dhizuku_title">Activación por Dhizuku</string>
     <string name="home_shizuku_title">Activación por Shizuku</string>
     <string name="home_adb_title">Activación a través de ADB</string>
