@@ -2,9 +2,9 @@
 <resources>
     <string name="cancel">Cancelar</string>
     <string name="confirm">OK</string>
-    <string name="finish">Terminar</string>
+    <string name="finish">Acabado</string>
     <string name="home_deactivate_dsp">¿Estás seguro de que quieres desactivarlo?</string>
-    <string name="copy">Copiar</string>
+    <string name="copy">Copia</string>
     <string name="donate">Donar</string>
     <string name="wechat">WeChat</string>
     <string name="agree">Permitir</string>
@@ -29,4 +29,5 @@
     <string name="home_dhizuku_dsp">Si tienes otras implementaciones de Dhizuku instaladas, puedes cambiar entre ellas a voluntad. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
     <string name="home_shizuku_dsp">Con Shizuku, tienes la capacidad de ejecutar comandos ADB sin necesidad de un ordenador. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
     <string name="home_shutdown_dsp">El sistema no podrá detener Dhizuku a menos que Dhizuku lo haga voluntariamente.</string>
+    <string name="permission_description">Utilice la API de Dhizuku</string>
 </resources>
