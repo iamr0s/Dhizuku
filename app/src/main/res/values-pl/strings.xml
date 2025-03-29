@@ -15,11 +15,19 @@
     <string name="donate">Darowizna</string>
     <string name="request_permission_text">Czy wyrażasz zgodę na prośbę o pozwolenie Dhizuku od <b>%1$s</b>\?</string>
     <string name="home_deactivate_title">Dezaktywuj</string>
-    <string name="home_status_owner_granted">Jesteś właścicielem!!!</string>
+    <string name="home_status_owner_granted">Jesteś Właścicielem!!!</string>
     <string name="retry">Ponów</string>
-    <string name="home_status_owner_denied">Oczekiwanie na aktywację</string>
-    <string name="home_app_management_title">Zarządzanie aplikacjami</string>
+    <string name="home_status_owner_denied">Czekam na aktywację</string>
+    <string name="home_app_management_title">Zarządzanie aplikacją</string>
     <string name="home_shizuku_dsp">Z aplikacją Shizuku, masz możliwość wydawania poleceń ADB bez dostępu do komputera. Proszę &lt;a href=%1$s&gt;przeczytać pomoc&lt;/a&gt;.</string>
-    <string name="home_app_management_dsp">Aplikacje korzystające z Dhizuku pojawią się tutaj.</string>
+    <string name="home_app_management_dsp">Aplikacje, które zarządały lub zadeklarowały Dhizuku pojawią się tutaj.</string>
     <string name="home_adb_title">Aktywacja przez ADB</string>
+    <string name="home_dhizuku_title">Aktywacja z użyciem Dhizuku</string>
+    <string name="home_dhizuku_dsp">Jeśli posiadasz inne implementację Dhizuku, możesz się między nimi przełączać. Proszę &lt;a href=%1$s&gt;przeczytać pomoc&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Aktywacja przez Shizuku</string>
+    <string name="home_adb_dsp">Poprzez połączenie ADB (Android Debug Bridge) możesz wykonywać niektóre uprzywilejowane polecenia. Proszę &lt;a href=%1$s&gt;przeczytać pomoc&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Pokaż komendę</string>
+    <string name="permission_description">Użyj API Dhizuku</string>
+    <string name="home_shutdown_dsp">System nie będzie w stanie wyłączyć Dhizuku, dopóki Dhizuku nie zrobi tego dobrowolnie.</string>
+    <string name="home_shutdown_title">Zamknięcie</string>
 </resources>
