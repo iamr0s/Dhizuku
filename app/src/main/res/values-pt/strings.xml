@@ -29,4 +29,5 @@
     <string name="home_shutdown_dsp">O sistema não conseguirá desligar o Dhizuku a menos que ele o faça voluntariamente.</string>
     <string name="home_adb_btn_view_command">Ver comando</string>
     <string name="home_dhizuku_dsp">Se você tiver outras implementações do Dhizuku instaladas, você pode alternar entre elas à vontade. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
+    <string name="permission_description">Utilize a API do Dhizuku</string>
 </resources>
