@@ -29,4 +29,5 @@
     <string name="home_dhizuku_dsp">他の Dhizuku 統合アプリがインストールされている場合、それらを自由に切り替えることができます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
     <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
     <string name="home_adb_dsp">ADB (Android Debug Bridge) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
+    <string name="permission_description">Dhizuku の API を使用します</string>
 </resources>
