@@ -3,7 +3,7 @@
     <string name="service_running">Dhizuku قيد التشغيل</string>
     <string name="service_channel_name">خدمة الخلفية</string>
     <string name="home_deactivate_dsp">هل أنت متأكد أنك تريد إلغاء التنشيط؟</string>
-    <string name="wechat">Wechat</string>
+    <string name="wechat">WeChat</string>
     <string name="agree">منح</string>
     <string name="copy">نسخ</string>
     <string name="finish">إنهاء</string>
@@ -29,4 +29,5 @@
     <string name="home_shutdown_title">إيقاف التشغيل</string>
     <string name="home_adb_dsp">من خلال اتصال ADB (جسر تصحيح أخطاء أندرويد)، يمكنك تنفيذ بعض الأوامر المميزة. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
     <string name="home_shutdown_dsp">لن يتمكن النظام من إيقاف تشغيل Dhizuku ما لم تقم Dhizuku بذلك طواعية.</string>
+    <string name="permission_description">استخدم واجهة برمجة التطبيقات الخاصة بـ Dhizuku</string>
 </resources>
