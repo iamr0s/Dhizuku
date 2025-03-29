@@ -29,4 +29,5 @@
     <string name="home_shutdown_dsp">Система не сможет завершить Dhizuku, если Dhizuku не сделает этого самостоятельно.</string>
     <string name="home_shutdown_title">Завершение</string>
     <string name="home_status_owner_denied">Ожидается активация</string>
+    <string name="permission_description">Используйте API Dhizuku</string>
 </resources>
