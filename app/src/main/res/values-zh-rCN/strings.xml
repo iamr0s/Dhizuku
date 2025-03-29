@@ -36,4 +36,5 @@
     <string name="refuse">拒绝</string>
     <string name="service_channel_name">后台服务</string>
     <string name="service_running">Dhizuku正在运行</string>
+    <string name="permission_description">使用 Dhizuku 的 API</string>
 </resources>
