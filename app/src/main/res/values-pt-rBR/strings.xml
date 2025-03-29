@@ -2,7 +2,7 @@
 <resources>
     <string name="cancel">Cancelar</string>
     <string name="confirm">OK</string>
-    <string name="finish">Terminar</string>
+    <string name="finish">Acabamento</string>
     <string name="home_deactivate_title">Desativar</string>
     <string name="home_deactivate_dsp">Tem certeza de que deseja desativar?</string>
     <string name="copy">Copiar</string>
@@ -29,4 +29,5 @@
     <string name="home_adb_dsp">Por meio da conexão ADB (Android Debug Bridge), você pode executar alguns comandos privilegiados. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Ver comando</string>
     <string name="home_shutdown_title">Desligar</string>
+    <string name="permission_description">Use a API do Dhizuku</string>
 </resources>
