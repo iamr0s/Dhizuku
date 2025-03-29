@@ -29,4 +29,5 @@
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
+    <string name="permission_description">Izmantojiet Dhizuku API</string>
 </resources>
