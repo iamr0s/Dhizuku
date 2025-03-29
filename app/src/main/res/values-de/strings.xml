@@ -11,22 +11,23 @@
     <string name="confirm">OK</string>
     <string name="donate">Spenden</string>
     <string name="request_permission_text">Folgende Dhizuku Berechtigungsanfrage annehmen: <b>%1$s</b>\?</string>
-    <string name="finish">Beendet</string>
+    <string name="finish">Abschließen</string>
     <string name="home_deactivate_title">Deaktivieren</string>
-    <string name="home_deactivate_dsp">Möchten Sie die Funktion wirklich deaktivieren?</string>
+    <string name="home_deactivate_dsp">Sind Sie sicher, dass Sie es deaktivieren wollen?</string>
     <string name="copy">Kopie</string>
-    <string name="home_status_owner_granted">Sie sind der Eigentümer!!!</string>
+    <string name="home_status_owner_granted">Du bist der Besitzer!!!</string>
     <string name="home_status_owner_denied">Warte auf aktivierung</string>
     <string name="home_app_management_title">Anwendungsmanagement</string>
-    <string name="home_app_management_dsp">Apps die Device Admin über Dhizuku angefragt haben, werden hier angezeigt.</string>
+    <string name="home_app_management_dsp">Apps, die Dhizuku angefordert oder deklariert haben, werden hier angezeigt.</string>
     <string name="home_dhizuku_dsp">Wenn du andere Dhizuku implementationen installiert hast, kannst du zwischen ihnen wechseln. Bitte dafür die Hilfe lesen&lt;a href=%1$s&gt;&lt;/a&gt;.</string>
     <string name="home_shizuku_title">Aktivierung durch Shizuku</string>
     <string name="home_dhizuku_title">Aktivierung durch Dhizuku</string>
-    <string name="home_shizuku_dsp">Mit Shizuku hast du die Möglichkeit ADB befehle ohne einen Computer auszuführen. Bitte die Hilfe für mehr infos lesen &lt;a href=%1$s&gt;&lt;/a&gt;.</string>
-    <string name="home_adb_title">Aktivierung über ADB</string>
-    <string name="home_adb_dsp">Mit ADB(Android Debug Bridge) kannst du privelegierte befehle ausführen. Bitte &lt;a href=%1$s&gt;die Hilfe lesen&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">Mit Shizuku kannst du ADB Befehle ohne einen Computer ausführen. Bitte &lt;a href=%1$s&gt;lese hierfür die Hilfe&lt;/a&gt;.</string>
+    <string name="home_adb_title">Aktivierung durch ADB</string>
+    <string name="home_adb_dsp">Durch die ADB (Android Debug Bridge) Verbindung, kannst du privilegierte Befehle ausführen. Bitte &lt;a href=%1$s&gt;lese hierfür die Hilfe&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Befehl anzeigen</string>
     <string name="home_shutdown_title">Herunterfahren</string>
     <string name="home_shutdown_dsp">Das System kann Dhizuku nur dann abschalten, wenn Dhizuku dies freiwillig tut.</string>
-    <string name="retry">Wiederholen</string>
+    <string name="retry">Erneut versuchen</string>
+    <string name="permission_description">Verwenden Sie die API von Dhizuku</string>
 </resources>
