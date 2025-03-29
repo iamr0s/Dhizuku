@@ -4,6 +4,7 @@
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
+[![License](https://img.shields.io/github/license/iamr0s/Dhizuku)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
 ## Описание
 

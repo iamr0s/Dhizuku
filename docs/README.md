@@ -4,6 +4,7 @@ English | [简体中文](README_zh_rCN.md) | [日本語](README_ja.md) | [Рус
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
 [![Latest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
+[![License](https://img.shields.io/github/license/iamr0s/Dhizuku)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
 ## Introduction
 
