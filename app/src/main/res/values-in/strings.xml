@@ -3,7 +3,7 @@
     <string name="cancel">Batal</string>
     <string name="confirm">Oke</string>
     <string name="home_deactivate_title">Nonaktifkan</string>
-    <string name="home_deactivate_dsp">Apakah Anda yakin ingin menonaktifkan\?</string>
+    <string name="home_deactivate_dsp">Apakah Anda yakin ingin menonaktifkan?</string>
     <string name="donate">Donasi</string>
     <string name="binance">Binance</string>
     <string name="agree">Izinkan</string>
@@ -25,4 +25,9 @@
     <string name="home_dhizuku_title">Aktivasi oleh Dhizuku</string>
     <string name="home_shizuku_title">Aktivasi oleh Shizuku</string>
     <string name="home_adb_title">Aktivasi oleh ADB</string>
+    <string name="home_shutdown_dsp">Sistem tidak akan dapat mematikan Dhizuku kecuali Dhizuku melakukannya secara sukarela.</string>
+    <string name="home_shutdown_title">Penutupan</string>
+    <string name="permission_description">Gunakan API Dhizuku</string>
+    <string name="home_adb_dsp">Melalui koneksi ADB (Android Debug Bridge), Anda dapat menjalankan beberapa perintah istimewa. Harap &lt;a href=%1$s&gt;baca bantuannya&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Lihat perintah</string>
 </resources>
