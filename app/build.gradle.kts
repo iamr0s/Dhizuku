@@ -99,6 +99,10 @@ android {
         generateLocaleConfig = true
     }
 
+    packaging {
+        jniLibs.keepDebugSymbols.add("**/libandroidx.graphics.path.so")
+    }
+
     dependenciesInfo {
         includeInApk = false
         includeInBundle = false
