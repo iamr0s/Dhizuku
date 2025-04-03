@@ -17,15 +17,11 @@ import com.rosan.dhizuku.R
 
 import org.koin.core.component.KoinComponent
 
-import rikka.shizuku.ShizukuProvider
-
 class FinalizeActivity : ComponentActivity(), KoinComponent {
     val REQUIRE_PERMISSIONS: Array<String> = arrayOf(
           Manifest.permission.READ_EXTERNAL_STORAGE,
           Manifest.permission.WRITE_EXTERNAL_STORAGE,
-          Manifest.permission.MANAGE_EXTERNAL_STORAGE,
-          DhizukuVariables.PERMISSION_API,
-          //ShizukuProvider.PERMISSION
+          DhizukuVariables.PERMISSION_API
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
