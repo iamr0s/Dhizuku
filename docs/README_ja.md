@@ -45,3 +45,7 @@ Dhizukuの翻訳に参加したい場合は､ [Weblate](https://hosted.weblate.
 ## ライセンス
 
 Dhizuku は [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) の下に基づいてライセンスされており、今後もオープンソースであり続けることを約束します。
+
+## クレジット
+
+- Tianyu (Sky) Lu: [アイコン](https://github.com/lutianyu2001/DhizukuIcon)を制作（[**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/)ライセンスの下で提供）
