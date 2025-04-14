@@ -8,6 +8,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.os.UserManager
 import android.widget.Toast
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.shared.DhizukuVariables
@@ -25,11 +26,12 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
         )
         fun grantPermissions(context: Context) {
             val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
+            val admin: ComponentName = ComponentName(context, DhizukuDAReceiver::class.java)
             if (dpm!!.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     requirePermissions.forEach { permission ->
                         dpm.setPermissionGrantState(
-                            ComponentName(context, DhizukuDAReceiver::class.java),
+                            admin,
                             DhizukuVariables.OFFICIAL_PACKAGE_NAME,
                             permission,
                             DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
@@ -37,6 +39,10 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
                     }
                 }
+                dpm.clearUserRestriction(
+                    admin,
+                    UserManager.DISALLOW_ADD_MANAGED_PROFILE
+                )
                 Toast.makeText(
                     context,
                     context.getString(R.string.home_status_owner_granted),
