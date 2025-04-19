@@ -4,7 +4,7 @@
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
-[![License](https://img.shields.io/github/license/iamr0s/Dhizuku)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
 ## 介绍
 
@@ -27,12 +27,6 @@ Android 5.0 ~ 15
 如果你想参与到Dhizuku的翻译工作中来，请前往[Weblate](https://hosted.weblate.org/engage/dhizuku/)
 
 [![status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
-
-## 捐赠支持
-
-- [支付宝](https://qr.alipay.com/fkx18580lfpydiop04dze47)
-- [微信](https://missuo.ru/file/fee5df1381671c996b127.png)
-- [币安](https://missuo.ru/file/28368c28d4ff28d59ed4b.jpg)
 
 ## 开源协议
 

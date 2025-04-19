@@ -4,7 +4,7 @@
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
-[![License](https://img.shields.io/github/license/iamr0s/Dhizuku)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
 ## 概要
 
@@ -27,20 +27,6 @@ Android 5.0 ~ 15
 Dhizukuの翻訳に参加したい場合は､ [Weblate](https://hosted.weblate.org/engage/dhizuku/) にアクセスしてください。
 
 [![status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
-
-## 寄付
-
-- [Alipay](https://qr.alipay.com/fkx18580lfpydiop04dze47)
-
-<details><summary>WeChat</summary>
-
-[![WeChat](https://missuo.ru/file/fee5df1381671c996b127.png)](#)
-</details>
-
-<details><summary>Binance</summary>
-
-[![Binance](https://missuo.ru/file/28368c28d4ff28d59ed4b.jpg)](#)
-</details>
 
 ## ライセンス
 

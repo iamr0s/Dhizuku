@@ -4,7 +4,7 @@
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
-[![License](https://img.shields.io/github/license/iamr0s/Dhizuku)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
 ## Описание
 
@@ -27,12 +27,6 @@
 Если вы желаете поучаствовать в переводе Dhizuku, переходите на [Weblate](https://hosted.weblate.org/engage/dhizuku/)
 
 [![status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
-
-## Пожертвования
-
-- [Alipay](https://qr.alipay.com/fkx18580lfpydiop04dze47)
-- [Wechat](https://missuo.ru/file/fee5df1381671c996b127.png)
-- [Binance](https://missuo.ru/file/28368c28d4ff28d59ed4b.jpg)
 
 ## Лицензия
 
