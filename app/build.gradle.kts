@@ -27,6 +27,8 @@ android {
     defaultConfig {
         minSdk = 21
         targetSdk = compileSdk
+        ndkVersion = "27.2.12479018"
+
         val versionProps = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
@@ -60,6 +62,7 @@ android {
             this.storePassword = storePassword
             enableV1Signing = true
             enableV2Signing = true
+            enableV3Signing = true
         }
     }
 
@@ -96,11 +99,13 @@ android {
     }
 
     androidResources {
+        @Suppress("UnstableApiUsage")
         generateLocaleConfig = true
     }
 
     packaging {
-        jniLibs.keepDebugSymbols.add("**/libandroidx.graphics.path.so")
+        //jniLibs.keepDebugSymbols.add("lib/*/libandroidx.graphics.path.so")
+        resources.excludes.addAll(arrayOf("META-INF/**", "DebugProbesKt.bin", "kotlin-tooling-metadata.json", "Kotlin/**"))
     }
 
     dependenciesInfo {
