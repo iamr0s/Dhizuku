@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path name="allfiles" path="/" />
+    <files-path name="media" path="media/" />
+    <external-path name="external_files" path="/" />
+</paths>
