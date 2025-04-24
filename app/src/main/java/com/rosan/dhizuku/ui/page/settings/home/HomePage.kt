@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.ui.page.settings.home
 
 import android.app.admin.DevicePolicyManager
+import android.content.ClipData
 import android.content.Context
 import android.os.Build
 
@@ -59,10 +60,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.ClipEntry
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
@@ -81,6 +84,8 @@ import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.exclude
 
 import kotlin.system.exitProcess
+
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -153,7 +158,6 @@ private fun OverflowMenu() {
             menuExpanded = false
             shutdownDialogShow = true
         })
-
         R.string.wechat
         R.string.alipay
         R.string.binance
@@ -295,10 +299,14 @@ private fun LazyItemScope.AdbWidget() {
         }) {
             Text(stringResource(R.string.cancel))
         }
-        val manager = LocalClipboardManager.current
+        val manager = LocalClipboard.current
+        val scope = rememberCoroutineScope()
+        val clip = ClipData.newPlainText("command", command)
         TextButton(onClick = {
-            manager.setText(AnnotatedString(command))
-            state = false
+            scope.launch {
+                manager.setClipEntry(ClipEntry(clip))
+                state = false
+            }
         }) {
             Text(stringResource(R.string.copy))
         }

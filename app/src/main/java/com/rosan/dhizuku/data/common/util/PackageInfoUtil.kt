@@ -1,3 +1,8 @@
+/**
+ * Removing the warning is not possible for compatibility reasons.
+ */
+@file:Suppress("DEPRECATION")
+
 package com.rosan.dhizuku.data.common.util
 
 import android.content.pm.PackageInfo

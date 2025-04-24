@@ -26,7 +26,7 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
         )
         fun grantPermissions(context: Context) {
             val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
-            val admin: ComponentName = ComponentName(context, DhizukuDAReceiver::class.java)
+            val admin = ComponentName(context, DhizukuDAReceiver::class.java)
             if (dpm!!.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     requirePermissions.forEach { permission ->
@@ -39,10 +39,6 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
                     }
                 }
-                dpm.clearUserRestriction(
-                    admin,
-                    UserManager.DISALLOW_ADD_MANAGED_PROFILE
-                )
                 Toast.makeText(
                     context,
                     context.getString(R.string.home_status_owner_granted),

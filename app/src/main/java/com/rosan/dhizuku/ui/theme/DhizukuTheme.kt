@@ -40,6 +40,10 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+/**
+ * Removing the warning is not possible for compatibility reasons.
+ */
+@Suppress("DEPRECATION")
 @Composable
 fun DhizukuTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -75,7 +79,7 @@ fun DhizukuTheme(
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        WindowCompat.getInsetsController(window,window.decorView)
+        WindowCompat.getInsetsController(window, window.decorView)
 
         window.statusBarColor = Color.Transparent.toArgb()
         WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars =
