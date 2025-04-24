@@ -28,5 +28,5 @@ For inquiries or issues, please reach out via [GitHub Issues](https://github.com
 
 ## 7. License
 
-This application is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).  
+This application is licensed under the [GNU General Public License v3.0](https://github.com/iamr0s/Dhizuku/blob/master/LICENSE).  
 By using or distributing this app, you agree to comply with the terms of this license.
