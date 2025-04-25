@@ -25,10 +25,43 @@ Used as an optional method to activate the app.
 - **XXPermissions**
 Required for managing storage permissions properly.
 
-## 4. Your Rights
+## 4. Uses Permissions
+
+Basically, the following permissions are used to support client applications that use Dhizuku, rather than for Dhizuku itself.
+
+- `FOREGROUND_SERVICE`
+- `FOREGROUND_SERVICE_REMOTE_MESSAGING`
+- `RECEIVE_BOOT_COMPLETED`
+
+> Required to maintain Dhizuku or other DPCs service.
+
+- `GET_ACCOUNTS`
+- `MANAGE_ACCOUNTS`
+
+> Required for profile operations from Dhizuku or other DPCs.
+
+- `QUERY_ALL_PACKAGES`
+
+> Required to get the DPCs list.
+
+- `READ_EXTERNAL_STORAGE`
+- `WRITE_EXTERNAL_STORAGE`
+- `MANAGE_EXTERNAL_STORAGE`
+
+> Required to retrieve the complete file data.
+
+- `REQUEST_PASSWORD_COMPLEXITY`
+
+> Required to change advanced settings for screen lock password.
+
+- `moe.shizuku.manager.permission.API_V23`
+
+> Required to enable features via Shizuku.
+
+## 5. Your Rights
 
 You have the right to disable and remove this app at any time.
 
-## 5. Contact
+## 6. Contact
 
 For inquiries, please contact us via [GitHub Issues](https://github.com/iamr0s/Dhizuku/issues), and a maintainer will respond accordingly.
