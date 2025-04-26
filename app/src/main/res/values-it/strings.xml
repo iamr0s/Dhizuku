@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="copy">Copia</string>
+    <string name="cancel">Annulla</string>
+    <string name="home_status_owner_granted">Sei il Proprietario!!!</string>
+    <string name="home_status_owner_denied">In attesa di attivazione</string>
+    <string name="home_app_management_title">Gestione Applicazioni</string>
+    <string name="home_app_management_dsp">Le App che hanno richiesto o hanno dichiarato di usare Dhizuku verranno mostrate qui.</string>
+    <string name="home_dhizuku_title">Attivazione attraverso Dhizuku</string>
+    <string name="home_shizuku_title">Attivazione attraverso Shizuku</string>
+    <string name="home_shizuku_dsp">Con Shizuku, hai la possibilità di eseguire comandi ADB senza aver bisogno di un computer. Per favore &lt;a href=%1$s&gt;consulta il manuale&lt;/a&gt;.</string>
+    <string name="home_adb_title">Attivazione attraverso ADB</string>
+    <string name="home_adb_dsp">Puoi eseguire alcuni comandi privilegiati attraverso la connessione ADB (Android Debug Bridge). Per favore &lt;a href=%1$s&gt;consulta il manuale&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Visualizza comando</string>
+    <string name="home_shutdown_title">Spegni</string>
+    <string name="home_shutdown_dsp">Il sistema non è in grado di spegnere Dhizuku a meno che Dhizuku non lo richieda volontariamente.</string>
+    <string name="home_deactivate_title">Disattiva</string>
+    <string name="home_deactivate_dsp">Sei sicuro di voler disattivare?</string>
+    <string name="confirm">OK</string>
+    <string name="finish">Fatto</string>
+    <string name="donate">Dona</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">WeChat</string>
+    <string name="binance">Binance</string>
+    <string name="request_permission_text"><![CDATA[Confermi l'accesso a Dhizuku per il permesso <b>%1$s</b>\?]]></string>
+    <string name="agree">Concedi</string>
+    <string name="refuse">Nega</string>
+    <string name="service_channel_name">Servizio in secondo piano</string>
+    <string name="service_running">Dhizuku è in esecuzione</string>
+    <string name="permission_description">Usa l\'API Dhizuku</string>
+    <string name="retry">Riprova</string>
+    <string name="home_dhizuku_dsp">Se hai installato altre implementazioni di Dhizuku, puoi cambiare quella attivata in qualunque momento. Per favore &lt;a href=%1$s&gt;consulta il manuale&lt;/a&gt;.</string>
+</resources>
