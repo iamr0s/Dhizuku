@@ -17,10 +17,10 @@ compose = "1.8.0"
 room = "2.7.1"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
-koin = "4.0.2"
+koin = "4.0.4"
 
 [plugins]
-toolchains-resolver = { id = "org.gradle.toolchains.foojay-resolver-convention", version = "0.9.0" }
+toolchains-resolver = { id = "org.gradle.toolchains.foojay-resolver-convention", version = "0.10.0" }
 agp-lib = { id = "com.android.library", version.ref = "agp" }
 agp-app = { id = "com.android.application", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -32,7 +32,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 ksp = { id = "com.google.devtools.ksp", version = "2.1.20-1.0.31" }
 
 [libraries]
-androidx-annotation = { module = "androidx.annotation:annotation", version = "1.9.1" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.9.1" }
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.16.0" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.8.7" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.10.1" }
@@ -58,7 +58,7 @@ koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", versi
 accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
 accompanist-navigationAnimation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanist" }
 accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }
-accompanist-drawablepainter = { group = "com.google.accompanist", name = "accompanist-drawablepainter", version.ref = "accompanist" }
+accompanist-drawablepainter = { group = "com.google.accompanist", name = "accompanist-drawablepainter", version = "0.37.2" }
 accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist" }
 
 # AndroidHiddenApiBypass
