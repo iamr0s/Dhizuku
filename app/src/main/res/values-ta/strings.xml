@@ -13,7 +13,7 @@
     <string name="alipay">அலிபே</string>
     <string name="wechat">வெச்சாட்</string>
     <string name="binance">பைன்ச்</string>
-    <string name="request_permission_text">&lt;! [சி.டி.ஏ.டி.ஏ [&lt;b&gt;%1$s &lt;/b&gt; \\?]] இன் திசுகு இசைவு கோரிக்கையை ஒப்புக்கொள்கிறேன்]&gt;</string>
+    <string name="request_permission_text"><b>%1$s</b> இன் திசுகு அனுமதி கோரிக்கையை ஏற்கவா?</string>
     <string name="agree">மானியம்</string>
     <string name="refuse">மறுக்கவும்</string>
     <string name="service_channel_name">பின்னணி பணி</string>
