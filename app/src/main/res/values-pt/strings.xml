@@ -13,7 +13,7 @@
     <string name="cancel">Cancelar</string>
     <string name="confirm">OK</string>
     <string name="donate">Doação</string>
-    <string name="request_permission_text">Concordar com a solicitação de permissão Dhizuku de <b>%1$s</b> ?</string>
+    <string name="request_permission_text">Concordar com a solicitação de permissão Dhizuku de <b>%1$s</b>\?</string>
     <string name="home_deactivate_title">Desativar</string>
     <string name="retry">Tentar novamente</string>
     <string name="home_status_owner_granted">Você é o Dono!!!</string>
