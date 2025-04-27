@@ -1,4 +1,4 @@
 This app can delegate device owner features.
 In other words, this app can act as an intermediary to call functions from the device owner.
 
-By using the auxiliary app (DAX), it is possible to make existing apps such as TestDPC compatible with Dhizuku, and they can even coexist.
+By using the auxiliary app (DAX), it is possible to make existing apps such as Test DPC compatible with Dhizuku, and they can even coexist.
