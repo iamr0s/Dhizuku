@@ -2,6 +2,7 @@ blank_issues_enabled: true
 contact_links:
   - name: How do I activate Dhizuku
     url: https://github.com/iamr0s/Dhizuku/discussions/19
+    about: For beginners
   - name: Cannot set device owner
     url: https://github.com/iamr0s/Dhizuku/discussions/19#already_device_owner
     about: Not allowed to set the device owner because there are already some accounts on the device.
@@ -10,3 +11,4 @@ contact_links:
     about: Android 7.0 or later
   - name: How to do if you cannot connect with Dhizuku v2.9
     url: https://github.com/iamr0s/Dhizuku/discussions/114
+    about: For developers
