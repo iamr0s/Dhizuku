@@ -13,7 +13,7 @@
     <string name="cancel">إلغاء</string>
     <string name="confirm">موافق</string>
     <string name="donate">تبرع</string>
-    <string name="request_permission_text">هل توافق على طلب إذن Dhizuku من <b>%1$s</b></string>
+    <string name="request_permission_text">هل توافق على طلب الإذن من <b>%1$s</b> لـ Dhizuku؟</string>
     <string name="home_deactivate_title">إلغاء التنشيط</string>
     <string name="home_status_owner_denied">في انتظار التنشيط</string>
     <string name="home_app_management_dsp">التطبيقات التي طلبت أو أعلنت Dhizuku ستظهر هنا.</string>
