@@ -1,0 +1,9 @@
+- Exclude unnecessary files from APK
+- Declaring the authority of Dhizuku itself
+- Support EMM
+- Improve behavior when becoming device owner
+- Fix service to run in the foreground
+- Profile owners can also clear
+- Support monochrome icon
+- Update translate
+- Support LocaleConfig
