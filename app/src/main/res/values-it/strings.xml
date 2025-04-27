@@ -22,7 +22,7 @@
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
-    <string name="request_permission_text"><![CDATA[Confermi l\'accesso a Dhizuku per il permesso <b>%1$s</b>\?]]></string>
+    <string name="request_permission_text">Confermi l\\\'accesso a Dhizuku per il permesso <b>%1$s</b>\?</string>
     <string name="agree">Concedi</string>
     <string name="refuse">Nega</string>
     <string name="service_channel_name">Servizio in secondo piano</string>
