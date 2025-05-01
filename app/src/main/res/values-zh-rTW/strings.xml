@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="copy">複製</string>
+    <string name="cancel">取消</string>
+    <string name="retry">重試</string>
+    <string name="home_app_management_title">應用管理</string>
+    <string name="home_status_owner_denied">等待啟用</string>
+    <string name="home_dhizuku_title">啟用（通過Dhizuku）</string>
+    <string name="home_adb_btn_view_command">查看命令</string>
+    <string name="home_shutdown_title">關閉</string>
+    <string name="home_adb_title">啟用（通過 ADB命令）</string>
+    <string name="home_shizuku_title">啟用（通過 Shizuku）</string>
+    <string name="home_deactivate_title">取消激活</string>
+    <string name="home_deactivate_dsp">確認要取消激活嗎？</string>
+    <string name="confirm">確認</string>
+    <string name="finish">完成</string>
+    <string name="alipay">支付寶（Alipay）</string>
+    <string name="wechat">微信（WeChat Pay）</string>
+    <string name="binance">Binance</string>
+    <string name="agree">同意</string>
+    <string name="refuse">拒絕</string>
+    <string name="service_channel_name">後臺服務</string>
+    <string name="service_running">Dhizuku 正在運行</string>
+    <string name="permission_description">使用 Dhizuku 的API</string>
+    <string name="home_shutdown_dsp">除非 Dhizuku 自行關閉，否則 Dhizuku 無法被系統所關閉。</string>
+    <string name="home_status_owner_granted">已取得裝置擁有者權限！！！</string>
+    <string name="donate">捐贈</string>
+    <string name="request_permission_text">授權<b>%1$s</b>使用 Dhizuku 嗎？</string>
+    <string name="home_shizuku_dsp">使用 Shizuku ，您無需透過計算機即可執行 ADB 指令。請&lt;a href=%1$s&gt;參閱說明文件&lt;/a&gt;。</string>
+    <string name="home_app_management_dsp">請求或宣告使用了Dhizuku的應用將會在此顯示。</string>
+    <string name="home_dhizuku_dsp">若您已安裝其他 Dhizuku 實作版本，可隨時自由切換使用。請&lt;a href=%1$s&gt;閱讀說明文件&lt;/a&gt;。</string>
+    <string name="home_adb_dsp">通過ADB（Android Debug Bridge）連接，可以執行一些需要權限的命令。請&lt;a href=%1$s&gt;閱讀說明文件&lt;/a&gt;。</string>
+</resources>
