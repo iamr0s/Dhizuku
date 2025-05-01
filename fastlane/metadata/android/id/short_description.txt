@@ -1,0 +1,1 @@
+Alat yang dapat membagikan izin Pemilik Perangkat(Device Owner)ke aplikasi lain.

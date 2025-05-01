@@ -1,0 +1,8 @@
+- Mendeklarasikan otoritas Dhizuku itu sendiri
+- Mendukung EMM (Enterprise Mobility Management)
+- Meningkatkan perilaku saat menjadi pemilik perangkat
+- Memperbaiki layanan agar berjalan di latar depan
+- Pemilik profil juga dapat menghapus
+- Mendukung ikon monokrom
+- Memperbarui terjemahan
+- Mengaktifkan LocaleConfig

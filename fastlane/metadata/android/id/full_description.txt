@@ -1,0 +1,4 @@
+Aplikasi ini dapat mendelegasikan fitur pemilik perangkat.
+Dengan kata lain, aplikasi ini dapat bertindak sebagai perantara untuk memanggil fungsi dari pemilik perangkat.
+
+Dengan menggunakan aplikasi pendamping (DAX), aplikasi yang sudah ada seperti Test DPC dapat dibuat kompatibel dengan Dhizuku, dan bahkan dapat berjalan berdampingan。
