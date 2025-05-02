@@ -7,6 +7,9 @@
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
 [![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
+| [**Условия использования** (на английском)](TERMS.md) | [**Политика конфиденциальности** (на английском)](PRIVACY.md)
+|-|-|
+
 ## Описание
 
 Инструмент, позволяющий делиться разрешениями владельца устройства (DeviceOwner) с другими приложениями.

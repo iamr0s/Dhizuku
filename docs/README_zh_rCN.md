@@ -7,6 +7,9 @@
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
 [![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
+| [**使用条款**（英语）](TERMS.md) | [**隐私政策**（英语）](PRIVACY.md) |
+|-|-|
+
 ## 介绍
 
 参考Shizuku的设计思想，分享 DeviceOwner (设备所有者) 权限给其余应用
