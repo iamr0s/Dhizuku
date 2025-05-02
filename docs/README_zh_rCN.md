@@ -1,5 +1,5 @@
-[English](README.md) | 简体中文 | [日本語](README_ja.md) | [Русский](README_ru.md)
-|-|-|-|-|
+[English](README.md) | 简体中文 | [繁体中文](README_zh_Hant.md) | [日本語](README_ja.md) | [Русский](README_ru.md)
+|-|-|-|-|-|
 
 # Dhizuku
 
