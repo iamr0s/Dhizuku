@@ -1,11 +1,14 @@
-[English](README.md) | 简体中文 | [日本語](README_ja.md) | [Русский](README_ru.md)
-|-|-|-|-|
+[English](README.md) | 简体中文 | [繁体中文](README_zh_Hant.md) | [日本語](README_ja.md) | [Русский](README_ru.md)
+|-|-|-|-|-|
 
 # Dhizuku
 
 [![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
 [![Lastest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
 [![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
+
+| [**使用条款**（英语）](TERMS.md) | [**隐私政策**（英语）](PRIVACY.md) |
+|-|-|
 
 ## 介绍
 
