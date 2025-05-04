@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
+    <cache-path name="temp" path="fileprovider_temp/" />
     <files-path name="allfiles" path="/" />
     <files-path name="media" path="media/" />
+    <external-cache-path name="external-temp" path="fileprovider_temp/" />
     <external-path name="external_files" path="/" />
 </paths>
