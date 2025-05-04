@@ -65,10 +65,6 @@ accompanist-systemuicontroller = { group = "com.google.accompanist", name = "acc
 # https://github.com/LSPosed/AndroidHiddenApiBypass
 lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hiddenapibypass", version = "6.1" }
 
-# XXPermissions
-# https://github.com/getActivity/XXPermissions
-xxpermissions = { group = "com.github.getActivity", name = "XXPermissions", version = "21.2" }
-
 # Rikka Shizuku
 # https://github.com/RikkaApps/Shizuku-API
 rikka-shizuku-api = { group = "dev.rikka.shizuku", name = "api", version.ref = "rikka-shizuku" }

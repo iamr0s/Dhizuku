@@ -10,7 +10,6 @@ updates:
       - maven-google
       - maven-central
       - gradle-plugin
-      - jitpack
     groups:
       maven-dependencies:
         patterns:
@@ -26,6 +25,3 @@ registries:
   gradle-plugin:
     type: maven-repository
     url: "https://plugins.gradle.org/m2/"
-  jitpack:
-    type: maven-repository
-    url: "https://jitpack.io/"

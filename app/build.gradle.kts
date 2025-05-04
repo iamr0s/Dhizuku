@@ -147,8 +147,6 @@ dependencies {
 
     implementation(libs.lsposed.hiddenapibypass)
 
-    implementation(libs.xxpermissions)
-
     implementation(libs.rikka.shizuku.api)
     implementation(libs.rikka.shizuku.provider)
 

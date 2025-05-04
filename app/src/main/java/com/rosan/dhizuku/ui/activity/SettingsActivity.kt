@@ -10,9 +10,6 @@ import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 
-import com.hjq.permissions.Permission
-import com.hjq.permissions.XXPermissions
-
 import com.rosan.dhizuku.ui.page.settings.SettingsPage
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
 
@@ -35,11 +32,5 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
     }
 
     private fun requestNotificationPermissions() {
-        val permissions = listOf(Permission.POST_NOTIFICATIONS, Permission.MANAGE_EXTERNAL_STORAGE)
-        if (XXPermissions.isGranted(this, permissions)) return
-        XXPermissions.with(this)
-            .permission(permissions)
-            .request { _, _ ->
-            }
     }
 }

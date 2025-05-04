@@ -15,14 +15,19 @@ import com.rosan.dhizuku.shared.DhizukuVariables
 
 import org.koin.core.component.KoinComponent
 
+import rikka.shizuku.ShizukuProvider
+
 class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
     companion object {
         val requirePermissions: Array<String> = arrayOf(
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.GET_ACCOUNTS,
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            DhizukuVariables.PERMISSION_API
+            DhizukuVariables.PERMISSION_API,
+            ShizukuProvider.PERMISSION
         )
         fun grantPermissions(context: Context) {
             val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
@@ -39,11 +44,6 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
                     }
                 }
-                Toast.makeText(
-                    context,
-                    context.getString(R.string.home_status_owner_granted),
-                    Toast.LENGTH_LONG
-                ).show()
             }
 
         }
@@ -57,6 +57,11 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
     override fun onEnabled(context: Context, intent: Intent) {
         super.onEnabled(context, intent)
-        grantPermissions(context)
+        //grantPermissions(context)
+        Toast.makeText(
+            context,
+            context.getString(R.string.home_status_owner_granted),
+            Toast.LENGTH_LONG
+        ).show()
     }
 }
