@@ -11,7 +11,7 @@
 # https://androidx.dev/storage/compose-compiler/repository/
 
 [versions]
-agp = "8.9.2"
+agp = "8.10.0"
 kotlin = "2.1.20"
 compose = "1.8.0"
 room = "2.7.1"
