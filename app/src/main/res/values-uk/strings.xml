@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="home_shutdown_dsp">Система не зможе вимкнути Dhizuku, якщо Dhizuku не зробить цього добровільно.</string>
+    <string name="home_shizuku_dsp">За допомогою Shizuku ви можете виконувати команди ADB без використання комп’ютера. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
+    <string name="permission_description">Використовуйте API Dhizuku</string>
+    <string name="copy">Копіювати</string>
+    <string name="cancel">Скасувати</string>
+    <string name="retry">Повторити спробу</string>
+    <string name="home_status_owner_granted">Ви Власник!!!</string>
+    <string name="home_status_owner_denied">Очікування активації</string>
+    <string name="home_app_management_title">Управління додатками</string>
+    <string name="home_app_management_dsp">Тут відображатимуться програми, які запросили або оголосили Dhizuku.</string>
+    <string name="home_dhizuku_title">Активація за допомогою Дхізуку</string>
+    <string name="home_dhizuku_dsp">Якщо у вас встановлено інші реалізації Dhizuku, ви можете перемикатися між ними за бажанням. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Активація Shizuku</string>
+    <string name="home_adb_title">Активація через ADB</string>
+    <string name="home_adb_dsp">Через з’єднання ADB (Android Debug Bridge) ви можете виконувати деякі привілейовані команди. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Команда «Переглянути»</string>
+    <string name="home_shutdown_title">Вимкнення</string>
+    <string name="home_deactivate_title">Деактивувати</string>
+    <string name="home_deactivate_dsp">Ви впевнені, що хочете деактивувати?</string>
+    <string name="confirm">Гаразд</string>
+    <string name="finish">Фініш</string>
+    <string name="donate">Пожертвувати</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">WeChat</string>
+    <string name="binance">Бінанс</string>
+    <string name="request_permission_text">Погоджуєтеся із запитом на дозвіл від Dhizuku для <b>%1$s</b>\?</string>
+    <string name="agree">Грант</string>
+    <string name="refuse">Заперечити</string>
+    <string name="service_channel_name">Фонове обслуговування</string>
+    <string name="service_running">Dhizuku працює</string>
+</resources>
