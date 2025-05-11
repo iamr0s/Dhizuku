@@ -24,11 +24,7 @@ No anonymous identifiers are created or collected.
 - **Shizuku-API**[^2] (included provider)  
 Used as an optional method to activate the app.
 
-- **XXPermissions**[^3]  
-Required for managing storage and notification permissions properly.
-
 [^2]: <https://github.com/RikkaApps/Shizuku-API>
-[^3]: <https://github.com/getActivity/XXPermissions>
 
 ## 4. Uses Permissions
 
