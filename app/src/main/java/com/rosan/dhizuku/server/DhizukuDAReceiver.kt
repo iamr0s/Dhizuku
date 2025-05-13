@@ -28,17 +28,14 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
     )
 
     fun grantPermissions(dpm: DevicePolicyManager, admin: ComponentName) {
-        if (dpm.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requirePermissions.forEach { permission ->
-                    dpm.setPermissionGrantState(
-                        admin,
-                        DhizukuVariables.OFFICIAL_PACKAGE_NAME,
-                        permission,
-                        DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
-                    )
-
-                }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requirePermissions.forEach { permission ->
+                dpm.setPermissionGrantState(
+                    admin,
+                    DhizukuVariables.OFFICIAL_PACKAGE_NAME,
+                    permission,
+                    DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
+                )
             }
         }
     }
