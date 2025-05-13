@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="agreement_title">温馨提示</string>
-    <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=&quot;https://iamr0s.github.io/Dhizuku/TERMS.html&quot;&gt;《用户条款》&lt;/a&gt;与&lt;a href=&quot;https://iamr0s.github.io/Dhizuku/PRIVACY.html&quot;&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。\n同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
+    <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;《用户条款》&lt;/a&gt;与&lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
     <string name="agree_text">同意</string>
     <!-- Commonly  used characters -->
     <string name="copy">复制</string>
