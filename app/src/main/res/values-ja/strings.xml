@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">使用許諾</string>
+    <string name="agreement_text">このアプリを利用するには、&lt;a href=&quot;https://iamr0s.github.io/Dhizuku/TERMS.html&quot;&gt;利用規約&lt;/a&gt;と&lt;a href=&quot;https://iamr0s.github.io/Dhizuku/PRIVACY.html&quot;&gt;個人情報保護方針&lt;/a&gt;に同意する必要があります。一度同意すると、この画面は以後表示されません。</string>
+    <string name="agree_text">同意</string>
     <string name="service_running">Dhizuku は動作中です</string>
     <string name="service_channel_name">バックグラウンド サービス</string>
     <string name="home_deactivate_dsp">本当に無効化してもよろしいですか？</string>
