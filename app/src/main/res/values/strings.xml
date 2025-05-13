@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name" translatable="false">Dhizuku</string>
     <string name="agreement_title">Policy</string>
-    <string name="agreement_text">Here is our user policy, Please read and agree to it. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">Terms of Use</a>, <a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">Privacy Policy</a> This message won\'t show up again after you agree.</string>
+    <string name="agreement_text">Here is our user policy, Please read and agree to it. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Terms of Use&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Privacy Policy&lt;/a&gt; This message won\'t show up again after you agree.</string>
     <string name="agree_text">Agree</string>
     <string name="permission_description">Use Dhizuku\'s API</string>
     <!-- Commonly  used characters -->
