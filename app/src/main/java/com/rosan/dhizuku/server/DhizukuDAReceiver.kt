@@ -9,7 +9,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.widget.Toast
+
 import com.rosan.dhizuku.R
+import com.rosan.dhizuku.api.Dhizuku
 import com.rosan.dhizuku.shared.DhizukuVariables
 
 import org.koin.core.component.KoinComponent
@@ -26,20 +28,15 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
         ShizukuProvider.PERMISSION
     )
 
-    fun grantPermissions(context: Context) {
-        val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
-        val admin = ComponentName(context, DhizukuDAReceiver::class.java)
-        if (dpm!!.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requirePermissions.forEach { permission ->
-                    dpm.setPermissionGrantState(
-                        admin,
-                        DhizukuVariables.OFFICIAL_PACKAGE_NAME,
-                        permission,
-                        DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
-                    )
-
-                }
+    fun grantPermissions(dpm: DevicePolicyManager, admin: ComponentName) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requirePermissions.forEach { permission ->
+                dpm.setPermissionGrantState(
+                    admin,
+                    DhizukuVariables.OFFICIAL_PACKAGE_NAME,
+                    permission,
+                    DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
+                )
             }
         }
     }
@@ -51,12 +48,15 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
     }
 
     override fun onEnabled(context: Context, intent: Intent) {
+        val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
         super.onEnabled(context, intent)
-        grantPermissions(context)
-        Toast.makeText(
-            context,
-            context.getString(R.string.home_status_owner_granted),
-            Toast.LENGTH_LONG
-        ).show()
+        if (dpm!!.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
+            grantPermissions(dpm, Dhizuku.getOwnerComponent())
+            Toast.makeText(
+                context,
+                context.getString(R.string.home_status_owner_granted),
+                Toast.LENGTH_LONG
+            ).show()
+        }
     }
 }
