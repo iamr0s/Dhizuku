@@ -69,7 +69,7 @@ Other permissions may be **used by third-party applications**(DPCs[^4]) that use
 [^7]: <https://developer.android.com/reference/android/accounts/AccountManager>
 [^8]: <https://developer.android.com/training/package-visibility/declaring#all-apps>
 [^9]: <https://developer.android.com/training/data-storage#permissions>
-[^10]: <https://developer.android.com/training/data-storage/manage-all-files?hl=ja#operations-allowed-manage-external-storage>
+[^10]: <https://developer.android.com/training/data-storage/manage-all-files#operations-allowed-manage-external-storage>
 [^11]: <https://developer.android.com/work/versions/android-10#screen_lock_quality_check>
 
 ## 5. Your Rights
