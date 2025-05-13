@@ -30,4 +30,7 @@
     <string name="refuse">Заперечити</string>
     <string name="service_channel_name">Фонове обслуговування</string>
     <string name="service_running">Dhizuku працює</string>
+    <string name="agreement_title">Політика</string>
+    <string name="agree_text">Згоден</string>
+    <string name="agreement_text">Ось наша політика користувача, будь ласка, прочитайте і прийміть її. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Умови використання&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Політика конфіденційності&lt;/a&gt; Це повідомлення більше не з\'явиться після того, як ви погодитеся.</string>
 </resources>
