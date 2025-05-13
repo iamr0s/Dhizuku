@@ -11,7 +11,6 @@ import android.os.Build
 import android.widget.Toast
 
 import com.rosan.dhizuku.R
-import com.rosan.dhizuku.api.Dhizuku
 import com.rosan.dhizuku.shared.DhizukuVariables
 
 import org.koin.core.component.KoinComponent
@@ -29,14 +28,17 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
     )
 
     fun grantPermissions(dpm: DevicePolicyManager, admin: ComponentName) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requirePermissions.forEach { permission ->
-                dpm.setPermissionGrantState(
-                    admin,
-                    DhizukuVariables.OFFICIAL_PACKAGE_NAME,
-                    permission,
-                    DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
-                )
+        if (dpm.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requirePermissions.forEach { permission ->
+                    dpm.setPermissionGrantState(
+                        admin,
+                        DhizukuVariables.OFFICIAL_PACKAGE_NAME,
+                        permission,
+                        DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
+                    )
+
+                }
             }
         }
     }
@@ -49,14 +51,15 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
 
     override fun onEnabled(context: Context, intent: Intent) {
         val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
+        val admin = ComponentName(context, DhizukuDAReceiver::class.java)
         super.onEnabled(context, intent)
         if (dpm!!.isDeviceOwnerApp(DhizukuVariables.OFFICIAL_PACKAGE_NAME)) {
-            grantPermissions(dpm, Dhizuku.getOwnerComponent())
             Toast.makeText(
                 context,
                 context.getString(R.string.home_status_owner_granted),
                 Toast.LENGTH_LONG
             ).show()
+            grantPermissions(dpm, admin)
         }
     }
 }
