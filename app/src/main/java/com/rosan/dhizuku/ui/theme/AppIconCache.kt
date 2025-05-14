@@ -5,9 +5,11 @@ import android.content.Context
 import android.content.pm.ActivityInfo
 import android.content.pm.ApplicationInfo
 import android.graphics.Bitmap
+import android.os.Build
 
 import androidx.collection.LruCache
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -69,13 +71,13 @@ object AppIconCache : CoroutineScope, KoinComponent {
         }
 
     @Composable
-    fun rememberImageBitmapState(applicationInfo: ApplicationInfo): State<ImageBitmap> =
+    fun rememberImageBitmapState(applicationInfo: ApplicationInfo): MutableState<ImageBitmap> =
         rememberImageBitmapState("${applicationInfo.packageName}_${applicationInfo.uid}") {
             applicationInfo.loadIcon(context.packageManager)?.toBitmap()
         }
 
     @Composable
-    fun rememberImageBitmapState(admin: DeviceAdminInfo): State<ImageBitmap> =
+    fun rememberImageBitmapState(admin: DeviceAdminInfo): MutableState<ImageBitmap> =
         rememberImageBitmapState("${admin.component.flattenToShortString()}_${admin.activityInfo.applicationInfo.uid}") {
             admin.loadIcon(context.packageManager)?.toBitmap()
         }
