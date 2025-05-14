@@ -33,9 +33,6 @@ android {
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
 
-        vectorDrawables {
-            useSupportLibrary = true
-        }
         proguardFiles(
             getDefaultProguardFile("proguard-android-optimize.txt"),
             "proguard-rules.pro"
