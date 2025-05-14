@@ -78,6 +78,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 import com.rosan.dhizuku.R
+import com.rosan.dhizuku.data.common.util.checkShizukuWorked
 import com.rosan.dhizuku.data.common.util.openUrlInBrowser
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
@@ -122,13 +123,13 @@ fun HomePage(
             if (dhizukuState.owner) item("app_management") {
                 AppManagementWidget(navController)
             }
-            item("dhizuku") {
+            if (dhizukuState.owner) item("dhizuku") {
                 DhizukuWidget(navController)
             }
-            item("shizuku") {
+            if (checkShizukuWorked()) item("shizuku") {
                 ShizukuWidget(navController)
             }
-            item("adb") {
+            if (!dhizukuState.owner) item("adb") {
                 AdbWidget()
             }
             if (dhizukuState.owner) item("home_deactivate_title") {

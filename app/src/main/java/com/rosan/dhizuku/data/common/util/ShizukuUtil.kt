@@ -1,9 +1,9 @@
 package com.rosan.dhizuku.data.common.util
 
-import android.content.Context
 import android.content.pm.PackageManager
 
 import com.rosan.dhizuku.data.common.model.exception.ShizukuNotWorkException
+import com.rosan.dhizuku.shared.DhizukuVariables
 
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
@@ -26,16 +26,21 @@ private suspend fun blockingRequestShizukuPermission() = callbackFlow {
     Shizuku.requestPermission(requestCode)
     awaitClose { Shizuku.removeRequestPermissionResultListener(listener) }
 }.catch {
-    throw if (it !is ShizukuNotWorkException) ShizukuNotWorkException(cause = it)
-    else it
+    throw it as? ShizukuNotWorkException ?: ShizukuNotWorkException(cause = it)
 }.first()
 
-suspend fun <T> requireShizukuPermissionGranted(context: Context, action: suspend () -> T): T {
-    Sui.init(context.packageName)
+suspend fun <T> requireShizukuPermissionGranted(action: suspend () -> T): T {
+    Sui.init(DhizukuVariables.OFFICIAL_PACKAGE_NAME)
     val binder = Shizuku.getBinder()
     if (binder == null || !binder.pingBinder())
         throw ShizukuNotWorkException("sui/shizuku isn't activated")
     if (Shizuku.checkSelfPermission() != PackageManager.PERMISSION_GRANTED)
         blockingRequestShizukuPermission()
     return action()
+}
+
+fun checkShizukuWorked(): Boolean {
+    val sui: Boolean = Sui.init(DhizukuVariables.OFFICIAL_PACKAGE_NAME)
+    val binder = Shizuku.getBinder()
+    return (sui || binder != null)
 }

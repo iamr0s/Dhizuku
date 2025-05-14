@@ -142,7 +142,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
 
     @SuppressLint("PrivateApi")
     private suspend fun activateByShizuku(who: ComponentName) =
-        requireShizukuPermissionGranted(context) {
+        requireShizukuPermissionGranted() {
             // wait for the account cache be refreshed
             delay(1500)
             requireBinderWrapperDevicePolicyManager(wrapper = {
