@@ -194,7 +194,7 @@ fun ActivatePage(
             else if (it is ActivateViewState.Status.End) {
                 Text(
                     if (it.error == null) stringResource(R.string.home_status_owner_granted)
-                    else it.error.stackTraceToString(),
+                    else it.error.toString(),
                     modifier = Modifier.fillMaxWidth()
                 )
             }
