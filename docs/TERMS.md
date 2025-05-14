@@ -16,7 +16,7 @@ Enabling any functionality within the app is considered an explicit agreement to
 
 ## 4. Third-Party Services
 
-This app may depend on third-party components (e.g., Shizuku-API, XXPermissions). The developer assumes no responsibility for any issues arising from their use or changes in their behavior.
+This app may depend on third-party components (e.g., Shizuku-API). The developer assumes no responsibility for any issues arising from their use or changes in their behavior.
 
 ## 5. Changes to Terms
 
