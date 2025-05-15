@@ -1,4 +1,7 @@
-This app can delegate device owner features.
-In other words, this app can act as an intermediary to call functions from the device owner.
+This app can delegate functions from the device owner.
+That is, this app acts as an intermediary to call functions from the device owner.
 
-By using the auxiliary app (DAX), it is possible to make existing apps such as Test DPC compatible with Dhizuku, and they can even coexist.
+Normally, this authority can only be delegated to one app, but Dhizuku allows you to delegate the full authority of the device owner to other apps.
+
+It's easy to set up (ex: Shizuku, QR code).
+For more information, please see the tutorial.
