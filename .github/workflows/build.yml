@@ -4,6 +4,7 @@ on:
   push:
     paths-ignore:
       - docs/**
+      - fastlane/**
       - LICENSE
   pull_request:
   workflow_dispatch:
