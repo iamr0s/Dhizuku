@@ -25,7 +25,7 @@
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="binance">Бінанс</string>
-    <string name="request_permission_text">Погоджуєтеся із запитом на дозвіл від Dhizuku для <b>%1$s</b>\?</string>
+    <string name="request_permission_text">Дозволити <b>%1$s</b> доступ до Dhizuku?</string>
     <string name="agree">Грант</string>
     <string name="refuse">Заперечити</string>
     <string name="service_channel_name">Фонове обслуговування</string>
