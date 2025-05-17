@@ -127,6 +127,7 @@ dependencies {
     implementation(libs.compose.ui.tooling)
     implementation(libs.compose.navigation)
     implementation(libs.compose.materialIcons)
+    implementation(libs.material)
     implementation(libs.compose.material3)
 
     implementation(libs.room.runtime)

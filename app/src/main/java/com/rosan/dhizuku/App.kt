@@ -2,6 +2,8 @@ package com.rosan.dhizuku
 
 import android.app.Application
 
+import com.google.android.material.color.DynamicColors
+
 import com.rosan.dhizuku.di.init.appModules
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.server.RunningService
@@ -26,5 +28,6 @@ class App : Application(), KoinComponent {
         }
         Sui.init(packageName)
         RunningService.start(this)
+        DynamicColors.applyToActivitiesIfAvailable(this)
     }
 }
