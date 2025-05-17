@@ -30,4 +30,6 @@
     <string name="home_shutdown_title">Завершение</string>
     <string name="home_status_owner_denied">Ожидается активация</string>
     <string name="permission_description">Используйте API Dhizuku</string>
+    <string name="agreement_title">Политика</string>
+    <string name="agree_text">Принять</string>
 </resources>
