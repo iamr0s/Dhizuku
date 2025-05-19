@@ -13,10 +13,6 @@ dependencyResolutionManagement {
         mavenLocal()
         google()
         mavenCentral()
-        maven {
-            name = "jitpack.io"
-            url = uri("https://jitpack.io")
-        }
     }
 }
 
