@@ -10,13 +10,13 @@
     <string name="cancel">Abbrechen</string>
     <string name="confirm">OK</string>
     <string name="donate">Spenden</string>
-    <string name="request_permission_text">Folgende Dhizuku Berechtigungsanfrage annehmen: <b>%1$s</b>\?</string>
+    <string name="request_permission_text">Möchten Sie folgende Dhizuku Berechtigungsanfrage annehmen: <b>%1$s</b>\?</string>
     <string name="finish">Abschließen</string>
     <string name="home_deactivate_title">Deaktivieren</string>
     <string name="home_deactivate_dsp">Sind Sie sicher, dass Sie es deaktivieren wollen?</string>
     <string name="copy">Kopie</string>
     <string name="home_status_owner_granted">Du bist der Besitzer!!!</string>
-    <string name="home_status_owner_denied">Warte auf aktivierung</string>
+    <string name="home_status_owner_denied">Warte auf Aktivierung</string>
     <string name="home_app_management_title">Anwendungsmanagement</string>
     <string name="home_app_management_dsp">Apps, die Dhizuku angefordert oder deklariert haben, werden hier angezeigt.</string>
     <string name="home_dhizuku_dsp">Wenn du andere Dhizuku implementationen installiert hast, kannst du zwischen ihnen wechseln. Bitte dafür die Hilfe lesen&lt;a href=%1$s&gt;&lt;/a&gt;.</string>
@@ -30,4 +30,6 @@
     <string name="home_shutdown_dsp">Das System kann Dhizuku nur dann abschalten, wenn Dhizuku dies freiwillig tut.</string>
     <string name="retry">Erneut versuchen</string>
     <string name="permission_description">Verwenden Sie die API von Dhizuku</string>
+    <string name="agreement_title">Richtlinie</string>
+    <string name="agree_text">Zustimmen</string>
 </resources>
