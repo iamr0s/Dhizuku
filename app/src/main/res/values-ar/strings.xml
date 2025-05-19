@@ -13,7 +13,7 @@
     <string name="cancel">إلغاء</string>
     <string name="confirm">موافق</string>
     <string name="donate">تبرع</string>
-    <string name="request_permission_text">هل توافق على طلب الإذن من <b>%1$s</b> لـ Dhizuku؟</string>
+    <string name="request_permission_text">هل تسمح لـ <b>%1$s</b> بالوصول إلى Dhizuku؟</string>
     <string name="home_deactivate_title">إلغاء التنشيط</string>
     <string name="home_status_owner_denied">في انتظار التنشيط</string>
     <string name="home_app_management_dsp">التطبيقات التي طلبت أو أعلنت Dhizuku ستظهر هنا.</string>
@@ -30,4 +30,7 @@
     <string name="home_adb_dsp">من خلال اتصال ADB (جسر تصحيح أخطاء أندرويد)، يمكنك تنفيذ بعض الأوامر المميزة. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
     <string name="home_shutdown_dsp">لن يتمكن النظام من إيقاف تشغيل Dhizuku ما لم تقم Dhizuku بذلك طواعية.</string>
     <string name="permission_description">استخدم واجهة برمجة التطبيقات الخاصة بـ Dhizuku</string>
+    <string name="agreement_title">السياسة</string>
+    <string name="agree_text">موافقة</string>
+    <string name="agreement_text">فيما يلي سياسة المستخدم الخاصة بنا، يرجى قراءتها والموافقة عليها. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;شروط الاستخدام&lt;/a&gt;، &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;سياسة الخصوصية&lt;/a&gt; لن تظهر هذه الرسالة مرة أخرى بعد موافقتك.</string>
 </resources>
