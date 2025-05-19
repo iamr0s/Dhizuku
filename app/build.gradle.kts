@@ -4,7 +4,6 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.agp.app)
     alias(libs.plugins.kotlin)
-    id("kotlin-kapt")
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
 }
