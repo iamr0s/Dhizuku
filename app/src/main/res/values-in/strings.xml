@@ -13,7 +13,7 @@
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="service_channel_name">Layanan latar belakang</string>
-    <string name="request_permission_text">Menyetujui permintaan izin Dhizuku dari <b>%1$s</b>\?</string>
+    <string name="request_permission_text">Izinkan <b>%1$s</b> mengakses Dhizuku?</string>
     <string name="service_running">Dhizuku sedang berjalan</string>
     <string name="home_dhizuku_dsp">Jika Anda memiliki implementasi Dhizuku lain yang terinstal, Anda dapat beralih di antara keduanya sesuka hati. Silakan <a href="%1$s">baca bantuan</a>.</string>
     <string name="home_status_owner_denied">Menunggu Aktivasi</string>
@@ -30,4 +30,7 @@
     <string name="permission_description">Gunakan API Dhizuku</string>
     <string name="home_adb_dsp">Melalui koneksi ADB (Android Debug Bridge), Anda dapat menjalankan beberapa perintah istimewa. Harap &lt;a href=%1$s&gt;baca bantuannya&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Lihat perintah</string>
+    <string name="agreement_title">Lisensi</string>
+    <string name="agree_text">Setuju</string>
+    <string name="agreement_text">Berikut adalah kebijakan pengguna kami. Harap baca dan setujui. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Persyaratan Penggunaan&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Kebijakan Privasi&lt;/a&gt; Pesan ini tidak akan muncul lagi setelah Anda setuju.</string>
 </resources>
