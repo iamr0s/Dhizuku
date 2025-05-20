@@ -29,6 +29,8 @@ Android 5.0 ~ 15
 
 ## Participate in translation
 
+Basically, strings are set by maintainers through an automatic translator, so if you notice anything inappropriate, please get involved in fixing it.
+
 If you would like to get involved in translating Dhizuku, head over to [Weblate](https://hosted.weblate.org/engage/dhizuku/)
 
 [![Status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
