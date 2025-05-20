@@ -8,11 +8,11 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
-val keystoreDir = "$rootDir/keystore"
+val keystoreDir: String = "$rootDir/keystore"
 
-val keystoreProps = Properties()
+val keystoreProps: Properties = Properties()
 for (name in arrayOf("r0s.properties", "debug.properties")) {
-    val f = file("$keystoreDir/$name")
+    val f: File = file("$keystoreDir/$name")
     if (!f.exists()) continue
     keystoreProps.load(f.inputStream())
     break
@@ -28,7 +28,7 @@ android {
         targetSdk = compileSdk
         ndkVersion = "27.2.12479018"
 
-        val versionProps = loadProperties("$rootDir/version.properties")
+        val versionProps: Properties = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
 
@@ -39,26 +39,21 @@ android {
     }
 
     signingConfigs {
-        val keyAlias = keystoreProps.getProperty("keyAlias")
-        val keyPassword = keystoreProps.getProperty("keyPassword")
-        val storeFile = file("$keystoreDir/${keystoreProps.getProperty("storeFile")}")
-        val storePassword = keystoreProps.getProperty("storePassword")
+        val keyAlias: String = keystoreProps.getProperty("keyAlias")
+        val keyPassword: String = keystoreProps.getProperty("keyPassword")
+        val storeFile: File = file("$keystoreDir/${keystoreProps.getProperty("storeFile")}")
+        val storePassword: String = keystoreProps.getProperty("storePassword")
         getByName("debug") {
             this.keyAlias = keyAlias
             this.keyPassword = keyPassword
             this.storeFile = storeFile
             this.storePassword = storePassword
-            enableV1Signing = true
-            enableV2Signing = true
         }
         create("release") {
             this.keyAlias = keyAlias
             this.keyPassword = keyPassword
             this.storeFile = storeFile
             this.storePassword = storePassword
-            enableV1Signing = true
-            enableV2Signing = true
-            enableV3Signing = true
         }
     }
 
