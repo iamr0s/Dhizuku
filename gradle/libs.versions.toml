@@ -20,11 +20,9 @@ rikka-shizuku = "13.1.5"
 koin = "4.0.4"
 
 [plugins]
-toolchains-resolver = { id = "org.gradle.toolchains.foojay-resolver-convention", version = "1.0.0" }
 agp-lib = { id = "com.android.library", version.ref = "agp" }
 agp-app = { id = "com.android.application", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 # KSP quickstart
