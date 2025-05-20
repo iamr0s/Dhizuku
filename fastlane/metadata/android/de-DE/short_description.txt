@@ -1,0 +1,1 @@
+Ein Werkzeug, um Geräteadministratorrechte mit anderen Apps zu teilen.
