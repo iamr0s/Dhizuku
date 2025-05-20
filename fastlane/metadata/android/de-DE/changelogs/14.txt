@@ -1,0 +1,8 @@
+– Die Autorität von Dhizuku selbst festlegen
+– EMM-Unterstützung
+– Verhalten beim Wechsel zum Gerätebesitzer verbessern
+– Dienst im Vordergrund ausführen
+– Profilbesitzer können auch löschen
+– Monochrome Symbole unterstützen
+– Übersetzung aktualisieren
+– LocaleConfig aktivieren

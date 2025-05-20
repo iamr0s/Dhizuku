@@ -1,0 +1,13 @@
+Diese App kann Funktionen des Gerätebesitzers delegieren.
+Das heißt, sie fungiert als Vermittler, um Funktionen des Gerätebesitzers aufzurufen.
+
+Normalerweise kann diese Berechtigung nur an eine App delegiert werden. Mit Dhizuku können Sie jedoch die volle Berechtigung des Gerätebesitzers an andere Apps delegieren.
+
+Die Einrichtung ist einfach (z. B. Shizuku, QR-Code).
+Weitere Informationen finden Sie im <a href="https://github.com/iamr0s/Dhizuku/discussions/19">Tutorial</a>.
+
+Anwendungsbeispiel: Ideal, wenn Sie zwei oder mehr Gerätebesitzerberechtigungen gleichzeitig unterstützen müssen.
+
+In Japan müssen Sie beispielsweise sowohl Aurora Store als auch Test DPC auf einem Gerät mit eingeschränkter Funktionalität unterstützen.
+
+Auch wenn der App-Entwickler Dhizuku nicht unterstützt, können Sie die Unterstützung mithilfe des Moduls Dhizuku-API-Xposed erzwingen.
