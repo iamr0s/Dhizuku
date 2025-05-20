@@ -6,7 +6,7 @@
     <string name="home_deactivate_title">Деактивация</string>
     <string name="home_deactivate_dsp">Подтвердить деактивацию?</string>
     <string name="binance">Binance</string>
-    <string name="request_permission_text">Разрешить <b>%1$s</b> использовать Dhizuku?</string>
+    <string name="request_permission_text">Разрешить <b>%1$s</b> доступ к Dhizuku?</string>
     <string name="agree">Разрешить</string>
     <string name="refuse">Отклонить</string>
     <string name="copy">Копировать</string>
@@ -32,4 +32,5 @@
     <string name="permission_description">Используйте API Dhizuku</string>
     <string name="agreement_title">Политика</string>
     <string name="agree_text">Принять</string>
+    <string name="agreement_text">Вот наша политика для пользователей, пожалуйста, прочтите и примите ее. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Условия использования&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Политика конфиденциальности&lt;/a&gt; Это сообщение больше не будет отображаться после вашего согласия.</string>
 </resources>
