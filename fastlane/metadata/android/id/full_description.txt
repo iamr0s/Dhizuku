@@ -1,4 +1,14 @@
-Aplikasi ini dapat mendelegasikan fitur pemilik perangkat.
-Dengan kata lain, aplikasi ini dapat bertindak sebagai perantara untuk memanggil fungsi dari pemilik perangkat.
+Aplikasi ini dapat mendelegasikan fungsi dari pemilik perangkat.
+Artinya, aplikasi ini bertindak sebagai perantara untuk memanggil fungsi dari pemilik perangkat.
 
-Dengan menggunakan aplikasi pendamping (DAX), aplikasi yang sudah ada seperti Test DPC dapat dibuat kompatibel dengan Dhizuku, dan bahkan dapat berjalan berdampingan。
+Biasanya, otoritas ini hanya dapat didelegasikan ke satu aplikasi, tetapi Dhizuku memungkinkan Anda untuk mendelegasikan otoritas penuh pemilik perangkat ke aplikasi lain.
+
+Mudah diatur (mis: Shizuku, kode QR).
+
+Untuk informasi selengkapnya, silakan lihat <a href="https://github.com/iamr0s/Dhizuku/discussions/19">tutorial</a>.
+
+Contoh penggunaan, ini ideal ketika Anda perlu mendukung dua atau lebih izin pemilik perangkat pada saat yang bersamaan.
+
+Khususnya, di Jepang, Anda perlu mendukung Aurora Store dan Test DPC pada perangkat dengan beberapa fungsi terbatas.
+
+Bahkan jika pengembang aplikasi tidak mendukung Dhizuku, Anda dapat memaksakan dukungan untuk Dhizuku dengan menggunakan modul Dhizuku-API-Xposed.

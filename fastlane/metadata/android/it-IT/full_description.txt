@@ -1,0 +1,13 @@
+Questa app può delegare funzioni al proprietario del dispositivo.
+Ovvero, questa app funge da intermediario per richiamare funzioni dal proprietario del dispositivo.
+
+Normalmente, questa autorità può essere delegata a una sola app, ma Dhizuku consente di delegare la piena autorità del proprietario del dispositivo ad altre app.
+
+È facile da configurare (ad esempio: Shizuku, codice QR).
+Per ulteriori informazioni, consultare il <a href="https://github.com/iamr0s/Dhizuku/discussions/19">tutorial</a>.
+
+Ad esempio, è ideale quando è necessario supportare contemporaneamente due o più autorizzazioni del proprietario del dispositivo.
+
+In particolare, in Giappone, è necessario supportare sia Aurora Store che Test DPC su un dispositivo con funzionalità limitate.
+
+Anche se lo sviluppatore dell'app non supporta Dhizuku, è possibile forzarne il supporto utilizzando il modulo Dhizuku-API-Xposed.
