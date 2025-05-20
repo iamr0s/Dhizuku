@@ -22,7 +22,7 @@
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
-    <string name="request_permission_text">Confermi l\'accesso a Dhizuku per il permesso <b>%1$s</b>\?</string>
+    <string name="request_permission_text">Consentire <b>%1$s</b> di accedere a Dhizuku?</string>
     <string name="agree">Concedi</string>
     <string name="refuse">Nega</string>
     <string name="service_channel_name">Servizio in secondo piano</string>
@@ -30,4 +30,7 @@
     <string name="permission_description">Usa l\'API Dhizuku</string>
     <string name="retry">Riprova</string>
     <string name="home_dhizuku_dsp">Se hai installato altre implementazioni di Dhizuku, puoi cambiare quella attivata in qualunque momento. Per favore &lt;a href=%1$s&gt;consulta il manuale&lt;/a&gt;.</string>
+    <string name="agreement_title">Politica</string>
+    <string name="agree_text">D\'accordo</string>
+    <string name="agreement_text">Ecco la nostra politica utente, Si prega di leggere e accettarlo. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt; Termini di utilizzo &lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html Policy&lt;/a&gt; Questo messaggio non verrà più dopo che sei d\'accordo.</string>
 </resources>
