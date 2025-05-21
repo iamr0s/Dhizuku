@@ -2,32 +2,35 @@
 <resources>
     <string name="cancel">Cancelar</string>
     <string name="confirm">OK</string>
-    <string name="finish">Acabamento</string>
+    <string name="finish">Concluir</string>
     <string name="home_deactivate_title">Desativar</string>
     <string name="home_deactivate_dsp">Tem certeza de que deseja desativar?</string>
     <string name="copy">Copiar</string>
-    <string name="donate">Doação</string>
+    <string name="donate">Doar</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="binance">Binance</string>
-    <string name="request_permission_text">Concordar com a solicitação de permissão Dhizuku de <b>%1$s</b>\?</string>
-    <string name="agree">Conceder</string>
-    <string name="refuse">Negar</string>
-    <string name="service_channel_name">Serviço em segundo plano</string>
-    <string name="service_running">Dhizuku está funcionando</string>
-    <string name="retry">Tentar novamente</string>
-    <string name="home_status_owner_granted">Você é o dono!!!</string>
-    <string name="home_status_owner_denied">Aguardando por ativação</string>
-    <string name="home_app_management_title">Gerenciamento do aplicativo</string>
-    <string name="home_app_management_dsp">Os aplicativos que solicitaram ou declararam Dhizuku serão exibidos aqui.</string>
-    <string name="home_dhizuku_title">Ativação por Dhizuku</string>
-    <string name="home_shizuku_title">Ativação por Shizuku</string>
-    <string name="home_shutdown_dsp">O sistema não conseguirá desligar o Dhizuku a menos que ele o faça voluntariamente.</string>
+    <string name="request_permission_text">Permitir que <b>%1$s</b> acesse o Dhizuku?</string>
+    <string name="agree">Permitir</string>
+    <string name="refuse">Bloquear</string>
+    <string name="service_channel_name">Serviço de segundo plano</string>
+    <string name="service_running">O Dhizuku está em execução</string>
+    <string name="retry">Repetir</string>
+    <string name="home_status_owner_granted">Você é Proprietário!!!</string>
+    <string name="home_status_owner_denied">Aguardando a ativação</string>
+    <string name="home_app_management_title">Gerenciamento de aplicativos</string>
+    <string name="home_app_management_dsp">Os apps que solicitaram ou declararam o uso do Dhizuku serão exibidos aqui.</string>
+    <string name="home_dhizuku_title">Ativação pelo Dhizuku</string>
+    <string name="home_shizuku_title">Ativação pelo Shizuku</string>
+    <string name="home_shutdown_dsp">O sistema não conseguirá encerrar o Dhizuku a menos que ele o faça voluntariamente.</string>
     <string name="home_dhizuku_dsp">Se você tiver outras implementações do Dhizuku instaladas, você pode alternar entre elas à vontade. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
     <string name="home_shizuku_dsp">Com o Shizuku, você tem a habilidade de executar comandos ADB sem precisar de um computador. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
-    <string name="home_adb_title">Ativação por ADB</string>
-    <string name="home_adb_dsp">Por meio da conexão ADB (Android Debug Bridge), você pode executar alguns comandos privilegiados. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
+    <string name="home_adb_title">Ativação pelo ADB</string>
+    <string name="home_adb_dsp">Por meio da conexão do ADB (Android Debug Bridge), você pode executar alguns comandos privilegiados. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Ver comando</string>
-    <string name="home_shutdown_title">Desligar</string>
-    <string name="permission_description">Use a API do Dhizuku</string>
+    <string name="home_shutdown_title">Encerrar</string>
+    <string name="permission_description">Usar a API do Dhizuku</string>
+    <string name="agreement_title">Política</string>
+    <string name="agree_text">Concordar</string>
+    <string name="agreement_text">Aqui está a nossa política do usuário, por favor leia e concorde com ela. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Termos de Uso&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Política de Privacidade&lt;/a&gt; Essa mensagem não aparecerá novamente após você concordar.</string>
 </resources>
