@@ -159,8 +159,8 @@ private fun OverflowMenu() {
             menuExpanded = false
             shutdownDialogShow = true
         })
-        R.string.wechat
         R.string.alipay
+        R.string.wechat
         R.string.binance
         DropdownMenuItem(text = {
             Text(stringResource(R.string.donate))
@@ -168,7 +168,7 @@ private fun OverflowMenu() {
             Icon(Icons.TwoTone.AttachMoney, null)
         }, onClick = {
             menuExpanded = false
-            context.openUrlInBrowser("https://github.com/iamr0s/Dhizuku")
+            context.openUrlInBrowser("https://github.com/iamr0s/Dhizuku/blob/main/docs/DONATE.md")
         })
     }
 
