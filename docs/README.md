@@ -35,6 +35,10 @@ If you would like to get involved in translating Dhizuku, head over to [Weblate]
 
 [![Status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
 
+## Donation
+
+Please refer [**here**](DONATE.md).
+
 ## License
 
 Dhizuku is licensed under the [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) , And promises to continue to keep it open source in the future.
