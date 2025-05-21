@@ -1,1 +1,1 @@
-Uno strumento in grado di condividere i criteri di proprietà del dispositivo con altre app.
+App che condivide privilegi di proprietario del dispositivo con altre app.
