@@ -22,6 +22,10 @@
     <uses-permission android:name="android.permission.REQUEST_PASSWORD_COMPLEXITY" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission
+    android:name="${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"         
+    tools:node="remove" />
+
     <uses-feature
         android:name="android.software.device_admin"
         android:required="true" />
