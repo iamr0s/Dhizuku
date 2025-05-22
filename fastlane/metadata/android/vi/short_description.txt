@@ -1,0 +1,1 @@
+Một công cụ có thể chia sẻ quyền của Chủ Sở Hữu Thiết Bị cho các ứng dụng khác.

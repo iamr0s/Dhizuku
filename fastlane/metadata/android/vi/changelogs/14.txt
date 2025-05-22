@@ -1,0 +1,8 @@
+- Khẳng định sự uy tín của Dhizuku
+- Hỗ trợ EMM
+- Cải thiện hành vi khi trở thành chủ sở hữu thiết bị
+- Sửa lỗi dịch vụ chạy trên nền trước
+- Chủ sở hữu hồ sơ cũng có thể xoá
+- Hỗ trợ biểu tượng đơn sắc
+- Cập nhật các bản dịch
+- Bật LocaleConfig

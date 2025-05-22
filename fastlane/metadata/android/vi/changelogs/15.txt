@@ -1,0 +1,3 @@
+- Thêm "Chính sách sử dụng" và "Chính sách bảo mật"
+- Thêm hộp thoại thoả thuận
+- Cập nhật các bản dịch

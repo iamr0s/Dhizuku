@@ -1,0 +1,13 @@
+Ứng dụng này có thể ủy quyền các chức năng từ chủ sở hữu thiết bị.
+Đúng vậy, ứng dụng này làm trung gian để sử dụng các chức năng của chủ sở hữu thiể bị.
+
+Bình thường, điều đó chỉ có thể ủy quyền cho một ứng dụng, nhưng Dhizuku cho phép bạn ủy quyền cho nhiều ứng dụng khác
+
+Nó khá dễ cài đặt(VD: Shizuku, QR code).
+Để biết thêm thông tin, hãy xem <a href="https://github.com/iamr0s/Dhizuku/discussions/19">tutorial</a>.
+
+Ví dụ sử dụng, lý tưởng khi bạn cần hỗ trợ hai hoặc nhiều quyền của chủ sở hữu thiết bị cùng một lúc.
+
+Đặc biệt, khi ở Nhật Bản, bạn cần cho phép cả Auora Store và Test DPC trên một thiết bị với một số chức năng bị giới hạn.
+
+Ngay cả khi nhà phát triển ứng dụng không hỗ trợ Dhizuku, bạn cũng có thể buộc hỗ trợ Dhizuku bằng các dùng mô-đun Dhizuku-API-Xposed.
