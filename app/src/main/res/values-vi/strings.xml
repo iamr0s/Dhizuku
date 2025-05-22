@@ -1,2 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="home_app_management_title">Quản lý ứng dụng</string>
+    <string name="home_adb_dsp">Qua kết nối ADB (Android Debug Bridge), bạn có thể chạy một số lệnh đặc quyền. Hãy &lt;a href=%1$s&gt;đọc trợ giúp&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Xem lệnh</string>
+    <string name="home_dhizuku_dsp">Nếu bạn đã cài đặt các phiên bản Dhizuku khác, bạn có thay đổi tùy theo ý muốn. Hãy &lt;a href=%1$s&gt;đọc trợ giúp&lt;/a&gt;.</string>
+    <string name="home_status_owner_denied">Đang chờ kích hoạt</string>
+    <string name="agreement_text">Đây là chính sách của chúng tôi, vui lòng đọc và đồng ý với chính sách này. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Điều khoản sử dụng&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Chính sách bảo mật&lt;/a&gt; Tin nhắn này sẽ không hiển thị lại sau khi bạn đồng ý.</string>
+    <string name="retry">Thử lại</string>
+    <string name="home_shutdown_title">Tắt</string>
+    <string name="agreement_title">Chính sách</string>
+    <string name="home_status_owner_granted">Bạn đã là Owner!!!</string>
+    <string name="agree_text">Đồng ý</string>
+    <string name="permission_description">Sử dụng API của Dhizuku</string>
+    <string name="copy">Sao chép</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="home_app_management_dsp">Các ứng dụng đã yêu cầu và khai báo Dhizuku sẽ ở đây.</string>
+    <string name="home_shizuku_title">Kích hoạt bởi Dhizuku</string>
+    <string name="home_adb_title">Kích hoạt bởi ADB</string>
+    <string name="home_shutdown_dsp">Hệ thống sẽ không thể tắt Dhizuku trừ khi Dhizuku tự nguyện.</string>
+    <string name="home_deactivate_title">Hủy kích hoạt</string>
+    <string name="home_deactivate_dsp">Bạn có chắc chắn muốn hủy kích hoạt?</string>
+    <string name="confirm">OK</string>
+    <string name="finish">Đã xong</string>
+    <string name="donate">Ủng hộ</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">WeChat</string>
+    <string name="binance">Binance</string>
+    <string name="request_permission_text">Cho phép <b>%1$s</b> truy cập Dhizuku?</string>
+    <string name="agree">Cho phép mọi lúc</string>
+    <string name="refuse">Từ chối</string>
+    <string name="service_channel_name">Dịch vụ nền</string>
+    <string name="service_running">Dhizuku đang chạy</string>
+    <string name="home_dhizuku_title">Kích hoạt bởi Dhizuku</string>
+    <string name="home_shizuku_dsp">Với Shizuku, bạn có thể chạy các tập lệnh ADB mà không cần một chiếc máy tính. Hãy &lt;a href=%1$s&gt;đọc trợ giúp&lt;/a&gt;.</string>
+</resources>
