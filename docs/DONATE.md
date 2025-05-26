@@ -1,3 +1,6 @@
+English | [简体中文](DONATE_zh_Hans.md) | [繁体中文](DONATE_zh_Hant.md)
+|-|-|-|
+
 # Donate
 
 If you like this app, please consider donating!
