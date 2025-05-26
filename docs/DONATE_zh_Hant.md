@@ -1,3 +1,6 @@
+[English](DONATE.md) | [简体中文](DONATE_zh_rCN.md) | 繁体中文
+|-|-|-|
+
 # 捐贈
 
 如果您喜歡這個應用，請考慮捐贈！
