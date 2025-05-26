@@ -1,3 +1,6 @@
+[English](DONATE.md) | 简体中文 | [繁体中文](DONATE_zh_Hant.md)
+|-|-|-|
+
 # 捐赠
 
 如果您喜欢这个应用，请考虑捐赠！
