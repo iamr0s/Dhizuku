@@ -32,6 +32,10 @@ Android 5.0 ~ 15
 
 [![status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
 
+## 捐赠
+
+请参阅 [**此处**](DONATE_zh_Hans.md).
+
 ## 开源协议
 
 Dhizuku目前基于 [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) 开源，且保证未来依然继续遵循此协议开源。
