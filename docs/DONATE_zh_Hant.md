@@ -1,4 +1,4 @@
-[English](DONATE.md) | [简体中文](DONATE_zh_rCN.md) | 繁体中文
+[English](DONATE.md) | [简体中文](DONATE_zh_Hans.md) | 繁体中文
 |-|-|-|
 
 # 捐贈
