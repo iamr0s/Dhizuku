@@ -1,2 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="agreement_text">Narito ang aming patakaran sa gumagamit, Mangyaring basahin at sang-ayunan ito. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Mga Tuntunin ng Paggamit&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Patakaran sa Privacy&lt;/a&gt; Hindi na lalabas muli ang mensaheng ito pagkatapos mong sumang-ayon.</string>
+    <string name="home_status_owner_denied">Naghihintay para sa pag-activate</string>
+    <string name="home_adb_dsp">Sa pamamagitan ng ADB (Android Debug Bridge) na koneksyon, makaka-execute ka ng ilang mga naka-pribilehiyo na command. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
+    <string name="home_deactivate_title">I-deactivate</string>
+    <string name="service_channel_name">Serbisyo ng background</string>
+    <string name="copy">Kopyahin</string>
+    <string name="home_app_management_title">Pamamahala ng Application</string>
+    <string name="home_shutdown_dsp">Hindi masa-shutdown ng sistema ang Dhizuku maliban kung gawin ito ng Dhizuku nang kusang loob.</string>
+    <string name="agreement_title">Patakaran</string>
+    <string name="home_deactivate_dsp">Sigurado ka ba gusto mong i-deactivate?</string>
+    <string name="agree_text">Sumang-ayon</string>
+    <string name="permission_description">Gamitin ang API ng Dhizuku</string>
+    <string name="home_status_owner_granted">Ikaw ang May-ari!!!</string>
+    <string name="home_app_management_dsp">Makikita rito ang mga app na humiling o ipinahayag ang Dhizuku.</string>
+    <string name="home_dhizuku_title">Pag-activate sa pamamagitan ng Dhizuku</string>
+    <string name="home_shizuku_title">Pag-activate sa pamamagitan ng Shizuku</string>
+    <string name="home_adb_title">Pag-activate sa pamamagitan ng ADB</string>
+    <string name="request_permission_text">Payagan ang <b>%1$s</b> na i-access ang Dhizuku?</string>
+    <string name="agree">Ibigay</string>
+    <string name="refuse">Tanggihan</string>
+    <string name="service_running">Tumatakbo ang Dhizuku</string>
+    <string name="home_adb_btn_view_command">Tignan ang command</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="home_dhizuku_dsp">Kung mayroon kang iba pang mga implementasyon na naka-install, maaari kang magpalipat-lipat sa pagitan ng mga ito sa kalooban. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
+    <string name="finish">Tapos na</string>
+    <string name="binance">Binance</string>
+    <string name="retry">Subukan Muli</string>
+    <string name="home_shutdown_title">I-shutdown</string>
+    <string name="home_shizuku_dsp">Gamit ang Shizuku, may kakayahan kang tumakbo ng mga ADB command nang walang pangangailangan ng computer. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
+    <string name="confirm">Sige</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">WeChat</string>
+    <string name="donate">Magpuna</string>
+</resources>
