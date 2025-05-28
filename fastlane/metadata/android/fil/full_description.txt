@@ -1,0 +1,14 @@
+Ang app na ito ay maaaring magtalaga ng mga function mula sa may-ari ng device.
+
+Iyon ay, gumaganap ang app na ito bilang isang tagapamagitan upang tumawag sa mga function mula sa may-ari ng device.
+
+Karaniwan, ang awtoridad na ito ay maaari lamang italaga sa isang app, pero pinapayagan ng Dhizuku ang pagtalaga ng punong awtoridad ng may-ari ng device sa may-ari ng device.
+
+Madali itong i-set up (hal: Shizuku, QR code).
+Para sa karagdagang impormasyon, mangyaring tignan ang <a href="https://github.com/iamr0s/Dhizuku/discussions/19">tutorial</a>.
+
+Halimbawa ng paggamit, mainam ito kapag kailangan mong suportahan ang dalawa o higit pang mga pahintulot ng may-ari ng device sa parehong oras.
+
+Sa partikular, sa Japan, kailangan mong suportahan ang Aurora Store at Test DPC sa isang device na may ilang limitadong functionality.
+
+Kahit na hindi sinusuportahan ng app developer ang Dhizuku, maaari mong pilitin ang support para sa Dhizuku sa pamamagitan ng Dhizuku-API-Xposed module.

@@ -1,0 +1,8 @@
+- Pagdedeklara ng awtoridad ng Dhizuku
+- Suportahan ang EMM
+- Pagbutihin ang pag-uugali kapag nagiging may-ari ng device
+- Ayusin ang serbisyo upang tumakbo sa harapan
+- Maaari ding i-clear ng mga may-ari ng profile
+- Suportahan ang monochrome na icon
+- I-update ang pagsasalin
+- Paganahin ang LocaleConfig
