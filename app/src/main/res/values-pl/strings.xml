@@ -30,4 +30,7 @@
     <string name="permission_description">Użyj API Dhizuku</string>
     <string name="home_shutdown_dsp">System nie będzie w stanie wyłączyć Dhizuku, dopóki Dhizuku nie zrobi tego dobrowolnie.</string>
     <string name="home_shutdown_title">Zamknięcie</string>
+    <string name="agreement_text">Tu jest nasza polityka użytkownika. Proszę przeczytać ją i się zgodzić&lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Polityka użytkowania&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Polityka prywatności&lt;/a&gt; Ta wiadomość się nie pokaże gdy ją akceptujesz</string>
+    <string name="agreement_title">Polityka</string>
+    <string name="agree_text">Zaakceptuj</string>
 </resources>
