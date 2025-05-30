@@ -1,0 +1,8 @@
+- Deklaracja autoryzacji samego Dhizuku
+- Wsparcie EMM
+- Ulepszenie zachowania po przejęciu własności urządzenia
+- Naprawa usługi, aby działała w tle
+- Profile właścicieli mogą się czyścić
+- Wsparcie dla monochromatycznych ikon
+- Ulepszenie tłumaczeń
+- Włącznie LocaleConfig

@@ -1,0 +1,1 @@
+Narzędzie, które pozwala udostępniać uprawnienia „właściciela urządzenia” innym aplikacjom.

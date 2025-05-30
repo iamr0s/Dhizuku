@@ -1,0 +1,3 @@
+- Dodano "Polityka użytkowania" i "Polityka prywatności"
+- Dodano dialog akceptacji 
+- Ulepszono tłumaczenia
