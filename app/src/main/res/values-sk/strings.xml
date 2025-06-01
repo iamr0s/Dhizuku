@@ -13,7 +13,7 @@
     <string name="cancel">Zrušiť</string>
     <string name="confirm">OK</string>
     <string name="donate">Darovať</string>
-    <string name="request_permission_text">Súhlasíte so žiadosťou o povolenie Dhizuku <b>%1$s</b>\?</string>
+    <string name="request_permission_text">Povoliť <b>%1$s</b> prístup k Dhizuku?</string>
     <string name="home_deactivate_title">Deaktivácia</string>
     <string name="retry">Znovu</string>
     <string name="home_dhizuku_dsp">Ak máte nainštalované iné implementácie Dhizuku, môžete medzi nimi ľubovoľne prepínať. Prosím, &lt;a href=%1$s&gt;prečítajte si nápovedu&lt;/a&gt;.</string>
@@ -30,4 +30,7 @@
     <string name="home_shutdown_title">Vypnutie</string>
     <string name="home_shutdown_dsp">Systém nebude môcť vypnúť Dhizuku, pokiaľ tak Dhizuku neurobí dobrovoľne.</string>
     <string name="permission_description">Použite Dhizuku API</string>
+    <string name="agreement_title">Politika</string>
+    <string name="agree_text">Súhlasím</string>
+    <string name="agreement_text">Tu sú naše zásady používania, prečítajte si ich a súhlaste s nimi. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Podmienky používania&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Zásady ochrany osobných údajov&lt;/a&gt; Táto správa sa po odsúhlasení už nezobrazí.</string>
 </resources>
