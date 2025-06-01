@@ -1,0 +1,3 @@
+- Pridané "Podmienky používania" a "Zásady ochrany osobných údajov"
+- Pridané dialógové okno dohody
+- Aktualizovaný preklad

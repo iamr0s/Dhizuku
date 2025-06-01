@@ -1,0 +1,1 @@
+Nástroj, ktorý môže zdieľať oprávnenia vlastníka zariadenia s inou aplikáciou.
