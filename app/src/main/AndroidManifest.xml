@@ -42,7 +42,7 @@
         android:appCategory="productivity"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:pageSizeCompat="enable"
+        android:pageSizeCompat="enabled"
         android:persistent="true"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
