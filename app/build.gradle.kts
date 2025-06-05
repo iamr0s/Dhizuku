@@ -26,7 +26,7 @@ android {
     defaultConfig {
         minSdk = 21
         targetSdk = compileSdk
-        ndkVersion = "27.2.12479018"
+        ndkVersion = "28.1.13356709"
 
         val versionProps: Properties = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
@@ -36,12 +36,6 @@ android {
             getDefaultProguardFile("proguard-android-optimize.txt"),
             "proguard-rules.pro"
         )
-
-        externalNativeBuild {
-            cmake {
-                arguments += listOf("-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON")
-            }
-        }
     }
 
     signingConfigs {
