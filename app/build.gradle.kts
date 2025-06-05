@@ -91,7 +91,7 @@ android {
     }
 
     packaging {
-        jniLibs.keepDebugSymbols.add("lib/*/libandroidx.graphics.path.so")
+        jniLibs.excludes.add("lib/*/libandroidx.graphics.path.so")
         resources.excludes.addAll(arrayOf("META-INF/**", "DebugProbesKt.bin", "kotlin-tooling-metadata.json", "kotlin/**"))
     }
 
