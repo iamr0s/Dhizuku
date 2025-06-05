@@ -39,32 +39,27 @@ android {
     }
 
     signingConfigs {
-        val keyAlias: String = keystoreProps.getProperty("keyAlias")
-        val keyPassword: String = keystoreProps.getProperty("keyPassword")
         val storeFile: File = file("$keystoreDir/${keystoreProps.getProperty("storeFile")}")
         val storePassword: String = keystoreProps.getProperty("storePassword")
+        val keyAlias: String = keystoreProps.getProperty("keyAlias")
+        val keyPassword: String = keystoreProps.getProperty("keyPassword")
         getByName("debug") {
-            this.keyAlias = keyAlias
-            this.keyPassword = keyPassword
             this.storeFile = storeFile
             this.storePassword = storePassword
-        }
-        create("release") {
             this.keyAlias = keyAlias
             this.keyPassword = keyPassword
-            this.storeFile = storeFile
-            this.storePassword = storePassword
         }
     }
 
     buildTypes {
-        getByName("debug") {
+        configureEach {
             signingConfig = signingConfigs.getByName("debug")
             isMinifyEnabled = false
+            ndk {
+                debugSymbolLevel = "SYMBOL_TABLE"
+            }
         }
-
         getByName("release") {
-            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
         }
@@ -96,7 +91,7 @@ android {
     }
 
     packaging {
-        //jniLibs.keepDebugSymbols.add("lib/*/libandroidx.graphics.path.so")
+        jniLibs.keepDebugSymbols.add("lib/*/libandroidx.graphics.path.so")
         resources.excludes.addAll(arrayOf("META-INF/**", "DebugProbesKt.bin", "kotlin-tooling-metadata.json", "kotlin/**"))
     }
 
