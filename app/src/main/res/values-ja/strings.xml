@@ -6,13 +6,10 @@
     <string name="service_running">Dhizuku は動作中です</string>
     <string name="service_channel_name">バックグラウンド サービス</string>
     <string name="home_deactivate_dsp">本当に無効化してもよろしいですか？</string>
-    <string name="wechat">WeChat</string>
     <string name="agree">許可</string>
     <string name="copy">コピー</string>
     <string name="finish">完了</string>
-    <string name="binance">Binance</string>
     <string name="refuse">拒否</string>
-    <string name="alipay">Alipay</string>
     <string name="cancel">中止</string>
     <string name="confirm">OK</string>
     <string name="donate">寄付</string>

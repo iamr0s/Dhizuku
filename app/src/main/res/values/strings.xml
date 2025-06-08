@@ -34,9 +34,6 @@
     <string name="confirm">OK</string>
     <string name="finish">Finish</string>
     <string name="donate">Donate</string>
-    <string name="alipay">Alipay</string>
-    <string name="wechat">WeChat</string>
-    <string name="binance">Binance</string>
     <string name="request_permission_text">Allow <b>%1$s</b> to access Dhizuku?</string>
     <string name="agree">Grant</string>
     <string name="refuse">Deny</string>

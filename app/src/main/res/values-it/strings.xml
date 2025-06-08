@@ -19,9 +19,6 @@
     <string name="confirm">OK</string>
     <string name="finish">Fatto</string>
     <string name="donate">Dona</string>
-    <string name="alipay">Alipay</string>
-    <string name="wechat">WeChat</string>
-    <string name="binance">Binance</string>
     <string name="request_permission_text">Consentire <b>%1$s</b> di accedere a Dhizuku?</string>
     <string name="agree">Concedi</string>
     <string name="refuse">Nega</string>

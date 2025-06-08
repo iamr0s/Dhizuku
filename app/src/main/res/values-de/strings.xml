@@ -2,11 +2,8 @@
 <resources>
     <string name="service_running">Dhizuku ist aktiv</string>
     <string name="service_channel_name">Hintergrunddienst</string>
-    <string name="wechat">WeChat</string>
     <string name="agree">Bewilligen</string>
-    <string name="binance">Binance</string>
     <string name="refuse">Ablehnen</string>
-    <string name="alipay">Alipay</string>
     <string name="cancel">Abbrechen</string>
     <string name="confirm">OK</string>
     <string name="donate">Spenden</string>

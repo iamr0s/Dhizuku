@@ -5,7 +5,6 @@
     <string name="request_permission_text">לאפשר ל<b>%1$s</b> לגשת לDhizuku?</string>
     <string name="confirm">בסדר</string>
     <string name="finish">סיום</string>
-    <string name="binance">Binance</string>
     <string name="retry">נסה שוב</string>
     <string name="home_status_owner_granted">אתה הבעלים!!!</string>
     <string name="home_app_management_title">ניהול יישומים</string>
@@ -19,12 +18,10 @@
     <string name="home_deactivate_title">הסרה</string>
     <string name="home_deactivate_dsp">האם אתם בטוחים שאתם רוצים להסיר?</string>
     <string name="donate">תרומה</string>
-    <string name="alipay">Alipay</string>
     <string name="agree">הענקה</string>
     <string name="refuse">דחייה</string>
     <string name="service_running">Dhizuku פועל</string>
     <string name="home_shutdown_title">כיבוי</string>
-    <string name="wechat">Wechat</string>
     <string name="service_channel_name">שירות רקע</string>
     <string name="home_app_management_dsp">אפליקציות שביקשו או הכריזו על dhizuku יופיעו כאן</string>
     <string name="home_status_owner_denied">מחכה להפעלה</string>

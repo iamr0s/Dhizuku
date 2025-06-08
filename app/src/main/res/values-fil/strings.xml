@@ -25,12 +25,9 @@
     <string name="cancel">Kanselahin</string>
     <string name="home_dhizuku_dsp">Kung mayroon kang iba pang mga implementasyon na naka-install, maaari kang magpalipat-lipat sa pagitan ng mga ito sa kalooban. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
     <string name="finish">Tapos na</string>
-    <string name="binance">Binance</string>
     <string name="retry">Subukan Muli</string>
     <string name="home_shutdown_title">I-shutdown</string>
     <string name="home_shizuku_dsp">Gamit ang Shizuku, may kakayahan kang tumakbo ng mga ADB command nang walang pangangailangan ng computer. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
     <string name="confirm">Sige</string>
-    <string name="alipay">Alipay</string>
-    <string name="wechat">WeChat</string>
     <string name="donate">Mag-abuloy</string>
 </resources>

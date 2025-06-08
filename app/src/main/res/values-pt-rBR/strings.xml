@@ -7,9 +7,6 @@
     <string name="home_deactivate_dsp">Tem certeza de que deseja desativar?</string>
     <string name="copy">Copiar</string>
     <string name="donate">Doar</string>
-    <string name="alipay">Alipay</string>
-    <string name="wechat">WeChat</string>
-    <string name="binance">Binance</string>
     <string name="request_permission_text">Permitir que <b>%1$s</b> acesse o Dhizuku?</string>
     <string name="agree">Permitir</string>
     <string name="refuse">Bloquear</string>

@@ -10,9 +10,6 @@
     <string name="home_adb_btn_view_command">கட்டளையைக் காண்க</string>
     <string name="home_shutdown_title">பணிநிறுத்தம்</string>
     <string name="home_shutdown_dsp">திசுகு தானாக முன்வந்து அவ்வாறு செய்யாவிட்டால் இந்த அமைப்பு திசுகுவை மூட முடியாது.</string>
-    <string name="alipay">அலிபே</string>
-    <string name="wechat">வெச்சாட்</string>
-    <string name="binance">பைன்ச்</string>
     <string name="request_permission_text"><b>%1$s</b> இன் திசுகு அனுமதி கோரிக்கையை ஏற்கவா?</string>
     <string name="agree">மானியம்</string>
     <string name="refuse">மறுக்கவும்</string>

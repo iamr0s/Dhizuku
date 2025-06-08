@@ -3,13 +3,10 @@
     <string name="service_running">Dhizuku 이(가) 작동중입니다</string>
     <string name="service_channel_name">백그라운드 서비스</string>
     <string name="home_deactivate_dsp">정말로 비활성화 하시겠습니까?</string>
-    <string name="wechat">WeChat</string>
     <string name="agree">허용</string>
     <string name="copy">복사</string>
     <string name="finish">완료</string>
-    <string name="binance">Binance</string>
     <string name="refuse">취소</string>
-    <string name="alipay">Alipay</string>
     <string name="cancel">취소</string>
     <string name="confirm">확인</string>
     <string name="donate">후원</string>

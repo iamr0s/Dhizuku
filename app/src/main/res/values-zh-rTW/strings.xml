@@ -14,9 +14,6 @@
     <string name="home_deactivate_dsp">確認要取消激活嗎？</string>
     <string name="confirm">確認</string>
     <string name="finish">完成</string>
-    <string name="alipay">支付寶（Alipay）</string>
-    <string name="wechat">微信（WeChat Pay）</string>
-    <string name="binance">Binance</string>
     <string name="agree">同意</string>
     <string name="refuse">拒絕</string>
     <string name="service_channel_name">後臺服務</string>

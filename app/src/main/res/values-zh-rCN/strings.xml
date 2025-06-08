@@ -31,9 +31,6 @@
     <string name="home_deactivate_title">取消激活</string>
     <string name="home_deactivate_dsp">确认要取消激活吗？</string>
     <string name="donate">捐赠</string>
-    <string name="alipay">支付宝</string>
-    <string name="wechat">微信</string>
-    <string name="binance">币安</string>
     <string name="request_permission_text">允许<b>%1$s</b>进入Dhizuku?</string>
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>

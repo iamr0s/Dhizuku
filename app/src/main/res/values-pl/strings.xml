@@ -3,13 +3,10 @@
     <string name="service_running">Dhizuku działa</string>
     <string name="service_channel_name">Usługa w tle</string>
     <string name="home_deactivate_dsp">Czy jesteś pewien że chcesz zdezaktywować?</string>
-    <string name="wechat">WeChat</string>
     <string name="agree">Udzielono</string>
     <string name="copy">Kopiuj</string>
     <string name="finish">Skończone</string>
-    <string name="binance">Binance</string>
     <string name="refuse">Odmów</string>
-    <string name="alipay">Alipay</string>
     <string name="cancel">Anuluj</string>
     <string name="confirm">OK</string>
     <string name="donate">Darowizna</string>

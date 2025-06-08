@@ -5,13 +5,10 @@
     <string name="home_deactivate_title">Nonaktifkan</string>
     <string name="home_deactivate_dsp">Apakah Anda yakin ingin menonaktifkan?</string>
     <string name="donate">Donasi</string>
-    <string name="binance">Binance</string>
     <string name="agree">Izinkan</string>
     <string name="refuse">Tolak</string>
     <string name="copy">Salin</string>
     <string name="finish">Selesai</string>
-    <string name="alipay">AliPay</string>
-    <string name="wechat">WeChat</string>
     <string name="service_channel_name">Layanan latar belakang</string>
     <string name="request_permission_text">Izinkan <b>%1$s</b> mengakses Dhizuku?</string>
     <string name="service_running">Dhizuku sedang berjalan</string>

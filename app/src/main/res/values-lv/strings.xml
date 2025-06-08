@@ -26,8 +26,5 @@
     <string name="home_shizuku_dsp">Izmantojot Shizuku, jums ir iespēja palaist ADB komandas bez datora palīdzības. Lūdzu, &lt;a href=%1$s&gt;skatiet dokumentāciju&lt;/a&gt;.</string>
     <string name="home_deactivate_title">Deaktivizēt</string>
     <string name="home_deactivate_dsp">Vai tiešām vēlaties deaktivizēt?</string>
-    <string name="alipay">Alipay</string>
-    <string name="wechat">WeChat</string>
-    <string name="binance">Binance</string>
     <string name="permission_description">Izmantot Dhizuku API</string>
 </resources>

@@ -5,7 +5,6 @@
     <string name="finish">Готово</string>
     <string name="home_deactivate_title">Деактивация</string>
     <string name="home_deactivate_dsp">Подтвердить деактивацию?</string>
-    <string name="binance">Binance</string>
     <string name="request_permission_text">Разрешить <b>%1$s</b> доступ к Dhizuku?</string>
     <string name="agree">Разрешить</string>
     <string name="refuse">Отклонить</string>
@@ -13,8 +12,6 @@
     <string name="donate">Пожертвования</string>
     <string name="service_running">Dhizuku запущен</string>
     <string name="service_channel_name">Фоновая служба</string>
-    <string name="alipay">Alipay</string>
-    <string name="wechat">WeChat</string>
     <string name="home_app_management_title">Управление приложениями</string>
     <string name="home_app_management_dsp">Приложения, которые запросили Dhizuku будут отображаться здесь.</string>
     <string name="home_shizuku_title">Активация через Shizuku</string>

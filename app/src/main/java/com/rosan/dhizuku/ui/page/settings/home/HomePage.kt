@@ -159,9 +159,6 @@ private fun OverflowMenu() {
             menuExpanded = false
             shutdownDialogShow = true
         })
-        R.string.alipay
-        R.string.wechat
-        R.string.binance
         DropdownMenuItem(text = {
             Text(stringResource(R.string.donate))
         }, leadingIcon = {
