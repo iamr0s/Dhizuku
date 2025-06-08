@@ -126,7 +126,7 @@ fun HomePage(
             if (dhizukuState.owner) item("dhizuku") {
                 DhizukuWidget(navController)
             }
-            if (checkShizukuWorked()) item("shizuku") {
+            item("shizuku") {
                 ShizukuWidget(navController)
             }
             if (!dhizukuState.owner) item("adb") {
@@ -258,7 +258,11 @@ private fun LazyItemScope.DhizukuWidget(navController: NavController) {
 @Composable
 private fun LazyItemScope.ShizukuWidget(navController: NavController) {
     CardWidget(onClick = {
-        navController.navigate(SettingsRoute.Activate.route(SettingsRoute.Activate.Mode.Shizuku))
+        if (checkShizukuWorked()) {
+            navController.navigate(SettingsRoute.Activate.route(SettingsRoute.Activate.Mode.Shizuku))
+        } else {
+            return@CardWidget
+        }
     }, icon = {
         Icon(imageVector = Icons.TwoTone.Terminal, contentDescription = null)
     }, title = {
