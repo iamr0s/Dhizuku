@@ -17,7 +17,7 @@ compose = "1.8.2"
 room = "2.7.1"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
-koin = "4.0.4"
+koin = "4.1.0"
 
 [plugins]
 agp-lib = { id = "com.android.library", version.ref = "agp" }
@@ -27,7 +27,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 
 # KSP quickstart
 # https://kotlinlang.org/docs/ksp-quickstart.html
-ksp = { id = "com.google.devtools.ksp", version = "2.1.21-2.0.1" }
+ksp = { id = "com.google.devtools.ksp", version = "2.1.21-2.0.2" }
 
 [libraries]
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.9.1" }
