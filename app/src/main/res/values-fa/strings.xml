@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="home_status_owner_denied">در انتظار فعال‌سازی</string>
+    <string name="home_adb_title">فعالسازی توسط ADB</string>
+    <string name="home_shizuku_dsp">توسط Shizuku، شما می‌توانید دستورات ADB را بدون نیاز به کامپیوتر اجرا کنید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
+    <string name="service_channel_name">خدمات پس‌زمینه</string>
+    <string name="request_permission_text">اجازه میدهید که <b>%1$s</b> دسترسی داشته باشد به Dhizuku؟</string>
+    <string name="agree_text">پذیرش</string>
+    <string name="cancel">لغو</string>
+    <string name="retry">تلاش مجدد</string>
+    <string name="home_status_owner_granted">شما مالک هستید!!!</string>
+    <string name="home_app_management_title">مدیریت برنامه‌ها</string>
+    <string name="home_dhizuku_title">فعال‌سازی توسط Dhizuku</string>
+    <string name="home_shizuku_title">فعالسازی توسط Shizuku</string>
+    <string name="home_shutdown_title">خاموش کردن</string>
+    <string name="home_deactivate_title">غیرفعال کردن</string>
+    <string name="confirm">تأیید</string>
+    <string name="home_adb_btn_view_command">فرمان مشاهده</string>
+    <string name="home_deactivate_dsp">آیا مطمئن هستید که می‌خواهید آن را غیرفعال کنید؟</string>
+    <string name="donate">حمایت</string>
+    <string name="agree">پذیرفتن</string>
+    <string name="refuse">رد کردن</string>
+    <string name="service_running">Dhizuku درحال اجرا است</string>
+    <string name="permission_description">استفاده از رابط برنامه‌نویسی کاربردی Dhizuku</string>
+    <string name="agreement_title">سیاست و خط‌مشی</string>
+    <string name="agreement_text">این خط‌مشی کاربری ماست، لطفاً آن را بخوانید و با آن موافقت کنید. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; این پیام پس از موافقت شما مجدد نمایش داده نخواهد شد.</string>
+    <string name="finish">­پایان</string>
+    <string name="home_app_management_dsp">برنامه‌هایی که درخواست یا اعلام استفاده از Dhizuku کرده‌اند، در اینجا نمایش داده خواهند شد.</string>
+    <string name="home_dhizuku_dsp">اگر پیاده‌سازی‌های دیگری از Dhizuku نصب کرده‌اید، می‌توانید به دلخواه بین آن‌ها جابه‌جا شوید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">از طریق اتصال ADB (Android Debug Bridge)، می‌توانید برخی دستورات با دسترسی ویژه را اجرا کنید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
+    <string name="copy">رونوشت</string>
+    <string name="home_shutdown_dsp">سیستم نمی‌تواند Dhizuku را خاموش کند، مگر اینکه Dhizuku به‌صورت داوطلبانه این کار را انجام دهد.</string>
+</resources>
