@@ -8,6 +8,10 @@
 [![最新版](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=最新版)](https://github.com/iamr0s/Dhizuku/releases/latest)
 [![使用許諾](https://img.shields.io/github/license/iamr0s/Dhizuku?label=使用許諾)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
+<a href="https://play.google.com/store/apps/details?id=com.rosan.dhizuku" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="70"></a>
+<a href="https://f-droid.org/packages/com.rosan.dhizuku/" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" height="70"></a>
+<a href="https://apt.izzysoft.de/fdroid/index/apk/com.rosan.dhizuku" target="_blank"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="70"></a>
+
 | [**利用規約**（英語）](TERMS.md) | [**個人情報保護方針**（英語）](PRIVACY.md) |
 |-|-|
 
@@ -21,7 +25,7 @@
 
 ## 対応バージョン
 
-Android 5.0 ~ 15
+Android 5.0 ~ 16
 
 ## 開発者向け
 

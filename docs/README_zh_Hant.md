@@ -7,6 +7,10 @@
 [![最新版本](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=最新版本)](https://github.com/iamr0s/Dhizuku/releases/latest)
 [![授權條款](https://img.shields.io/github/license/iamr0s/Dhizuku?label=授權條款)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
+<a href="https://play.google.com/store/apps/details?id=com.rosan.dhizuku" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="70"></a>
+<a href="https://f-droid.org/packages/com.rosan.dhizuku/" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" height="70"></a>
+<a href="https://apt.izzysoft.de/fdroid/index/apk/com.rosan.dhizuku" target="_blank"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="70"></a>
+
 | [**使用條款**（英文）](TERMS.md) | [**隱私權政策**（英文）](PRIVACY.md) |
 |-|-|
 
@@ -16,7 +20,7 @@
 
 ## 支援版本
 
-Android 5.0 ~ 15
+Android 5.0 ~ 16
 
 ## 啟用教學
 
