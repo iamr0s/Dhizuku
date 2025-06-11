@@ -15,7 +15,7 @@
     <string name="home_shutdown_title">خاموش کردن</string>
     <string name="home_deactivate_title">غیرفعال کردن</string>
     <string name="confirm">تأیید</string>
-    <string name="home_adb_btn_view_command">مشاهده فرمان</string>
+    <string name="home_adb_btn_view_command">فرمان مشاهده</string>
     <string name="home_deactivate_dsp">آیا مطمئن هستید که می‌خواهید آن را غیرفعال کنید؟</string>
     <string name="donate">حمایت</string>
     <string name="agree">پذیرفتن</string>
