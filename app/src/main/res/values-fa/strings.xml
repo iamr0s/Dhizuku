@@ -24,7 +24,7 @@
     <string name="permission_description">استفاده از رابط برنامه‌نویسی کاربردی Dhizuku</string>
     <string name="agreement_title">سیاست و خط‌مشی</string>
     <string name="agreement_text">این خط‌مشی کاربری ماست، لطفاً آن را بخوانید و با آن موافقت کنید. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; این پیام پس از موافقت شما مجدد نمایش داده نخواهد شد.</string>
-    <string name="finish">­پایان</string>
+    <string name="finish">پایان</string>
     <string name="home_app_management_dsp">برنامه‌هایی که درخواست یا اعلام استفاده از Dhizuku کرده‌اند، در اینجا نمایش داده خواهند شد.</string>
     <string name="home_dhizuku_dsp">اگر پیاده‌سازی‌های دیگری از Dhizuku نصب کرده‌اید، می‌توانید به دلخواه بین آن‌ها جابه‌جا شوید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
     <string name="home_adb_dsp">از طریق اتصال ADB (Android Debug Bridge)، می‌توانید برخی دستورات با دسترسی ویژه را اجرا کنید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
