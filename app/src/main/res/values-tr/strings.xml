@@ -4,7 +4,7 @@
     <string name="home_deactivate_dsp">Devre dışı bırakmak istediğinize emin misiniz?</string>
     <string name="copy">Kopyala</string>
     <string name="donate">Bağış Yap</string>
-    <string name="request_permission_text"><b>%1$s</b>, Dhizuku kullanılarak yetkilendirilsin mi?</string>
+    <string name="request_permission_text"><b>%1$s</b>\'ın Dhizuku\'ya erişmesine izin verilsin mi?</string>
     <string name="agree">İzin ver</string>
     <string name="refuse">Reddet</string>
     <string name="service_channel_name">Arkaplan hizmeti</string>
@@ -27,4 +27,7 @@
     <string name="home_dhizuku_dsp">Kurulu başka Dhizuku uygulamalarınız varsa, bunlar arasında istediğiniz zaman geçiş yapabilirsiniz. Lütfen &lt;a href=%1$s&gt;yardımı okuyun&lt;/a&gt;.</string>
     <string name="home_adb_dsp">ADB (Android Hata Ayıklama Köprüsü) bağlantısı aracılığıyla bazı ayrıcalıklı komutları çalıştırabilirsiniz. Lütfen &lt;a href=%1$s&gt;yardımı okuyun&lt;/a&gt;.</string>
     <string name="permission_description">Dhizuku\'nun API\'sini kullanın</string>
+    <string name="agree_text">Kabul et</string>
+    <string name="agreement_title">Sözleşme</string>
+    <string name="agreement_text">İşte kullanıcı politikamız, lütfen okuyun ve kabul edin. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Kullanım Şartları&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Gizlilik Politikası&lt;/a&gt;. Kabul ettikten sonra bu mesaj bir daha gösterilmeyecektir.</string>
 </resources>
