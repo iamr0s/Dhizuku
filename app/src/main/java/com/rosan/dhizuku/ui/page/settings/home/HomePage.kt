@@ -126,7 +126,7 @@ fun HomePage(
             if (dhizukuState.owner) item("dhizuku") {
                 DhizukuWidget(navController)
             }
-            item("shizuku") {
+            if (!dhizukuState.owner) item("shizuku") {
                 ShizukuWidget(navController)
             }
             if (!dhizukuState.owner) item("adb") {
