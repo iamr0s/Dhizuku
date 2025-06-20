@@ -8,7 +8,7 @@
 [![最新版](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=最新版)](https://github.com/iamr0s/Dhizuku/releases/latest)
 [![使用許諾](https://img.shields.io/github/license/iamr0s/Dhizuku?label=使用許諾)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
-<a href="https://play.google.com/store/apps/details?id=com.rosan.dhizuku?hl=ja" target="_blank"><img src="https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png" height="65"></a>
+<a href="https://play.google.com/store/apps/details?id=com.rosan.dhizuku?hl=ja" target="_blank"><img src="https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png" height="61"></a>
 <a href="https://f-droid.org/packages/com.rosan.dhizuku/" target="_blank"><img src="https://f-droid.org/badge/get-it-on-ja.png" height="70"></a>
 <a href="https://apt.izzysoft.de/fdroid/index/apk/com.rosan.dhizuku" target="_blank"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="70"></a>
 
