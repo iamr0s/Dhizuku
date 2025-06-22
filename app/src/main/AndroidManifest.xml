@@ -4,7 +4,7 @@
     tools:ignore="ExportedContentProvider,UnusedAttribute,ScopedStorage,QueryAllPackagesPermission,ProtectedPermissions">
 
     <permission
-        android:name="com.rosan.dhizuku.permission.API"
+        android:name="${applicationId}.permission.API"
         android:description="@string/permission_description"
         android:icon="@drawable/ic_launcher_foreground"
         android:label="@string/app_name"
@@ -23,7 +23,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <permission
-        android:name="com.rosan.dhizuku.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature"
         tools:node="remove" />
     <uses-permission
@@ -97,7 +97,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.rosan.dhizuku.server.provider" />
+                <action android:name="${applicationId}.server.provider" />
             </intent-filter>
         </provider>
 
@@ -149,9 +149,9 @@
             android:name=".server.ShutdownReceiver"
             android:enabled="true"
             android:exported="true"
-            android:permission="com.rosan.dhizuku.permission.API">
+            android:permission="${applicationId}.permission.API">
             <intent-filter>
-                <action android:name="com.rosan.dhizuku.action.SHUTDOWN" />
+                <action android:name="${applicationId}.action.SHUTDOWN" />
             </intent-filter>
         </receiver>
 
