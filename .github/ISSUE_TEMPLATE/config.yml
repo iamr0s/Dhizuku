@@ -3,7 +3,7 @@ contact_links:
   - name: How do I activate Dhizuku
     url: https://github.com/iamr0s/Dhizuku/discussions/19
     about: For beginners
-  - name: Cannot set device owner
+  - name: Cannot set device owner (Occured IllegalStateException)
     url: https://github.com/iamr0s/Dhizuku/discussions/19#already_device_owner
     about: Not allowed to set the device owner because there are already some accounts on the device.
   - name: How to setup with QR code
