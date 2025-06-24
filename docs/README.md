@@ -23,13 +23,18 @@ A tool that can share DeviceOwner permissions to other application.
 
 - [Github Discussions](https://github.com/iamr0s/Dhizuku/discussions/19)
 
+> [!IMPORTANT]
+> Basically, we strongly recommend setting up your device **without any accounts installed**.  
+> Please note that we may not be able to provide support if **one or more other accounts are configured** on the device.
+
 ## Supported Versions
 
 Android 5.0 ~ 16
 
-## For Developer（Join Dhizuku-API）
+## For Developer
 
-- [Dhizuku API](https://github.com/iamr0s/Dhizuku-API)
+- [Dhizuku API](https://github.com/iamr0s/Dhizuku-API)  
+  If implement this in your app, your app can use the Dhizuku-API.
 
 ## Participate in translation
 
