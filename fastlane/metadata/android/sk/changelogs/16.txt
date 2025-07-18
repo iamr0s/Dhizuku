@@ -1,0 +1,6 @@
+- Podpora Android 16
+- Podpora EdgeToEdge
+- Aktualizácia príspevok odkaz
+- Fix Shizuku's card widget
+- Pridať jazyk: perzské, Filipino, vietnamčina
+- Aktualizácia prekladov
