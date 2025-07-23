@@ -30,4 +30,19 @@
     <string name="agreement_title">Politika</string>
     <string name="agree_text">Súhlasím</string>
     <string name="agreement_text">Tu sú naše zásady používania, prečítajte si ich a súhlaste s nimi. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Podmienky používania&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Zásady ochrany osobných údajov&lt;/a&gt; Táto správa sa po odsúhlasení už nezobrazí.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
