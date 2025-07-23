@@ -30,4 +30,19 @@
     <string name="service_running">Dhizuku đang chạy</string>
     <string name="home_dhizuku_title">Kích hoạt bởi Dhizuku</string>
     <string name="home_shizuku_dsp">Với Shizuku, bạn có thể chạy các tập lệnh ADB mà không cần một chiếc máy tính. Hãy &lt;a href=%1$s&gt;đọc trợ giúp&lt;/a&gt;.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
