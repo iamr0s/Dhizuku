@@ -30,4 +30,18 @@
     <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
     <string name="home_adb_dsp">ADB (Android Debug Bridge) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
     <string name="permission_description">Dhizuku の API を使用します</string>
+    <string name="settings">設定</string>
+    <string name="settings_desc">Dhizuku の動作環境の設定を行います。</string>
+    <string name="enable_dhizuku">Dhizuku を有効化</string>
+    <string name="enable_dhizuku_desc">アプリが Dhizuku を利用できるようにします</string>
+    <string name="whitelist_mode">除外モード</string>
+    <string name="whitelist_mode_desc">あらかじめ許可したアプリのみ Dhizuku を使用できるようにします</string>
+    <string name="block_app">アプリをブロック</string>
+    <string name="auto_deny_in">自動で却下：</string>
+    <string name="block_app_desc">Dhizuku へのアクセスを拒否しました</string>
+    <string name="app_blocked_notice">このアプリはブロック済みのため Dhizuku にアクセスできません</string>
+    <string name="allow_dhizuku_access">Dhizuku へのアクセスを許可</string>
+    <string name="unblock_app">アプリのブロックを解除</string>
+    <string name="auto_deny_in_seconds">%d で自動拒否</string>
+    <string name="denying_access">アクセスを拒否しています…</string>
 </resources>
