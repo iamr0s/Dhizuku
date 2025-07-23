@@ -39,4 +39,18 @@
     <string name="refuse">Deny</string>
     <string name="service_channel_name">Background service</string>
     <string name="service_running">Dhizuku is running</string>
+    <string name="settings">Settings</string>
+    <string name="settings_desc">Configure Dhizuku behavior</string>
+    <string name="enable_dhizuku">Enable Dhizuku</string>
+    <string name="enable_dhizuku_desc">Allow apps to use Dhizuku services</string>
+    <string name="whitelist_mode">Whitelist Mode</string>
+    <string name="whitelist_mode_desc">Only allow pre-approved apps to use Dhizuku</string>
+    <string name="block_app">Block App</string>
+    <string name="auto_deny_in">Auto-deny in</string>
+    <string name="block_app_desc">Completely deny access to Dhizuku</string>
+    <string name="app_blocked_notice">This app is blocked and cannot access Dhizuku</string>
+    <string name="allow_dhizuku_access">Allow Dhizuku Access</string>
+    <string name="unblock_app">Unblock App</string>
+    <string name="auto_deny_in_seconds">Auto-deny in %d seconds</string>
+    <string name="denying_access">Denying access…</string>
 </resources>

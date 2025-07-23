@@ -7,10 +7,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -20,16 +25,22 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import kotlin.math.cos
+import kotlin.math.sin
 
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 
@@ -44,6 +55,7 @@ import com.rosan.dhizuku.ui.theme.DhizukuTheme
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 import org.koin.core.component.KoinComponent
@@ -52,18 +64,20 @@ import org.koin.core.component.inject
 class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     companion object {
         const val UID_ERR = -1
+        const val AUTO_DENY_SECONDS = 15
     }
 
     data class ViewState(
         val uid: Int = UID_ERR,
         val allowApi: Boolean = false,
-        val listener: IDhizukuRequestPermissionListener? = null
+        val listener: IDhizukuRequestPermissionListener? = null,
+        val timeLeft: Int = AUTO_DENY_SECONDS,
+        val timedOut: Boolean = false,
+        val shouldShowDialog: Boolean = true
     )
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
-
     private val repo by inject<AppRepo>()
-
     private var state by mutableStateOf(ViewState())
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,9 +86,50 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
             finish()
             return
         }
+
+        // Check if dhizuku is enabled and app is not blocked
+        coroutineScope.launch {
+            val prefs = getSharedPreferences("dhizuku_settings", MODE_PRIVATE)
+            val dhizukuEnabled = prefs.getBoolean("dhizuku_enabled", true)
+            if (!dhizukuEnabled) {
+                state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
+                finish()
+                return@launch
+            }
+
+            val whitelistMode = prefs.getBoolean("whitelist_mode", false)
+            val entity = repo.findByUID(state.uid)
+
+            if (whitelistMode && (entity == null || !entity.allowApi)) {
+                state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
+                finish()
+                return@launch
+            }
+
+            if (entity?.blocked == true) {
+                state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
+                finish()
+                return@launch
+            }
+        }
+
         setContent {
             DhizukuTheme {
-                if (!showDialog()) finish()
+                if (state.shouldShowDialog) {
+                    LaunchedEffect(Unit) {
+                        repeat(AUTO_DENY_SECONDS) { second ->
+                            delay(1000)
+                            state = state.copy(timeLeft = AUTO_DENY_SECONDS - second - 1)
+                        }
+                        if (!state.timedOut) {
+                            state = state.copy(allowApi = false, timedOut = true)
+                            finish()
+                        }
+                    }
+                }
+
+                if (state.shouldShowDialog && !showDialog()) finish()
+                if (!state.shouldShowDialog) finish()
             }
         }
     }
@@ -100,9 +155,10 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
             val signature = packageInfo.signature ?: return@launch
 
             val entity = repo.findByUID(uid)
-            if (entity == null)
+            if (entity == null && allowApi)
                 repo.insert(AppEntity(uid = uid, signature = signature, allowApi = allowApi))
-            else repo.update(entity.copy(uid = uid, signature = signature, allowApi = allowApi))
+            else if (entity != null && allowApi)
+                repo.update(entity.copy(uid = uid, signature = signature, allowApi = allowApi))
         }.invokeOnCompletion {
             val result = if (state.allowApi) PackageManager.PERMISSION_GRANTED
             else PackageManager.PERMISSION_DENIED
@@ -117,9 +173,6 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
             intent.getBundleExtra("bundle")
         ).find { it.containsKey(DhizukuVariables.PARAM_CLIENT_UID) }
             ?: return false
-
-        // In the future, it will be replaced by the following method
-//        val bundle = intent.extras ?: return false
 
         val uid = bundle.getInt(DhizukuVariables.PARAM_CLIENT_UID, -1)
         if (uid == -1) return false
@@ -142,6 +195,62 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     }
 
     @Composable
+    private fun CountdownPieChart(
+        progress: Float,
+        modifier: Modifier = Modifier
+    ) {
+        val color = MaterialTheme.colorScheme.outline
+
+        Canvas(modifier = modifier) {
+            val radius = size.minDimension / 2f
+            val center = androidx.compose.ui.geometry.Offset(size.width / 2f, size.height / 2f)
+            val strokeWidth = 2.dp.toPx() // Made thicker
+            val lineRadius = radius - strokeWidth / 2f
+
+            // Draw the remaining arc (hollow circle outline that gets eaten away counter-clockwise)
+            if (progress > 0f) {
+                drawArc(
+                    color = color,
+                    startAngle = -90f, // Start from top (12 o'clock)
+                    sweepAngle = 360f * progress, // Sweep clockwise for remaining time
+                    useCenter = false, // This makes it hollow!
+                    topLeft = androidx.compose.ui.geometry.Offset(
+                        center.x - lineRadius,
+                        center.y - lineRadius
+                    ),
+                    size = androidx.compose.ui.geometry.Size(lineRadius * 2, lineRadius * 2),
+                    style = Stroke(width = strokeWidth, cap = StrokeCap.Round)
+                )
+            }
+
+            // Always draw a line from center to top (12 o'clock position)
+            drawLine(
+                color = color,
+                start = center,
+                end = androidx.compose.ui.geometry.Offset(center.x, center.y - lineRadius),
+                strokeWidth = strokeWidth,
+                cap = StrokeCap.Round
+            )
+
+            // Draw current time position line (moves clockwise as arc gets eaten counter-clockwise)
+            if (progress > 0f && progress < 1f) {
+                val angle = -90f + (360f * progress)
+                val angleRad = Math.toRadians(angle.toDouble())
+                val endX = center.x + lineRadius * cos(angleRad).toFloat()
+                val endY = center.y + lineRadius * sin(angleRad).toFloat()
+
+                drawLine(
+                    color = color,
+                    start = center,
+                    end = androidx.compose.ui.geometry.Offset(endX, endY),
+                    strokeWidth = strokeWidth,
+                    cap = StrokeCap.Round
+                )
+            }
+        }
+    }
+
+    @Composable
     private fun showDialog(): Boolean {
         val uid = state.uid
         val packageInfo = packageManager.getPackageInfoForUid(uid) ?: return false
@@ -151,6 +260,12 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
             ?: packageManager.defaultActivityIcon
         val label = applicationInfo?.loadLabel(packageManager)
             ?: packageName
+
+        val progress by animateFloatAsState(
+            targetValue = state.timeLeft.toFloat() / AUTO_DENY_SECONDS,
+            animationSpec = tween(durationMillis = 1000, easing = LinearEasing),
+            label = "countdown_progress"
+        )
 
         AlertDialog(onDismissRequest = {
             finish()
@@ -165,32 +280,63 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
                 AnnotatedString.fromHtml(stringResource(R.string.request_permission_text, label)),
                 textAlign = TextAlign.Center
             )
+        }, text = {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    CountdownPieChart(
+                        progress = progress,
+                        modifier = Modifier.size(16.dp)
+                    )
+                    Text(
+                        text = if (state.timeLeft > 0) {
+                            stringResource(R.string.auto_deny_in_seconds, state.timeLeft)
+                        } else {
+                            stringResource(R.string.denying_access)
+                        },
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
         }, confirmButton = {
             Column(
-                verticalArrangement = Arrangement.spacedBy(4.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.clip(RoundedCornerShape(12.dp))
             ) {
                 @Composable
-                fun MyTextButton(onClick: () -> Unit, @StringRes textResId: Int) {
+                fun MyTextButton(onClick: () -> Unit, @StringRes textResId: Int, isPrimary: Boolean = false) {
                     TextButton(
                         onClick = onClick,
                         modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(4.dp),
+                        shape = RoundedCornerShape(8.dp),
                         contentPadding = PaddingValues(16.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer,
-                            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                        colors = if (isPrimary) ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            contentColor = MaterialTheme.colorScheme.onPrimary
+                        ) else ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.errorContainer,
+                            contentColor = MaterialTheme.colorScheme.onErrorContainer
                         )
                     ) {
-                        Text(stringResource(textResId))
+                        Text(
+                            stringResource(textResId),
+                            style = MaterialTheme.typography.labelLarge
+                        )
                     }
                 }
                 MyTextButton(onClick = {
-                    state = state.copy(allowApi = true)
+                    state = state.copy(allowApi = true, timedOut = true)
                     finish()
-                }, textResId = R.string.agree)
+                }, textResId = R.string.agree, isPrimary = true)
                 MyTextButton(onClick = {
-                    state = state.copy(allowApi = false)
+                    state = state.copy(allowApi = false, timedOut = true)
                     finish()
                 }, textResId = R.string.refuse)
             }

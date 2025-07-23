@@ -6,7 +6,6 @@ import com.google.android.material.color.DynamicColors
 
 import com.rosan.dhizuku.di.init.appModules
 import com.rosan.dhizuku.server.DhizukuState
-import com.rosan.dhizuku.server.RunningService
 
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -27,7 +26,6 @@ class App : Application(), KoinComponent {
             modules(module { single { this@App } })
         }
         Sui.init(packageName)
-        RunningService.start(this)
         DynamicColors.applyToActivitiesIfAvailable(this)
     }
 }

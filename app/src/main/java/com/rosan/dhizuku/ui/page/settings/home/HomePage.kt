@@ -3,7 +3,6 @@ package com.rosan.dhizuku.ui.page.settings.home
 import android.app.admin.DevicePolicyManager
 import android.content.ClipData
 import android.content.Context
-import android.os.Build
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
@@ -35,6 +34,7 @@ import androidx.compose.material.icons.twotone.MoreVert
 import androidx.compose.material.icons.twotone.RoomPreferences
 import androidx.compose.material.icons.twotone.SentimentVeryDissatisfied
 import androidx.compose.material.icons.twotone.SentimentVerySatisfied
+import androidx.compose.material.icons.twotone.Settings
 import androidx.compose.material.icons.twotone.SwapHorizontalCircle
 import androidx.compose.material.icons.twotone.Terminal
 import androidx.compose.material3.AlertDialog
@@ -119,6 +119,9 @@ fun HomePage(
         ) {
             item("dhizuku_state") {
                 DhizukuStateWidget()
+            }
+            if (dhizukuState.owner) item("settings") {
+                SettingsWidget(navController)
             }
             if (dhizukuState.owner) item("app_management") {
                 AppManagementWidget(navController)
@@ -223,6 +226,19 @@ private fun LazyItemScope.DhizukuStateWidget() {
         AnimatedContent(targetState = isOwner) {
             Text(stringResource(if (it) R.string.home_status_owner_granted else R.string.home_status_owner_denied))
         }
+    })
+}
+
+@Composable
+private fun LazyItemScope.SettingsWidget(navController: NavController) {
+    CardWidget(onClick = {
+        navController.navigate(SettingsRoute.Settings.route)
+    }, icon = {
+        Icon(imageVector = Icons.TwoTone.Settings, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.settings))
+    }, text = {
+        Text(stringResource(R.string.settings_desc))
     })
 }
 
@@ -343,13 +359,11 @@ private fun LazyItemScope.DeactivateWidget() {
             Text(stringResource(R.string.cancel))
         }
         TextButton(onClick = {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                try {
-                    @Suppress("DEPRECATION")
-                    manager.clearProfileOwner(DhizukuState.component)
-                } catch (e: Throwable) {
-                    e.printStackTrace()
-                }
+            try {
+                @Suppress("DEPRECATION")
+                manager.clearProfileOwner(DhizukuState.component)
+            } catch (e: Throwable) {
+                e.printStackTrace()
             }
             try {
                 @Suppress("DEPRECATION")

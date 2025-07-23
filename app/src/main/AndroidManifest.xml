@@ -113,9 +113,9 @@
 
         <service
             android:name=".server.RunningService"
-            android:directBootAware="true"
-            android:exported="false"
-            android:foregroundServiceType="remoteMessaging" />
+            android:enabled="false"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" />
 
         <receiver
             android:name=".server.DhizukuDAReceiver"
