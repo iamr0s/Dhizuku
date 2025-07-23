@@ -44,4 +44,5 @@
     <string name="unblock_app"></string>
     <string name="agree_text"></string>
     <string name="whitelist_mode"></string>
+    <string name="agreement_text"></string>
 </resources>
