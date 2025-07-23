@@ -30,4 +30,19 @@
     <string name="agreement_title">Lisensi</string>
     <string name="agree_text">Setuju</string>
     <string name="agreement_text">Berikut adalah kebijakan pengguna kami. Harap baca dan setujui. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Persyaratan Penggunaan&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Kebijakan Privasi&lt;/a&gt; Pesan ini tidak akan muncul lagi setelah Anda setuju.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
