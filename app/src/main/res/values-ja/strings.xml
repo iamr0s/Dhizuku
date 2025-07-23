@@ -42,6 +42,6 @@
     <string name="app_blocked_notice">このアプリはブロック済みのため Dhizuku にアクセスできません</string>
     <string name="allow_dhizuku_access">Dhizuku へのアクセスを許可</string>
     <string name="unblock_app">アプリのブロックを解除</string>
-    <string name="auto_deny_in_seconds">%d で自動拒否</string>
+    <string name="auto_deny_in_seconds">残り %d 秒で自動拒否</string>
     <string name="denying_access">アクセスを拒否しています…</string>
 </resources>
