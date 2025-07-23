@@ -30,4 +30,19 @@
     <string name="agree_text">Kabul et</string>
     <string name="agreement_title">Sözleşme</string>
     <string name="agreement_text">İşte kullanıcı politikamız, lütfen okuyun ve kabul edin. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Kullanım Şartları&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Gizlilik Politikası&lt;/a&gt;. Kabul ettikten sonra bu mesaj bir daha gösterilmeyecektir.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
