@@ -30,4 +30,19 @@
     <string name="agreement_title">執照</string>
     <string name="agree_text">同意</string>
     <string name="agreement_text">这里是我们的用户政策, 请阅读并表示同意 <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">使用條款</a>・<a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">隱私權政策</a> 你同意后,这一信息没有再次显示.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
