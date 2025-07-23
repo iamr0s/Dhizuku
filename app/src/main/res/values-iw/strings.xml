@@ -30,4 +30,19 @@
     <string name="agreement_title">מדיניות</string>
     <string name="agree_text">הסכמה</string>
     <string name="agreement_text">הנה המדיניות שלנו, אנא קראו אותה והסכימו לה. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; ההודעה הזו לא תופיע אחרי הסכמה.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
