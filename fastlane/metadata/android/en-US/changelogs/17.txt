@@ -1,0 +1,3 @@
+- Fix Shizuku's card widget
+- Add whitelist mode
+- Add feature for switch of Dhizuku state
