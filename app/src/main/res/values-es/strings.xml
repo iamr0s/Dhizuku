@@ -27,4 +27,21 @@
     <string name="home_shizuku_dsp">Con Shizuku, tienes la capacidad de ejecutar comandos ADB sin necesidad de un ordenador. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
     <string name="home_shutdown_dsp">El sistema no podrá detener Dhizuku a menos que Dhizuku lo haga voluntariamente.</string>
     <string name="permission_description">Utilice la API de Dhizuku</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="agreement_title"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="agree_text"></string>
+    <string name="whitelist_mode"></string>
 </resources>
