@@ -29,5 +29,5 @@
     <string name="permission_description">Usar a API do Dhizuku</string>
     <string name="agreement_title">Política</string>
     <string name="agree_text">Concordar</string>
-    <string name="agreement_text">Aqui está a nossa política do usuário, por favor leia e concorde com ela. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Termos de Uso&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Política de Privacidade&lt;/a&gt; Essa mensagem não aparecerá novamente após você concordar.</string>
+    <string name="agreement_text">Aqui está a nossa política do usuário, por favor leia e concorde com ela. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Termos de Uso&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Política de Privacidade&lt;/a&gt; Essa mensagem não aparecerá novamente após você concordar.</string>
 </resources>
