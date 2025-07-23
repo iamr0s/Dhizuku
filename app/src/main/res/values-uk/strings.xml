@@ -30,4 +30,18 @@
     <string name="agreement_title">Політика</string>
     <string name="agree_text">Згоден</string>
     <string name="agreement_text">Ось наша політика користувача, будь ласка, прочитайте і прийміть її. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Умови використання&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Політика конфіденційності&lt;/a&gt; Це повідомлення більше не з\'явиться після того, як ви погодитеся.</string>
+    <string name="settings">Налаштування</string>
+    <string name="settings_desc">Налаштування поведінки Dhizuku</string>
+    <string name="enable_dhizuku">Увімкнути Dhizuku</string>
+    <string name="enable_dhizuku_desc">Дозволити програмам використовувати сервіси Dhizuku</string>
+    <string name="whitelist_mode">Режим білого списку</string>
+    <string name="whitelist_mode_desc">Дозволити використовувати Dhizuku лише попередньо схваленим програмам</string>
+    <string name="block_app">Блокувати додаток</string>
+    <string name="auto_deny_in">Автоматична відмова через</string>
+    <string name="block_app_desc">Повністю заборонити доступ до Dhizuku</string>
+    <string name="app_blocked_notice">Цей додаток заблоковано та не має доступу до Dhizuku</string>
+    <string name="allow_dhizuku_access">Дозволити доступ до Dhizuku</string>
+    <string name="unblock_app">Розблокувати додаток</string>
+    <string name="auto_deny_in_seconds">Автоматично відхилити через %d секунд</string>
+    <string name="denying_access">Відмова в доступі…</string>
 </resources>
