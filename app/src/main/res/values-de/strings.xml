@@ -29,7 +29,7 @@
     <string name="permission_description">Verwenden Sie die API von Dhizuku</string>
     <string name="agreement_title">Richtlinie</string>
     <string name="agree_text">Zustimmen</string>
-    <string name="agreement_text">Dies ist unsere Benutzerrichtlinie. Bitte lesen Sie sie und akzeptieren Sie sie. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Nutzungsbedingungen&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Datenschutzrichtlinie&lt;/a&gt; Diese Nachricht wird nicht mehr angezeigt, nachdem Sie zugestimmt haben.</string>
+    <string name="agreement_text">Dies ist unsere Benutzerrichtlinie. Bitte lesen Sie sie und akzeptieren Sie sie. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Nutzungsbedingungen&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Datenschutzrichtlinie&lt;/a&gt; Diese Nachricht wird nicht mehr angezeigt, nachdem Sie zugestimmt haben.</string>
     <string name="settings_desc"></string>
     <string name="denying_access"></string>
     <string name="block_app_desc"></string>
