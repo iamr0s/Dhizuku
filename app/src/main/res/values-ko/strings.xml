@@ -30,19 +30,4 @@
     <string name="agreement_title">사용권</string>
     <string name="agreement_text">다음은 사용자 정책입니다. 읽고 동의해 주세요. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;이용 약관&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;개인정보처리방침&lt;/a&gt; 동의하시면 이 메시지가 다시 표시되지 않습니다.</string>
     <string name="agree_text">동의하다</string>
-    <string name="settings_desc"></string>
-    <string name="denying_access"></string>
-    <string name="block_app_desc"></string>
-    <string name="auto_deny_in_seconds"></string>
-    <string name="enable_dhizuku_desc"></string>
-    <string name="app_blocked_notice"></string>
-    <string name="auto_deny_in"></string>
-    <string name="enable_dhizuku"></string>
-    <string name="block_app"></string>
-    <string name="allow_dhizuku_access"></string>
-    <string name="settings"></string>
-    <string name="app_name" translatable="false"></string>
-    <string name="whitelist_mode_desc"></string>
-    <string name="unblock_app"></string>
-    <string name="whitelist_mode"></string>
 </resources>

@@ -30,19 +30,4 @@
     <string name="agreement_title">Політика</string>
     <string name="agree_text">Згоден</string>
     <string name="agreement_text">Ось наша політика користувача, будь ласка, прочитайте і прийміть її. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Умови використання&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Політика конфіденційності&lt;/a&gt; Це повідомлення більше не з\'явиться після того, як ви погодитеся.</string>
-    <string name="settings_desc"></string>
-    <string name="denying_access"></string>
-    <string name="block_app_desc"></string>
-    <string name="auto_deny_in_seconds"></string>
-    <string name="enable_dhizuku_desc"></string>
-    <string name="app_blocked_notice"></string>
-    <string name="auto_deny_in"></string>
-    <string name="enable_dhizuku"></string>
-    <string name="block_app"></string>
-    <string name="allow_dhizuku_access"></string>
-    <string name="settings"></string>
-    <string name="app_name" translatable="false"></string>
-    <string name="whitelist_mode_desc"></string>
-    <string name="unblock_app"></string>
-    <string name="whitelist_mode"></string>
 </resources>

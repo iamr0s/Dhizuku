@@ -44,5 +44,4 @@
     <string name="unblock_app">アプリのブロックを解除</string>
     <string name="auto_deny_in_seconds">残り %d 秒で自動拒否</string>
     <string name="denying_access">アクセスを拒否しています…</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

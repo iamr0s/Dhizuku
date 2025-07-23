@@ -30,19 +30,4 @@
     <string name="agreement_title">السياسة</string>
     <string name="agree_text">موافقة</string>
     <string name="agreement_text">فيما يلي سياسة المستخدم الخاصة بنا، يرجى قراءتها والموافقة عليها. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">شروط الاستخدام</a>، <a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">سياسة الخصوصية</a> لن تظهر هذه الرسالة مرة أخرى بعد موافقتك.</string>
-    <string name="settings_desc"></string>
-    <string name="denying_access"></string>
-    <string name="block_app_desc"></string>
-    <string name="auto_deny_in_seconds"></string>
-    <string name="enable_dhizuku_desc"></string>
-    <string name="app_blocked_notice"></string>
-    <string name="auto_deny_in"></string>
-    <string name="enable_dhizuku"></string>
-    <string name="block_app"></string>
-    <string name="allow_dhizuku_access"></string>
-    <string name="settings"></string>
-    <string name="app_name" translatable="false"></string>
-    <string name="whitelist_mode_desc"></string>
-    <string name="unblock_app"></string>
-    <string name="whitelist_mode"></string>
 </resources>
