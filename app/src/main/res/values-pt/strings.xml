@@ -30,4 +30,19 @@
     <string name="agreement_title">Política</string>
     <string name="agree_text">Concordar</string>
     <string name="agreement_text">Aqui estão as nossas políticas de uso. Por favor, leia e aceite. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">Termos de Uso</a> <a href="https://iamr0s.github.io/Dhizuku/PRIVACYgt;html">Privacidade</a> Esta mensagem não voltará a aparecer depois de concordares.</string>
+    <string name="settings_desc"></string>
+    <string name="denying_access"></string>
+    <string name="block_app_desc"></string>
+    <string name="auto_deny_in_seconds"></string>
+    <string name="enable_dhizuku_desc"></string>
+    <string name="app_blocked_notice"></string>
+    <string name="auto_deny_in"></string>
+    <string name="enable_dhizuku"></string>
+    <string name="block_app"></string>
+    <string name="allow_dhizuku_access"></string>
+    <string name="settings"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="whitelist_mode_desc"></string>
+    <string name="unblock_app"></string>
+    <string name="whitelist_mode"></string>
 </resources>
