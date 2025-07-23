@@ -61,11 +61,16 @@ class AppManagementViewModel : ViewModel(), KoinComponent {
                             ?.contains(DhizukuVariables.PERMISSION_API) ?: false
                         val entity = it.find { it.uid == uid }
                         val allowApi = entity?.allowApi ?: false
+                        val blocked = entity?.blocked ?: false
 
                         if (!requested && entity == null)
                             return@mapNotNull null
 
-                        AppManagementViewData(applicationInfo = applicationInfo, enabled = allowApi)
+                        AppManagementViewData(
+                            applicationInfo = applicationInfo,
+                            enabled = allowApi,
+                            blocked = blocked
+                        )
                     }
                 state = state.copy(
                     data = data.distinctBy { it.applicationInfo.packageName }
@@ -84,6 +89,17 @@ class AppManagementViewModel : ViewModel(), KoinComponent {
                 repo.insert(AppEntity(uid = uid, signature = signature, allowApi = bool))
             else
                 repo.update(entity.copy(signature = signature, allowApi = bool))
+        }
+    }
+
+    fun setBlocked(uid: Int, bool: Boolean) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val signature = packageManager.getPackageInfoForUid(uid)?.signature ?: return@launch
+            val entity = repo.findByUID(uid)
+            if (entity == null)
+                repo.insert(AppEntity(uid = uid, signature = signature, allowApi = false, blocked = bool))
+            else
+                repo.update(entity.copy(signature = signature, blocked = bool, allowApi = if (bool) false else entity.allowApi))
         }
     }
 }

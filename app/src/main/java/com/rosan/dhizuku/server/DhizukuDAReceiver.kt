@@ -7,7 +7,7 @@ import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.os.Build
+import android.content.pm.PackageManager
 import android.widget.Toast
 
 import com.rosan.dhizuku.R
@@ -28,15 +28,13 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
     )
 
     fun grantPermissions(dpm: DevicePolicyManager, admin: ComponentName) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requirePermissions.forEach { permission ->
-                dpm.setPermissionGrantState(
-                    admin,
-                    DhizukuVariables.OFFICIAL_PACKAGE_NAME,
-                    permission,
-                    DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
-                )
-            }
+        requirePermissions.forEach { permission ->
+            dpm.setPermissionGrantState(
+                admin,
+                DhizukuVariables.OFFICIAL_PACKAGE_NAME,
+                permission,
+                DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
+            )
         }
     }
 
@@ -57,6 +55,23 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
                 Toast.LENGTH_LONG
             ).show()
             grantPermissions(dpm, admin)
+
+            val serviceComponent = ComponentName(context, RunningService::class.java)
+            context.packageManager.setComponentEnabledSetting(
+                serviceComponent,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP
+            )
         }
+    }
+
+    override fun onDisabled(context: Context, intent: Intent) {
+        super.onDisabled(context, intent)
+        val serviceComponent = ComponentName(context, RunningService::class.java)
+        context.packageManager.setComponentEnabledSetting(
+            serviceComponent,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP
+        )
     }
 }

@@ -14,6 +14,5 @@ class BootCompleteReceiver : BroadcastReceiver() {
             Intent.ACTION_LOCKED_BOOT_COMPLETED -> {}
             else -> return
         }
-        RunningService.start(context)
     }
 }

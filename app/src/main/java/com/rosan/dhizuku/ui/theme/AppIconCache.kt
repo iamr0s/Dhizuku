@@ -2,12 +2,12 @@ package com.rosan.dhizuku.ui.theme
 
 import android.app.admin.DeviceAdminInfo
 import android.content.Context
-import android.content.pm.ActivityInfo
 import android.content.pm.ApplicationInfo
 import android.graphics.Bitmap
 
 import androidx.collection.LruCache
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -16,16 +16,13 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
 
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-
-import kotlin.coroutines.CoroutineContext
+import kotlinx.coroutines.withContext
 
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-object AppIconCache : CoroutineScope, KoinComponent {
+object AppIconCache : KoinComponent {
     private val context by inject<Context>()
 
     private val defaultImageBitMap by lazy {
@@ -44,39 +41,41 @@ object AppIconCache : CoroutineScope, KoinComponent {
         }
     }
 
-    override val coroutineContext: CoroutineContext = Dispatchers.IO
-
-    private fun id(applicationInfo: ApplicationInfo) =
-        Triple(applicationInfo.packageName, "", applicationInfo.uid)
-
-    private fun id(activityInfo: ActivityInfo) =
-        Triple(activityInfo.packageName, activityInfo.name, activityInfo.applicationInfo.uid)
-
     @Composable
-    private fun rememberImageBitmapState(key: String, action: () -> Bitmap?) =
-        remember(key) {
-            mutableStateOf(defaultImageBitMap).also {
-                launch {
-                    val bitmap = lruCache[key]
-                        ?: action.invoke()
-                        ?: return@launch
-//                ?: applicationInfo.loadIcon(context.packageManager)?.toBitmap()
-//                ?: return@launch
-                    lruCache.put(key, bitmap)
-                    it.value = bitmap.asImageBitmap()
+    fun rememberImageBitmapState(applicationInfo: ApplicationInfo): MutableState<ImageBitmap> {
+        val key = "${applicationInfo.packageName}_${applicationInfo.uid}"
+        val state = remember(key) { mutableStateOf(defaultImageBitMap) }
+
+        LaunchedEffect(key) {
+            val bitmap = withContext(Dispatchers.IO) {
+                lruCache[key] ?: applicationInfo.loadIcon(context.packageManager)?.toBitmap()?.also {
+                    lruCache.put(key, it)
                 }
+            }
+            bitmap?.let {
+                state.value = it.asImageBitmap()
             }
         }
 
-    @Composable
-    fun rememberImageBitmapState(applicationInfo: ApplicationInfo): MutableState<ImageBitmap> =
-        rememberImageBitmapState("${applicationInfo.packageName}_${applicationInfo.uid}") {
-            applicationInfo.loadIcon(context.packageManager)?.toBitmap()
-        }
+        return state
+    }
 
     @Composable
-    fun rememberImageBitmapState(admin: DeviceAdminInfo): MutableState<ImageBitmap> =
-        rememberImageBitmapState("${admin.component.flattenToShortString()}_${admin.activityInfo.applicationInfo.uid}") {
-            admin.loadIcon(context.packageManager)?.toBitmap()
+    fun rememberImageBitmapState(admin: DeviceAdminInfo): MutableState<ImageBitmap> {
+        val key = "${admin.component.flattenToShortString()}_${admin.activityInfo.applicationInfo.uid}"
+        val state = remember(key) { mutableStateOf(defaultImageBitMap) }
+
+        LaunchedEffect(key) {
+            val bitmap = withContext(Dispatchers.IO) {
+                lruCache[key] ?: admin.loadIcon(context.packageManager)?.toBitmap()?.also {
+                    lruCache.put(key, it)
+                }
+            }
+            bitmap?.let {
+                state.value = it.asImageBitmap()
+            }
         }
+
+        return state
+    }
 }

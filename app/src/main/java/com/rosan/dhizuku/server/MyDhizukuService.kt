@@ -17,7 +17,6 @@ import org.koin.core.component.inject
 class MyDhizukuService(context: Context?, admin: ComponentName?, client: IDhizukuClient?) :
     DhizukuService(context, admin, client), KoinComponent {
     private val context by inject<Context>()
-
     private val repo by inject<AppRepo>()
 
     override fun getVersionName(): String = "$versionCode"
@@ -25,14 +24,37 @@ class MyDhizukuService(context: Context?, admin: ComponentName?, client: IDhizuk
     private var signature: String? = null
 
     override fun checkCallingPermission(func: String?, callingUid: Int, callingPid: Int): Boolean {
-        val entity = runBlocking { repo.findByUID(callingUid) } ?: return false
-        if (!entity.allowApi) return false
+        val prefs = context.getSharedPreferences("dhizuku_settings", Context.MODE_PRIVATE)
+        val dhizukuEnabled = prefs.getBoolean("dhizuku_enabled", true)
+        if (!dhizukuEnabled) {
+            return false
+        }
+
+        val entity = runBlocking { repo.findByUID(callingUid) }
+        if (entity == null) {
+            return false
+        }
+
+        if (!entity.allowApi || entity.blocked) {
+            return false
+        }
+
+        val whitelistMode = prefs.getBoolean("whitelist_mode", false)
+        if (whitelistMode && !entity.allowApi) {
+            return false
+        }
 
         val signature = this.signature
             ?: context.packageManager.getPackageInfoForUid(callingUid)?.signature
-            ?: return false
+        if (signature == null) {
+            return false
+        }
         this.signature = signature
 
-        return signature == entity.signature
+        if (signature != entity.signature) {
+            return false
+        }
+
+        return true
     }
 }

@@ -2,7 +2,6 @@ package com.rosan.dhizuku.data.settings.model.room.impl
 
 import android.app.admin.DevicePolicyManager
 import android.content.Context
-import android.os.Build
 import com.rosan.dhizuku.data.settings.model.room.dao.AppDao
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
@@ -35,7 +34,7 @@ class AppRepoImpl(
     override suspend fun findByUID(uid: Int): AppEntity? = dao.findByUID(uid)
 
     override suspend fun update(entity: AppEntity) {
-        if (!entity.allowApi) {
+        if (!entity.allowApi || entity.blocked) {
             clearDelegatedScopes(entity)
         }
         entity.modifiedAt = System.currentTimeMillis()
@@ -56,7 +55,6 @@ class AppRepoImpl(
     private fun clearDelegatedScopes(entity: AppEntity) {
         if (!DhizukuState.state.owner) return
         val packageNames = packageManager.getPackagesForUid(entity.uid) ?: emptyArray()
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
         packageNames.forEach {
             kotlin.runCatching {
                 devicePolicyManager.setDelegatedScopes(
