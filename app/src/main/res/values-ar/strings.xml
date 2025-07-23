@@ -29,7 +29,7 @@
     <string name="permission_description">استخدم واجهة برمجة التطبيقات الخاصة بـ Dhizuku</string>
     <string name="agreement_title">السياسة</string>
     <string name="agree_text">موافقة</string>
-    <string name="agreement_text">فيما يلي سياسة المستخدم الخاصة بنا، يرجى قراءتها والموافقة عليها. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;شروط الاستخدام&lt;/a&gt;، &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;سياسة الخصوصية&lt;/a&gt; لن تظهر هذه الرسالة مرة أخرى بعد موافقتك.</string>
+    <string name="agreement_text">فيما يلي سياسة المستخدم الخاصة بنا، يرجى قراءتها والموافقة عليها. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">شروط الاستخدام</a>، <a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">سياسة الخصوصية</a> لن تظهر هذه الرسالة مرة أخرى بعد موافقتك.</string>
     <string name="settings_desc"></string>
     <string name="denying_access"></string>
     <string name="block_app_desc"></string>
