@@ -30,4 +30,18 @@
     <string name="home_shizuku_dsp">Gamit ang Shizuku, may kakayahan kang tumakbo ng mga ADB command nang walang pangangailangan ng computer. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
     <string name="confirm">Sige</string>
     <string name="donate">Mag-abuloy</string>
+    <string name="settings">Mga Setting</string>
+    <string name="settings_desc">I-configure ang pag-uugali ng Dhizuku</string>
+    <string name="enable_dhizuku">I-enable ang Dhizuku</string>
+    <string name="enable_dhizuku_desc">Payagan ang mga app na gamitin ang mga serbisyo ng Dhizuku</string>
+    <string name="whitelist_mode">Whitelist Mode</string>
+    <string name="whitelist_mode_desc">Payagan lamang ang mga inaprubahang app na gamitin ang Dhizuku</string>
+    <string name="block_app">I-block ang App</string>
+    <string name="auto_deny_in">Awtomatikong tanggihan sa</string>
+    <string name="block_app_desc">Ganap na tanggihan ang access sa Dhizuku</string>
+    <string name="app_blocked_notice">Naka-block ang app na ito at hindi maa-access ang Dhizuku</string>
+    <string name="allow_dhizuku_access">Payagan ang Access sa Dhizuku</string>
+    <string name="unblock_app">I-unblock ang App</string>
+    <string name="auto_deny_in_seconds">Awtomatikong tatanggihan sa %d segundo</string>
+    <string name="denying_access">Tinatanggihan ang pag-access…</string>
 </resources>
