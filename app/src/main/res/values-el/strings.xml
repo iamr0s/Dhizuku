@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Πολιτική</string>
+    <string name="agreement_text">Ακολουθεί η πολιτική χρήστη μας. Παρακαλούμε διαβάστε την και αποδεχτείτε την. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Όροι Χρήσης&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Πολιτική Απορρήτου&lt;/a&gt; Αυτό το μήνυμα δεν θα εμφανιστεί ξανά αφού αποδεχτείτε.</string>
+    <string name="agree_text">Συμφωνώ</string>
+    <string name="permission_description">Χρήση Dhizuku\'s API</string>
+    <string name="copy">Αντιγραφή</string>
 </resources>
