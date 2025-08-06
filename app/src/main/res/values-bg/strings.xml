@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Политика</string>
+    <string name="agreement_text">Това е нашата потребителска политика. Моля, прочетете и се съгласете с нея.\n<a href="https://iamr0s.github.io/Dhizuku/TERMS.html">Условия за ползване</a>,\n<a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">Политика за поверителност</a>\nТова съобщение няма да се показва отново след като се съгласите.</string>
+    <string name="agree_text">Приеми</string>
+    <string name="permission_description">Използване на API на Dhizuku</string>
+    <string name="copy">Копиране</string>
+    <string name="cancel">Отказ</string>
+    <string name="retry">Опитай отново</string>
 </resources>
