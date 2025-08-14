@@ -13,7 +13,7 @@
 [versions]
 agp = "8.12.0"
 kotlin = "2.2.0"
-compose = "1.8.3"
+compose = "1.9.0"
 room = "2.7.2"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
@@ -31,7 +31,7 @@ ksp = { id = "com.google.devtools.ksp", version = "2.2.0-2.0.2" }
 
 [libraries]
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.9.1" }
-androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.16.0" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.17.0" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.9.2" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.10.1" }
 
