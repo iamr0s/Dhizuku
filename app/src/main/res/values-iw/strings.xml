@@ -30,4 +30,5 @@
     <string name="agreement_title">מדיניות</string>
     <string name="agree_text">הסכמה</string>
     <string name="agreement_text">הנה המדיניות שלנו, אנא קראו אותה והסכימו לה. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; ההודעה הזו לא תופיע אחרי הסכמה.</string>
+    <string name="settings">הגדרות</string>
 </resources>
