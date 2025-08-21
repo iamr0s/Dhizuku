@@ -30,4 +30,5 @@
     <string name="agreement_title">Politika</string>
     <string name="agree_text">Súhlasím</string>
     <string name="agreement_text">Tu sú naše zásady používania, prečítajte si ich a súhlaste s nimi. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Podmienky používania&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Zásady ochrany osobných údajov&lt;/a&gt; Táto správa sa po odsúhlasení už nezobrazí.</string>
+    <string name="settings">Nastavenia</string>
 </resources>
