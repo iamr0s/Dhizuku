@@ -30,4 +30,5 @@
     <string name="agreement_title">السياسة</string>
     <string name="agree_text">موافقة</string>
     <string name="agreement_text">فيما يلي سياسة المستخدم الخاصة بنا، يرجى قراءتها والموافقة عليها. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">شروط الاستخدام</a>، <a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">سياسة الخصوصية</a> لن تظهر هذه الرسالة مرة أخرى بعد موافقتك.</string>
+    <string name="settings">الإعدادات</string>
 </resources>
