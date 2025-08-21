@@ -30,4 +30,5 @@
     <string name="agree_text">Kabul et</string>
     <string name="agreement_title">Sözleşme</string>
     <string name="agreement_text">İşte kullanıcı politikamız, lütfen okuyun ve kabul edin. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Kullanım Şartları&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Gizlilik Politikası&lt;/a&gt;. Kabul ettikten sonra bu mesaj bir daha gösterilmeyecektir.</string>
+    <string name="settings">Ayarlar</string>
 </resources>
