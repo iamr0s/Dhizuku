@@ -30,4 +30,5 @@
     <string name="agreement_title">Политика</string>
     <string name="agree_text">Принять</string>
     <string name="agreement_text">Вот наша политика для пользователей, пожалуйста, прочтите и примите ее. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Условия использования&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Политика конфиденциальности&lt;/a&gt; Это сообщение больше не будет отображаться после вашего согласия.</string>
+    <string name="settings">Настройки</string>
 </resources>
