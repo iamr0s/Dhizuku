@@ -1,3 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Brukerpolicy</string>
+    <string name="agree_text">Godta</string>
+    <string name="agreement_text">Vennligst les og godta vår brukerpolicy. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; Denne meldingen vil ikke vises igjen etter den er godtatt.</string>
+    <string name="permission_description">Bruk Dhizukus API</string>
+    <string name="copy">Kopier</string>
+    <string name="cancel">Avbryt</string>
+    <string name="retry">Prøv igjen</string>
+    <string name="home_status_owner_granted">Dhizuku er enhetseier!</string>
+    <string name="home_status_owner_denied">Venter på aktivering</string>
+    <string name="home_app_management_title">Administrer applikasjon(er)</string>
+    <string name="home_app_management_dsp">Forespørsler og godtatte applikasjoner vises her.</string>
+    <string name="home_dhizuku_title">Aktivering gjennom Dhizuku</string>
+    <string name="home_dhizuku_dsp">Andre installerte Dhizuku-implementeringer kan endres her. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Aktivering gjennom Shizuku</string>
+    <string name="home_shizuku_dsp">Med Shizuku kan ADB-kommandoer kjøres uten bruk av datamaskin. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
+    <string name="home_adb_title">Aktivering gjennom ADB</string>
+    <string name="home_adb_dsp">Enkelte privilegerte kommandoer kan kjøres gjennom en ADB-tilkobling (Android Debug Bridge). &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Vis kommando</string>
+    <string name="home_shutdown_title">Avslutt</string>
+    <string name="home_shutdown_dsp">Dhizuku vil ikke kunne avlsuttes av systemet, med mindre Dhizuku avslutter seg selv.</string>
+    <string name="home_deactivate_title">Deaktiver</string>
+    <string name="home_deactivate_dsp">Er du sikker på at du vil deaktivere?</string>
+    <string name="confirm">Greit</string>
+    <string name="finish">Ferdig</string>
+    <string name="donate">Donere</string>
+    <string name="request_permission_text">Gi <b>%1$s</b> tilgang til Dhizuku?</string>
+    <string name="agree">Tillat</string>
+    <string name="refuse">Nekt</string>
+    <string name="service_channel_name">Bakgrunnstjeneste</string>
+    <string name="service_running">Dhizuku kjører</string>
+    <string name="settings">Innstillinger</string>
+    <string name="settings_desc">Konfigurer handlinger i Dhizuku</string>
+    <string name="enable_dhizuku">Aktiver Dhizuku</string>
+    <string name="enable_dhizuku_desc">Tillat applikasjoner tilgang til Dhizuku-tjenester</string>
+    <string name="whitelist_mode">Whitelist-modus</string>
+    <string name="whitelist_mode_desc">Kun godkjenn forhåndstillatte applikasjoner tilgang til Dhizuku</string>
+    <string name="block_app">Blokker applikasjon</string>
+    <string name="auto_deny_in">Nekt automatisk i</string>
+    <string name="block_app_desc">Blokker all tilgang til Dhizuku</string>
+    <string name="app_blocked_notice">Denne applikasjonen er blokkert, og har ikke tilgang til Dhizuku</string>
+    <string name="allow_dhizuku_access">Tillat tilgang til Dhizuku</string>
+    <string name="unblock_app">Opphev blokkering</string>
+    <string name="auto_deny_in_seconds">Nekt automatisk i %d sekunder</string>
+    <string name="denying_access">Nekter tilgang…</string>
 </resources>
