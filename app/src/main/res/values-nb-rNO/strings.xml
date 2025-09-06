@@ -12,14 +12,14 @@
     <string name="home_app_management_title">Administrer applikasjon(er)</string>
     <string name="home_app_management_dsp">Forespørsler og godtatte applikasjoner vises her.</string>
     <string name="home_dhizuku_title">Aktivering gjennom Dhizuku</string>
-    <string name="home_dhizuku_dsp">Andre installerte Dhizuku-implementeringer kan endres her. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">Du kan alltid bytte mellom flere Dhizuku-implementeringer hvis de er installert. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
     <string name="home_shizuku_title">Aktivering gjennom Shizuku</string>
     <string name="home_shizuku_dsp">Med Shizuku kan ADB-kommandoer kjøres uten bruk av datamaskin. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
     <string name="home_adb_title">Aktivering gjennom ADB</string>
     <string name="home_adb_dsp">Enkelte privilegerte kommandoer kan kjøres gjennom en ADB-tilkobling (Android Debug Bridge). &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Vis kommando</string>
     <string name="home_shutdown_title">Avslutt</string>
-    <string name="home_shutdown_dsp">Dhizuku vil ikke kunne avlsuttes av systemet, med mindre Dhizuku avslutter seg selv.</string>
+    <string name="home_shutdown_dsp">Dhizuku vil ikke kunne avlsuttes av systemet med mindre Dhizuku avslutter seg selv.</string>
     <string name="home_deactivate_title">Deaktiver</string>
     <string name="home_deactivate_dsp">Er du sikker på at du vil deaktivere?</string>
     <string name="confirm">Greit</string>
