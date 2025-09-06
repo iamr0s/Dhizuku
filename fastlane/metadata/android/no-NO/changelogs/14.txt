@@ -1,0 +1,8 @@
+- Dhizuku erklærer fullmakten selv
+- Støtte for EMM
+- Forbedret atferd etter å ha blitt enhetseier
+- Fikset tjeneste til å kjøre i forgrunnen
+- Profileiere kan nå også forkaste endringer
+- Støtte for monokrom ikon
+- Oppdaterte oversettelser
+- Aktivering av LocaleConfig

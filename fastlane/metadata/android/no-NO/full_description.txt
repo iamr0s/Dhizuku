@@ -1,13 +1,13 @@
-Denne appen tildeler funksjoner fra enhetseieren.
-Den handler som en formidler for tilkalling av funksjoner fra enhetseiern.
+Denne appen kan tildele funksjoner fra enhetseiernivå.
+Den fungerer som en formidler som tilkaller enhetseierfunksjoner.
 
-Denne fullmakten tildeles normalt kun til én applikasjon, men Dhizuku tildeler fullmakt fra enhetseieren til flere applikasjoner.
+En slik fullmakt gis normalt kun til én applikasjon, men Dhizuku gjør at denne fullmakten kan tildeles flere applikasjoner.
 
-Oppsettet er enkelt (ex: Shizuku, QR code).
+Oppsettet er enkelt (f.eks: Shizuku, QR-kode).
 For mer informasjon, vennligst <a href="https://github.com/iamr0s/Dhizuku/discussions/19">les mer</a>.
 
 F.eks, når støtte for to eller flere enhetseiertillatelser er nødvendig samtidig.
 
-F.eks, i Japan, så kreves det støtte for både Aurora Store og Test DPC på en enhet med begrensede funksjoner.
+I Japan, kreves det støtte for både Aurora Store og Test DPC på en enhet med begrensede funksjoner.
 
-Hvis Dhizuku-API-Xposed-modulen brukes, kan støtte for Dhizuku påtvinges i applikasjoner som opprinnelige har støtte for det.
+Hvis Dhizuku-API-Xposed-modulen brukes, kan applikasjoner påtvinges støtte for Dhizuku selv om de opprinnelig ikke har støtte for det.

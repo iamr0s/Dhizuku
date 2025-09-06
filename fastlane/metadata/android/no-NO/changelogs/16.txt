@@ -1,0 +1,6 @@
+- Støtte for Android 16
+- Støtte for EdgeToEdge
+- Oppdatert donasjon-lenke
+- Fikset Shizukus kort-widget
+- La til språk: Persisk, Filippinsk og Vietnamesisk
+- Oppdaterte oversettelser
