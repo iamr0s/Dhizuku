@@ -1,0 +1,8 @@
+- Dhizuku'nun yetkisini kendisinin beyan etmesi
+- EMM desteği
+- Cihaz sahibi olurken davranışı iyileştirme
+- Servisin ön planda çalışmasını düzeltme
+- Profil sahipleri de temizleme yapabilir
+- Tek renkli simge desteği
+- Çeviriyi güncelle
+- LocaleConfig’i etkinleştir

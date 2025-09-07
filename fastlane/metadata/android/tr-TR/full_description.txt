@@ -1,0 +1,13 @@
+Bu uygulama, cihaz sahibinden gelen işlevleri devralabilir.
+Yani, bu uygulama cihaz sahibinden gelen işlevleri çağırmak için bir aracı olarak çalışır.
+
+Normalde, bu yetki yalnızca bir uygulamaya devredilebilir, ancak Dhizuku, cihaz sahibinin tüm yetkisini diğer uygulamalara devretmenize olanak tanır.
+
+Kurulumu kolaydır (örneğin: Shizuku, QR kodu).
+Daha fazla bilgi için lütfen <a href="https://github.com/iamr0s/Dhizuku/discussions/19">eğiticiye</a> bakın.
+
+Kullanım örneği olarak, aynı anda iki veya daha fazla cihaz sahibi iznini desteklemeniz gerektiğinde idealdir.
+
+Özellikle Japonya’da, sınırlı işlevselliğe sahip bir cihazda hem Aurora Store’u hem de Test DPC’yi desteklemeniz gerekir.
+
+Uygulama geliştiricisi Dhizuku’yu desteklemese bile, Dhizuku-API-Xposed modülünü kullanarak Dhizuku desteğini zorla etkinleştirebilirsiniz.

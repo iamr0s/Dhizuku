@@ -1,0 +1,3 @@
+- Shiuzuki'nin kart widgetı düzeltildi
+- Beyaz liste modu eklendi
+- Dhiuzuku'nun durumunu değiştirme özelliği eklendi

@@ -1,0 +1,6 @@
+- Android 16 desteği
+- Kenardan Kenara desteği
+- Bağış linki güncellendi
+- Shiuzuku'nun kart widgetı düzeltildi
+- Diller eklendi:Farsça, Filipinçe ve Vietnamca
+- Çeviriler güncellendi
