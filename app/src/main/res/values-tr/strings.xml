@@ -31,4 +31,17 @@
     <string name="agreement_title">Sözleşme</string>
     <string name="agreement_text">İşte kullanıcı politikamız, lütfen okuyun ve kabul edin. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Kullanım Şartları&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Gizlilik Politikası&lt;/a&gt;. Kabul ettikten sonra bu mesaj bir daha gösterilmeyecektir.</string>
     <string name="settings">Ayarlar</string>
+    <string name="enable_dhizuku">Dhizuku\'yu etkinleştir</string>
+    <string name="enable_dhizuku_desc">Uygulamaların Dhizuku servislerini kullanmasına izin ver</string>
+    <string name="whitelist_mode">Beyaz Liste Modu</string>
+    <string name="whitelist_mode_desc">Sadece önceden onaylanmış uygulamaların Dhizuku\'yu kullanmasına izin ver</string>
+    <string name="block_app">Uygulamayı engelle</string>
+    <string name="auto_deny_in">­Otomatik reddet</string>
+    <string name="block_app_desc">Tamamen Dhizuku isteğini reddet</string>
+    <string name="app_blocked_notice">Bu uygulama engellendi ve Dhizuku\'ya erişemez</string>
+    <string name="allow_dhizuku_access">Dhizuku\'ya erişimine izin ver</string>
+    <string name="unblock_app">Uygulamanın engelini kaldır</string>
+    <string name="auto_deny_in_seconds">%d saniyede otomatik reddet</string>
+    <string name="denying_access">İzin reddediliyor…</string>
+    <string name="settings_desc">Dhiuzuku davranışını yapılandır</string>
 </resources>
