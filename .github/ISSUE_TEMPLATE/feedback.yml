@@ -1,0 +1,20 @@
+name: Send feedback
+description: Report bug, create feature request, and other.
+labels: [ "triage needed" ]
+assignees: [ "s1204IT" ]
+title: "Replace here your opinion"
+body:
+- type: markdown
+  attributes:
+    value: |
+      This is not the place for pointless debate.  
+      Before asking a question, be sure to check the [Discussions](https://github.com/iamr0s/Dhizuku/discussions) to see if the same question has already been asked.  
+      
+      And, please be patient as rushing the admins will not help resolve the issue.  
+      The admins are looking at the issue.
+- type: textarea
+  attributes:
+    label: Your opinion
+    placeholder: Place here your opinion
+  validations:
+    required: true
