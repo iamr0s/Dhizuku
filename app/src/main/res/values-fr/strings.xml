@@ -1,3 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Politique</string>
+    <string name="agreement_text">Voici notre politique utilisateur. Veuillez la lire et l\'accepter.&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Termes d\'utilisation&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Politique de confidentialité&lt;/a&gt; Ce message ne s\'affichera plus une fois que vous aurez accepté.</string>
+    <string name="agree_text">Accepter</string>
+    <string name="permission_description">Utiliser l\'API de Dhizuku</string>
+    <string name="copy">Copier</string>
+    <string name="cancel">Annuler</string>
+    <string name="retry">Réessayer</string>
+    <string name="home_status_owner_granted">Vous êtes Propriétaire !!!</string>
+    <string name="home_status_owner_denied">En attente de l\'activation</string>
+    <string name="home_app_management_title">Gestion des applications</string>
+    <string name="home_app_management_dsp">Les applications qui nécessitent ou déclarent Dhizuku s\'afficheront ici.</string>
+    <string name="home_dhizuku_title">Activation par Dhizuku</string>
+    <string name="home_dhizuku_dsp">Si vous avez d\'autres implémentations Dhizuku installées, vous pouvez basculer entre elles à volonté. Veuillez &lt;a href=%1$s&gt;consulter l\'aide&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Activation par Shizuku</string>
+    <string name="home_shizuku_dsp">Avec Shizuku, vous avez la possibilité d\'exécuter des commandes ADB sans passer par un ordinateur. Veuillez &lt;a href=%1$s&gt;consulter l\'aide&lt;/a&gt;.</string>
+    <string name="home_adb_title">Activation par ADB</string>
+    <string name="home_adb_dsp">À travers la connexion ADB (Android Debug Bridge), vous pouvez exécuter des commandes avec privilèges. Veuillez &lt;a href=%1$s&gt;consulter l\'aide&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Afficher la commande</string>
+    <string name="home_shutdown_title">Arrêter</string>
+    <string name="home_shutdown_dsp">Le système ne pourra pas arrêter Dhizuku à moins que Dhizuku ne le fasse volontairement.</string>
+    <string name="home_deactivate_title">Désactiver</string>
+    <string name="home_deactivate_dsp">Êtes-vous sûr de vouloir désactiver ?</string>
+    <string name="confirm">OK</string>
+    <string name="finish">Terminer</string>
+    <string name="donate">Faire un don</string>
+    <string name="request_permission_text">Autoriser<b>%1$s</b> à accéder à Dhizuku ?</string>
+    <string name="agree">Autoriser</string>
+    <string name="refuse">Refuser</string>
+    <string name="service_channel_name">Service en arrière-plan</string>
+    <string name="service_running">Dhizuku est en cours d\'exécution</string>
+    <string name="settings">Paramètres</string>
+    <string name="settings_desc">Configurer le comportement de Dhizuku</string>
+    <string name="enable_dhizuku">Activer Dhizuku</string>
+    <string name="enable_dhizuku_desc">Autoriser les applications à utiliser les services Dhizuku</string>
+    <string name="whitelist_mode">Mode liste blanche</string>
+    <string name="whitelist_mode_desc">Autoriser uniquement les applications pré-approuvées à utiliser Dhizuku</string>
+    <string name="block_app">Bloquer l\'application</string>
+    <string name="auto_deny_in">Refuser automatique dans</string>
+    <string name="block_app_desc">Refuser complètement l\'accès à Dhizuku</string>
+    <string name="app_blocked_notice">Cette application est bloquée et ne peut pas accéder à Dhizuku</string>
+    <string name="allow_dhizuku_access">Autoriser l\'accès à Dhizuku</string>
+    <string name="unblock_app">Débloquer l\'application</string>
+    <string name="auto_deny_in_seconds">Refuser automatiquement dans %d secondes</string>
+    <string name="denying_access">Refus d’accès…</string>
 </resources>
