@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="agreement_title">Politique</string>
-    <string name="agreement_text">Voici notre politique utilisateur. Veuillez la lire et l\'accepter.&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Termes d\'utilisation&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Politique de confidentialité&lt;/a&gt; Ce message ne s\'affichera plus une fois que vous aurez accepté.</string>
+    <string name="agreement_text">Voici notre politique utilisateur. Veuillez la lire et l\'accepter. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Conditions d\'utilisation&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Politique de confidentialité&lt;/a&gt; Ce message ne s\'affichera plus une fois que vous aurez accepté.</string>
     <string name="agree_text">Accepter</string>
     <string name="permission_description">Utiliser l\'API de Dhizuku</string>
     <string name="copy">Copier</string>
