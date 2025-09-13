@@ -1,0 +1,6 @@
+- Prise en charge Android 16
+- Prise en charge EdgeToEdge
+- Mise à jour du lien de don
+- Correction du widget de carte de Shizuku
+- Ajout des langues : persan, philippin, vietnamien
+- Mise à jour des traductions

@@ -1,0 +1,8 @@
+- Déclaration de l'autorité de Dhizuku même
+- Prise en charge EMM
+- Amélioration du comportement lorsque vous devenez propriétaire d'un appareil
+- Correction du service pour qu'il s'exécute au premier plan
+- Les propriétaires de profils peuvent également effacer
+- Prise en charge de l'icône monochrome
+- Mise à jour de la traduction
+- Activation de LocaleConfig

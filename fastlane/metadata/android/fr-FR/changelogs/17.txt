@@ -1,0 +1,3 @@
+- Correction du widget de carte de Shizuku
+- Ajout du mode liste blanche
+- Ajout d'une fonctionnalité pour changer l'état de Dhizuku
