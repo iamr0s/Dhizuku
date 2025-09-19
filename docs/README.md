@@ -29,7 +29,7 @@ A tool that can share DeviceOwner permissions to other application.
 
 ## Supported Versions
 
-Android 5.0 ~ 16
+Android 8.0 ~ 16
 
 ## For Developer
 
