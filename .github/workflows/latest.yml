@@ -1,0 +1,51 @@
+name: Latest API Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+    steps:
+
+    - name: Checkout API
+      uses: actions/checkout@v5
+      with:
+        repository: iamr0s/Dhizuku-API
+        path: api
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Set environments
+        run: |
+          {
+            echo "repo=$(echo ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/})"
+            echo "version=v$(grep versionName version.properties | awk -F\= '{print $2}')"
+            echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
+          } >> $GITHUB_ENV
+
+    - name: Build API
+      working-directory: api
+      run: ./gradlew publishToMavenLocal
+
+     - name: Checkout
+       uses: actions/checkout@v5
+
+     - name: Build
+       run: |
+          ./gradlew --no-daemon --warning-mode=all --scan assembleDebug
+          cp -f app/build/outputs/apk/debug/app-debug.apk ${{ env.repo }}-${{ env.version }}@${{ env.commit }}.apk
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.repo }}-${{ env.version }}@${{ env.commit }}
+          path: ${{ env.repo }}-${{ env.version }}@${{ env.commit }}.apk
