@@ -1,0 +1,1 @@
+Herramienta que comparte permisos de Dueño de Dispositivo a otras aplicaciones.
