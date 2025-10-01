@@ -8,9 +8,9 @@
     <string name="donate">Donar</string>
     <string name="agree">Permitir</string>
     <string name="refuse">Denegar</string>
-    <string name="service_channel_name">Servicio de fondo</string>
+    <string name="service_channel_name">Servicio en segundo plano</string>
     <string name="service_running">Dhizuku está en marcha</string>
-    <string name="request_permission_text">¿Acepta la solicitud de permiso Dhizuku de <b>%1$s</b>\?</string>
+    <string name="request_permission_text">¿Permitir a <b>%1$s</b> el acceso a Dhizuku?</string>
     <string name="home_deactivate_title">Desactivar</string>
     <string name="retry">Reintentar</string>
     <string name="home_status_owner_granted">¡Eres dueño!</string>
@@ -28,4 +28,20 @@
     <string name="home_shutdown_dsp">El sistema no podrá detener Dhizuku a menos que Dhizuku lo haga voluntariamente.</string>
     <string name="permission_description">Utilice la API de Dhizuku</string>
     <string name="settings">Ajustes</string>
+    <string name="agreement_title">Política</string>
+    <string name="agree_text">Aceptar</string>
+    <string name="enable_dhizuku">Activar Dhizuku</string>
+    <string name="whitelist_mode">Modo de Lista Blanca</string>
+    <string name="block_app">Bloquear Aplicación</string>
+    <string name="block_app_desc">Denegar completamente el acceso a Dhizuku</string>
+    <string name="app_blocked_notice">Esta aplicación está bloqueada y no puede acceder a Dhizuku</string>
+    <string name="allow_dhizuku_access">Permitir el acceso a Dhizuku</string>
+    <string name="unblock_app">Desbloquear Aplicación</string>
+    <string name="denying_access">Denegando acceso…</string>
+    <string name="auto_deny_in_seconds">Auto denegar en %d segundos</string>
+    <string name="settings_desc">Configurar comportamiento de Dhizuku</string>
+    <string name="enable_dhizuku_desc">Permitir a aplicaciones el uso de servicios de Dhizuku</string>
+    <string name="whitelist_mode_desc">Solo permitir el uso de Dhizuku a aplicaciones preaprobadas</string>
+    <string name="auto_deny_in">Auto denegar en</string>
+    <string name="agreement_text">Esta es nuestra política de usuarios. Léala y acéptela. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Condiciones de uso&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Política de privacidad&lt;/a&gt;. Este mensaje no volverá a aparecer una vez la hayas aceptado.</string>
 </resources>
