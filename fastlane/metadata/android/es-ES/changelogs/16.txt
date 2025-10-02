@@ -1,0 +1,6 @@
+- Compatible con Android 16
+- Compatible con EdgeToEdge
+- Actualizar el enlace de donación
+- Corregir el widget de la tarjeta de Shizuku
+- Añadir idiomas: persa, filipino y vietnamita
+- Actualizar las traducciones
