@@ -1,0 +1,6 @@
+- Mendukung Android 16
+- Mendukung EdgeToEdge
+- Memperbarui tautan donasi
+- Memperbaiki widget kartu Shizuku
+- Menambahkan bahasa: Persia, Filipina, Vietnam
+- Memperbarui terjemahan

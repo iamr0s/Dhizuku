@@ -1,0 +1,3 @@
+- Memperbaiki widget kartu Shizuku
+- Menambahkan mode daftar putih
+- Menambahkan fitur untuk mengubah status Dhizuku
