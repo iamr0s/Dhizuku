@@ -31,4 +31,17 @@
     <string name="agree_text">Setuju</string>
     <string name="agreement_text">Berikut adalah kebijakan pengguna kami. Harap baca dan setujui. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Persyaratan Penggunaan&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Kebijakan Privasi&lt;/a&gt; Pesan ini tidak akan muncul lagi setelah Anda setuju.</string>
     <string name="settings">Setelan</string>
+    <string name="settings_desc">Konfigurasikan perilaku Dhizuku</string>
+    <string name="enable_dhizuku">Aktifkan Dhizuku</string>
+    <string name="enable_dhizuku_desc">Izinkan aplikasi menggunakan layanan Dhizuku</string>
+    <string name="whitelist_mode">Mode Daftar Putih</string>
+    <string name="whitelist_mode_desc">Hanya izinkan aplikasi yang telah disetujui sebelumnya untuk menggunakan Dhizuku</string>
+    <string name="block_app">Blokir Aplikasi</string>
+    <string name="auto_deny_in">Penolakan otomatis</string>
+    <string name="block_app_desc">Tolak akses sepenuhnya ke Dhizuku</string>
+    <string name="app_blocked_notice">Aplikasi ini diblokir dan tidak dapat mengakses Dhizuku</string>
+    <string name="allow_dhizuku_access">Izinkan Akses Dhizuku</string>
+    <string name="unblock_app">Buka Blokir Aplikasi</string>
+    <string name="auto_deny_in_seconds">Penolakan otomatis dalam %d detik</string>
+    <string name="denying_access">Menolak akses…</string>
 </resources>
