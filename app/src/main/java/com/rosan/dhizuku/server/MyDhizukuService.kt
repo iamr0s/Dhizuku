@@ -14,7 +14,7 @@ import kotlinx.coroutines.runBlocking
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class MyDhizukuService(context: Context?, admin: ComponentName?, client: IDhizukuClient?) :
+class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizukuClient?) :
     DhizukuService(context, admin, client), KoinComponent {
     private val context by inject<Context>()
     private val repo by inject<AppRepo>()
