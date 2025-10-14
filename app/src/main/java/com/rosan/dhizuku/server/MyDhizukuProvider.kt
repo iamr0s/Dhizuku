@@ -8,6 +8,6 @@ import org.koin.core.component.KoinComponent
 
 class MyDhizukuProvider : DhizukuProvider(), KoinComponent {
     override fun onCreateService(client: IDhizukuClient): DhizukuService {
-        return MyDhizukuService(context, DhizukuState.component, client)
+        return MyDhizukuService(context!!, DhizukuState.component, client)
     }
 }
