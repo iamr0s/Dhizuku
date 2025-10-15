@@ -17,37 +17,38 @@ English | [简体中文](README_zh_rCN.md) | [繁体中文](README_zh_Hant.md) |
 
 ## Introduction
 
-A tool that can share DeviceOwner permissions to other application.
+A tool for sharing DeviceOwner permissions with other applications.
 
-## Activation tutorial
+## Activation Tutotial
 
-- [Github Discussions](https://github.com/iamr0s/Dhizuku/discussions/19)
+For instructions on how to activate DeviceOwner for Dhizuku, head over to the
+[Github Discussions](https://github.com/iamr0s/Dhizuku/discussions/19) page to see a
+detailed guide.
 
 > [!IMPORTANT]
-> Basically, we strongly recommend setting up your device **without any accounts installed**.  
-> Please note that we may not be able to provide support if **one or more other accounts are configured** on the device.
+> We strongly recommend setting up your device **without any accounts**.
+> If your device is already set up, you may need to remove these prior to enabling Dhizuku.
+> We may not be able to provide support if **any accounts are configured** on the device.
 
 ## Supported Versions
 
 Android 8.0 ~ 16
 
-## For Developer
+## For Developers
 
-- [Dhizuku API](https://github.com/iamr0s/Dhizuku-API)  
-  If implement this in your app, your app can use the Dhizuku-API.
+App developers who wish to use Dhizuku can utilize the [Dhizuku API](https://github.com/iamr0s/Dhizuku-API) in order to access DeviceOwner permissions.
 
-## Participate in translation
+## Translations
 
-Basically, strings are set by maintainers through an automatic translator, so if you notice anything inappropriate, please get involved in fixing it.
-
-If you would like to get involved in translating Dhizuku, head over to [Weblate](https://hosted.weblate.org/engage/dhizuku/)
+If you would like to get involved in translating Dhizuku, head over to [Weblate](https://hosted.weblate.org/engage/dhizuku/).
+If you notice issues with the existing translations, please provide your input to fix incorrect or inappropriate strings.
 
 [![Status](https://hosted.weblate.org/widgets/dhizuku/-/multi-auto.svg)](https://hosted.weblate.org/engage/dhizuku/)
 
-## Donation
+## Donations
 
-Please refer [**here**](DONATE.md).
+If you like this app, please consider [**donating**](DONATE.md)!
 
 ## License
 
-Dhizuku is licensed under the [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html) , And promises to continue to keep it open source in the future.
+Dhizuku is licensed under the [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html), and will remain open-source in the future.
