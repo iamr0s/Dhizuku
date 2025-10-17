@@ -21,12 +21,12 @@ for (name in arrayOf("r0s.properties", "debug.properties")) {
 android {
     namespace = "com.rosan.dhizuku"
     compileSdk = 36
-    buildToolsVersion = "36.0.0"
+    buildToolsVersion = "36.1.0"
 
     defaultConfig {
         minSdk = 26
         targetSdk = compileSdk
-        ndkVersion = "28.1.13356709"
+        ndkVersion = "28.2.13676358"
 
         val versionProps: Properties = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
