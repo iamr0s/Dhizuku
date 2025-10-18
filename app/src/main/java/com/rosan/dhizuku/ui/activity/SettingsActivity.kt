@@ -9,7 +9,6 @@ import android.os.Environment
 import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
-
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,11 +16,6 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import androidx.core.content.ContextCompat
-import androidx.core.net.toUri
-import androidx.core.content.edit
-import androidx.core.text.HtmlCompat
-
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawing
@@ -31,23 +25,31 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
-
+import androidx.core.content.ContextCompat
+import androidx.core.content.edit
+import androidx.core.net.toUri
+import androidx.core.text.HtmlCompat
 import com.rosan.dhizuku.R
+import com.rosan.dhizuku.data.common.util.asFlow
 import com.rosan.dhizuku.ui.page.settings.SettingsPage
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
-
 import org.koin.core.component.KoinComponent
 
 class SettingsActivity : ComponentActivity(), KoinComponent {
+    private val appPrefs by lazy {
+        getSharedPreferences("app", MODE_PRIVATE)
+    }
+
+    private val agreementFlow by lazy {
+        appPrefs.asFlow("agreement", false)
+    }
+
     private lateinit var stringLauncher: ActivityResultLauncher<String>
     private lateinit var intentLauncher: ActivityResultLauncher<Intent>
 
@@ -81,7 +83,8 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
             if (ContextCompat.checkSelfPermission(
                     this,
                     Manifest.permission.POST_NOTIFICATIONS
-                ) != PackageManager.PERMISSION_GRANTED) {
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
                 stringLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
             }
         }
@@ -102,15 +105,8 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
 
     @Composable
     private fun AgreementDialog() {
-        val preferences = LocalContext.current.getSharedPreferences("app", MODE_PRIVATE)
-        var agreed by remember {
-            mutableStateOf(preferences.getBoolean("agreement", false))
-        }
-        preferences.edit {
-            putBoolean("agreement", agreed)
-            commit()
-        }
-        if (agreed) return
+        val agreement by agreementFlow.collectAsState(false)
+        if (agreement) return
 
         AlertDialog(onDismissRequest = { }, title = {
             Text(text = stringResource(id = R.string.agreement_title))
@@ -134,7 +130,9 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
             }
         }, confirmButton = {
             TextButton(onClick = {
-                agreed = true
+                appPrefs.edit(true) {
+                    putBoolean("agreement", true)
+                }
             }) {
                 Text(text = stringResource(id = R.string.agree_text))
             }

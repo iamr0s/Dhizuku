@@ -3,7 +3,6 @@ package com.rosan.dhizuku.ui.activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
@@ -39,27 +38,24 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import kotlin.math.cos
-import kotlin.math.sin
-
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
-
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.aidl.IDhizukuRequestPermissionListener
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
+import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 import com.rosan.dhizuku.shared.DhizukuVariables
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
-
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import kotlin.math.cos
+import kotlin.math.sin
 
 class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     companion object {
@@ -77,7 +73,8 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     )
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
-    private val repo by inject<AppRepo>()
+    private val appRepo by inject<AppRepo>()
+    private val settingsRepo by inject<SettingsRepo>()
     private var state by mutableStateOf(ViewState())
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,18 +86,15 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
         // Check if dhizuku is enabled and app is not blocked
         coroutineScope.launch {
-            val prefs = getSharedPreferences("dhizuku_settings", MODE_PRIVATE)
-            val dhizukuEnabled = prefs.getBoolean("dhizuku_enabled", true)
-            if (!dhizukuEnabled) {
+            if (!settingsRepo.isDhizukuEnabled) {
                 state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
                 finish()
                 return@launch
             }
 
-            val whitelistMode = prefs.getBoolean("whitelist_mode", false)
-            val entity = repo.findByUID(state.uid)
+            val entity = appRepo.findByUID(state.uid)
 
-            if (whitelistMode && (entity == null || !entity.allowApi)) {
+            if (settingsRepo.isWhitelistMode && (entity == null || !entity.allowApi)) {
                 state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
                 finish()
                 return@launch
@@ -154,11 +148,11 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
             val packageInfo = packageManager.getPackageInfoForUid(uid) ?: return@launch
             val signature = packageInfo.signature ?: return@launch
 
-            val entity = repo.findByUID(uid)
-            if (entity == null && allowApi)
-                repo.insert(AppEntity(uid = uid, signature = signature, allowApi = allowApi))
-            else if (entity != null && allowApi)
-                repo.update(entity.copy(uid = uid, signature = signature, allowApi = allowApi))
+            val entity = appRepo.findByUID(uid)
+            if (entity == null)
+                appRepo.insert(AppEntity(uid = uid, signature = signature, allowApi = allowApi))
+            else
+                appRepo.update(entity.copy(uid = uid, signature = signature, allowApi = allowApi))
         }.invokeOnCompletion {
             val result = if (state.allowApi) PackageManager.PERMISSION_GRANTED
             else PackageManager.PERMISSION_DENIED
@@ -286,7 +280,10 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                    horizontalArrangement = Arrangement.spacedBy(
+                        8.dp,
+                        Alignment.CenterHorizontally
+                    ),
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -311,7 +308,11 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
                 modifier = Modifier.clip(RoundedCornerShape(12.dp))
             ) {
                 @Composable
-                fun MyTextButton(onClick: () -> Unit, @StringRes textResId: Int, isPrimary: Boolean = false) {
+                fun MyTextButton(
+                    onClick: () -> Unit,
+                    @StringRes textResId: Int,
+                    isPrimary: Boolean = false
+                ) {
                     TextButton(
                         onClick = onClick,
                         modifier = Modifier.fillMaxWidth(),

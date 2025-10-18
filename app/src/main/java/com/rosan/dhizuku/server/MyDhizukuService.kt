@@ -7,6 +7,7 @@ import com.rosan.dhizuku.aidl.IDhizukuClient
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.repo.AppRepo
+import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 import com.rosan.dhizuku.server_api.DhizukuService
 
 import kotlinx.coroutines.runBlocking
@@ -17,20 +18,19 @@ import org.koin.core.component.inject
 class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizukuClient?) :
     DhizukuService(context, admin, client), KoinComponent {
     private val context by inject<Context>()
-    private val repo by inject<AppRepo>()
+    private val appRepo by inject<AppRepo>()
+    private val settingsRepo by inject<SettingsRepo>()
 
     override fun getVersionName(): String = "$versionCode"
 
     private var signature: String? = null
 
     override fun checkCallingPermission(func: String?, callingUid: Int, callingPid: Int): Boolean {
-        val prefs = context.getSharedPreferences("dhizuku_settings", Context.MODE_PRIVATE)
-        val dhizukuEnabled = prefs.getBoolean("dhizuku_enabled", true)
-        if (!dhizukuEnabled) {
+        if (!settingsRepo.isDhizukuEnabled) {
             return false
         }
 
-        val entity = runBlocking { repo.findByUID(callingUid) }
+        val entity = runBlocking { appRepo.findByUID(callingUid) }
         if (entity == null) {
             return false
         }
@@ -39,8 +39,7 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
             return false
         }
 
-        val whitelistMode = prefs.getBoolean("whitelist_mode", false)
-        if (whitelistMode && !entity.allowApi) {
+        if (settingsRepo.isWhitelistMode && !entity.allowApi) {
             return false
         }
 

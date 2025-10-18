@@ -8,7 +8,7 @@ import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 
 import org.koin.dsl.module
 
-val roomModule = module {
+val dataModule = module {
     single {
         DhizukuRoom.createInstance()
     }

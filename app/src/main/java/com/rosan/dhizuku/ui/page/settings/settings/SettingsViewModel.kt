@@ -35,13 +35,13 @@ class SettingsViewModel : ViewModel(), KoinComponent {
 
     fun setWhitelistMode(enabled: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
-            settingsRepo.setWhitelistMode(enabled)
+            settingsRepo.isWhitelistMode = enabled
         }
     }
 
     fun setDhizukuEnabled(enabled: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
-            settingsRepo.setDhizukuEnabled(enabled)
+            settingsRepo.isDhizukuEnabled = enabled
         }
     }
 }
