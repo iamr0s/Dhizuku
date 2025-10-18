@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="ExportedContentProvider,UnusedAttribute,ScopedStorage,QueryAllPackagesPermission,ProtectedPermissions">
+    tools:ignore="ExportedContentProvider,UnusedAttribute,ForegroundServicesPolicy,ScopedStorage,AllFilesAccessPolicy,QueryAllPackagesPermission,PackageVisibilityPolicy,ProtectedPermissions,SystemPermissionTypo">
 
     <permission
         android:name="${applicationId}.permission.API"
@@ -32,8 +32,6 @@
     <uses-feature
         android:name="android.software.device_admin"
         android:required="true" />
-    
-    <uses-sdk tools:overrideLibrary="rikka.shizuku.api, rikka.shizuku.provider, rikka.shizuku.shared, rikka.shizuku.aidl" />
 
     <application
         android:name=".App"
