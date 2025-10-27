@@ -10,25 +10,38 @@
     <string name="request_permission_text">Möchten Sie folgende Dhizuku Berechtigungsanfrage annehmen: <b>%1$s</b>\?</string>
     <string name="finish">Abschließen</string>
     <string name="home_deactivate_title">Deaktivieren</string>
-    <string name="home_deactivate_dsp">Sind Sie sicher, dass Sie es deaktivieren wollen?</string>
+    <string name="home_deactivate_dsp">Sind Sie sicher dass Sie es deaktivieren wollen?</string>
     <string name="copy">Kopie</string>
-    <string name="home_status_owner_granted">Du bist der Besitzer!!!</string>
+    <string name="home_status_owner_granted">Du bist Besitzer!!!</string>
     <string name="home_status_owner_denied">Warte auf Aktivierung</string>
     <string name="home_app_management_title">Anwendungsmanagement</string>
-    <string name="home_app_management_dsp">Apps, die Dhizuku angefordert oder deklariert haben, werden hier angezeigt.</string>
-    <string name="home_dhizuku_dsp">Wenn du andere Dhizuku implementationen installiert hast, kannst du zwischen ihnen wechseln. Bitte dafür die Hilfe lesen&lt;a href=%1$s&gt;&lt;/a&gt;.</string>
+    <string name="home_app_management_dsp">Apps die Dhizuku angefordert oder deklariert haben werden hier angezeigt.</string>
+    <string name="home_dhizuku_dsp">Wenn du andere Dhizuku Ausführungen installiert hast, kannst du zwischen diesen wechseln. Bitte lies dazu die Hilfe&lt;a href=%1$s&gt;&lt;/a&gt;.</string>
     <string name="home_shizuku_title">Aktivierung durch Shizuku</string>
     <string name="home_dhizuku_title">Aktivierung durch Dhizuku</string>
-    <string name="home_shizuku_dsp">Mit Shizuku kannst du ADB Befehle ohne einen Computer ausführen. Bitte &lt;a href=%1$s&gt;lese hierfür die Hilfe&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">Mit Shizuku kannst du ADB Befehle ohne einen Computer ausführen. Bitte &lt;a href=%1$s&gt;lies dazu die Hilfe&lt;/a&gt;.</string>
     <string name="home_adb_title">Aktivierung durch ADB</string>
     <string name="home_adb_dsp">Durch die ADB (Android Debug Bridge) Verbindung, kannst du privilegierte Befehle ausführen. Bitte &lt;a href=%1$s&gt;lese hierfür die Hilfe&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Befehl anzeigen</string>
     <string name="home_shutdown_title">Herunterfahren</string>
-    <string name="home_shutdown_dsp">Das System kann Dhizuku nur dann abschalten, wenn Dhizuku dies freiwillig tut.</string>
+    <string name="home_shutdown_dsp">Das System kann Dhizuku nur dann abschalten wenn Dhizuku dies freiwillig tut.</string>
     <string name="retry">Erneut versuchen</string>
-    <string name="permission_description">Verwenden Sie die API von Dhizuku</string>
+    <string name="permission_description">Verwenden Sie die Dhizuku API</string>
     <string name="agreement_title">Richtlinie</string>
     <string name="agree_text">Zustimmen</string>
-    <string name="agreement_text">Dies ist unsere Benutzerrichtlinie. Bitte lesen Sie sie und akzeptieren Sie sie. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Nutzungsbedingungen&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Datenschutzrichtlinie&lt;/a&gt; Diese Nachricht wird nicht mehr angezeigt, nachdem Sie zugestimmt haben.</string>
+    <string name="agreement_text">Dies ist unsere Benutzerrichtlinie. Bitte lesen und akzeptieren Sie diese. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Nutzungsbedingungen&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Datenschutzrichtlinie&lt;/a&gt; Diese Nachricht wird nicht mehr angezeigt nachdem Sie zugestimmt haben.</string>
     <string name="settings">Einstellungen</string>
+    <string name="settings_desc">Dhizuku Verhalten konfigurieren</string>
+    <string name="enable_dhizuku">Dhizuku aktivieren</string>
+    <string name="enable_dhizuku_desc">Erlaube Apps die Benutzung der Dhizuku Dienste</string>
+    <string name="whitelist_mode">Whitelist Modus</string>
+    <string name="whitelist_mode_desc">Erlaube nur vorgeprüften Apps die Benutzung von Dhizuku</string>
+    <string name="block_app">Blockiere App</string>
+    <string name="auto_deny_in">Automatisch Ablehnen in</string>
+    <string name="block_app_desc">Zugriff zu Dhizuku komplett verweigern</string>
+    <string name="app_blocked_notice">Diese App ist gesperrt und hat keinen Zugriff zu Dhizuku</string>
+    <string name="allow_dhizuku_access">Erlaube Dhizuku Zugriff</string>
+    <string name="unblock_app">Entsperre App</string>
+    <string name="auto_deny_in_seconds">Automatische Ablehnung in %d Sekunden</string>
+    <string name="denying_access">Zugang verweigert…</string>
 </resources>
