@@ -31,4 +31,17 @@
     <string name="agree_text">Concordar</string>
     <string name="agreement_text">Aqui está a nossa política do usuário, por favor leia e concorde com ela. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Termos de Uso&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Política de Privacidade&lt;/a&gt; Essa mensagem não aparecerá novamente após você concordar.</string>
     <string name="settings">Configurações</string>
+    <string name="settings_desc">Configurar o comportamento do Dhizuku</string>
+    <string name="enable_dhizuku">Habilitar Dhizuku</string>
+    <string name="enable_dhizuku_desc">Permitir que os aplicativos usem os serviços Dhizuku</string>
+    <string name="whitelist_mode">Modo de lista branca</string>
+    <string name="whitelist_mode_desc">Permitir que apenas aplicativos pré-aprovados usem o Dhizuku</string>
+    <string name="block_app">Bloquear App</string>
+    <string name="auto_deny_in">Negação automática em</string>
+    <string name="block_app_desc">Negar completamente o acesso ao Dhizuku</string>
+    <string name="app_blocked_notice">Este aplicativo está bloqueado e não é possível acessar o Dhizuku</string>
+    <string name="allow_dhizuku_access">Permitir acesso Dhizuku</string>
+    <string name="unblock_app">Desbloquear App</string>
+    <string name="auto_deny_in_seconds">Negação automática em %d segundos</string>
+    <string name="denying_access">Negar acesso…</string>
 </resources>
