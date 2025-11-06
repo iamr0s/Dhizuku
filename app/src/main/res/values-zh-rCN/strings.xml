@@ -31,7 +31,7 @@
     <string name="home_deactivate_title">取消激活</string>
     <string name="home_deactivate_dsp">确认要取消激活吗？</string>
     <string name="donate">捐赠</string>
-    <string name="request_permission_text">允许<b>%1$s</b>进入Dhizuku?</string>
+    <string name="request_permission_text">允许<b>%1$s</b>访问Dhizuku?</string>
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>
     <string name="service_channel_name">后台服务</string>
@@ -45,7 +45,7 @@
     <string name="whitelist_mode_desc">仅允许预先批准的应用使用 Dhizuku</string>
     <string name="block_app">阻止应用程序</string>
     <string name="auto_deny_in">自动拒绝：</string>
-    <string name="block_app_desc">拒绝进入 Dhizuku</string>
+    <string name="block_app_desc">拒绝访问 Dhizuku</string>
     <string name="app_blocked_notice">此应用已被屏蔽，您无法访问 Dhizuku</string>
     <string name="allow_dhizuku_access">允许访问 Dhizuku</string>
     <string name="unblock_app">解除阻止应用程序</string>
