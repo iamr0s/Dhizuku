@@ -1,9 +1,13 @@
 package com.rosan.dhizuku.ui.activity
 
 import android.Manifest
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.os.PowerManager
+import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -34,6 +38,7 @@ import com.rosan.dhizuku.data.common.util.asFlow
 import com.rosan.dhizuku.ui.page.settings.SettingsPage
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
 import org.koin.core.component.KoinComponent
+import androidx.core.net.toUri
 
 class SettingsActivity : ComponentActivity(), KoinComponent {
     private val appPrefs by lazy {
@@ -64,6 +69,7 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
             RequestPermission()
         ) { _: Boolean -> }
         requestPostNotificationPermission()
+        requestIgnoreBatteryOptimization()
     }
 
     fun requestPostNotificationPermission() {
@@ -75,6 +81,19 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
             ) {
                 stringLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
             }
+        }
+    }
+
+    @SuppressLint("BatteryLife")
+    fun requestIgnoreBatteryOptimization() {
+        val powerManager = getSystemService(POWER_SERVICE) as PowerManager
+        if (!powerManager.isIgnoringBatteryOptimizations(packageName)) {
+            startActivity(
+                Intent(
+                    Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                    ("package:$packageName").toUri()
+                )
+            )
         }
     }
 

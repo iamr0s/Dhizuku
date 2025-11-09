@@ -31,4 +31,14 @@
     <string name="agreement_title">Polityka</string>
     <string name="agree_text">Zaakceptuj</string>
     <string name="settings">Ustawienia</string>
+    <string name="settings_desc">Skonfiguruj zachowanie Dhizuku</string>
+    <string name="enable_dhizuku">Włącz Dhizuku</string>
+    <string name="enable_dhizuku_desc">Pozwól aby aplikacje używały Dhizuku</string>
+    <string name="whitelist_mode">Tryb białej listy</string>
+    <string name="block_app">Zablokuj aplikacje</string>
+    <string name="auto_deny_in">Auto-blokowanie w</string>
+    <string name="block_app_desc">Całkowicie zablokuj dostęp do Dhizuku</string>
+    <string name="app_blocked_notice">Ta aplikacja jest zablokowana i nie ma dostępu do Dhizuku</string>
+    <string name="unblock_app">Odblokuj aplikacje</string>
+    <string name="auto_deny_in_seconds">Auto-zablokowanie w %d sekund</string>
 </resources>
