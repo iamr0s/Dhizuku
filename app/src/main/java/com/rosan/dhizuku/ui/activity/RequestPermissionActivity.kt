@@ -66,6 +66,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     data class ViewState(
         val uid: Int = UID_ERR,
         val allowApi: Boolean = false,
+        val signature: String = "",
         val listener: IDhizukuRequestPermissionListener? = null,
         val timeLeft: Int = AUTO_DENY_SECONDS,
         val timedOut: Boolean = false,
@@ -102,6 +103,12 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
             if (entity?.blocked == true) {
                 state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
+                finish()
+                return@launch
+            }
+
+            if (entity?.allowApi == true && entity.signature == state.signature) {
+                state = state.copy(allowApi = true, timedOut = false, shouldShowDialog = false)
                 finish()
                 return@launch
             }
@@ -183,6 +190,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
         state = state.copy(
             uid = uid,
+            signature = packageManager.getPackageInfoForUid(uid)?.signature ?: "",
             listener = listener
         )
         return true
