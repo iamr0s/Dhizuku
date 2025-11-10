@@ -51,4 +51,7 @@
     <string name="unblock_app">取消屏蔽应用</string>
     <string name="auto_deny_in_seconds">将在 %d 秒后自动拒绝</string>
     <string name="denying_access">拒绝访问…</string>
+
+    <string name="daemon_service_notification_title">Dhizuku 守护进程</string>
+    <string name="daemon_service_notification_text">这是一个Dhizuku的通知，用于保证随时提供服务，你可以长按隐藏此通知。</string>
 </resources>

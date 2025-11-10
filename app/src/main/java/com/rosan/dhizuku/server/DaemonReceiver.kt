@@ -4,10 +4,10 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-import kotlin.system.exitProcess
-
-class ShutdownReceiver : BroadcastReceiver() {
+class DaemonReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        exitProcess(0)
+        context ?: return
+        // 刷新 Dhizuku 的状态
+        DhizukuState.sync(context)
     }
 }

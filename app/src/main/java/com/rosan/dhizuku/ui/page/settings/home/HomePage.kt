@@ -120,22 +120,22 @@ fun HomePage(
             item("dhizuku_state") {
                 DhizukuStateWidget()
             }
-            if (dhizukuState.owner) item("settings") {
+            if (dhizukuState.isOwner) item("settings") {
                 SettingsWidget(navController)
             }
-            if (dhizukuState.owner) item("app_management") {
+            if (dhizukuState.isOwner) item("app_management") {
                 AppManagementWidget(navController)
             }
-            if (dhizukuState.owner) item("dhizuku") {
+            if (dhizukuState.isOwner) item("dhizuku") {
                 DhizukuWidget(navController)
             }
-            if (!dhizukuState.owner) item("shizuku") {
+            if (!dhizukuState.isOwner) item("shizuku") {
                 ShizukuWidget(navController)
             }
-            if (!dhizukuState.owner) item("adb") {
+            if (!dhizukuState.isOwner) item("adb") {
                 AdbWidget()
             }
-            if (dhizukuState.owner) item("home_deactivate_title") {
+            if (dhizukuState.isOwner) item("home_deactivate_title") {
                 DeactivateWidget()
             }
         }
@@ -195,7 +195,7 @@ private fun OverflowMenu() {
 
 @Composable
 private fun LazyItemScope.DhizukuStateWidget() {
-    val isOwner = DhizukuState.state.owner
+    val isOwner = DhizukuState.state.isOwner
 
     @Suppress("AnimateAsStateLabel")
     val iconContainerColor by animateColorAsState(
@@ -208,6 +208,7 @@ private fun LazyItemScope.DhizukuStateWidget() {
         if (isOwner) MaterialTheme.colorScheme.onPrimaryContainer
         else MaterialTheme.colorScheme.onErrorContainer
     )
+    val context = LocalContext.current
     CardWidget(colors = CardDefaults.cardColors(
         containerColor = iconContainerColor
     ), icon = {
@@ -226,7 +227,7 @@ private fun LazyItemScope.DhizukuStateWidget() {
         AnimatedContent(targetState = isOwner) {
             Text(stringResource(if (it) R.string.home_status_owner_granted else R.string.home_status_owner_denied))
         }
-    })
+    }, onClick = { DhizukuState.sync(context )})
 }
 
 @Composable
@@ -287,7 +288,7 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
 
 @Composable
 private fun LazyItemScope.AdbWidget() {
-    val command = "adb shell dpm set-device-owner ${DhizukuState.component.flattenToShortString()}"
+    val command = "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
     var state by remember {
         mutableStateOf(false)
     }
@@ -361,7 +362,7 @@ private fun LazyItemScope.DeactivateWidget() {
         TextButton(onClick = {
             try {
                 @Suppress("DEPRECATION")
-                manager.clearProfileOwner(DhizukuState.component)
+                manager.clearProfileOwner(DhizukuState.admin)
             } catch (e: Throwable) {
                 e.printStackTrace()
             }

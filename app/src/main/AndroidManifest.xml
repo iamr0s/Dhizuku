@@ -11,6 +11,7 @@
         android:protectionLevel="dangerous" />
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
@@ -64,6 +65,7 @@
             <intent-filter>
                 <action android:name="${applicationId}.action.request.permission" />
                 <action android:name="${applicationId}.action.REQUEST_DHIZUKU_PERMISSION" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -100,20 +102,19 @@
         </provider>
 
         <provider
-                android:name="androidx.core.content.FileProvider"
-                android:authorities="${applicationId}.fileprovider"
-                android:exported="false"
-                android:grantUriPermissions="true">
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
-                    android:name="android.support.FILE_PROVIDER_PATHS"
-                    android:resource="@xml/file_provider_paths" />
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
         </provider>
 
         <service
-            android:name=".server.RunningService"
-            android:enabled="false"
-            android:exported="true"
-            android:permission="android.permission.BIND_DEVICE_ADMIN" />
+            android:name=".server.DaemonService"
+            android:enabled="true"
+            android:foregroundServiceType="remoteMessaging" />
 
         <receiver
             android:name=".server.DhizukuDAReceiver"
@@ -133,23 +134,22 @@
         </receiver>
 
         <receiver
-            android:name=".server.BootCompleteReceiver"
+            android:name=".server.DaemonReceiver"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
+                <!-- booted receiver-->
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
 
-        <receiver
-            android:name=".server.ShutdownReceiver"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="${applicationId}.permission.API">
-            <intent-filter>
-                <action android:name="${applicationId}.action.SHUTDOWN" />
+                <!-- device/profile owner changed receiver -->
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+                <action android:name="android.app.action.DEVICE_OWNER_CHANGED" />
+                <action android:name="android.app.action.PROFILE_OWNER_CHANGED" />
+                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE" />
             </intent-filter>
         </receiver>
 
@@ -160,7 +160,5 @@
             android:exported="true"
             android:multiprocess="false"
             android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
-
     </application>
-
 </manifest>

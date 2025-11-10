@@ -18,13 +18,13 @@ import rikka.sui.Sui
 class App : Application(), KoinComponent {
     override fun onCreate() {
         super.onCreate()
-        DhizukuState.sync(this)
         startKoin {
             androidLogger()
             androidContext(this@App)
             modules(appModules)
             modules(module { single { this@App } })
         }
+        DhizukuState.sync(this)
         Sui.init(packageName)
         DynamicColors.applyToActivitiesIfAvailable(this)
     }

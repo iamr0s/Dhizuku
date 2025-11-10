@@ -53,12 +53,12 @@ class AppRepoImpl(
     }
 
     private fun clearDelegatedScopes(entity: AppEntity) {
-        if (!DhizukuState.state.owner) return
+        if (!DhizukuState.state.isOwner) return
         val packageNames = packageManager.getPackagesForUid(entity.uid) ?: emptyArray()
         packageNames.forEach {
             kotlin.runCatching {
                 devicePolicyManager.setDelegatedScopes(
-                    DhizukuState.component,
+                    DhizukuState.admin,
                     it,
                     emptyList()
                 )

@@ -53,4 +53,7 @@
     <string name="unblock_app">Unblock App</string>
     <string name="auto_deny_in_seconds">Auto-deny in %d seconds</string>
     <string name="denying_access">Denying access…</string>
+
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">This is a Dhizuku notification to ensure service availability at any time. You can long press to hide this notification.</string>
 </resources>
