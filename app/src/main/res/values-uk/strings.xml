@@ -44,4 +44,6 @@
     <string name="unblock_app">Розблокувати додаток</string>
     <string name="auto_deny_in_seconds">Автоматично відхилити через %d секунд</string>
     <string name="denying_access">Відмова в доступі…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">Це сповіщення Dhizuku для забезпечення доступності послуги в будь-який час. Ви можете довго натискати, щоб приховати це сповіщення.</string>
 </resources>
