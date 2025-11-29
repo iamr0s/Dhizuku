@@ -44,4 +44,5 @@
     <string name="unblock_app">I-unblock ang App</string>
     <string name="auto_deny_in_seconds">Awtomatikong tatanggihan sa %d segundo</string>
     <string name="denying_access">Tinatanggihan ang pag-access…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
 </resources>
