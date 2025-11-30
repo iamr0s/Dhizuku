@@ -31,4 +31,19 @@
     <string name="agree_text">Súhlasím</string>
     <string name="agreement_text">Tu sú naše zásady používania, prečítajte si ich a súhlaste s nimi. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Podmienky používania&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Zásady ochrany osobných údajov&lt;/a&gt; Táto správa sa po odsúhlasení už nezobrazí.</string>
     <string name="settings">Nastavenia</string>
+    <string name="settings_desc">Konfigurácia správania Dhizuku</string>
+    <string name="enable_dhizuku">Aktivovať Dhizuku</string>
+    <string name="enable_dhizuku_desc">Povoliť aplikáciám používať služby Dhizuku</string>
+    <string name="whitelist_mode">Nastavenie Whitelist-u</string>
+    <string name="whitelist_mode_desc">Povoliť používanie Dhizuku len vopred schváleným aplikáciám</string>
+    <string name="block_app">Blokovať aplikácie</string>
+    <string name="auto_deny_in">Automatické odmietnutie v</string>
+    <string name="block_app_desc">Úplne zamietnuť prístup k Dhizuku</string>
+    <string name="app_blocked_notice">Táto aplikácia je blokovaná a nemôže pristupovať k Dhizuku</string>
+    <string name="allow_dhizuku_access">Povoliť prístup Dhizuku</string>
+    <string name="unblock_app">Odblokovať aplikácie</string>
+    <string name="auto_deny_in_seconds">Automatické odmietnutie za %d sekúnd</string>
+    <string name="denying_access">Odmietnutie prístupu…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">Toto je oznámenie Dhizuku, ktoré zabezpečuje dostupnosť služby kedykoľvek. Dlhým stlačením môžete toto oznámenie skryť.</string>
 </resources>
