@@ -1,0 +1,3 @@
+- Oprava widgetu karty Shizuku
+- Pridanie režimu Whitelist-u
+- Pridanie funkcie pre prepínanie stavu Dhizuku
