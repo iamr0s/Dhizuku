@@ -45,4 +45,5 @@
     <string name="auto_deny_in_seconds">Awtomatikong tatanggihan sa %d segundo</string>
     <string name="denying_access">Tinatanggihan ang pag-access…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">Ito ay isang notification ng Dhizuku para siguraduhin ang availability sa anumang oras. Maaari mong matagal na i-tap para itago ang notification na ito.</string>
 </resources>
