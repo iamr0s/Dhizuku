@@ -12,7 +12,7 @@
 
 [versions]
 agp = "8.13.2"
-kotlin = "2.2.21"
+kotlin = "2.3.0"
 compose = "1.10.0"
 room = "2.8.4"
 accompanist = "0.36.0"
@@ -27,13 +27,13 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 
 # KSP quickstart
 # https://kotlinlang.org/docs/ksp-quickstart.html
-ksp = { id = "com.google.devtools.ksp", version = "2.3.3" }
+ksp = { id = "com.google.devtools.ksp", version = "2.3.4" }
 
 [libraries]
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.9.1" }
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.17.0" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.10.0" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.12.1" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.12.2" }
 
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
