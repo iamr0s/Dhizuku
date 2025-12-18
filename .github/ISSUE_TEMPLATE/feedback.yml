@@ -1,7 +1,6 @@
 name: Send feedback
 description: Report bug, create feature request, and other.
 labels: [ "triage needed" ]
-assignees: [ "s1204IT" ]
 title: "Replace here your opinion"
 body:
 - type: markdown
