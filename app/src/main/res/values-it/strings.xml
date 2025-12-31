@@ -30,4 +30,6 @@
     <string name="agreement_title">Politica</string>
     <string name="agree_text">D\'accordo</string>
     <string name="agreement_text">Ecco la nostra politica utente, Si prega di leggere e accettarlo. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt; Termini di utilizzo &lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html Policy&lt;/a&gt; Questo messaggio non verrà più dopo che sei d\'accordo.</string>
+    <string name="settings">Impostazioni</string>
+    <string name="enable_dhizuku">Attiva Dhizuku</string>
 </resources>
