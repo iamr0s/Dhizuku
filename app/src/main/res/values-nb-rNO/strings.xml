@@ -2,7 +2,7 @@
 <resources>
     <string name="agreement_title">Brukerpolicy</string>
     <string name="agree_text">Godta</string>
-    <string name="agreement_text">Vennligst les og godta vår brukerpolicy. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; Denne meldingen vil ikke vises igjen etter den er godtatt.</string>
+    <string name="agreement_text">Vennligst les og godta vår brukerpolicy &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt;. Denne meldingen vises ikke igjen etter at den er godtatt.</string>
     <string name="permission_description">Bruk Dhizukus API</string>
     <string name="copy">Kopier</string>
     <string name="cancel">Avbryt</string>
@@ -13,9 +13,9 @@
     <string name="home_app_management_dsp">Forespørsler og godtatte applikasjoner vises her.</string>
     <string name="home_dhizuku_title">Aktivering gjennom Dhizuku</string>
     <string name="home_dhizuku_dsp">Du kan alltid bytte mellom flere Dhizuku-implementeringer hvis de er installert. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
-    <string name="home_shizuku_title">Aktivering gjennom Shizuku</string>
-    <string name="home_shizuku_dsp">Med Shizuku kan ADB-kommandoer kjøres uten bruk av datamaskin. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
-    <string name="home_adb_title">Aktivering gjennom ADB</string>
+    <string name="home_shizuku_title">Aktiver med Shizuku</string>
+    <string name="home_shizuku_dsp">Shizuku kan kjøre ADB-kommandoer uten bruk av en datamaskin. &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
+    <string name="home_adb_title">Aktiver med ADB</string>
     <string name="home_adb_dsp">Enkelte privilegerte kommandoer kan kjøres gjennom en ADB-tilkobling (Android Debug Bridge). &lt;a href=%1$s&gt;Les mer&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Vis kommando</string>
     <string name="home_shutdown_title">Avslutt</string>
@@ -44,4 +44,6 @@
     <string name="unblock_app">Opphev blokkering</string>
     <string name="auto_deny_in_seconds">Nekt automatisk i %d sekunder</string>
     <string name="denying_access">Nekter tilgang…</string>
+    <string name="daemon_service_notification_title">Dhizuku-daemon</string>
+    <string name="daemon_service_notification_text">Dette varslet forsikrer at Dhizuku-tjenesten er tilgjengelig til enhver tid. Trykk og hold for å skjule dette varslet.</string>
 </resources>
