@@ -13,15 +13,15 @@
     <string name="service_running">Dhizuku запущен</string>
     <string name="service_channel_name">Фоновая служба</string>
     <string name="home_app_management_title">Управление приложениями</string>
-    <string name="home_app_management_dsp">Приложения, которые запросили Dhizuku будут отображаться здесь.</string>
+    <string name="home_app_management_dsp">Здесь будут отображаться приложения, которые запросили или объявили Dhizuku.</string>
     <string name="home_shizuku_title">Активация через Shizuku</string>
-    <string name="home_shizuku_dsp">С Shizuku у вас есть возможность запускать ADB команды без помощи компьютера. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">С Shizuku у вас есть возможность запускать ADB-команды без помощи компьютера. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
     <string name="home_adb_title">Активация через ADB</string>
     <string name="home_adb_btn_view_command">Посмотреть команду</string>
-    <string name="retry">Попробовать снова</string>
+    <string name="retry">Повторить</string>
     <string name="home_dhizuku_title">Активация через Dhizuku</string>
     <string name="home_dhizuku_dsp">Если у вас установлены другие реализации Dhizuku, вы можете переключаться между ними по желанию. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
-    <string name="home_adb_dsp">Через ADB (Android Debug Bridge) подключение, вы можете запускать некоторые привилегированные команды. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Через ADB (Android Debug Bridge)-подключение, вы можете запускать некоторые привилегированные команды. Пожалуйста, &lt;a href=%1$s&gt;прочтите документацию&lt;/a&gt;.</string>
     <string name="home_status_owner_granted">Вы владелец!!!</string>
     <string name="home_shutdown_dsp">Система не сможет завершить Dhizuku, если Dhizuku не сделает этого самостоятельно.</string>
     <string name="home_shutdown_title">Завершение</string>
@@ -29,6 +29,21 @@
     <string name="permission_description">Используйте API Dhizuku</string>
     <string name="agreement_title">Политика</string>
     <string name="agree_text">Принять</string>
-    <string name="agreement_text">Вот наша политика для пользователей, пожалуйста, прочтите и примите ее. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Условия использования&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Политика конфиденциальности&lt;/a&gt; Это сообщение больше не будет отображаться после вашего согласия.</string>
+    <string name="agreement_text">Вот наша политика для пользователей, пожалуйста, прочтите и примите её. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Условия использования&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Политика конфиденциальности&lt;/a&gt; Это сообщение больше не будет отображаться после вашего согласия.</string>
     <string name="settings">Настройки</string>
+    <string name="settings_desc">Настройка поведения Dhizuku</string>
+    <string name="enable_dhizuku">Включить Dhizuku</string>
+    <string name="enable_dhizuku_desc">Разрешить приложениям использовать сервисы Dhizuku</string>
+    <string name="whitelist_mode">Режим белого списка</string>
+    <string name="whitelist_mode_desc">Разрешить использование Dhizuku только предварительно одобренным приложениям</string>
+    <string name="block_app">Блокировать приложение</string>
+    <string name="auto_deny_in">Автоотклонение через</string>
+    <string name="block_app_desc">Полностью запретить доступ к Dhizuku</string>
+    <string name="app_blocked_notice">Это приложение заблокировано и не может получить доступ к Dhizuku</string>
+    <string name="allow_dhizuku_access">Разрешить доступ Dhizuku</string>
+    <string name="unblock_app">Разблокировать приложение</string>
+    <string name="auto_deny_in_seconds">Автоотклонение через %d сек.</string>
+    <string name="denying_access">Отклонение доступа…</string>
+    <string name="daemon_service_notification_title">Демон Дхизуку</string>
+    <string name="daemon_service_notification_text">Это уведомление Dhizuku, обеспечивающее доступность сервиса в любое время. Вы можете нажать и удерживать, чтобы скрыть это уведомление.</string>
 </resources>
