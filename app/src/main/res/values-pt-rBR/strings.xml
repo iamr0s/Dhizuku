@@ -44,4 +44,6 @@
     <string name="unblock_app">Desbloquear App</string>
     <string name="auto_deny_in_seconds">Negação automática em %d segundos</string>
     <string name="denying_access">Negar acesso…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">Esta é uma notificação do Dhizuku para garantir a disponibilidade do serviço a qualquer momento. Você pode pressionar e segurar para ocultar esta notificação.</string>
 </resources>
