@@ -25,10 +25,25 @@
     <string name="home_adb_btn_view_command">عرض الأمر</string>
     <string name="home_shutdown_title">إيقاف التشغيل</string>
     <string name="home_adb_dsp">من خلال اتصال ADB (جسر تصحيح أخطاء أندرويد)، يمكنك تنفيذ بعض الأوامر المميزة. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
-    <string name="home_shutdown_dsp">لن يتمكن النظام من إيقاف تشغيل Dhizuku ما لم تقم Dhizuku بذلك طواعية.</string>
+    <string name="home_shutdown_dsp">لن يتمكن النظام من إيقاف تشغيل Dhizuku ما لم يقم Dhizuku بذلك طواعية.</string>
     <string name="permission_description">استخدم واجهة برمجة التطبيقات الخاصة بـ Dhizuku</string>
     <string name="agreement_title">السياسة</string>
     <string name="agree_text">موافقة</string>
     <string name="agreement_text">فيما يلي سياسة المستخدم الخاصة بنا، يرجى قراءتها والموافقة عليها. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">شروط الاستخدام</a>، <a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">سياسة الخصوصية</a> لن تظهر هذه الرسالة مرة أخرى بعد موافقتك.</string>
     <string name="settings">الإعدادات</string>
+    <string name="settings_desc">ضبط سلوك Dhizuku</string>
+    <string name="enable_dhizuku">تفعيلDhizuku</string>
+    <string name="enable_dhizuku_desc">تمكين التطبيقات من استخدام خدمات Dhizuku</string>
+    <string name="whitelist_mode">وضع القائمة البيضاء</string>
+    <string name="whitelist_mode_desc">لا تسمح إلا للتطبيقات المعتمدة مسبقًا باستخدام Dhizuku</string>
+    <string name="block_app">حظر التطبيق</string>
+    <string name="auto_deny_in">الرفض التلقائي</string>
+    <string name="block_app_desc">منع الوصول إلى Dhizuku بشكل كامل</string>
+    <string name="app_blocked_notice">هذا التطبيق محظور ولا يمكنه الوصول إلى Dhizuku</string>
+    <string name="allow_dhizuku_access">السماح بالوصول لـ Dhizuku</string>
+    <string name="unblock_app">إلغاء حظر التطبيق</string>
+    <string name="auto_deny_in_seconds">الرفض التلقائي في d% ثواني</string>
+    <string name="denying_access">منع الوصول …</string>
+    <string name="daemon_service_notification_text">هذا إشعار من Dhizuku لضمان توفر الخدمة في أي وقت. يمكنك الضغط مطولاً لإخفاء هذا الإشعار.</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
 </resources>
