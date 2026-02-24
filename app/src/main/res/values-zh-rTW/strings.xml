@@ -16,18 +16,34 @@
     <string name="finish">完成</string>
     <string name="agree">同意</string>
     <string name="refuse">拒絕</string>
-    <string name="service_channel_name">後臺服務</string>
+    <string name="service_channel_name">後台服務</string>
     <string name="service_running">Dhizuku 正在運行</string>
     <string name="permission_description">使用 Dhizuku 的API</string>
     <string name="home_shutdown_dsp">除非 Dhizuku 自行關閉，否則 Dhizuku 無法被系統所關閉。</string>
     <string name="home_status_owner_granted">已取得裝置擁有者權限！！！</string>
     <string name="donate">捐贈</string>
-    <string name="request_permission_text">允许<b>%1$s</b>进入Dhizuku?</string>
+    <string name="request_permission_text">是否允許<b>%1$s</b>使用Dhizuku?</string>
     <string name="home_shizuku_dsp">使用 Shizuku ，您無需透過計算機即可執行 ADB 指令。請&lt;a href=%1$s&gt;參閱說明文件&lt;/a&gt;。</string>
     <string name="home_app_management_dsp">請求或宣告使用了Dhizuku的應用將會在此顯示。</string>
     <string name="home_dhizuku_dsp">若您已安裝其他 Dhizuku 實作版本，可隨時自由切換使用。請&lt;a href=%1$s&gt;閱讀說明文件&lt;/a&gt;。</string>
     <string name="home_adb_dsp">通過ADB（Android Debug Bridge）連接，可以執行一些需要權限的命令。請&lt;a href=%1$s&gt;閱讀說明文件&lt;/a&gt;。</string>
     <string name="agreement_title">執照</string>
     <string name="agree_text">同意</string>
-    <string name="agreement_text">这里是我们的用户政策, 请阅读并表示同意 <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">使用條款</a>・<a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">隱私權政策</a> 你同意后,这一信息没有再次显示.</string>
+    <string name="agreement_text">這裡是我們的使用者政策, 請閱讀並表示同意 <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">使用條款</a>・<a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">政策</a> 你同意後,這一資訊沒有再次顯示隱私權.</string>
+    <string name="settings">設定</string>
+    <string name="settings_desc">設定 Dhizuku 行為</string>
+    <string name="enable_dhizuku">啟用 Dhizuku</string>
+    <string name="enable_dhizuku_desc">允許其他應用使用 Dhizuku</string>
+    <string name="whitelist_mode">白名單模式</string>
+    <string name="whitelist_mode_desc">僅允許預先批准的應用使用 Dhizuku</string>
+    <string name="block_app">屏蔽應用</string>
+    <string name="auto_deny_in">自動拒絕:</string>
+    <string name="block_app_desc">拒絕使用 Dhizuku</string>
+    <string name="app_blocked_notice">此應用程式已被封鎖，無法存取 Dhizuku</string>
+    <string name="allow_dhizuku_access">允許訪問 Dhizuku</string>
+    <string name="unblock_app">取消封鎖應用</string>
+    <string name="auto_deny_in_seconds">將在 %d 秒後自動拒絕</string>
+    <string name="denying_access">拒絕訪問…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">這是 Dhizuku 發送的通知，用於確保服務隨時可用。您可以長按此通知以將其隱藏。</string>
 </resources>
