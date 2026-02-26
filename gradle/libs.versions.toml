@@ -13,7 +13,7 @@
 [versions]
 agp = "9.0.1"
 kotlin = "2.3.10"
-compose = "1.10.3"
+compose = "1.10.4"
 room = "2.8.4"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
