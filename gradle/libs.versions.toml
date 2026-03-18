@@ -17,7 +17,7 @@ compose = "1.10.5"
 room = "2.8.4"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
-koin = "4.1.1"
+koin = "4.2.0"
 
 [plugins]
 agp-lib = { id = "com.android.library", version.ref = "agp" }
