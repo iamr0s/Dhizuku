@@ -17,7 +17,7 @@ compose = "1.10.6"
 room = "2.8.4"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
-koin = "4.2.0"
+koin = "4.2.1"
 
 [plugins]
 agp-lib = { id = "com.android.library", version.ref = "agp" }
@@ -30,7 +30,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 ksp = { id = "com.google.devtools.ksp", version = "2.3.6" }
 
 [libraries]
-androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.9.1" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.10.0" }
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.18.0" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.10.0" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.13.0" }
