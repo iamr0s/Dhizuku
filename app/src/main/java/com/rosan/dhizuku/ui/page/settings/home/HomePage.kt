@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyItemScope
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.Adb
 import androidx.compose.material.icons.twotone.AttachMoney
@@ -288,7 +289,8 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
 
 @Composable
 private fun LazyItemScope.AdbWidget() {
-    val command = "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
+    val Dcommand = "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
+    val Pcommand = "adb shell dpm set-profile-owner ${DhizukuState.admin.flattenToShortString()}"
     var state by remember {
         mutableStateOf(false)
     }
@@ -320,19 +322,31 @@ private fun LazyItemScope.AdbWidget() {
         }
         val manager = LocalClipboard.current
         val scope = rememberCoroutineScope()
-        val clip = ClipData.newPlainText("command", command)
+        val Dclip = ClipData.newPlainText("Dcommand", Dcommand)
+        val Pclip = ClipData.newPlainText("Pcommand", Pcommand)
+
         TextButton(onClick = {
             scope.launch {
-                manager.setClipEntry(ClipEntry(clip))
+                manager.setClipEntry(ClipEntry(Dclip))
                 state = false
             }
         }) {
-            Text(stringResource(R.string.copy))
+            Text(stringResource(R.string.Dcopy))
+        }
+        TextButton(onClick = {
+            scope.launch {
+                manager.setClipEntry(ClipEntry(Pclip))
+                state = false
+            }
+        }) {
+            Text(stringResource(R.string.Pcopy))
         }
     }, title = {
         Text(stringResource(R.string.home_adb_btn_view_command))
     }, text = {
-        Text(command)
+        SelectionContainer() {
+        Text("Device Owner: \n\n$Dcommand \n\n\n Profile Owner: \n\n$Pcommand")
+        }
     })
 }
 

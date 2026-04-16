@@ -6,7 +6,8 @@
     <string name="agree_text">Agree</string>
     <string name="permission_description">Use Dhizuku\'s API</string>
     <!-- Commonly  used characters -->
-    <string name="copy">Copy</string>
+    <string name="Dcopy">Copy Device Owner</string>
+    <string name="Pcopy">Copy Profile Owner</string>
     <string name="cancel">Cancel</string>
     <string name="retry">Retry</string>
     <!-- Home - Status -->
@@ -24,7 +25,7 @@
     <!-- Home - Adb -->
     <string name="home_adb_title">Activation by ADB</string>
     <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
-    <string name="home_adb_btn_view_command">View command</string>
+    <string name="home_adb_btn_view_command">View commands</string>
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
     <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
@@ -32,6 +33,8 @@
     <string name="home_deactivate_title">Deactivate</string>
     <string name="home_deactivate_dsp">Are you sure you want to deactivate?</string>
     <string name="confirm">OK</string>
+    <string name="confirm1">Device Owner</string>
+    <string name="confirm2">Profile Owner</string>
     <string name="finish">Finish</string>
     <string name="donate">Donate</string>
     <string name="request_permission_text">Allow <b>%1$s</b> to access Dhizuku?</string>

@@ -17,9 +17,12 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyItemScope
@@ -57,6 +60,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+
 
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
@@ -115,29 +119,77 @@ fun ActivatePage(
                 }
             )
         },
-        floatingActionButton = {
+        bottomBar = {
             val comp by compState
             AnimatedVisibility(
                 visible = comp != null,
                 enter = scaleIn(),
                 exit = scaleOut()
             ) {
-                ExtendedFloatingActionButton(
-                    icon = {
-                        Icon(
-                            imageVector = Icons.TwoTone.Check,
-                            contentDescription = null
+                if (title == stringResource(R.string.home_shizuku_title)) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .navigationBarsPadding()
+                            .padding(16.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                    ) {
+                        ExtendedFloatingActionButton(
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.TwoTone.Check,
+                                    contentDescription = null
+                                )
+                            },
+                            text = {
+                                Text(stringResource(R.string.confirm1))
+                            },
+                            onClick = {
+                                comp?.let {
+                                    viewModel.Dactivate(mode = mode, comp = it)
+                                }
+                            }
                         )
-                    },
-                    text = {
-                        Text(stringResource(R.string.confirm))
-                    },
-                    onClick = {
-                        comp?.let {
-                            viewModel.activate(mode = mode, comp = it)
-                        }
+
+                        ExtendedFloatingActionButton(
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.TwoTone.Check,
+                                    contentDescription = null
+                                )
+                            },
+                            text = {
+                                Text(stringResource(R.string.confirm2))
+                            },
+                            onClick = {
+                                comp?.let {
+                                    viewModel.Pactivate(mode = mode, comp = it)
+                                }
+                            }
+                        )
                     }
-                )
+                } else {
+                    ExtendedFloatingActionButton(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .navigationBarsPadding()
+                            .padding(16.dp),
+                        icon = {
+                            Icon(
+                                imageVector = Icons.TwoTone.Check,
+                                contentDescription = null
+                            )
+                        },
+                        text = {
+                            Text(stringResource(R.string.confirm))
+                        },
+                        onClick = {
+                            comp?.let {
+                                viewModel.Dactivate(mode = mode, comp = it)
+                            }
+                        }
+                    )
+                }
             }
         }) {
         val pullToRefreshState = rememberPullToRefreshState()
@@ -176,7 +228,11 @@ fun ActivatePage(
         }
         if (isRunning) return@AlertDialog
         if (!isSuccess) TextButton(onClick = {
-            viewModel.activate(mode = mode, comp = comp!!)
+            if (viewModel.ownertype == "Device") {
+                viewModel.Dactivate(mode = mode, comp = comp!!)
+            } else {
+                viewModel.Pactivate(mode = mode, comp = comp!!)
+            }
         }) {
             Text(stringResource(R.string.retry))
         } else TextButton(onClick = { navController.navigateUp() }) {
