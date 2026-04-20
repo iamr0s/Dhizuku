@@ -4,6 +4,9 @@ English | [简体中文](README_zh_rCN.md) | [繁体中文](README_zh_Hant.md) |
 
 # Dhizuku+
 
+[![Latest](https://img.shields.io/github/v/release/iamr0s/Dhizuku?label=Lastest)](https://github.com/iamr0s/Dhizuku/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/iamr0s/Dhizuku/total?label=Downloads)](https://github.com/iamr0s/Dhizuku/releases)
+[![License](https://img.shields.io/github/license/iamr0s/Dhizuku?label=License)](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE)
 
 
 <a href="https://play.google.com/store/apps/details?id=com.rosan.dhizuku" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="70"></a>
