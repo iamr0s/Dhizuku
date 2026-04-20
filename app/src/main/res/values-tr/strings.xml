@@ -44,4 +44,6 @@
     <string name="auto_deny_in_seconds">%d saniyede otomatik reddet</string>
     <string name="denying_access">İzin reddediliyor…</string>
     <string name="settings_desc">Dhiuzuku davranışını yapılandır</string>
+    <string name="daemon_service_notification_title">Dhizuku Servisi</string>
+    <string name="daemon_service_notification_text">Bu, hizmetin her zaman kullanılabilir olmasını sağlayan bir Dhizuku bildirimidir. Bu bildirimi gizlemek için uzun basabilirsiniz.</string>
 </resources>
