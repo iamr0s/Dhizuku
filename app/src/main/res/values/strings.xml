@@ -26,6 +26,9 @@
     <string name="home_adb_title">Activation by ADB</string>
     <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">View commands</string>
+    <!-- Home - PvsD -->
+    <string name="home_PvsD_title">Profile vs Device Owner</string>
+    <string name="home_PvsD_dsp">Profile Owner, as the name suggests, owns the Main Profile, User 0. This gives most of the permissions, but is missing a few, such as installing apps (Presumably), disallowing camera toggling, disallowing microphone toggle, and more. Device Owner, on the other hand, allows all the permissions. You should start with trying Device Owner, but if that can\'t work on your device, you can use Profile Owner as an alternative.</string>
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
     <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
