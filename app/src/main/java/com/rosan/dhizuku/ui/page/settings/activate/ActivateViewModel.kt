@@ -64,6 +64,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
     }
 
     private var collectDataJob: Job? = null
+    var ownertype: String? = null
 
     fun collectData() {
         state = state.copy(loading = true)
@@ -108,7 +109,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         state = state.copy(status = ActivateViewState.Status.Waiting)
     }
 
-    fun activate(
+    fun Dactivate(
         mode: SettingsRoute.Activate.Mode,
         comp: ComponentName
     ) {
@@ -118,7 +119,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             val exceptionOrNull = kotlin.runCatching {
                 when (mode) {
                     SettingsRoute.Activate.Mode.Dhizuku -> activateByDhizuku(comp)
-                    SettingsRoute.Activate.Mode.Shizuku -> activateByShizuku(comp)
+                    SettingsRoute.Activate.Mode.Shizuku -> activateDByShizuku(comp)
                 }
             }.exceptionOrNull().let {
                 if (it is InvocationTargetException) it.targetException
@@ -126,6 +127,29 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             }
             if (exceptionOrNull is CancellationException) return@launch
             state = state.copy(status = ActivateViewState.Status.End(error = exceptionOrNull))
+            ownertype = "Device"
+        }
+    }
+
+    fun Pactivate(
+        mode: SettingsRoute.Activate.Mode,
+        comp: ComponentName
+    ) {
+        state = state.copy(status = ActivateViewState.Status.Running)
+        activateJob?.cancel()
+        activateJob = viewModelScope.launch(Dispatchers.IO) {
+            val exceptionOrNull = kotlin.runCatching {
+                when (mode) {
+                    SettingsRoute.Activate.Mode.Dhizuku -> activateByDhizuku(comp)
+                    SettingsRoute.Activate.Mode.Shizuku -> activatePByShizuku(comp)
+                }
+            }.exceptionOrNull().let {
+                if (it is InvocationTargetException) it.targetException
+                else it
+            }
+            if (exceptionOrNull is CancellationException) return@launch
+            state = state.copy(status = ActivateViewState.Status.End(error = exceptionOrNull))
+            ownertype = "Profile"
         }
     }
 
@@ -141,7 +165,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         }
 
     @SuppressLint("PrivateApi")
-    private suspend fun activateByShizuku(who: ComponentName) =
+    private suspend fun activateDByShizuku(who: ComponentName) =
         requireShizukuPermissionGranted() {
             // wait for the account cache be refreshed
             delay(1500)
@@ -151,6 +175,20 @@ class ActivateViewModel : ViewModel(), KoinComponent {
                 val userId = Os.getuid() / 100000
                 it.setActiveAdmin(who, true, userId)
                 it.setDeviceOwner(who, null, userId)
+            }
+        }
+
+    @SuppressLint("PrivateApi")
+    private suspend fun activatePByShizuku(who: ComponentName) =
+        requireShizukuPermissionGranted() {
+            // wait for the account cache be refreshed
+            delay(1500)
+            requireBinderWrapperDevicePolicyManager(wrapper = {
+                ShizukuBinderWrapper(it)
+            }) {
+                val userId = Os.getuid() / 100000
+                it.setActiveAdmin(who, true, userId)
+                it.setProfileOwner(who, null, userId)
             }
         }
 
@@ -192,6 +230,29 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             .also { it.isAccessible = true }.invoke(this, who, ownerName)
     }
 
+    private fun DevicePolicyManager.setProfileOwner(
+        who: ComponentName,
+        ownerName: String?,
+        userId: Int
+    ) {
+        val clazz = this::class.java
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, Int::class.java)
+                .also { it.isAccessible = true }.invoke(this, who, userId)
+            return
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            clazz.getDeclaredMethod(
+                "setProfileOwner",
+                ComponentName::class.java,
+                String::class.java,
+                Int::class.java
+            ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId)
+            return
+        }
+        clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, String::class.java)
+            .also { it.isAccessible = true }.invoke(this, who, ownerName)
+    }
 
     @SuppressLint("PrivateApi")
     private fun requireBinderWrapperDevicePolicyManager(
