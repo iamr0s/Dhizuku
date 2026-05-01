@@ -1,3 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Zásady</string>
+    <string name="agreement_text">Zde jsou naše uživatelské zásady. Přečtěte si je a přijměte je. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Podmínky užítí&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Zásady ochrany osobních údajů&lt;/a&gt; Po přijetí se tato zpráva již nebude zobrazovat.</string>
+    <string name="agree_text">Souhlasím</string>
+    <string name="permission_description">Použít Dhizuku API</string>
+    <string name="copy">Kopírovat</string>
+    <string name="cancel">Zrušit</string>
+    <string name="retry">Zkusit znovu</string>
+    <string name="home_status_owner_granted">Jste vlastník!!!</string>
+    <string name="home_status_owner_denied">Čekání na aktivaci</string>
+    <string name="home_app_management_title">Správa Aplikací</string>
+    <string name="home_app_management_dsp">Aplikace, které požádaly o Dhizuku nebo je deklarovaly, se objeví zde.</string>
+    <string name="home_dhizuku_title">Aktivace pomocí Dhizuku</string>
+    <string name="home_dhizuku_dsp">Pokud máte nainstalovány další implementace Dhizuku, můžete mezi nimi libovolně přepínat. Přečtěte si prosím &lt;a href=\"%1$s\"&gt;nápovědu&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Aktivace pomocí Shizuku</string>
+    <string name="home_shizuku_dsp">Díky aplikaci Shizuku můžete spouštět příkazy ADB bez nutnosti počítače. Přečtěte si prosím &lt;a href=\"%1$s\"&gt;nápovědu&lt;/a&gt;.</string>
+    <string name="home_adb_title">Aktivace pomocí ADB</string>
+    <string name="home_adb_dsp">Prostřednictvím ADB (Android Debug Bridge) můžete vykonávat některé privilegované příkazy. Přečtěte si prosím &lt;a href=\"%1$s\"&gt;nápovědu&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">Zobrazit přikaz</string>
+    <string name="home_shutdown_title">Vypnutí</string>
+    <string name="home_shutdown_dsp">Systém nebude schopen vypnout Dhizuku, pokud tak Dhizuku neudělá dobrovolně.</string>
+    <string name="home_deactivate_title">Deaktivovat</string>
+    <string name="home_deactivate_dsp">Jste si jisti že chcete deaktivovat?</string>
+    <string name="confirm">OK</string>
+    <string name="finish">Dokončit</string>
+    <string name="donate">Přispět</string>
+    <string name="request_permission_text">Povolit <b>%1$s</b> přístup k Dhizuku?</string>
+    <string name="agree">Povolit</string>
+    <string name="refuse">Odmítnout</string>
+    <string name="service_channel_name">Servis v pozadí</string>
+    <string name="service_running">Dhizuku je aktivní</string>
+    <string name="settings">Nastavení</string>
+    <string name="settings_desc">Konfigurace chování Dhizuku</string>
+    <string name="enable_dhizuku">Spustit Dhizuku</string>
+    <string name="enable_dhizuku_desc">Povolit aplikacím používat služby Dhizuku</string>
+    <string name="whitelist_mode">Režim Whitelist</string>
+    <string name="whitelist_mode_desc">Pouze povolit předem schváleným aplikacím používat Dhizuku</string>
+    <string name="block_app">Zablokovat Aplikaci</string>
+    <string name="auto_deny_in">Automatické zamítnutí</string>
+    <string name="block_app_desc">Plně zamítnout přístup k Dhizuku</string>
+    <string name="app_blocked_notice">Tato aplikace je zablokována a nemá přístup k Dhizuku</string>
+    <string name="allow_dhizuku_access">Povolit přístup k Dhizuku</string>
+    <string name="unblock_app">Odblokovat aplikaci</string>
+    <string name="auto_deny_in_seconds">Automatické zamítnutí za %d sekund</string>
+    <string name="denying_access">Zamítání přístupu…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">Toto je oznámení Dhizuku pro zajištění dostupnosti služby kdykoliv. Dlouhým podržením můžete toto oznámení skrýt.</string>
 </resources>
