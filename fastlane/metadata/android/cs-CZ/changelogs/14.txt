@@ -1,0 +1,8 @@
+- Deklarace oprávnění samotného Dhizuku
+- Podpora EMM
+- Vylepšené chování aplikace při převzetí role vlastníka zařízení
+- Oprava služby aby běžela na popředí
+- Vlastníci profilů mohou také mazat
+- Podpora monochromní ikony
+- Aktualizace překladů
+- Zapnutí LocaleConfig
