@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyItemScope
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.Adb
 import androidx.compose.material.icons.twotone.AttachMoney
@@ -31,6 +32,7 @@ import androidx.compose.material.icons.twotone.Cancel
 import androidx.compose.material.icons.twotone.Code
 import androidx.compose.material.icons.twotone.DoNotDisturbOn
 import androidx.compose.material.icons.twotone.MoreVert
+import androidx.compose.material.icons.twotone.Person
 import androidx.compose.material.icons.twotone.RoomPreferences
 import androidx.compose.material.icons.twotone.SentimentVeryDissatisfied
 import androidx.compose.material.icons.twotone.SentimentVerySatisfied
@@ -147,6 +149,7 @@ private fun OverflowMenu() {
     val context = LocalContext.current
     var menuExpanded by remember { mutableStateOf(false) }
     var shutdownDialogShow by remember { mutableStateOf(false) }
+    var profileDeviceDialogShow by remember { mutableStateOf(false) }
 
     IconButton(onClick = { menuExpanded = true }) {
         Icon(Icons.TwoTone.MoreVert, null)
@@ -163,6 +166,14 @@ private fun OverflowMenu() {
             shutdownDialogShow = true
         })
         DropdownMenuItem(text = {
+            Text(stringResource(R.string.home_PvsD_title))
+        }, leadingIcon = {
+            Icon(Icons.TwoTone.Person, null)
+        }, onClick = {
+            menuExpanded = false
+            profileDeviceDialogShow = true
+        })
+        DropdownMenuItem(text = {
             Text(stringResource(R.string.donate))
         }, leadingIcon = {
             Icon(Icons.TwoTone.AttachMoney, null)
@@ -172,25 +183,42 @@ private fun OverflowMenu() {
         })
     }
 
-    if (!shutdownDialogShow) return
-    AlertDialog(onDismissRequest = {
-        shutdownDialogShow = false
-    }, confirmButton = {
-        TextButton(onClick = {
+    if (shutdownDialogShow) {
+        AlertDialog(onDismissRequest = {
             shutdownDialogShow = false
-        }) {
-            Text(stringResource(R.string.cancel))
-        }
-        TextButton(onClick = {
-            exitProcess(0)
-        }) {
-            Text(stringResource(R.string.confirm))
-        }
-    }, title = {
-        Text(stringResource(R.string.home_shutdown_title))
-    }, text = {
-        Text(stringResource(R.string.home_shutdown_dsp))
-    })
+        }, confirmButton = {
+            TextButton(onClick = {
+                shutdownDialogShow = false
+            }) {
+                Text(stringResource(R.string.cancel))
+            }
+            TextButton(onClick = {
+                exitProcess(0)
+            }) {
+                Text(stringResource(R.string.confirm))
+            }
+        }, title = {
+            Text(stringResource(R.string.home_shutdown_title))
+        }, text = {
+            Text(stringResource(R.string.home_shutdown_dsp))
+        })
+    }
+
+    if (profileDeviceDialogShow) {
+        AlertDialog(onDismissRequest = {
+            profileDeviceDialogShow = false
+        }, confirmButton = {
+            TextButton(onClick = {
+                profileDeviceDialogShow = false
+            }) {
+                Text(stringResource(R.string.confirm))
+            }
+        }, title = {
+            Text(stringResource(R.string.home_PvsD_title))
+        }, text = {
+            Text(stringResource(R.string.home_PvsD_dsp))
+        })
+    }
 }
 
 @Composable
@@ -288,7 +316,8 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
 
 @Composable
 private fun LazyItemScope.AdbWidget() {
-    val command = "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
+    val Dcommand = "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
+    val Pcommand = "adb shell dpm set-profile-owner ${DhizukuState.admin.flattenToShortString()}"
     var state by remember {
         mutableStateOf(false)
     }
@@ -320,20 +349,43 @@ private fun LazyItemScope.AdbWidget() {
         }
         val manager = LocalClipboard.current
         val scope = rememberCoroutineScope()
-        val clip = ClipData.newPlainText("command", command)
+        val Dclip = ClipData.newPlainText("Dcommand", Dcommand)
+        val Pclip = ClipData.newPlainText("Pcommand", Pcommand)
+
         TextButton(onClick = {
             scope.launch {
-                manager.setClipEntry(ClipEntry(clip))
+                manager.setClipEntry(ClipEntry(Dclip))
                 state = false
             }
         }) {
-            Text(stringResource(R.string.copy))
+            Text(stringResource(R.string.Dcopy))
+        }
+        TextButton(onClick = {
+            scope.launch {
+                manager.setClipEntry(ClipEntry(Pclip))
+                state = false
+            }
+        }) {
+            Text(stringResource(R.string.Pcopy))
         }
     }, title = {
         Text(stringResource(R.string.home_adb_btn_view_command))
     }, text = {
-        Text(command)
+        SelectionContainer() {
+        Text("Device Owner: \n\n$Dcommand \n\n\n Profile Owner: \n\n$Pcommand")
+        }
     })
+}
+
+@Composable
+private fun LazyItemScope.ProfileDeviceWidget() {    CardWidget(onClick = {
+}, icon = {
+    Icon(imageVector = Icons.TwoTone.Person, contentDescription = null)
+}, title = {
+    Text(stringResource(R.string.home_PvsD_title))
+}, text = {
+    HtmlText(stringResource(R.string.home_PvsD_dsp, "https://shizuku.rikka.app/"))
+})
 }
 
 @Composable
