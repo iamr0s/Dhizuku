@@ -1,0 +1,3 @@
+- Adicionar "Termos de Uso" e "Política de Privacidade"
+- Adicionar caixa de diálogo de concordância
+- Atualizar tradução
