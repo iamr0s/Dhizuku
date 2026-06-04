@@ -19,7 +19,7 @@ for (name in arrayOf("r0s.properties", "debug.properties")) {
 
 android {
     namespace = "com.rosan.dhizuku"
-    compileSdk = 36
+    compileSdk = 37
     buildToolsVersion = "36.1.0"
 
     defaultConfig {
