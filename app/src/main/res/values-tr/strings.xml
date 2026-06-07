@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Bağış Düğmesini Gizle</string>
     <string name="donate_hide_confirm_dsp">Bu işlem uygulama içinden geri alınamaz. Bağış düğmesini kalıcı olarak gizlemek istediğinizden emin misiniz?</string>
     <string name="home_status_owner_transferred">%1$s aktarıldı!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
