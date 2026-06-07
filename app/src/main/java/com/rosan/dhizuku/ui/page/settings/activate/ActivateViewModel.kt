@@ -64,7 +64,14 @@ class ActivateViewModel : ViewModel(), KoinComponent {
     }
 
     private var collectDataJob: Job? = null
-    var ownertype: String? = null
+
+    enum class OwnerType {
+        Device,
+        Profile
+    }
+
+    var ownerType: OwnerType? = null
+        private set
 
     fun collectData() {
         state = state.copy(loading = true)
@@ -109,17 +116,18 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         state = state.copy(status = ActivateViewState.Status.Waiting)
     }
 
-    fun Dactivate(
+    fun activateAsDeviceOwner(
         mode: SettingsRoute.Activate.Mode,
         comp: ComponentName
     ) {
+        ownerType = OwnerType.Device
         state = state.copy(status = ActivateViewState.Status.Running)
         activateJob?.cancel()
         activateJob = viewModelScope.launch(Dispatchers.IO) {
             val exceptionOrNull = kotlin.runCatching {
                 when (mode) {
                     SettingsRoute.Activate.Mode.Dhizuku -> activateByDhizuku(comp)
-                    SettingsRoute.Activate.Mode.Shizuku -> activateDByShizuku(comp)
+                    SettingsRoute.Activate.Mode.Shizuku -> activateAsDeviceOwnerByShizuku(comp)
                 }
             }.exceptionOrNull().let {
                 if (it is InvocationTargetException) it.targetException
@@ -127,21 +135,21 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             }
             if (exceptionOrNull is CancellationException) return@launch
             state = state.copy(status = ActivateViewState.Status.End(error = exceptionOrNull))
-            ownertype = "Device"
         }
     }
 
-    fun Pactivate(
+    fun activateAsProfileOwner(
         mode: SettingsRoute.Activate.Mode,
         comp: ComponentName
     ) {
+        ownerType = OwnerType.Profile
         state = state.copy(status = ActivateViewState.Status.Running)
         activateJob?.cancel()
         activateJob = viewModelScope.launch(Dispatchers.IO) {
             val exceptionOrNull = kotlin.runCatching {
                 when (mode) {
                     SettingsRoute.Activate.Mode.Dhizuku -> activateByDhizuku(comp)
-                    SettingsRoute.Activate.Mode.Shizuku -> activatePByShizuku(comp)
+                    SettingsRoute.Activate.Mode.Shizuku -> activateAsProfileOwnerByShizuku(comp)
                 }
             }.exceptionOrNull().let {
                 if (it is InvocationTargetException) it.targetException
@@ -149,7 +157,6 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             }
             if (exceptionOrNull is CancellationException) return@launch
             state = state.copy(status = ActivateViewState.Status.End(error = exceptionOrNull))
-            ownertype = "Profile"
         }
     }
 
@@ -165,7 +172,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         }
 
     @SuppressLint("PrivateApi")
-    private suspend fun activateDByShizuku(who: ComponentName) =
+    private suspend fun activateAsDeviceOwnerByShizuku(who: ComponentName) =
         requireShizukuPermissionGranted() {
             // wait for the account cache be refreshed
             delay(1500)
@@ -179,7 +186,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         }
 
     @SuppressLint("PrivateApi")
-    private suspend fun activatePByShizuku(who: ComponentName) =
+    private suspend fun activateAsProfileOwnerByShizuku(who: ComponentName) =
         requireShizukuPermissionGranted() {
             // wait for the account cache be refreshed
             delay(1500)

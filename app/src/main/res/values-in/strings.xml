@@ -7,7 +7,6 @@
     <string name="donate">Donasi</string>
     <string name="agree">Izinkan</string>
     <string name="refuse">Tolak</string>
-    <string name="copy">Salin</string>
     <string name="finish">Selesai</string>
     <string name="service_channel_name">Layanan latar belakang</string>
     <string name="request_permission_text">Izinkan <b>%1$s</b> mengakses Dhizuku?</string>

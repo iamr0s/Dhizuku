@@ -2,7 +2,6 @@
 <resources>
     <string name="home_deactivate_title">Devre dışı bırak</string>
     <string name="home_deactivate_dsp">Devre dışı bırakmak istediğinize emin misiniz?</string>
-    <string name="copy">Kopyala</string>
     <string name="donate">Bağış Yap</string>
     <string name="request_permission_text"><b>%1$s</b>\'ın Dhizuku\'ya erişmesine izin verilsin mi?</string>
     <string name="agree">İzin ver</string>

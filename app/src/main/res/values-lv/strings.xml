@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="copy">Kopēt</string>
     <string name="cancel">Atcelt</string>
     <string name="retry">Mēģināt vēlreiz</string>
     <string name="home_status_owner_granted">Jūs esiet īpašnieks!!!</string>

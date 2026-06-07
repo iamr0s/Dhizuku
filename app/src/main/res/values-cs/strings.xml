@@ -4,7 +4,6 @@
     <string name="agreement_text">Zde jsou naše uživatelské zásady. Přečtěte si je a přijměte je. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Podmínky užítí&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Zásady ochrany osobních údajů&lt;/a&gt; Po přijetí se tato zpráva již nebude zobrazovat.</string>
     <string name="agree_text">Souhlasím</string>
     <string name="permission_description">Použít Dhizuku API</string>
-    <string name="copy">Kopírovat</string>
     <string name="cancel">Zrušit</string>
     <string name="retry">Zkusit znovu</string>
     <string name="home_status_owner_granted">Jste vlastník!!!</string>

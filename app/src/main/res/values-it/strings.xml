@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="copy">Copia</string>
     <string name="cancel">Annulla</string>
     <string name="home_status_owner_granted">Sei il Proprietario!!!</string>
     <string name="home_status_owner_denied">In attesa di attivazione</string>

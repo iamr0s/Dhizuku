@@ -12,7 +12,6 @@
     <string name="home_status_owner_granted">Bạn đã là Owner!!!</string>
     <string name="agree_text">Đồng ý</string>
     <string name="permission_description">Sử dụng API của Dhizuku</string>
-    <string name="copy">Sao chép</string>
     <string name="cancel">Hủy bỏ</string>
     <string name="home_app_management_dsp">Các ứng dụng đã yêu cầu và khai báo Dhizuku sẽ ở đây.</string>
     <string name="home_shizuku_title">Kích hoạt bởi Dhizuku</string>

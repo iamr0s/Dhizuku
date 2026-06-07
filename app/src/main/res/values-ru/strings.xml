@@ -8,7 +8,6 @@
     <string name="request_permission_text">Разрешить <b>%1$s</b> доступ к Dhizuku?</string>
     <string name="agree">Разрешить</string>
     <string name="refuse">Отклонить</string>
-    <string name="copy">Копировать</string>
     <string name="donate">Пожертвования</string>
     <string name="service_running">Dhizuku запущен</string>
     <string name="service_channel_name">Фоновая служба</string>

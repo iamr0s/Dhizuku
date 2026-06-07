@@ -4,11 +4,10 @@
     <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;《用户条款》&lt;/a&gt;与&lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
     <string name="agree_text">同意</string>
     <!-- Commonly  used characters -->
-    <string name="copy">复制</string>
     <string name="cancel">取消</string>
     <string name="retry">重试</string>
     <!-- Home - Status -->
-    <string name="home_status_owner_granted">已获得设备所有者权限！</string>
+    <string name="home_status_owner_granted">已获得所有者权限！</string>
     <string name="home_status_owner_denied">等待激活</string>
     <!-- Home - Application Management -->
     <string name="home_app_management_title">应用管理</string>

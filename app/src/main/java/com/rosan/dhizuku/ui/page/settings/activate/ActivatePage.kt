@@ -21,8 +21,6 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyItemScope
@@ -31,9 +29,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.twotone.ArrowBack
+import androidx.compose.material.icons.twotone.ArrowDropDown
 import androidx.compose.material.icons.twotone.Check
+import androidx.compose.material.icons.twotone.Warning
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
@@ -41,6 +43,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -54,6 +57,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -61,8 +65,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
-
 import com.rosan.dhizuku.R
+import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.AppIconCache
 import com.rosan.dhizuku.ui.theme.exclude
@@ -126,66 +130,111 @@ fun ActivatePage(
                 enter = scaleIn(),
                 exit = scaleOut()
             ) {
-                if (title == stringResource(R.string.home_shizuku_title)) {
+                if (mode == SettingsRoute.Activate.Mode.Shizuku) {
+                    var ownerType by remember { mutableStateOf(ActivateViewModel.OwnerType.Device) }
+                    var menuExpanded by remember { mutableStateOf(false) }
+                    var profileOwnerWarningShow by remember { mutableStateOf(false) }
+
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .navigationBarsPadding()
                             .padding(16.dp),
                         horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        ExtendedFloatingActionButton(
-                            icon = {
-                                Icon(
-                                    imageVector = Icons.TwoTone.Check,
-                                    contentDescription = null
+                        Box {
+                            OutlinedButton(onClick = { menuExpanded = true }) {
+                                Text(
+                                    stringResource(
+                                        when (ownerType) {
+                                            ActivateViewModel.OwnerType.Profile -> R.string.confirm_profile_owner
+                                            else -> R.string.confirm_device_owner
+                                        }
+                                    )
                                 )
-                            },
-                            text = {
-                                Text(stringResource(R.string.confirm1))
-                            },
-                            onClick = {
-                                comp?.let {
-                                    viewModel.Dactivate(mode = mode, comp = it)
-                                }
+                                Icon(imageVector = Icons.TwoTone.ArrowDropDown, contentDescription = null)
                             }
-                        )
-
-                        ExtendedFloatingActionButton(
-                            icon = {
-                                Icon(
-                                    imageVector = Icons.TwoTone.Check,
-                                    contentDescription = null
+                            DropdownMenu(
+                                expanded = menuExpanded,
+                                onDismissRequest = { menuExpanded = false }
+                            ) {
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.confirm_device_owner)) },
+                                    onClick = {
+                                        ownerType = ActivateViewModel.OwnerType.Device
+                                        menuExpanded = false
+                                    }
                                 )
-                            },
-                            text = {
-                                Text(stringResource(R.string.confirm2))
-                            },
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.confirm_profile_owner)) },
+                                    onClick = {
+                                        menuExpanded = false
+                                        profileOwnerWarningShow = true
+                                    }
+                                )
+                            }
+                        }
+
+                        if (profileOwnerWarningShow) {
+                            AlertDialog(
+                                onDismissRequest = { profileOwnerWarningShow = false },
+                                icon = {
+                                    Icon(
+                                        imageVector = Icons.TwoTone.Warning,
+                                        contentDescription = null
+                                    )
+                                },
+                                title = {
+                                    Text(stringResource(R.string.profile_owner_warning_title))
+                                },
+                                text = {
+                                    Text(stringResource(R.string.profile_owner_warning_dsp))
+                                },
+                                confirmButton = {
+                                    TextButton(onClick = {
+                                        ownerType = ActivateViewModel.OwnerType.Profile
+                                        profileOwnerWarningShow = false
+                                    }) {
+                                        Text(stringResource(R.string.confirm))
+                                    }
+                                },
+                                dismissButton = {
+                                    TextButton(onClick = { profileOwnerWarningShow = false }) {
+                                        Text(stringResource(R.string.cancel))
+                                    }
+                                }
+                            )
+                        }
+
+                        ActivateFab(
+                            textRes = R.string.confirm,
                             onClick = {
                                 comp?.let {
-                                    viewModel.Pactivate(mode = mode, comp = it)
+                                    when (ownerType) {
+                                        ActivateViewModel.OwnerType.Profile ->
+                                            viewModel.activateAsProfileOwner(mode = mode, comp = it)
+
+                                        else ->
+                                            viewModel.activateAsDeviceOwner(mode = mode, comp = it)
+                                    }
                                 }
                             }
                         )
                     }
                 } else {
-                    ExtendedFloatingActionButton(
+                    ActivateFab(
                         modifier = Modifier
                             .fillMaxWidth()
                             .navigationBarsPadding()
                             .padding(16.dp),
-                        icon = {
-                            Icon(
-                                imageVector = Icons.TwoTone.Check,
-                                contentDescription = null
-                            )
-                        },
-                        text = {
-                            Text(stringResource(R.string.confirm))
-                        },
+                        textRes = R.string.confirm,
                         onClick = {
                             comp?.let {
-                                viewModel.Dactivate(mode = mode, comp = it)
+                                if (DhizukuState.state.isProfileOwner)
+                                    viewModel.activateAsProfileOwner(mode = mode, comp = it)
+                                else
+                                    viewModel.activateAsDeviceOwner(mode = mode, comp = it)
                             }
                         }
                     )
@@ -228,10 +277,12 @@ fun ActivatePage(
         }
         if (isRunning) return@AlertDialog
         if (!isSuccess) TextButton(onClick = {
-            if (viewModel.ownertype == "Device") {
-                viewModel.Dactivate(mode = mode, comp = comp!!)
-            } else {
-                viewModel.Pactivate(mode = mode, comp = comp!!)
+            when (viewModel.ownerType) {
+                ActivateViewModel.OwnerType.Profile ->
+                    viewModel.activateAsProfileOwner(mode = mode, comp = comp!!)
+
+                else ->
+                    viewModel.activateAsDeviceOwner(mode = mode, comp = comp!!)
             }
         }) {
             Text(stringResource(R.string.retry))
@@ -249,13 +300,45 @@ fun ActivatePage(
             if (it == ActivateViewState.Status.Running) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
             else if (it is ActivateViewState.Status.End) {
                 Text(
-                    if (it.error == null) stringResource(R.string.home_status_owner_granted)
+                    if (it.error == null) stringResource(
+                        when (mode) {
+                            SettingsRoute.Activate.Mode.Dhizuku -> R.string.home_status_owner_transferred
+                            SettingsRoute.Activate.Mode.Shizuku -> R.string.home_status_owner_granted
+                        },
+                        stringResource(
+                            when (viewModel.ownerType) {
+                                ActivateViewModel.OwnerType.Profile -> R.string.confirm_profile_owner
+                                else -> R.string.confirm_device_owner
+                            }
+                        )
+                    )
                     else it.error.toString(),
                     modifier = Modifier.fillMaxWidth()
                 )
             }
         }
     })
+}
+
+@Composable
+private fun ActivateFab(
+    modifier: Modifier = Modifier,
+    textRes: Int,
+    onClick: () -> Unit
+) {
+    ExtendedFloatingActionButton(
+        modifier = modifier,
+        icon = {
+            Icon(
+                imageVector = Icons.TwoTone.Check,
+                contentDescription = null
+            )
+        },
+        text = {
+            Text(stringResource(textRes))
+        },
+        onClick = onClick
+    )
 }
 
 @Composable

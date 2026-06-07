@@ -4,7 +4,6 @@
     <string name="service_channel_name">Usługa w tle</string>
     <string name="home_deactivate_dsp">Czy jesteś pewien że chcesz zdezaktywować?</string>
     <string name="agree">Udzielono</string>
-    <string name="copy">Kopiuj</string>
     <string name="finish">Skończone</string>
     <string name="refuse">Odmów</string>
     <string name="cancel">Anuluj</string>

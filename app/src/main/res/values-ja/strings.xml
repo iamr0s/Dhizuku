@@ -7,12 +7,19 @@
     <string name="service_channel_name">バックグラウンド サービス</string>
     <string name="home_deactivate_dsp">本当に無効化してもよろしいですか？</string>
     <string name="agree">許可</string>
-    <string name="copy">コピー</string>
     <string name="finish">完了</string>
     <string name="refuse">拒否</string>
+    <string name="copy">コピー</string>
     <string name="cancel">中止</string>
     <string name="confirm">OK</string>
+    <string name="confirm_device_owner">デバイスオーナー</string>
+    <string name="confirm_profile_owner">プロファイルオーナー</string>
+    <string name="profile_owner_warning_title">警告</string>
+    <string name="profile_owner_warning_dsp">これは意図を理解したユーザーのみがおこなえる変更です。Dhizukuの開発者はこのモード変更により生じた想定外の動作について一切の保証をいたしかねます。</string>
     <string name="donate">寄付</string>
+    <string name="donate_hide_action">非表示にする</string>
+    <string name="donate_hide_confirm_title">寄付ボタンを非表示</string>
+    <string name="donate_hide_confirm_dsp">アプリ内からは元に戻せません。寄付ボタンを完全に非表示にしますか？</string>
     <string name="request_permission_text"><b>%1$s</b> による Dhizuku へのアクセスを許可しますか？</string>
     <string name="home_deactivate_title">無効化</string>
     <string name="home_status_owner_denied">有効化を待機中</string>
@@ -24,7 +31,8 @@
     <string name="home_shutdown_title">停止</string>
     <string name="home_shutdown_dsp">Dhizuku は手動で停止しない限り、システムは Dhizuku を停止できません。</string>
     <string name="retry">再試行</string>
-    <string name="home_status_owner_granted">端末所有者です！</string>
+    <string name="home_status_owner_granted">%1$sです！</string>
+    <string name="home_status_owner_transferred">%1$sを譲渡しました！</string>
     <string name="home_app_management_title">アプリの管理</string>
     <string name="home_dhizuku_dsp">他の Dhizuku 統合アプリがインストールされている場合、それらを自由に切り替えることができます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
     <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>

@@ -11,7 +11,6 @@
     <string name="finish">Abschließen</string>
     <string name="home_deactivate_title">Deaktivieren</string>
     <string name="home_deactivate_dsp">Sind Sie sicher dass Sie es deaktivieren wollen?</string>
-    <string name="copy">Kopie</string>
     <string name="home_status_owner_granted">Du bist Besitzer!!!</string>
     <string name="home_status_owner_denied">Warte auf Aktivierung</string>
     <string name="home_app_management_title">Anwendungsmanagement</string>

@@ -3,7 +3,6 @@
     <string name="home_shutdown_dsp">Система не зможе вимкнути Dhizuku, якщо Dhizuku не зробить цього добровільно.</string>
     <string name="home_shizuku_dsp">За допомогою Shizuku ви можете виконувати команди ADB без використання комп’ютера. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
     <string name="permission_description">Використовуйте API Dhizuku</string>
-    <string name="copy">Копіювати</string>
     <string name="cancel">Скасувати</string>
     <string name="retry">Повторити спробу</string>
     <string name="home_status_owner_granted">Ви Власник!!!</string>

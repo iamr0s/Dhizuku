@@ -5,7 +5,6 @@
     <string name="home_adb_dsp">Sa pamamagitan ng ADB (Android Debug Bridge) na koneksyon, makaka-execute ka ng ilang mga naka-pribilehiyo na command. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
     <string name="home_deactivate_title">I-deactivate</string>
     <string name="service_channel_name">Serbisyo ng background</string>
-    <string name="copy">Kopyahin</string>
     <string name="home_app_management_title">Pamamahala ng Application</string>
     <string name="home_shutdown_dsp">Hindi masa-shutdown ng sistema ang Dhizuku maliban kung gawin ito ng Dhizuku nang kusang loob.</string>
     <string name="agreement_title">Patakaran</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="copy">העתקה</string>
     <string name="cancel">ביטול</string>
     <string name="request_permission_text">לאפשר ל<b>%1$s</b> לגשת לDhizuku?</string>
     <string name="confirm">בסדר</string>
