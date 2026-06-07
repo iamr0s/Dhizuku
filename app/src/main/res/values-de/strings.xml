@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Spenden-Schaltfläche ausblenden</string>
     <string name="donate_hide_confirm_dsp">Dies kann innerhalb der App nicht rückgängig gemacht werden. Möchten Sie die Spenden-Schaltfläche wirklich dauerhaft ausblenden?</string>
     <string name="home_status_owner_transferred">%1$s wurde übertragen!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
