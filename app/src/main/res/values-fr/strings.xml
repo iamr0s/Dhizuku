@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Masquer le bouton de don</string>
     <string name="donate_hide_confirm_dsp">Cette action est irréversible depuis l\'application. Êtes-vous sûr de vouloir masquer définitivement le bouton de don ?</string>
     <string name="home_status_owner_transferred">%1$s a été transféré !!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
