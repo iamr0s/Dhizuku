@@ -61,4 +61,5 @@
     <string name="donate_hide_confirm_title">隐藏捐赠按钮</string>
     <string name="donate_hide_confirm_dsp">此操作无法在应用内撤销。确定要永久隐藏捐赠按钮吗？</string>
     <string name="home_status_owner_transferred">%1$s已转移！！！</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
