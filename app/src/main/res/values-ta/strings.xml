@@ -54,5 +54,4 @@
     <string name="donate_hide_confirm_title">நன்கொடை பொத்தானை மறை</string>
     <string name="donate_hide_confirm_dsp">இந்தச் செயலை பயன்பாட்டிற்குள் இருந்து செயல்தவிர்க்க முடியாது. நன்கொடை பொத்தானை நிரந்தரமாக மறைக்க விரும்புகிறீர்களா?</string>
     <string name="home_status_owner_transferred">%1$s மாற்றப்பட்டது!!!</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

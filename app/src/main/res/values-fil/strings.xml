@@ -54,5 +54,4 @@
     <string name="donate_hide_confirm_title">Itago ang Donate na Button</string>
     <string name="donate_hide_confirm_dsp">Hindi na ito maaaring bawiin sa loob ng app. Sigurado ka bang gusto mong permanenteng itago ang donate na button?</string>
     <string name="home_status_owner_transferred">Na-transfer na ang %1$s!!!</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

@@ -54,5 +54,4 @@
     <string name="donate_hide_confirm_title">Sembunyikan Tombol Donasi</string>
     <string name="donate_hide_confirm_dsp">Tindakan ini tidak dapat dibatalkan dari dalam aplikasi. Apakah Anda yakin ingin menyembunyikan tombol donasi secara permanen?</string>
     <string name="home_status_owner_transferred">%1$s telah dipindahkan!!!</string>
-    <string name="app_name" translatable="false"></string>
 </resources>
