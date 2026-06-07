@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Скрыть кнопку пожертвования</string>
     <string name="donate_hide_confirm_dsp">Это действие нельзя отменить из приложения. Вы уверены, что хотите навсегда скрыть кнопку пожертвования?</string>
     <string name="home_status_owner_transferred">%1$s передан!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
