@@ -13,11 +13,11 @@
     <string name="home_app_management_title">Управление на приложения</string>
     <string name="home_app_management_dsp">Тук ще се показват приложенията, които са поискали или декларирали Dhizuku.</string>
     <string name="home_dhizuku_title">Активиране чрез Dhizuku</string>
-    <string name="home_dhizuku_dsp">Ако имате инсталирани други реализации на Dhizuku, можете да превключвате между тях по желание. Моля &lt;a href="%1$s"&gt;прочетете помощта&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">Ако имате инсталирани други реализации на Dhizuku, можете да превключвате между тях по желание. Моля &lt;a href=%1$s&gt;прочетете помощта&lt;/a&gt;.</string>
     <string name="home_shizuku_title">Активиране чрез Shizuku</string>
-    <string name="home_shizuku_dsp">С Shizuku имате възможност да изпълнявате ADB команди без нужда от компютър. Моля &lt;a href="%1$s"&gt;прочетете помощта&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">С Shizuku имате възможност да изпълнявате ADB команди без нужда от компютър. Моля &lt;a href=%1$s&gt;прочетете помощта&lt;/a&gt;.</string>
     <string name="home_adb_title">Активиране чрез ADB</string>
-    <string name="home_adb_dsp">Чрез връзка с ADB (Android Debug Bridge) можете да изпълнявате някои привилегировани команди. Моля &lt;a href="%1$s"&gt;прочетете помощта&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Чрез връзка с ADB (Android Debug Bridge) можете да изпълнявате някои привилегировани команди. Моля &lt;a href=%1$s&gt;прочетете помощта&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Преглед на командата</string>
     <string name="home_shutdown_title">Изключване</string>
     <string name="home_shutdown_dsp">Системата няма да може да изключи Dhizuku, освен ако Dhizuku не направи това доброволно.</string>
@@ -54,4 +54,5 @@
     <string name="denying_access">Отказване на достъп…</string>
     <string name="daemon_service_notification_title">Демон на Dhizuku</string>
     <string name="daemon_service_notification_text">Това е известие от Dhizuku, гарантиращо наличността на услугата по всяко време. Можете да задържите натиснато, за да скриете това известие.</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
