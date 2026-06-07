@@ -28,7 +28,7 @@
     <string name="home_adb_dsp">通過ADB（Android Debug Bridge）連接，可以執行一些需要權限的命令。請&lt;a href=%1$s&gt;閱讀說明文件&lt;/a&gt;。</string>
     <string name="agreement_title">執照</string>
     <string name="agree_text">同意</string>
-    <string name="agreement_text">這裡是我們的使用者政策, 請閱讀並表示同意 <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">使用條款</a>・<a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">政策</a> 你同意後,這一資訊沒有再次顯示隱私權.</string>
+    <string name="agreement_text">這裡是我們的使用者政策, 請閱讀並表示同意 &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;使用條款&lt;/a&gt;・&lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;政策&lt;/a&gt; 你同意後,這一資訊沒有再次顯示隱私權.</string>
     <string name="settings">設定</string>
     <string name="settings_desc">設定 Dhizuku 行為</string>
     <string name="enable_dhizuku">啟用 Dhizuku</string>
