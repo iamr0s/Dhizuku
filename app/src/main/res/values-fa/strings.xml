@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">پنهان کردن دکمه حمایت</string>
     <string name="donate_hide_confirm_dsp">این کار از داخل برنامه قابل بازگشت نیست. آیا مطمئن هستید که می‌خواهید دکمه حمایت را برای همیشه پنهان کنید؟</string>
     <string name="home_status_owner_transferred">%1$s منتقل شد!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
