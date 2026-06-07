@@ -6,7 +6,7 @@
     <string name="permission_description">Utiliser l\'API de Dhizuku</string>
     <string name="cancel">Annuler</string>
     <string name="retry">Réessayer</string>
-    <string name="home_status_owner_granted">Vous êtes Propriétaire !!!</string>
+    <string name="home_status_owner_granted">Vous êtes Propriétaire !!!</string>
     <string name="home_status_owner_denied">En attente de l\'activation</string>
     <string name="home_app_management_title">Gestion des applications</string>
     <string name="home_app_management_dsp">Les applications qui nécessitent ou déclarent Dhizuku s\'afficheront ici.</string>
