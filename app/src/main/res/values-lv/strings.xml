@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Slēpt ziedojumu pogu</string>
     <string name="donate_hide_confirm_dsp">Šo darbību lietotnē nevar atsaukt. Vai tiešām vēlaties neatgriezeniski paslēpt ziedojumu pogu?</string>
     <string name="home_status_owner_transferred">%1$s ir pārsūtīts!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
