@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Ẩn nút ủng hộ</string>
     <string name="donate_hide_confirm_dsp">Hành động này không thể hoàn tác trong ứng dụng. Bạn có chắc chắn muốn ẩn vĩnh viễn nút ủng hộ không?</string>
     <string name="home_status_owner_transferred">%1$s đã được chuyển giao!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
