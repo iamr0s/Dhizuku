@@ -20,11 +20,11 @@
     <string name="home_shutdown_title">Arrêter</string>
     <string name="home_shutdown_dsp">Le système ne pourra pas arrêter Dhizuku à moins que Dhizuku ne le fasse volontairement.</string>
     <string name="home_deactivate_title">Désactiver</string>
-    <string name="home_deactivate_dsp">Êtes-vous sûr de vouloir désactiver ?</string>
+    <string name="home_deactivate_dsp">Êtes-vous sûr de vouloir désactiver ?</string>
     <string name="confirm">OK</string>
     <string name="finish">Terminer</string>
     <string name="donate">Faire un don</string>
-    <string name="request_permission_text">Autoriser<b>%1$s</b> à accéder à Dhizuku ?</string>
+    <string name="request_permission_text">Autoriser<b>%1$s</b> à accéder à Dhizuku ?</string>
     <string name="agree">Autoriser</string>
     <string name="refuse">Refuser</string>
     <string name="service_channel_name">Service en arrière-plan</string>
