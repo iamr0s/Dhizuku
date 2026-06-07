@@ -12,7 +12,7 @@
     <string name="service_channel_name">Serviço de segundo plano</string>
     <string name="service_running">O Dhizuku está em execução</string>
     <string name="retry">Repetir</string>
-    <string name="home_status_owner_granted">Você é Proprietário!!!</string>
+    <string name="home_status_owner_granted">Você é %1$s!!!</string>
     <string name="home_status_owner_denied">Aguardando a ativação</string>
     <string name="home_app_management_title">Gerenciamento de aplicativos</string>
     <string name="home_app_management_dsp">Os apps que solicitaram ou declararam o uso do Dhizuku serão exibidos aqui.</string>
@@ -23,7 +23,7 @@
     <string name="home_shizuku_dsp">Com o Shizuku, você tem a habilidade de executar comandos ADB sem precisar de um computador. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
     <string name="home_adb_title">Ativação pelo ADB</string>
     <string name="home_adb_dsp">Por meio da conexão do ADB (Android Debug Bridge), você pode executar alguns comandos privilegiados. Por favor, &lt;a href=%1$s&gt;leia a ajuda&lt;/a&gt;.</string>
-    <string name="home_adb_btn_view_command">Ver comando</string>
+    <string name="home_adb_btn_view_command">Ver comandos</string>
     <string name="home_shutdown_title">Encerrar</string>
     <string name="permission_description">Usar a API do Dhizuku</string>
     <string name="agreement_title">Política</string>
