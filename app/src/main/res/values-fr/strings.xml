@@ -4,7 +4,6 @@
     <string name="agreement_text">Voici notre politique utilisateur. Veuillez la lire et l\'accepter. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Conditions d\'utilisation&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Politique de confidentialité&lt;/a&gt; Ce message ne s\'affichera plus une fois que vous aurez accepté.</string>
     <string name="agree_text">Accepter</string>
     <string name="permission_description">Utiliser l\'API de Dhizuku</string>
-    <string name="copy">Copier</string>
     <string name="cancel">Annuler</string>
     <string name="retry">Réessayer</string>
     <string name="home_status_owner_granted">Vous êtes Propriétaire !!!</string>
@@ -44,4 +43,15 @@
     <string name="unblock_app">Débloquer l\'application</string>
     <string name="auto_deny_in_seconds">Refuser automatiquement dans %d secondes</string>
     <string name="denying_access">Refus d’accès…</string>
+    <string name="daemon_service_notification_title">Démon Dhizuku</string>
+    <string name="daemon_service_notification_text">Ceci est une notification de Dhizuku pour garantir la disponibilité du service à tout moment. Vous pouvez appuyer longuement pour masquer cette notification.</string>
+    <string name="copy">Copier</string>
+    <string name="confirm_device_owner">Propriétaire de l\'appareil</string>
+    <string name="confirm_profile_owner">Propriétaire du profil</string>
+    <string name="profile_owner_warning_title">Avertissement</string>
+    <string name="profile_owner_warning_dsp">Il s\'agit d\'une modification qui ne doit être effectuée que par des utilisateurs comprenant ses implications. Les développeurs de Dhizuku ne peuvent garantir aucun comportement inattendu causé par ce changement de mode.</string>
+    <string name="donate_hide_action">Masquer</string>
+    <string name="donate_hide_confirm_title">Masquer le bouton de don</string>
+    <string name="donate_hide_confirm_dsp">Cette action est irréversible depuis l\'application. Êtes-vous sûr de vouloir masquer définitivement le bouton de don ?</string>
+    <string name="home_status_owner_transferred">%1$s a été transféré !!!</string>
 </resources>

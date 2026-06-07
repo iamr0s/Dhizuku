@@ -7,7 +7,6 @@
     <string name="donate">Donasi</string>
     <string name="agree">Izinkan</string>
     <string name="refuse">Tolak</string>
-    <string name="copy">Salin</string>
     <string name="finish">Selesai</string>
     <string name="service_channel_name">Layanan latar belakang</string>
     <string name="request_permission_text">Izinkan <b>%1$s</b> mengakses Dhizuku?</string>
@@ -46,4 +45,13 @@
     <string name="denying_access">Menolak akses…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">Ini adalah notifikasi Dhizuku untuk memastikan ketersediaan layanan setiap saat. Tekan dan tahan untuk menyembunyikan notifikasi ini.</string>
+    <string name="copy">Salin</string>
+    <string name="confirm_device_owner">Pemilik Perangkat</string>
+    <string name="confirm_profile_owner">Pemilik Profil</string>
+    <string name="profile_owner_warning_title">Peringatan</string>
+    <string name="profile_owner_warning_dsp">Ini adalah perubahan yang hanya boleh dilakukan oleh pengguna yang memahami implikasinya. Pengembang Dhizuku tidak dapat menjamin apa pun terkait perilaku tak terduga yang disebabkan oleh perubahan mode ini.</string>
+    <string name="donate_hide_action">Sembunyikan</string>
+    <string name="donate_hide_confirm_title">Sembunyikan Tombol Donasi</string>
+    <string name="donate_hide_confirm_dsp">Tindakan ini tidak dapat dibatalkan dari dalam aplikasi. Apakah Anda yakin ingin menyembunyikan tombol donasi secara permanen?</string>
+    <string name="home_status_owner_transferred">%1$s telah dipindahkan!!!</string>
 </resources>

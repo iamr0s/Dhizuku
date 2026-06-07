@@ -7,6 +7,7 @@ import android.content.Context
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,20 +24,23 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyItemScope
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.Adb
+import androidx.compose.material.icons.twotone.ArrowDropDown
 import androidx.compose.material.icons.twotone.AttachMoney
 import androidx.compose.material.icons.twotone.Cancel
 import androidx.compose.material.icons.twotone.Code
 import androidx.compose.material.icons.twotone.DoNotDisturbOn
-import androidx.compose.material.icons.twotone.MoreVert
 import androidx.compose.material.icons.twotone.RoomPreferences
 import androidx.compose.material.icons.twotone.SentimentVeryDissatisfied
 import androidx.compose.material.icons.twotone.SentimentVerySatisfied
 import androidx.compose.material.icons.twotone.Settings
 import androidx.compose.material.icons.twotone.SwapHorizontalCircle
 import androidx.compose.material.icons.twotone.Terminal
+import androidx.compose.material.icons.twotone.Warning
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardColors
@@ -50,13 +54,20 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonColors
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.PlainTooltip
 import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TooltipAnchorPosition
+import androidx.compose.material3.TooltipBox
+import androidx.compose.material3.TooltipDefaults
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -64,6 +75,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.ClipEntry
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
@@ -80,6 +92,7 @@ import androidx.navigation.NavController
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.data.common.util.checkShizukuWorked
 import com.rosan.dhizuku.data.common.util.openUrlInBrowser
+import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 import com.rosan.dhizuku.ui.theme.exclude
@@ -87,6 +100,8 @@ import com.rosan.dhizuku.ui.theme.exclude
 import kotlin.system.exitProcess
 
 import kotlinx.coroutines.launch
+
+import org.koin.compose.koinInject
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -106,7 +121,7 @@ fun HomePage(
                     Text(stringResource(R.string.app_name))
                 },
                 actions = {
-                    OverflowMenu()
+                    TopBarActions()
                 }
             )
         }) {
@@ -142,55 +157,108 @@ fun HomePage(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun OverflowMenu() {
+private fun TopBarActions() {
     val context = LocalContext.current
-    var menuExpanded by remember { mutableStateOf(false) }
+    val settingsRepo = koinInject<SettingsRepo>()
+
     var shutdownDialogShow by remember { mutableStateOf(false) }
+    var donateMenuExpanded by remember { mutableStateOf(false) }
+    var donateHideConfirmShow by remember { mutableStateOf(false) }
 
-    IconButton(onClick = { menuExpanded = true }) {
-        Icon(Icons.TwoTone.MoreVert, null)
-    }
-    DropdownMenu(
-        expanded = menuExpanded,
-        onDismissRequest = { menuExpanded = false }) {
-        DropdownMenuItem(text = {
-            Text(stringResource(R.string.home_shutdown_title))
-        }, leadingIcon = {
-            Icon(Icons.TwoTone.Cancel, null)
-        }, onClick = {
-            menuExpanded = false
-            shutdownDialogShow = true
-        })
-        DropdownMenuItem(text = {
-            Text(stringResource(R.string.donate))
-        }, leadingIcon = {
-            Icon(Icons.TwoTone.AttachMoney, null)
-        }, onClick = {
-            menuExpanded = false
-            context.openUrlInBrowser("https://github.com/iamr0s/Dhizuku/blob/main/docs/DONATE.md")
-        })
+    val donateButtonHidden by settingsRepo.flowDonateButtonHidden()
+        .collectAsState(initial = settingsRepo.isDonateButtonHidden)
+
+    if (!donateButtonHidden) {
+        Box {
+            TooltipBox(
+                positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Below),
+                tooltip = { PlainTooltip { Text(stringResource(R.string.donate)) } },
+                state = rememberTooltipState()
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(CircleShape)
+                        .combinedClickable(
+                            onClick = {
+                                context.openUrlInBrowser("https://github.com/iamr0s/Dhizuku/blob/main/docs/DONATE.md")
+                            },
+                            onLongClick = { donateMenuExpanded = true }
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(Icons.TwoTone.AttachMoney, contentDescription = stringResource(R.string.donate))
+                }
+            }
+            DropdownMenu(
+                expanded = donateMenuExpanded,
+                onDismissRequest = { donateMenuExpanded = false }
+            ) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.donate_hide_action)) },
+                    onClick = {
+                        donateMenuExpanded = false
+                        donateHideConfirmShow = true
+                    }
+                )
+            }
+        }
     }
 
-    if (!shutdownDialogShow) return
-    AlertDialog(onDismissRequest = {
-        shutdownDialogShow = false
-    }, confirmButton = {
-        TextButton(onClick = {
+    TooltipBox(
+        positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Below),
+        tooltip = { PlainTooltip { Text(stringResource(R.string.home_shutdown_title)) } },
+        state = rememberTooltipState()
+    ) {
+        IconButton(onClick = { shutdownDialogShow = true }) {
+            Icon(Icons.TwoTone.Cancel, contentDescription = stringResource(R.string.home_shutdown_title))
+        }
+    }
+
+    if (shutdownDialogShow) {
+        AlertDialog(onDismissRequest = {
             shutdownDialogShow = false
-        }) {
-            Text(stringResource(R.string.cancel))
-        }
-        TextButton(onClick = {
-            exitProcess(0)
-        }) {
-            Text(stringResource(R.string.confirm))
-        }
-    }, title = {
-        Text(stringResource(R.string.home_shutdown_title))
-    }, text = {
-        Text(stringResource(R.string.home_shutdown_dsp))
-    })
+        }, confirmButton = {
+            TextButton(onClick = {
+                shutdownDialogShow = false
+            }) {
+                Text(stringResource(R.string.cancel))
+            }
+            TextButton(onClick = {
+                exitProcess(0)
+            }) {
+                Text(stringResource(R.string.confirm))
+            }
+        }, title = {
+            Text(stringResource(R.string.home_shutdown_title))
+        }, text = {
+            Text(stringResource(R.string.home_shutdown_dsp))
+        })
+    }
+
+    if (donateHideConfirmShow) {
+        AlertDialog(onDismissRequest = {
+            donateHideConfirmShow = false
+        }, confirmButton = {
+            TextButton(onClick = {
+                donateHideConfirmShow = false
+            }) {
+                Text(stringResource(R.string.cancel))
+            }
+            TextButton(onClick = {
+                settingsRepo.isDonateButtonHidden = true
+                donateHideConfirmShow = false
+            }) {
+                Text(stringResource(R.string.confirm))
+            }
+        }, title = {
+            Text(stringResource(R.string.donate_hide_confirm_title))
+        }, text = {
+            Text(stringResource(R.string.donate_hide_confirm_dsp))
+        })
+    }
 }
 
 @Composable
@@ -225,7 +293,16 @@ private fun LazyItemScope.DhizukuStateWidget() {
     ), title = {
         @Suppress("AnimatedContentLabel")
         AnimatedContent(targetState = isOwner) {
-            Text(stringResource(if (it) R.string.home_status_owner_granted else R.string.home_status_owner_denied))
+            Text(
+                if (it) stringResource(
+                    R.string.home_status_owner_granted,
+                    stringResource(
+                        if (DhizukuState.state.isProfileOwner) R.string.confirm_profile_owner
+                        else R.string.confirm_device_owner
+                    )
+                )
+                else stringResource(R.string.home_status_owner_denied)
+            )
         }
     }, onClick = { DhizukuState.sync(context )})
 }
@@ -286,12 +363,19 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
     })
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun LazyItemScope.AdbWidget() {
-    val command = "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
-    var state by remember {
-        mutableStateOf(false)
-    }
+    val deviceOwnerCommand =
+        "adb shell dpm set-device-owner ${DhizukuState.admin.flattenToShortString()}"
+    val profileOwnerCommand =
+        "adb shell dpm set-profile-owner ${DhizukuState.admin.flattenToShortString()}"
+
+    var commandDialogShow by remember { mutableStateOf(false) }
+    var useProfileOwner by remember { mutableStateOf(false) }
+    var ownerMenuExpanded by remember { mutableStateOf(false) }
+    var profileOwnerWarningShow by remember { mutableStateOf(false) }
+
     CardWidget(icon = {
         Icon(imageVector = Icons.TwoTone.Adb, contentDescription = null)
     }, title = {
@@ -303,28 +387,52 @@ private fun LazyItemScope.AdbWidget() {
                 "https://developer.android.com/tools/adb"
             )
         )
-        TextButton(onClick = { state = true }) {
+        TextButton(onClick = { commandDialogShow = true }) {
             Icon(imageVector = Icons.TwoTone.Code, contentDescription = null)
             Spacer(Modifier.size(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.home_adb_btn_view_command))
         }
     })
-    if (!state) return
+
+    if (profileOwnerWarningShow) {
+        AlertDialog(onDismissRequest = {
+            profileOwnerWarningShow = false
+        }, icon = {
+            Icon(imageVector = Icons.TwoTone.Warning, contentDescription = null)
+        }, confirmButton = {
+            TextButton(onClick = {
+                useProfileOwner = true
+                profileOwnerWarningShow = false
+            }) {
+                Text(stringResource(R.string.confirm))
+            }
+        }, dismissButton = {
+            TextButton(onClick = { profileOwnerWarningShow = false }) {
+                Text(stringResource(R.string.cancel))
+            }
+        }, title = {
+            Text(stringResource(R.string.profile_owner_warning_title))
+        }, text = {
+            Text(stringResource(R.string.profile_owner_warning_dsp))
+        })
+    }
+
+    if (!commandDialogShow) return
+    val command = if (useProfileOwner) profileOwnerCommand else deviceOwnerCommand
     AlertDialog(onDismissRequest = {
-        state = false
+        commandDialogShow = false
     }, confirmButton = {
         TextButton(onClick = {
-            state = false
+            commandDialogShow = false
         }) {
             Text(stringResource(R.string.cancel))
         }
         val manager = LocalClipboard.current
         val scope = rememberCoroutineScope()
-        val clip = ClipData.newPlainText("command", command)
         TextButton(onClick = {
             scope.launch {
-                manager.setClipEntry(ClipEntry(clip))
-                state = false
+                manager.setClipEntry(ClipEntry(ClipData.newPlainText("command", command)))
+                commandDialogShow = false
             }
         }) {
             Text(stringResource(R.string.copy))
@@ -332,7 +440,41 @@ private fun LazyItemScope.AdbWidget() {
     }, title = {
         Text(stringResource(R.string.home_adb_btn_view_command))
     }, text = {
-        Text(command)
+        Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            Box {
+                OutlinedButton(onClick = { ownerMenuExpanded = true }) {
+                    Text(
+                        stringResource(
+                            if (useProfileOwner) R.string.confirm_profile_owner
+                            else R.string.confirm_device_owner
+                        )
+                    )
+                    Icon(imageVector = Icons.TwoTone.ArrowDropDown, contentDescription = null)
+                }
+                DropdownMenu(
+                    expanded = ownerMenuExpanded,
+                    onDismissRequest = { ownerMenuExpanded = false }
+                ) {
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.confirm_device_owner)) },
+                        onClick = {
+                            useProfileOwner = false
+                            ownerMenuExpanded = false
+                        }
+                    )
+                    DropdownMenuItem(
+                        text = { Text(stringResource(R.string.confirm_profile_owner)) },
+                        onClick = {
+                            ownerMenuExpanded = false
+                            profileOwnerWarningShow = true
+                        }
+                    )
+                }
+            }
+            SelectionContainer {
+                Text(command)
+            }
+        }
     })
 }
 

@@ -5,7 +5,6 @@
     <string name="home_adb_dsp">Sa pamamagitan ng ADB (Android Debug Bridge) na koneksyon, makaka-execute ka ng ilang mga naka-pribilehiyo na command. Mangyaring &lt;a href=%1$s&gt;basahin ang tulong&lt;/a&gt;.</string>
     <string name="home_deactivate_title">I-deactivate</string>
     <string name="service_channel_name">Serbisyo ng background</string>
-    <string name="copy">Kopyahin</string>
     <string name="home_app_management_title">Pamamahala ng Application</string>
     <string name="home_shutdown_dsp">Hindi masa-shutdown ng sistema ang Dhizuku maliban kung gawin ito ng Dhizuku nang kusang loob.</string>
     <string name="agreement_title">Patakaran</string>
@@ -46,4 +45,13 @@
     <string name="denying_access">Tinatanggihan ang pag-access…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">Ito ay isang notification ng Dhizuku para siguraduhin ang availability sa anumang oras. Maaari mong matagal na i-tap para itago ang notification na ito.</string>
+    <string name="copy">Kopyahin</string>
+    <string name="confirm_device_owner">May-ari ng Device</string>
+    <string name="confirm_profile_owner">May-ari ng Profile</string>
+    <string name="profile_owner_warning_title">Babala</string>
+    <string name="profile_owner_warning_dsp">Ito ay isang pagbabago na dapat lamang gawin ng mga user na nakakaunawa sa mga implikasyon nito. Hindi magagarantiya ng mga developer ng Dhizuku ang anumang bagay tungkol sa hindi inaasahang gawi na dulot ng pagbabagong ito sa mode.</string>
+    <string name="donate_hide_action">Itago</string>
+    <string name="donate_hide_confirm_title">Itago ang Donate na Button</string>
+    <string name="donate_hide_confirm_dsp">Hindi na ito maaaring bawiin sa loob ng app. Sigurado ka bang gusto mong permanenteng itago ang donate na button?</string>
+    <string name="home_status_owner_transferred">Na-transfer na ang %1$s!!!</string>
 </resources>

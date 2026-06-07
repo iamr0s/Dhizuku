@@ -4,7 +4,6 @@
     <string name="agreement_text">Ακολουθεί η πολιτική χρήστη μας. Παρακαλούμε διαβάστε την και αποδεχτείτε την. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Όροι Χρήσης&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Πολιτική Απορρήτου&lt;/a&gt; Αυτό το μήνυμα δεν θα εμφανιστεί ξανά αφού αποδεχτείτε.</string>
     <string name="agree_text">Συμφωνώ</string>
     <string name="permission_description">Χρήση Dhizuku\'s API</string>
-    <string name="copy">Αντιγραφή</string>
     <string name="cancel">Ακύρωση</string>
     <string name="retry">Δοκιμάστε ξανά</string>
     <string name="home_status_owner_granted">Είσαι Ιδιοκτήτης!!!</string>
@@ -46,4 +45,13 @@
     <string name="unblock_app">Άρση αποκλεισμού Εφαρμογής</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">Αυτή είναι μια ειδοποίηση Dhizuku για να διασφαλιστεί η διαθεσιμότητα της υπηρεσίας ανά πάσα στιγμή. Μπορείτε να πατήσετε παρατεταμένα για να αποκρύψετε αυτήν την ειδοποίηση.</string>
+    <string name="copy">Αντιγραφή</string>
+    <string name="confirm_device_owner">Κάτοχος Συσκευής</string>
+    <string name="confirm_profile_owner">Κάτοχος Προφίλ</string>
+    <string name="profile_owner_warning_title">Προειδοποίηση</string>
+    <string name="profile_owner_warning_dsp">Αυτή είναι μια αλλαγή που θα πρέπει να γίνεται μόνο από χρήστες που κατανοούν τις επιπτώσεις της. Οι προγραμματιστές του Dhizuku δεν μπορούν να εγγυηθούν τίποτα σχετικά με απρόβλεπτη συμπεριφορά που προκαλείται από αυτή την αλλαγή λειτουργίας.</string>
+    <string name="donate_hide_action">Απόκρυψη</string>
+    <string name="donate_hide_confirm_title">Απόκρυψη Κουμπιού Δωρεάς</string>
+    <string name="donate_hide_confirm_dsp">Αυτό δεν μπορεί να αναιρεθεί μέσα από την εφαρμογή. Είστε βέβαιοι ότι θέλετε να αποκρύψετε μόνιμα το κουμπί δωρεάς;</string>
+    <string name="home_status_owner_transferred">Το %1$s μεταφέρθηκε!!!</string>
 </resources>

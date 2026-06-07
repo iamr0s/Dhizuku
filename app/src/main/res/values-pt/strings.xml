@@ -4,7 +4,6 @@
     <string name="service_channel_name">Serviço em segundo plano</string>
     <string name="home_deactivate_dsp">Tem a certeza de que deseja desativar?</string>
     <string name="agree">Conceder</string>
-    <string name="copy">Copiar</string>
     <string name="finish">Terminar</string>
     <string name="refuse">Negar</string>
     <string name="cancel">Cancelar</string>
@@ -31,4 +30,28 @@
     <string name="agree_text">Concordar</string>
     <string name="agreement_text">Aqui estão as nossas políticas de uso. Por favor, leia e aceite. <a href="https://iamr0s.github.io/Dhizuku/TERMS.html">Termos de Uso</a> <a href="https://iamr0s.github.io/Dhizuku/PRIVACYgt;html">Privacidade</a> Esta mensagem não voltará a aparecer depois de concordares.</string>
     <string name="settings">Configurações</string>
+    <string name="settings_desc">Configurar o comportamento do Dhizuku</string>
+    <string name="enable_dhizuku">Ativar Dhizuku</string>
+    <string name="enable_dhizuku_desc">Permitir que aplicativos usem os serviços do Dhizuku</string>
+    <string name="whitelist_mode">Modo de lista branca</string>
+    <string name="whitelist_mode_desc">Permitir o uso do Dhizuku apenas a aplicativos pré-aprovados</string>
+    <string name="block_app">Bloquear aplicativo</string>
+    <string name="block_app_desc">Negar completamente o acesso ao Dhizuku</string>
+    <string name="auto_deny_in">Negar automaticamente em</string>
+    <string name="auto_deny_in_seconds">Negação automática em %d segundos</string>
+    <string name="app_blocked_notice">Este aplicativo está bloqueado e não pode acessar o Dhizuku</string>
+    <string name="allow_dhizuku_access">Permitir acesso ao Dhizuku</string>
+    <string name="unblock_app">Desbloquear aplicativo</string>
+    <string name="denying_access">Negando acesso…</string>
+    <string name="daemon_service_notification_title">Daemon do Dhizuku</string>
+    <string name="daemon_service_notification_text">Esta é uma notificação do Dhizuku para garantir a disponibilidade do serviço a qualquer momento. Você pode pressionar e segurar para ocultar esta notificação.</string>
+    <string name="copy">Copiar</string>
+    <string name="confirm_device_owner">Proprietário do dispositivo</string>
+    <string name="confirm_profile_owner">Proprietário do perfil</string>
+    <string name="profile_owner_warning_title">Aviso</string>
+    <string name="profile_owner_warning_dsp">Esta é uma alteração que deve ser feita apenas por usuários que entendem as suas implicações. Os desenvolvedores do Dhizuku não podem garantir nada sobre comportamentos inesperados causados por esta mudança de modo.</string>
+    <string name="donate_hide_action">Ocultar</string>
+    <string name="donate_hide_confirm_title">Ocultar botão de doação</string>
+    <string name="donate_hide_confirm_dsp">Esta ação não pode ser desfeita dentro do aplicativo. Tem certeza de que deseja ocultar permanentemente o botão de doação?</string>
+    <string name="home_status_owner_transferred">%1$s foi transferido!!!</string>
 </resources>

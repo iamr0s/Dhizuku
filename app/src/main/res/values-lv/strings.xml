@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="copy">Kopēt</string>
     <string name="cancel">Atcelt</string>
     <string name="retry">Mēģināt vēlreiz</string>
     <string name="home_status_owner_granted">Jūs esiet īpašnieks!!!</string>
@@ -27,4 +26,32 @@
     <string name="home_deactivate_title">Deaktivizēt</string>
     <string name="home_deactivate_dsp">Vai tiešām vēlaties deaktivizēt?</string>
     <string name="permission_description">Izmantot Dhizuku API</string>
+    <string name="agreement_title">Politika</string>
+    <string name="agree_text">Piekrist</string>
+    <string name="agreement_text">Šī ir mūsu lietotāju politika. Lūdzu, izlasiet to un piekrītiet tai. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Lietošanas noteikumi&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Konfidencialitātes politika&lt;/a&gt; Šis ziņojums vairs netiks rādīts, kad būsiet tam piekritis.</string>
+    <string name="settings">Iestatījumi</string>
+    <string name="settings_desc">Konfigurēt Dhizuku darbību</string>
+    <string name="enable_dhizuku">Iespējot Dhizuku</string>
+    <string name="enable_dhizuku_desc">Atļaut lietotnēm izmantot Dhizuku pakalpojumus</string>
+    <string name="whitelist_mode">Baltā saraksta režīms</string>
+    <string name="whitelist_mode_desc">Atļaut izmantot Dhizuku tikai iepriekš apstiprinātām lietotnēm</string>
+    <string name="block_app">Bloķēt lietotni</string>
+    <string name="block_app_desc">Pilnībā liegt piekļuvi Dhizuku</string>
+    <string name="auto_deny_in">Automātiski liegt pēc</string>
+    <string name="auto_deny_in_seconds">Automātiska liegšana pēc %d sekundēm</string>
+    <string name="app_blocked_notice">Šī lietotne ir bloķēta un nevar piekļūt Dhizuku</string>
+    <string name="allow_dhizuku_access">Atļaut piekļuvi Dhizuku</string>
+    <string name="unblock_app">Atbloķēt lietotni</string>
+    <string name="denying_access">Piekļuve tiek liegta…</string>
+    <string name="daemon_service_notification_title">Dhizuku dēmons</string>
+    <string name="daemon_service_notification_text">Šis ir Dhizuku paziņojums, kas nodrošina pakalpojuma pieejamību jebkurā laikā. Varat to noturēt nospiestu, lai paslēptu šo paziņojumu.</string>
+    <string name="copy">Kopēt</string>
+    <string name="confirm_device_owner">Ierīces īpašnieks</string>
+    <string name="confirm_profile_owner">Profila īpašnieks</string>
+    <string name="profile_owner_warning_title">Brīdinājums</string>
+    <string name="profile_owner_warning_dsp">Šīs izmaiņas drīkst veikt tikai lietotāji, kuri saprot to sekas. Dhizuku izstrādātāji nevar garantēt neko attiecībā uz negaidītu rīcību, ko izraisījusi šī režīma maiņa.</string>
+    <string name="donate_hide_action">Slēpt</string>
+    <string name="donate_hide_confirm_title">Slēpt ziedojumu pogu</string>
+    <string name="donate_hide_confirm_dsp">Šo darbību lietotnē nevar atsaukt. Vai tiešām vēlaties neatgriezeniski paslēpt ziedojumu pogu?</string>
+    <string name="home_status_owner_transferred">%1$s ir pārsūtīts!!!</string>
 </resources>

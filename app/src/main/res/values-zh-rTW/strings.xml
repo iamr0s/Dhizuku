@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="copy">複製</string>
     <string name="cancel">取消</string>
     <string name="retry">重試</string>
     <string name="home_app_management_title">應用管理</string>
@@ -20,7 +19,7 @@
     <string name="service_running">Dhizuku 正在運行</string>
     <string name="permission_description">使用 Dhizuku 的API</string>
     <string name="home_shutdown_dsp">除非 Dhizuku 自行關閉，否則 Dhizuku 無法被系統所關閉。</string>
-    <string name="home_status_owner_granted">已取得裝置擁有者權限！！！</string>
+    <string name="home_status_owner_granted">已取得擁有者權限！！！</string>
     <string name="donate">捐贈</string>
     <string name="request_permission_text">是否允許<b>%1$s</b>使用Dhizuku?</string>
     <string name="home_shizuku_dsp">使用 Shizuku ，您無需透過計算機即可執行 ADB 指令。請&lt;a href=%1$s&gt;參閱說明文件&lt;/a&gt;。</string>
@@ -46,4 +45,13 @@
     <string name="denying_access">拒絕訪問…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">這是 Dhizuku 發送的通知，用於確保服務隨時可用。您可以長按此通知以將其隱藏。</string>
+    <string name="copy">複製</string>
+    <string name="confirm_device_owner">裝置擁有者</string>
+    <string name="confirm_profile_owner">設定檔擁有者</string>
+    <string name="profile_owner_warning_title">警告</string>
+    <string name="profile_owner_warning_dsp">此變更應僅由了解其影響的使用者進行。Dhizuku 的開發者無法對此模式變更所導致的任何非預期行為做出任何保證。</string>
+    <string name="donate_hide_action">隱藏</string>
+    <string name="donate_hide_confirm_title">隱藏捐贈按鈕</string>
+    <string name="donate_hide_confirm_dsp">此操作無法在應用程式內復原。您確定要永久隱藏捐贈按鈕嗎？</string>
+    <string name="home_status_owner_transferred">%1$s已轉移！！！</string>
 </resources>

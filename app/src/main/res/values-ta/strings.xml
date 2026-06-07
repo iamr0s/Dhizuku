@@ -15,7 +15,6 @@
     <string name="refuse">மறுக்கவும்</string>
     <string name="service_channel_name">பின்னணி பணி</string>
     <string name="service_running">திசுகு இயங்குகிறது</string>
-    <string name="copy">நகலெடு</string>
     <string name="cancel">ரத்துசெய்</string>
     <string name="retry">மீண்டும் முயற்சிக்கவும்</string>
     <string name="home_app_management_dsp">திசுகு கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
@@ -27,4 +26,32 @@
     <string name="finish">முடிக்க</string>
     <string name="donate">நன்கொடை</string>
     <string name="permission_description">Dhizku இன் API ஐப் பயன்படுத்தவும்</string>
+    <string name="agreement_title">கொள்கை</string>
+    <string name="agree_text">ஒப்புக்கொள்கிறேன்</string>
+    <string name="agreement_text">இது எங்கள் பயனர் கொள்கை. தயவுசெய்து அதைப் படித்து ஒப்புக்கொள்ளவும். &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;பயன்பாட்டு விதிமுறைகள்&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;தனியுரிமைக் கொள்கை&lt;/a&gt; நீங்கள் ஒப்புக்கொண்ட பிறகு இந்தச் செய்தி மீண்டும் காட்டப்படாது.</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="settings_desc">Dhizuku இன் செயல்பாட்டை உள்ளமைக்கவும்</string>
+    <string name="enable_dhizuku">Dhizuku ஐ இயக்கு</string>
+    <string name="enable_dhizuku_desc">Dhizuku சேவைகளைப் பயன்படுத்த பயன்பாடுகளை அனுமதிக்கவும்</string>
+    <string name="whitelist_mode">அனுமதிப் பட்டியல் முறை</string>
+    <string name="whitelist_mode_desc">முன்கூட்டியே அங்கீகரிக்கப்பட்ட பயன்பாடுகள் மட்டுமே Dhizuku ஐப் பயன்படுத்த அனுமதிக்கவும்</string>
+    <string name="block_app">பயன்பாட்டைத் தடு</string>
+    <string name="block_app_desc">Dhizuku அணுகலை முழுமையாக மறுக்கவும்</string>
+    <string name="auto_deny_in">தானாக மறுப்பதற்கான நேரம்</string>
+    <string name="auto_deny_in_seconds">%d வினாடிகளில் தானாக மறுக்கப்படும்</string>
+    <string name="app_blocked_notice">இந்த பயன்பாடு தடுக்கப்பட்டுள்ளது மற்றும் Dhizuku ஐ அணுக முடியாது</string>
+    <string name="allow_dhizuku_access">Dhizuku அணுகலை அனுமதிக்கவும்</string>
+    <string name="unblock_app">பயன்பாட்டின் தடையை நீக்கு</string>
+    <string name="denying_access">அணுகல் மறுக்கப்படுகிறது…</string>
+    <string name="daemon_service_notification_title">Dhizuku டீமன்</string>
+    <string name="daemon_service_notification_text">இது சேவை எப்போதும் கிடைக்கும் என்பதை உறுதிசெய்ய Dhizuku அனுப்பும் அறிவிப்பு. இந்த அறிவிப்பை மறைக்க அழுத்திப் பிடிக்கலாம்.</string>
+    <string name="copy">நகலெடு</string>
+    <string name="confirm_device_owner">சாதன உரிமையாளர்</string>
+    <string name="confirm_profile_owner">சுயவிவர உரிமையாளர்</string>
+    <string name="profile_owner_warning_title">எச்சரிக்கை</string>
+    <string name="profile_owner_warning_dsp">இது அதன் தாக்கங்களைப் புரிந்துகொண்ட பயனர்களால் மட்டுமே செய்யப்பட வேண்டிய மாற்றம். இந்த பயன்முறை மாற்றத்தால் ஏற்படும் எதிர்பாராத நடத்தைகள் குறித்து Dhizuku உருவாக்குநர்களால் எதையும் உறுதியளிக்க முடியாது.</string>
+    <string name="donate_hide_action">மறை</string>
+    <string name="donate_hide_confirm_title">நன்கொடை பொத்தானை மறை</string>
+    <string name="donate_hide_confirm_dsp">இந்தச் செயலை பயன்பாட்டிற்குள் இருந்து செயல்தவிர்க்க முடியாது. நன்கொடை பொத்தானை நிரந்தரமாக மறைக்க விரும்புகிறீர்களா?</string>
+    <string name="home_status_owner_transferred">%1$s மாற்றப்பட்டது!!!</string>
 </resources>

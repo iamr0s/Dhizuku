@@ -2,7 +2,6 @@
 <resources>
     <string name="home_deactivate_title">Devre dışı bırak</string>
     <string name="home_deactivate_dsp">Devre dışı bırakmak istediğinize emin misiniz?</string>
-    <string name="copy">Kopyala</string>
     <string name="donate">Bağış Yap</string>
     <string name="request_permission_text"><b>%1$s</b>\'ın Dhizuku\'ya erişmesine izin verilsin mi?</string>
     <string name="agree">İzin ver</string>
@@ -46,4 +45,13 @@
     <string name="settings_desc">Dhiuzuku davranışını yapılandır</string>
     <string name="daemon_service_notification_title">Dhizuku Servisi</string>
     <string name="daemon_service_notification_text">Bu, hizmetin her zaman kullanılabilir olmasını sağlayan bir Dhizuku bildirimidir. Bu bildirimi gizlemek için uzun basabilirsiniz.</string>
+    <string name="copy">Kopyala</string>
+    <string name="confirm_device_owner">Cihaz Sahibi</string>
+    <string name="confirm_profile_owner">Profil Sahibi</string>
+    <string name="profile_owner_warning_title">Uyarı</string>
+    <string name="profile_owner_warning_dsp">Bu, yalnızca sonuçlarını anlayan kullanıcılar tarafından yapılması gereken bir değişikliktir. Dhizuku geliştiricileri bu mod değişikliğinin neden olduğu beklenmedik davranışlar hakkında hiçbir garanti veremez.</string>
+    <string name="donate_hide_action">Gizle</string>
+    <string name="donate_hide_confirm_title">Bağış Düğmesini Gizle</string>
+    <string name="donate_hide_confirm_dsp">Bu işlem uygulama içinden geri alınamaz. Bağış düğmesini kalıcı olarak gizlemek istediğinizden emin misiniz?</string>
+    <string name="home_status_owner_transferred">%1$s aktarıldı!!!</string>
 </resources>

@@ -8,7 +8,6 @@
     <string name="request_permission_text">Разрешить <b>%1$s</b> доступ к Dhizuku?</string>
     <string name="agree">Разрешить</string>
     <string name="refuse">Отклонить</string>
-    <string name="copy">Копировать</string>
     <string name="donate">Пожертвования</string>
     <string name="service_running">Dhizuku запущен</string>
     <string name="service_channel_name">Фоновая служба</string>
@@ -46,4 +45,13 @@
     <string name="denying_access">Отклонение доступа…</string>
     <string name="daemon_service_notification_title">Демон Дхизуку</string>
     <string name="daemon_service_notification_text">Это уведомление Dhizuku, обеспечивающее доступность сервиса в любое время. Вы можете нажать и удерживать, чтобы скрыть это уведомление.</string>
+    <string name="copy">Копировать</string>
+    <string name="confirm_device_owner">Владелец устройства</string>
+    <string name="confirm_profile_owner">Владелец профиля</string>
+    <string name="profile_owner_warning_title">Предупреждение</string>
+    <string name="profile_owner_warning_dsp">Это изменение должны выполнять только пользователи, понимающие его последствия. Разработчики Dhizuku не могут гарантировать что-либо в отношении непредвиденного поведения, вызванного этим изменением режима.</string>
+    <string name="donate_hide_action">Скрыть</string>
+    <string name="donate_hide_confirm_title">Скрыть кнопку пожертвования</string>
+    <string name="donate_hide_confirm_dsp">Это действие нельзя отменить из приложения. Вы уверены, что хотите навсегда скрыть кнопку пожертвования?</string>
+    <string name="home_status_owner_transferred">%1$s передан!!!</string>
 </resources>

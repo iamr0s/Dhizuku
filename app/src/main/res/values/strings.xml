@@ -10,7 +10,8 @@
     <string name="cancel">Cancel</string>
     <string name="retry">Retry</string>
     <!-- Home - Status -->
-    <string name="home_status_owner_granted">You are Owner!!!</string>
+    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_transferred">%1$s has been transferred!!!</string>
     <string name="home_status_owner_denied">Waiting for activation</string>
     <!-- Home - Application Management -->
     <string name="home_app_management_title">Application Management</string>
@@ -24,7 +25,8 @@
     <!-- Home - Adb -->
     <string name="home_adb_title">Activation by ADB</string>
     <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
-    <string name="home_adb_btn_view_command">View command</string>
+    <string name="home_adb_btn_view_command">View commands</string>
+    <!-- Home - PvsD -->
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
     <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
@@ -32,8 +34,15 @@
     <string name="home_deactivate_title">Deactivate</string>
     <string name="home_deactivate_dsp">Are you sure you want to deactivate?</string>
     <string name="confirm">OK</string>
+    <string name="confirm_device_owner">Device Owner</string>
+    <string name="confirm_profile_owner">Profile Owner</string>
+    <string name="profile_owner_warning_title">Warning</string>
+    <string name="profile_owner_warning_dsp">This is a change that should only be made by users who understand its implications. The developers of Dhizuku cannot guarantee anything about unexpected behavior caused by this mode change.</string>
     <string name="finish">Finish</string>
     <string name="donate">Donate</string>
+    <string name="donate_hide_action">Hide</string>
+    <string name="donate_hide_confirm_title">Hide Donate Button</string>
+    <string name="donate_hide_confirm_dsp">This cannot be undone from within the app. Are you sure you want to permanently hide the donate button?</string>
     <string name="request_permission_text">Allow <b>%1$s</b> to access Dhizuku?</string>
     <string name="agree">Grant</string>
     <string name="refuse">Deny</string>

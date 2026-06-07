@@ -20,12 +20,12 @@ for (name in arrayOf("r0s.properties", "debug.properties")) {
 android {
     namespace = "com.rosan.dhizuku"
     compileSdk = 37
-    buildToolsVersion = "36.1.0"
+    buildToolsVersion = "37.0.0"
 
     defaultConfig {
         minSdk = 26
         targetSdk = compileSdk
-        ndkVersion = "28.2.13676358"
+        ndkVersion = "29.0.14206865"
 
         val versionProps: Properties = loadProperties("$rootDir/version.properties")
         versionCode = versionProps.getProperty("versionCode").toInt()
@@ -64,19 +64,9 @@ android {
         }
     }
 
-    java {
-        toolchain {
-            languageVersion.set(JavaLanguageVersion.of(21))
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
-    }
-
-    kotlin {
-        jvmToolchain(21)
     }
 
     buildFeatures {
@@ -98,10 +88,20 @@ android {
         includeInApk = false
         includeInBundle = false
     }
+}
 
-    ksp {
-        arg("room.schemaLocation", "$projectDir/schemas")
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
+}
+
+kotlin {
+    jvmToolchain(21)
+}
+
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
 }
 
 dependencies {

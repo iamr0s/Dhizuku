@@ -22,6 +22,9 @@ class SettingsRepoImpl : SettingsRepo, KoinComponent {
     override fun flowDhizukuEnabled(): Flow<Boolean> =
         prefs.asFlow("dhizuku_enabled", true)
 
+    override fun flowDonateButtonHidden(): Flow<Boolean> =
+        prefs.asFlow("donate_button_hidden", false)
+
     override var isWhitelistMode: Boolean
         get() = prefs.getBoolean("whitelist_mode", false)
         set(value) = prefs.edit(true) {
@@ -32,5 +35,11 @@ class SettingsRepoImpl : SettingsRepo, KoinComponent {
         get() = prefs.getBoolean("dhizuku_enabled", true)
         set(value) = prefs.edit(true) {
             putBoolean("dhizuku_enabled", value)
+        }
+
+    override var isDonateButtonHidden: Boolean
+        get() = prefs.getBoolean("donate_button_hidden", false)
+        set(value) = prefs.edit(true) {
+            putBoolean("donate_button_hidden", value)
         }
 }
