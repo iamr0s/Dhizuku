@@ -30,4 +30,28 @@
     <string name="agree_text">הסכמה</string>
     <string name="agreement_text">הנה המדיניות שלנו, אנא קראו אותה והסכימו לה. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Terms of Use&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Privacy Policy&lt;/a&gt; ההודעה הזו לא תופיע אחרי הסכמה.</string>
     <string name="settings">הגדרות</string>
+    <string name="settings_desc">הגדרת התנהגות Dhizuku</string>
+    <string name="enable_dhizuku">הפעלת Dhizuku</string>
+    <string name="enable_dhizuku_desc">לאפשר ליישומים להשתמש בשירותי Dhizuku</string>
+    <string name="whitelist_mode">מצב רשימה לבנה</string>
+    <string name="whitelist_mode_desc">לאפשר שימוש ב-Dhizuku רק ליישומים שאושרו מראש</string>
+    <string name="block_app">חסימת יישום</string>
+    <string name="block_app_desc">דחיית גישה ל-Dhizuku לחלוטין</string>
+    <string name="auto_deny_in">דחייה אוטומטית בעוד</string>
+    <string name="auto_deny_in_seconds">דחייה אוטומטית בעוד %d שניות</string>
+    <string name="app_blocked_notice">יישום זה חסום ואינו יכול לגשת ל-Dhizuku</string>
+    <string name="allow_dhizuku_access">לאפשר גישה ל-Dhizuku</string>
+    <string name="unblock_app">ביטול חסימת יישום</string>
+    <string name="denying_access">דוחה גישה…</string>
+    <string name="daemon_service_notification_title">שירות הרקע של Dhizuku</string>
+    <string name="daemon_service_notification_text">זוהי התראה של Dhizuku שמטרתה להבטיח את זמינות השירות בכל עת. ניתן ללחוץ לחיצה ארוכה כדי להסתיר התראה זו.</string>
+    <string name="copy">העתקה</string>
+    <string name="confirm_device_owner">בעלים של המכשיר</string>
+    <string name="confirm_profile_owner">בעלים של הפרופיל</string>
+    <string name="profile_owner_warning_title">אזהרה</string>
+    <string name="profile_owner_warning_dsp">זהו שינוי שצריך להתבצע רק על ידי משתמשים שמבינים את המשמעות שלו. מפתחי Dhizuku אינם יכולים להבטיח דבר לגבי התנהגות בלתי צפויה שנגרמת משינוי מצב זה.</string>
+    <string name="donate_hide_action">הסתרה</string>
+    <string name="donate_hide_confirm_title">הסתרת כפתור התרומה</string>
+    <string name="donate_hide_confirm_dsp">לא ניתן לבטל פעולה זו מתוך היישום. האם אתם בטוחים שברצונכם להסתיר לצמיתות את כפתור התרומה?</string>
+    <string name="home_status_owner_transferred">%1$s הועבר!!!</string>
 </resources>

@@ -29,4 +29,29 @@
     <string name="service_running">Dhizuku đang chạy</string>
     <string name="home_dhizuku_title">Kích hoạt bởi Dhizuku</string>
     <string name="home_shizuku_dsp">Với Shizuku, bạn có thể chạy các tập lệnh ADB mà không cần một chiếc máy tính. Hãy &lt;a href=%1$s&gt;đọc trợ giúp&lt;/a&gt;.</string>
+    <string name="settings">Cài đặt</string>
+    <string name="settings_desc">Cấu hình hành vi của Dhizuku</string>
+    <string name="enable_dhizuku">Bật Dhizuku</string>
+    <string name="enable_dhizuku_desc">Cho phép ứng dụng sử dụng các dịch vụ của Dhizuku</string>
+    <string name="whitelist_mode">Chế độ danh sách trắng</string>
+    <string name="whitelist_mode_desc">Chỉ cho phép các ứng dụng đã được phê duyệt trước sử dụng Dhizuku</string>
+    <string name="block_app">Chặn ứng dụng</string>
+    <string name="block_app_desc">Từ chối hoàn toàn quyền truy cập vào Dhizuku</string>
+    <string name="auto_deny_in">Tự động từ chối sau</string>
+    <string name="auto_deny_in_seconds">Tự động từ chối sau %d giây</string>
+    <string name="app_blocked_notice">Ứng dụng này đã bị chặn và không thể truy cập Dhizuku</string>
+    <string name="allow_dhizuku_access">Cho phép truy cập Dhizuku</string>
+    <string name="unblock_app">Bỏ chặn ứng dụng</string>
+    <string name="denying_access">Đang từ chối quyền truy cập…</string>
+    <string name="daemon_service_notification_title">Trình nền Dhizuku</string>
+    <string name="daemon_service_notification_text">Đây là thông báo của Dhizuku nhằm đảm bảo dịch vụ luôn sẵn sàng. Bạn có thể nhấn giữ để ẩn thông báo này.</string>
+    <string name="copy">Sao chép</string>
+    <string name="confirm_device_owner">Chủ sở hữu thiết bị</string>
+    <string name="confirm_profile_owner">Chủ sở hữu hồ sơ</string>
+    <string name="profile_owner_warning_title">Cảnh báo</string>
+    <string name="profile_owner_warning_dsp">Đây là thay đổi chỉ nên được thực hiện bởi những người dùng hiểu rõ tác động của nó. Các nhà phát triển Dhizuku không thể đảm bảo bất cứ điều gì về các hành vi không mong muốn do thay đổi chế độ này gây ra.</string>
+    <string name="donate_hide_action">Ẩn</string>
+    <string name="donate_hide_confirm_title">Ẩn nút ủng hộ</string>
+    <string name="donate_hide_confirm_dsp">Hành động này không thể hoàn tác trong ứng dụng. Bạn có chắc chắn muốn ẩn vĩnh viễn nút ủng hộ không?</string>
+    <string name="home_status_owner_transferred">%1$s đã được chuyển giao!!!</string>
 </resources>

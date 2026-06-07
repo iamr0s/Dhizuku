@@ -43,4 +43,15 @@
     <string name="whitelist_mode_desc">Solo permitir el uso de Dhizuku a aplicaciones preaprobadas</string>
     <string name="auto_deny_in">Auto denegar en</string>
     <string name="agreement_text">Esta es nuestra política de usuarios. Léala y acéptela. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Condiciones de uso&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Política de privacidad&lt;/a&gt;. Este mensaje no volverá a aparecer una vez la hayas aceptado.</string>
+    <string name="daemon_service_notification_title">Daemon de Dhizuku</string>
+    <string name="daemon_service_notification_text">Esta es una notificación de Dhizuku para garantizar la disponibilidad del servicio en todo momento. Puedes mantener pulsado para ocultar esta notificación.</string>
+    <string name="copy">Copiar</string>
+    <string name="confirm_device_owner">Propietario del dispositivo</string>
+    <string name="confirm_profile_owner">Propietario del perfil</string>
+    <string name="profile_owner_warning_title">Advertencia</string>
+    <string name="profile_owner_warning_dsp">Este es un cambio que solo deben realizar usuarios que comprendan sus implicaciones. Los desarrolladores de Dhizuku no pueden garantizar nada sobre comportamientos inesperados causados por este cambio de modo.</string>
+    <string name="donate_hide_action">Ocultar</string>
+    <string name="donate_hide_confirm_title">Ocultar botón de donación</string>
+    <string name="donate_hide_confirm_dsp">Esto no se puede deshacer desde la aplicación. ¿Seguro que quieres ocultar permanentemente el botón de donación?</string>
+    <string name="home_status_owner_transferred">¡%1$s ha sido transferido!</string>
 </resources>

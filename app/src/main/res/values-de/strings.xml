@@ -43,4 +43,15 @@
     <string name="unblock_app">Entsperre App</string>
     <string name="auto_deny_in_seconds">Automatische Ablehnung in %d Sekunden</string>
     <string name="denying_access">Zugang verweigert…</string>
+    <string name="daemon_service_notification_title">Dhizuku-Daemon</string>
+    <string name="daemon_service_notification_text">Dies ist eine Dhizuku-Benachrichtigung, um die Verfügbarkeit des Dienstes jederzeit sicherzustellen. Sie können lange drücken, um diese Benachrichtigung auszublenden.</string>
+    <string name="copy">Kopieren</string>
+    <string name="confirm_device_owner">Geräteinhaber</string>
+    <string name="confirm_profile_owner">Profilinhaber</string>
+    <string name="profile_owner_warning_title">Warnung</string>
+    <string name="profile_owner_warning_dsp">Dies ist eine Änderung, die nur von Nutzern vorgenommen werden sollte, die deren Auswirkungen verstehen. Die Entwickler von Dhizuku können keine Garantie für unerwartetes Verhalten übernehmen, das durch diesen Moduswechsel verursacht wird.</string>
+    <string name="donate_hide_action">Ausblenden</string>
+    <string name="donate_hide_confirm_title">Spenden-Schaltfläche ausblenden</string>
+    <string name="donate_hide_confirm_dsp">Dies kann innerhalb der App nicht rückgängig gemacht werden. Möchten Sie die Spenden-Schaltfläche wirklich dauerhaft ausblenden?</string>
+    <string name="home_status_owner_transferred">%1$s wurde übertragen!!!</string>
 </resources>

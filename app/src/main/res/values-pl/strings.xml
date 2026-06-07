@@ -40,4 +40,18 @@
     <string name="app_blocked_notice">Ta aplikacja jest zablokowana i nie ma dostępu do Dhizuku</string>
     <string name="unblock_app">Odblokuj aplikacje</string>
     <string name="auto_deny_in_seconds">Auto-zablokowanie w %d sekund</string>
+    <string name="denying_access">Odmawianie dostępu…</string>
+    <string name="allow_dhizuku_access">Zezwól na dostęp do Dhizuku</string>
+    <string name="whitelist_mode_desc">Zezwalaj na korzystanie z Dhizuku tylko zatwierdzonym wcześniej aplikacjom</string>
+    <string name="daemon_service_notification_title">Demon Dhizuku</string>
+    <string name="daemon_service_notification_text">To jest powiadomienie Dhizuku zapewniające dostępność usługi w każdej chwili. Możesz przytrzymać, aby ukryć to powiadomienie.</string>
+    <string name="copy">Kopiuj</string>
+    <string name="confirm_device_owner">Właściciel urządzenia</string>
+    <string name="confirm_profile_owner">Właściciel profilu</string>
+    <string name="profile_owner_warning_title">Ostrzeżenie</string>
+    <string name="profile_owner_warning_dsp">Jest to zmiana, której powinni dokonywać tylko użytkownicy rozumiejący jej konsekwencje. Twórcy Dhizuku nie mogą zagwarantować niczego w kwestii nieoczekiwanego zachowania spowodowanego tą zmianą trybu.</string>
+    <string name="donate_hide_action">Ukryj</string>
+    <string name="donate_hide_confirm_title">Ukryj przycisk darowizny</string>
+    <string name="donate_hide_confirm_dsp">Tej czynności nie można cofnąć w aplikacji. Czy na pewno chcesz na stałe ukryć przycisk darowizny?</string>
+    <string name="home_status_owner_transferred">%1$s został przeniesiony!!!</string>
 </resources>

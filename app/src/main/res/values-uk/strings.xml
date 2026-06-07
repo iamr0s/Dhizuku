@@ -45,4 +45,13 @@
     <string name="denying_access">Відмова в доступі…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">Це сповіщення Dhizuku для забезпечення доступності послуги в будь-який час. Ви можете довго натискати, щоб приховати це сповіщення.</string>
+    <string name="copy">Копіювати</string>
+    <string name="confirm_device_owner">Власник пристрою</string>
+    <string name="confirm_profile_owner">Власник профілю</string>
+    <string name="profile_owner_warning_title">Попередження</string>
+    <string name="profile_owner_warning_dsp">Це зміна, яку повинні робити лише користувачі, які розуміють її наслідки. Розробники Dhizuku не можуть нічого гарантувати щодо несподіваної поведінки, спричиненої зміною цього режиму.</string>
+    <string name="donate_hide_action">Сховати</string>
+    <string name="donate_hide_confirm_title">Сховати кнопку пожертви</string>
+    <string name="donate_hide_confirm_dsp">Цю дію неможливо скасувати в додатку. Ви впевнені, що хочете назавжди сховати кнопку пожертви?</string>
+    <string name="home_status_owner_transferred">%1$s передано!!!</string>
 </resources>

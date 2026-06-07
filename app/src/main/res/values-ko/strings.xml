@@ -30,4 +30,28 @@
     <string name="agreement_text">다음은 사용자 정책입니다. 읽고 동의해 주세요. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;이용 약관&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;개인정보처리방침&lt;/a&gt; 동의하시면 이 메시지가 다시 표시되지 않습니다.</string>
     <string name="agree_text">동의하다</string>
     <string name="settings">설정</string>
+    <string name="settings_desc">Dhizuku의 동작을 설정합니다</string>
+    <string name="enable_dhizuku">Dhizuku 활성화</string>
+    <string name="enable_dhizuku_desc">앱이 Dhizuku 서비스를 사용하도록 허용합니다</string>
+    <string name="whitelist_mode">화이트리스트 모드</string>
+    <string name="whitelist_mode_desc">사전에 승인된 앱만 Dhizuku를 사용하도록 허용합니다</string>
+    <string name="block_app">앱 차단</string>
+    <string name="block_app_desc">Dhizuku에 대한 접근을 완전히 거부합니다</string>
+    <string name="auto_deny_in">자동 거부까지 남은 시간</string>
+    <string name="auto_deny_in_seconds">%d초 후 자동으로 거부됩니다</string>
+    <string name="app_blocked_notice">이 앱은 차단되어 있어 Dhizuku에 접근할 수 없습니다</string>
+    <string name="allow_dhizuku_access">Dhizuku 접근 허용</string>
+    <string name="unblock_app">앱 차단 해제</string>
+    <string name="denying_access">접근을 거부하는 중…</string>
+    <string name="daemon_service_notification_title">Dhizuku 데몬</string>
+    <string name="daemon_service_notification_text">이 알림은 서비스가 항상 사용 가능하도록 보장하기 위한 Dhizuku의 알림입니다. 길게 눌러 이 알림을 숨길 수 있습니다.</string>
+    <string name="copy">복사</string>
+    <string name="confirm_device_owner">기기 소유자</string>
+    <string name="confirm_profile_owner">프로필 소유자</string>
+    <string name="profile_owner_warning_title">경고</string>
+    <string name="profile_owner_warning_dsp">이 변경은 그 영향을 이해하는 사용자만 수행해야 합니다. Dhizuku 개발자는 이 모드 변경으로 인해 발생하는 예기치 않은 동작에 대해 어떠한 보장도 할 수 없습니다.</string>
+    <string name="donate_hide_action">숨기기</string>
+    <string name="donate_hide_confirm_title">후원 버튼 숨기기</string>
+    <string name="donate_hide_confirm_dsp">앱 내에서는 이 작업을 되돌릴 수 없습니다. 후원 버튼을 영구적으로 숨기시겠습니까?</string>
+    <string name="home_status_owner_transferred">%1$s(이)가 이전되었습니다!!!</string>
 </resources>

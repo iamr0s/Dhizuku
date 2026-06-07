@@ -45,4 +45,13 @@
     <string name="denying_access">Negar acesso…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">Esta é uma notificação do Dhizuku para garantir a disponibilidade do serviço a qualquer momento. Você pode pressionar e segurar para ocultar esta notificação.</string>
+    <string name="copy">Copiar</string>
+    <string name="confirm_device_owner">Proprietário do Dispositivo</string>
+    <string name="confirm_profile_owner">Proprietário do Perfil</string>
+    <string name="profile_owner_warning_title">Aviso</string>
+    <string name="profile_owner_warning_dsp">Esta é uma alteração que só deve ser feita por usuários que entendem suas implicações. Os desenvolvedores do Dhizuku não podem garantir nada sobre comportamentos inesperados causados por essa mudança de modo.</string>
+    <string name="donate_hide_action">Ocultar</string>
+    <string name="donate_hide_confirm_title">Ocultar Botão de Doação</string>
+    <string name="donate_hide_confirm_dsp">Isso não pode ser desfeito dentro do aplicativo. Tem certeza de que deseja ocultar permanentemente o botão de doação?</string>
+    <string name="home_status_owner_transferred">%1$s foi transferido!!!</string>
 </resources>

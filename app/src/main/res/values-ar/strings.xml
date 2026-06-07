@@ -45,4 +45,13 @@
     <string name="denying_access">منع الوصول …</string>
     <string name="daemon_service_notification_text">هذا إشعار من Dhizuku لضمان توفر الخدمة في أي وقت. يمكنك الضغط مطولاً لإخفاء هذا الإشعار.</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="copy">نسخ</string>
+    <string name="confirm_device_owner">مالك الجهاز</string>
+    <string name="confirm_profile_owner">مالك الملف الشخصي</string>
+    <string name="profile_owner_warning_title">تحذير</string>
+    <string name="profile_owner_warning_dsp">هذا تغيير يجب أن يقوم به فقط المستخدمون الذين يفهمون آثاره. لا يمكن لمطوري Dhizuku ضمان أي شيء بشأن السلوك غير المتوقع الناجم عن تغيير هذا الوضع.</string>
+    <string name="donate_hide_action">إخفاء</string>
+    <string name="donate_hide_confirm_title">إخفاء زر التبرع</string>
+    <string name="donate_hide_confirm_dsp">لا يمكن التراجع عن هذا من داخل التطبيق. هل أنت متأكد أنك تريد إخفاء زر التبرع نهائيًا؟</string>
+    <string name="home_status_owner_transferred">تم نقل %1$s!!!</string>
 </resources>

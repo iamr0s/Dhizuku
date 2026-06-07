@@ -29,4 +29,29 @@
     <string name="home_dhizuku_dsp">اگر پیاده‌سازی‌های دیگری از Dhizuku نصب کرده‌اید، می‌توانید به دلخواه بین آن‌ها جابه‌جا شوید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
     <string name="home_adb_dsp">از طریق اتصال ADB (Android Debug Bridge)، می‌توانید برخی دستورات با دسترسی ویژه را اجرا کنید. لطفاً &lt;a href=%1$s&gt;راهنما را بخوانید&lt;/a&gt;.</string>
     <string name="home_shutdown_dsp">سیستم نمی‌تواند Dhizuku را خاموش کند، مگر اینکه Dhizuku به‌صورت داوطلبانه این کار را انجام دهد.</string>
+    <string name="settings">تنظیمات</string>
+    <string name="settings_desc">پیکربندی رفتار Dhizuku</string>
+    <string name="enable_dhizuku">فعال‌سازی Dhizuku</string>
+    <string name="enable_dhizuku_desc">به برنامه‌ها اجازه دهید از خدمات Dhizuku استفاده کنند</string>
+    <string name="whitelist_mode">حالت لیست سفید</string>
+    <string name="whitelist_mode_desc">فقط به برنامه‌های از پیش تأییدشده اجازه استفاده از Dhizuku را بدهید</string>
+    <string name="block_app">مسدود کردن برنامه</string>
+    <string name="block_app_desc">دسترسی به Dhizuku را به‌طور کامل رد کنید</string>
+    <string name="auto_deny_in">رد خودکار در</string>
+    <string name="auto_deny_in_seconds">رد خودکار در %d ثانیه</string>
+    <string name="app_blocked_notice">این برنامه مسدود شده است و نمی‌تواند به Dhizuku دسترسی داشته باشد</string>
+    <string name="allow_dhizuku_access">اجازه دسترسی به Dhizuku</string>
+    <string name="unblock_app">رفع مسدودیت برنامه</string>
+    <string name="denying_access">در حال رد دسترسی…</string>
+    <string name="daemon_service_notification_title">سرویس دیمون Dhizuku</string>
+    <string name="daemon_service_notification_text">این یک اعلان از Dhizuku است تا اطمینان حاصل شود که این سرویس همیشه در دسترس است. می‌توانید با لمس طولانی این اعلان را پنهان کنید.</string>
+    <string name="copy">کپی</string>
+    <string name="confirm_device_owner">مالک دستگاه</string>
+    <string name="confirm_profile_owner">مالک نمایه</string>
+    <string name="profile_owner_warning_title">هشدار</string>
+    <string name="profile_owner_warning_dsp">این تغییری است که فقط باید توسط کاربرانی که پیامدهای آن را درک می‌کنند انجام شود. توسعه‌دهندگان Dhizuku نمی‌توانند درباره رفتارهای غیرمنتظره ناشی از این تغییر حالت تضمینی ارائه دهند.</string>
+    <string name="donate_hide_action">پنهان کردن</string>
+    <string name="donate_hide_confirm_title">پنهان کردن دکمه حمایت</string>
+    <string name="donate_hide_confirm_dsp">این کار از داخل برنامه قابل بازگشت نیست. آیا مطمئن هستید که می‌خواهید دکمه حمایت را برای همیشه پنهان کنید؟</string>
+    <string name="home_status_owner_transferred">%1$s منتقل شد!!!</string>
 </resources>
