@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Ukryj przycisk darowizny</string>
     <string name="donate_hide_confirm_dsp">Tej czynności nie można cofnąć w aplikacji. Czy na pewno chcesz na stałe ukryć przycisk darowizny?</string>
     <string name="home_status_owner_transferred">%1$s został przeniesiony!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
