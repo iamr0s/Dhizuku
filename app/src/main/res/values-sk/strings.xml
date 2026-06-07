@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Skryť tlačidlo daru</string>
     <string name="donate_hide_confirm_dsp">Toto sa v aplikácii nedá vrátiť späť. Naozaj chcete tlačidlo daru natrvalo skryť?</string>
     <string name="home_status_owner_transferred">%1$s bolo prenesené!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
