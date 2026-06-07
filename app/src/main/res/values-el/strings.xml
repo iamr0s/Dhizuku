@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Απόκρυψη Κουμπιού Δωρεάς</string>
     <string name="donate_hide_confirm_dsp">Αυτό δεν μπορεί να αναιρεθεί μέσα από την εφαρμογή. Είστε βέβαιοι ότι θέλετε να αποκρύψετε μόνιμα το κουμπί δωρεάς;</string>
     <string name="home_status_owner_transferred">Το %1$s μεταφέρθηκε!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
