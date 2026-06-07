@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Ocultar botão de doação</string>
     <string name="donate_hide_confirm_dsp">Esta ação não pode ser desfeita dentro do aplicativo. Tem certeza de que deseja ocultar permanentemente o botão de doação?</string>
     <string name="home_status_owner_transferred">%1$s foi transferido!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
