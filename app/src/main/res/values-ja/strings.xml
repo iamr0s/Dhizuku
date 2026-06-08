@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="agreement_title">使用許諾</string>
-    <string name="agreement_text">このアプリを利用するには、&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;利用規約&lt;/a&gt;と&lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;個人情報保護方針&lt;/a&gt;に同意する必要があります。一度同意すると、この画面は以後表示されません。</string>
+    <string name="agreement_text">このアプリを利用するには、&lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;利用規約&lt;/a&gt;と&lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;個人情報保護方針&lt;/a&gt;に同意する必要があります。一度同意すると、この画面は以後表示されません。</string>
     <string name="agree_text">同意</string>
     <string name="service_running">Dhizuku は動作中です</string>
     <string name="service_channel_name">バックグラウンド サービス</string>
@@ -34,9 +34,9 @@
     <string name="home_status_owner_granted">%1$sです！</string>
     <string name="home_status_owner_transferred">%1$sを譲渡しました！</string>
     <string name="home_app_management_title">アプリの管理</string>
-    <string name="home_dhizuku_dsp">他の Dhizuku 統合アプリがインストールされている場合、それらを自由に切り替えることができます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
-    <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
-    <string name="home_adb_dsp">ADB (Android Debug Bridge) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは&lt;a href=%1$s&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
+    <string name="home_dhizuku_dsp">他の Dhizuku 統合アプリがインストールされている場合、それらを自由に切り替えることができます。詳しくは&lt;a href=\"%1$s\"&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
+    <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは&lt;a href=\"%1$s\"&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
+    <string name="home_adb_dsp">ADB (Android Debug Bridge) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは&lt;a href=\"%1$s\"&gt;ヘルプ&lt;/a&gt;をお読みください。</string>
     <string name="permission_description">Dhizuku の API を使用します</string>
     <string name="settings">設定</string>
     <string name="settings_desc">Dhizuku の動作環境の設定を行います。</string>
