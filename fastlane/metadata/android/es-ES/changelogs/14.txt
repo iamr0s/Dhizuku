@@ -1,0 +1,8 @@
+- Declarar la autoridad del propio Dhizuku
+- Compatibilidad con EMM
+- Mejorar el comportamiento al convertirse en propietario del dispositivo
+- Corregir el servicio para que se ejecute en primer plano
+- Los propietarios de perfil también pueden borrar
+- Compatibilidad con icono monocromático
+- Actualizar la traducción
+- Activar LocaleConfig

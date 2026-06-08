@@ -1,0 +1,3 @@
+- Correzione del widget della scheda di Shizuku
+- Aggiunta modalità whitelist
+- Aggiunta funzione per cambiare lo stato di Dhizuku

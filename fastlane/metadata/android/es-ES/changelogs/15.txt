@@ -1,0 +1,3 @@
+- Añadir "Términos de uso" y "Política de privacidad"
+- Añadir diálogo de aceptación
+- Actualizar la traducción

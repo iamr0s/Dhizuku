@@ -32,7 +32,7 @@ detailed guide.
 
 ## Supported Versions
 
-Android 8.0 ~ 16
+Android 8.0 ~ 17
 
 ## For Developers
 

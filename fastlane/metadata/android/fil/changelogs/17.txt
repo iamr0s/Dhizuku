@@ -1,0 +1,3 @@
+- Ayusin ang widget ng card ng Shizuku
+- Magdagdag ng whitelist mode
+- Magdagdag ng feature para sa pagpapalit ng status ng Dhizuku

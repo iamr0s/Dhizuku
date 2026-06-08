@@ -1,0 +1,6 @@
+- Suportahan ang Android 16
+- Suportahan ang EdgeToEdge
+- I-update ang link ng donasyon
+- Ayusin ang widget ng card ng Shizuku
+- Magdagdag ng wika: Persian, Filipino, Vietnamese
+- I-update ang mga pagsasalin

@@ -1,0 +1,6 @@
+- Wsparcie dla Android 16
+- Wsparcie dla EdgeToEdge
+- Aktualizacja linku do wsparcia
+- Naprawa widżetu karty Shizuku
+- Dodano języki: perski, filipiński, wietnamski
+- Aktualizacja tłumaczeń
