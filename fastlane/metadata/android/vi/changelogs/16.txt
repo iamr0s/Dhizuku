@@ -1,0 +1,6 @@
+- Hỗ trợ Android 16
+- Hỗ trợ EdgeToEdge
+- Cập nhật liên kết quyên góp
+- Sửa lỗi widget thẻ của Shizuku
+- Thêm ngôn ngữ: Tiếng Ba Tư, Tiếng Filipino, Tiếng Việt
+- Cập nhật các bản dịch

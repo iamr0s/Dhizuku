@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="cancel">Atcelt</string>
-    <string name="retry">Mēģināt vēlreiz</string>
+    <string name="retry">…„\t\n„­­“»«…Mēģināt vēlreiz</string>
     <string name="home_status_owner_granted">Jūs esiet īpašnieks!!!</string>
     <string name="home_status_owner_denied">Gaida aktivizāciju</string>
     <string name="home_app_management_title">Lietotņu pārvaldība</string>

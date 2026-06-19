@@ -1,0 +1,6 @@
+- Supporto Android 16
+- Supporto EdgeToEdge
+- Aggiornamento del link per le donazioni
+- Correzione del widget della scheda di Shizuku
+- Aggiunta lingue: persiano, filippino, vietnamita
+- Aggiornamento delle traduzioni

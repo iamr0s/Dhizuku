@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="agreement_title">Политика</string>
-    <string name="agreement_text">Това е нашата потребителска политика. Моля, прочетете и се съгласете с нея.\n<a href="https://iamr0s.github.io/Dhizuku/TERMS.html">Условия за ползване</a>,\n<a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html">Политика за поверителност</a>\nТова съобщение няма да се показва отново след като се съгласите.</string>
+    <string name="agreement_text">Това е нашата потребителска политика. Моля, прочетете и се съгласете с нея.\n&lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Условия за ползване&lt;/a&gt;,\n&lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Политика за поверителност&lt;/a&gt;\nТова съобщение няма да се показва отново след като се съгласите.</string>
     <string name="agree_text">Приеми</string>
     <string name="permission_description">Използване на API на Dhizuku</string>
     <string name="cancel">Отказ</string>
@@ -13,11 +13,11 @@
     <string name="home_app_management_title">Управление на приложения</string>
     <string name="home_app_management_dsp">Тук ще се показват приложенията, които са поискали или декларирали Dhizuku.</string>
     <string name="home_dhizuku_title">Активиране чрез Dhizuku</string>
-    <string name="home_dhizuku_dsp">Ако имате инсталирани други реализации на Dhizuku, можете да превключвате между тях по желание. Моля &lt;a href="%1$s"&gt;прочетете помощта&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">Ако имате инсталирани други реализации на Dhizuku, можете да превключвате между тях по желание. Моля &lt;a href=%1$s&gt;прочетете помощта&lt;/a&gt;.</string>
     <string name="home_shizuku_title">Активиране чрез Shizuku</string>
-    <string name="home_shizuku_dsp">С Shizuku имате възможност да изпълнявате ADB команди без нужда от компютър. Моля &lt;a href="%1$s"&gt;прочетете помощта&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">С Shizuku имате възможност да изпълнявате ADB команди без нужда от компютър. Моля &lt;a href=%1$s&gt;прочетете помощта&lt;/a&gt;.</string>
     <string name="home_adb_title">Активиране чрез ADB</string>
-    <string name="home_adb_dsp">Чрез връзка с ADB (Android Debug Bridge) можете да изпълнявате някои привилегировани команди. Моля &lt;a href="%1$s"&gt;прочетете помощта&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Чрез връзка с ADB (Android Debug Bridge) можете да изпълнявате някои привилегировани команди. Моля &lt;a href=%1$s&gt;прочетете помощта&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Преглед на командата</string>
     <string name="home_shutdown_title">Изключване</string>
     <string name="home_shutdown_dsp">Системата няма да може да изключи Dhizuku, освен ако Dhizuku не направи това доброволно.</string>

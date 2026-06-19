@@ -19,7 +19,7 @@ English | [简体中文](README_zh_rCN.md) | [繁体中文](README_zh_Hant.md) |
 
 A tool for sharing DeviceOwner permissions with other applications.
 
-## Activation Tutotial
+## Activation Tutorial
 
 For instructions on how to activate DeviceOwner for Dhizuku, head over to the
 [Github Discussions](https://github.com/iamr0s/Dhizuku/discussions/19) page to see a
@@ -32,7 +32,7 @@ detailed guide.
 
 ## Supported Versions
 
-Android 8.0 ~ 16
+Android 8.0 ~ 17
 
 ## For Developers
 

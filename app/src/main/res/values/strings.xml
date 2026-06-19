@@ -25,7 +25,7 @@
     <!-- Home - Adb -->
     <string name="home_adb_title">Activation by ADB</string>
     <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
-    <string name="home_adb_btn_view_command">View commands</string>
+    <string name="home_adb_btn_view_command">View command</string>
     <!-- Home - PvsD -->
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
