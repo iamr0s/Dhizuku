@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home_status_owner_granted">நீங்கள் உரிமையாளர் !!!</string>
+    <string name="home_status_owner_granted">நீங்கள் %1$s!!!</string>
     <string name="home_status_owner_denied">செயல்படுத்தலுக்காக காத்திருக்கிறது</string>
     <string name="home_app_management_title">பயன்பாட்டு மேலாண்மை</string>
     <string name="home_dhizuku_title">திசுகுவால் செயல்படுத்தல்</string>
@@ -10,7 +10,7 @@
     <string name="home_adb_btn_view_command">கட்டளையைக் காண்க</string>
     <string name="home_shutdown_title">பணிநிறுத்தம்</string>
     <string name="home_shutdown_dsp">திசுகு தானாக முன்வந்து அவ்வாறு செய்யாவிட்டால் இந்த அமைப்பு திசுகுவை மூட முடியாது.</string>
-    <string name="request_permission_text"><b>%1$s</b> இன் திசுகு அனுமதி கோரிக்கையை ஏற்கவா?</string>
+    <string name="request_permission_text">Allow <b>%1$s</b> பெறுநர் access Dhizuku?</string>
     <string name="agree">மானியம்</string>
     <string name="refuse">மறுக்கவும்</string>
     <string name="service_channel_name">பின்னணி பணி</string>
@@ -49,9 +49,9 @@
     <string name="confirm_device_owner">சாதன உரிமையாளர்</string>
     <string name="confirm_profile_owner">சுயவிவர உரிமையாளர்</string>
     <string name="profile_owner_warning_title">எச்சரிக்கை</string>
-    <string name="profile_owner_warning_dsp">இது அதன் தாக்கங்களைப் புரிந்துகொண்ட பயனர்களால் மட்டுமே செய்யப்பட வேண்டிய மாற்றம். இந்த பயன்முறை மாற்றத்தால் ஏற்படும் எதிர்பாராத நடத்தைகள் குறித்து Dhizuku உருவாக்குநர்களால் எதையும் உறுதியளிக்க முடியாது.</string>
+    <string name="profile_owner_warning_dsp">இது, அதன் தாக்கங்களை புரிந்து கொள்ளும் பயனர்களால் மட்டுமே செய்யப்பட வேண்டிய மாற்றமாகும். இந்த பயன்முறை மாற்றத்தால் ஏற்படும் எதிர்பாராத நடத்தை குறித்து திசுகுவின் உருவாக்குபவர்கள் எதற்கும் பொறுப்பு அளிக்க முடியாது.</string>
     <string name="donate_hide_action">மறை</string>
-    <string name="donate_hide_confirm_title">நன்கொடை பொத்தானை மறை</string>
-    <string name="donate_hide_confirm_dsp">இந்தச் செயலை பயன்பாட்டிற்குள் இருந்து செயல்தவிர்க்க முடியாது. நன்கொடை பொத்தானை நிரந்தரமாக மறைக்க விரும்புகிறீர்களா?</string>
+    <string name="donate_hide_confirm_title">நன்கொடை பட்டனை மறை</string>
+    <string name="donate_hide_confirm_dsp">பயன்பாட்டிற்குள் இருந்து இதைச் செயல்தவிர்க்க முடியாது. அரே you sure you want பெறுநர் permanently மறை the நன்கொடை button?</string>
     <string name="home_status_owner_transferred">%1$s மாற்றப்பட்டது!!!</string>
 </resources>
