@@ -1,0 +1,2 @@
+- Adicionado recurso para oferecer suporte ao uso pelo proprietário do perfil.
+- Otimizada a API do Dhizuku
