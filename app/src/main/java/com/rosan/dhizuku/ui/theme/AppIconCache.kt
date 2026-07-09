@@ -78,4 +78,27 @@ object AppIconCache : KoinComponent {
 
         return state
     }
+
+    @Composable
+    fun rememberImageBitmapState(packageName: String, drawable: android.graphics.drawable.Drawable): MutableState<ImageBitmap> {
+        val key = packageName
+        val state = remember(key) { mutableStateOf(defaultImageBitMap) }
+
+        LaunchedEffect(key) {
+            val bitmap = withContext(Dispatchers.IO) {
+                lruCache[key] ?: try {
+                    drawable.toBitmap()
+                } catch (e: Exception) {
+                    null
+                }?.also {
+                    lruCache.put(key, it)
+                }
+            }
+            bitmap?.let {
+                state.value = it.asImageBitmap()
+            }
+        }
+
+        return state
+    }
 }
