@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_shutdown_dsp">Система не зможе вимкнути Dhizuku, якщо Dhizuku не зробить цього добровільно.</string>
-    <string name="home_shizuku_dsp">За допомогою Shizuku ви можете виконувати команди ADB без використання комп’ютера. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">За допомогою Shizuku ви можете виконувати команди ADB без використання комп’ютера. Будь ласка &lt;a href=\"%1$s\"&gt;прочитайте довідку&lt;/a&gt;.</string>
     <string name="permission_description">Використовуйте API Dhizuku</string>
     <string name="cancel">Скасувати</string>
     <string name="retry">Повторити спробу</string>
-    <string name="home_status_owner_granted">Ви Власник!!!</string>
+    <string name="home_status_owner_granted">Ви є %1$s!!!</string>
     <string name="home_status_owner_denied">Очікування активації</string>
     <string name="home_app_management_title">Управління додатками</string>
     <string name="home_app_management_dsp">Тут відображатимуться програми, які запросили або оголосили Dhizuku.</string>
     <string name="home_dhizuku_title">Активація за допомогою Дхізуку</string>
-    <string name="home_dhizuku_dsp">Якщо у вас встановлено інші реалізації Dhizuku, ви можете перемикатися між ними за бажанням. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">Якщо у вас встановлені інші реалізації Dhizuku, ви можете переключатися між ними за власним бажанням. Будь ласка &lt;a href=\"%1$s\"&gt;прочитайте довідку&lt;/a&gt;.</string>
     <string name="home_shizuku_title">Активація Shizuku</string>
     <string name="home_adb_title">Активація через ADB</string>
-    <string name="home_adb_dsp">Через з’єднання ADB (Android Debug Bridge) ви можете виконувати деякі привілейовані команди. Будь ласка, &lt;a href=%1$s&gt;ознайомтеся з довідкою&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Через ADB (Android Debug Bridge) підключення, ви можете виконувати деякі привілейовані команди. Будь ласка &lt;a href=\"%1$s\"&gt;прочитайте довідку&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Команда «Переглянути»</string>
     <string name="home_shutdown_title">Вимкнення</string>
     <string name="home_deactivate_title">Деактивувати</string>
@@ -28,7 +28,7 @@
     <string name="service_running">Dhizuku працює</string>
     <string name="agreement_title">Політика</string>
     <string name="agree_text">Згоден</string>
-    <string name="agreement_text">Ось наша політика користувача, будь ласка, прочитайте і прийміть її. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Умови використання&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Політика конфіденційності&lt;/a&gt; Це повідомлення більше не з\'явиться після того, як ви погодитеся.</string>
+    <string name="agreement_text">Ось наша політика користувача, будь ласка, прочитайте її та погодьтеся з нею. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Умови Використання&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Політика Конфіденційності&lt;/a&gt; Це повідомлення більше не з’являтиметься після вашої згоди.</string>
     <string name="settings">Налаштування</string>
     <string name="settings_desc">Налаштування поведінки Dhizuku</string>
     <string name="enable_dhizuku">Увімкнути Dhizuku</string>
@@ -46,12 +46,12 @@
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">Це сповіщення Dhizuku для забезпечення доступності послуги в будь-який час. Ви можете довго натискати, щоб приховати це сповіщення.</string>
     <string name="copy">Копіювати</string>
-    <string name="confirm_device_owner">Власник пристрою</string>
-    <string name="confirm_profile_owner">Власник профілю</string>
+    <string name="confirm_device_owner">Власником Пристрою</string>
+    <string name="confirm_profile_owner">Власником Профілю</string>
     <string name="profile_owner_warning_title">Попередження</string>
     <string name="profile_owner_warning_dsp">Це зміна, яку повинні робити лише користувачі, які розуміють її наслідки. Розробники Dhizuku не можуть нічого гарантувати щодо несподіваної поведінки, спричиненої зміною цього режиму.</string>
-    <string name="donate_hide_action">Сховати</string>
-    <string name="donate_hide_confirm_title">Сховати кнопку пожертви</string>
-    <string name="donate_hide_confirm_dsp">Цю дію неможливо скасувати в додатку. Ви впевнені, що хочете назавжди сховати кнопку пожертви?</string>
-    <string name="home_status_owner_transferred">%1$s передано!!!</string>
+    <string name="donate_hide_action">Приховати</string>
+    <string name="donate_hide_confirm_title">Приховати кнопку \"Пожертвувати\"</string>
+    <string name="donate_hide_confirm_dsp">Цю дію неможливо скасувати в додатку. Ви впевнені, що хочете назавжди приховати кнопку пожертвування?</string>
+    <string name="home_status_owner_transferred">%1$s був перекладений!!!</string>
 </resources>
