@@ -13,7 +13,7 @@
     <string name="home_deactivate_title">Deaktivácia</string>
     <string name="retry">Znovu</string>
     <string name="home_dhizuku_dsp">Ak máte nainštalované iné implementácie Dhizuku, môžete medzi nimi ľubovoľne prepínať. Prosím, &lt;a href=%1$s&gt;prečítajte si nápovedu&lt;/a&gt;.</string>
-    <string name="home_status_owner_granted">Ste vlastníkom!!!</string>
+    <string name="home_status_owner_granted">Si %1$s!!!</string>
     <string name="home_status_owner_denied">Čakanie na aktiváciu</string>
     <string name="home_app_management_title">Správa aplikácií</string>
     <string name="home_app_management_dsp">Zobrazia sa tu aplikácie, ktoré požaduje alebo oznámil Dhizuku.</string>
@@ -49,9 +49,9 @@
     <string name="confirm_device_owner">Vlastník zariadenia</string>
     <string name="confirm_profile_owner">Vlastník profilu</string>
     <string name="profile_owner_warning_title">Upozornenie</string>
-    <string name="profile_owner_warning_dsp">Toto je zmena, ktorú by mali vykonávať iba používatelia, ktorí rozumejú jej dôsledkom. Vývojári Dhizuku nemôžu zaručiť nič ohľadom neočakávaného správania spôsobeného touto zmenou režimu.</string>
+    <string name="profile_owner_warning_dsp">Túto zmenu by mali vykonávať len používatelia, ktorí chápu jej dôsledky. Vývojári Dhizuku nemôžu poskytnúť žiadnu záruku v súvislosti s neočakávaným správaním spôsobeným touto zmenou režimu.</string>
     <string name="donate_hide_action">Skryť</string>
     <string name="donate_hide_confirm_title">Skryť tlačidlo daru</string>
-    <string name="donate_hide_confirm_dsp">Toto sa v aplikácii nedá vrátiť späť. Naozaj chcete tlačidlo daru natrvalo skryť?</string>
-    <string name="home_status_owner_transferred">%1$s bolo prenesené!!!</string>
+    <string name="donate_hide_confirm_dsp">Túto akciu nie je možné v aplikácii vrátiť späť. Naozaj chcete tlačidlo „Prispieť“ natrvalo skryť?</string>
+    <string name="home_status_owner_transferred">%1$s bolo prevedené!!!</string>
 </resources>
