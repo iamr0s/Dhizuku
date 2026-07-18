@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Siyosati</string>
+    <string name="agreement_text">Bu bizni siyosat va foydalanish qoidalarimiz. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Foydalanish yöriqnomasi&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Ichki qoidasi&lt;/a&gt; Shartlarga rozi bölganingizdan keyin bu qayta söralmaydi</string>
+    <string name="agree_text">Qabul qilish</string>
+    <string name="permission_description">\"Dhizuku\"ning \"API\"idan foydalaning</string>
+    <string name="copy">Buferlash</string>
+    <string name="cancel">Bekor qilish</string>
+    <string name="retry">Qayta urinish</string>
+    <string name="home_status_owner_granted">Siz %1$s!!!</string>
+    <string name="home_status_owner_transferred">%1$s ötqazildi</string>
+    <string name="home_status_owner_denied">Faollashtirish kutilyapti</string>
+    <string name="home_app_management_title">Ilova boshqaruvi</string>
+    <string name="home_app_management_dsp">Ilovalar ruxsat söradi yoki bekor qilingan Dhizuku shu yerda körinadi</string>
+    <string name="home_dhizuku_title">Dhizuku faollashtirdi</string>
 </resources>
