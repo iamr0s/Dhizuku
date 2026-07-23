@@ -12,7 +12,7 @@
     <string name="confirm">Onayla</string>
     <string name="cancel">İptal</string>
     <string name="retry">Yeniden dene</string>
-    <string name="home_status_owner_granted">Siz bir sahipsiniz!!!</string>
+    <string name="home_status_owner_granted">%1$s oldunuz!!!</string>
     <string name="home_app_management_title">Uygulama Yönetimi</string>
     <string name="home_app_management_dsp">Shizuku\'yu talep eden veya bildiren uygulamalar burada gösterilecektir.</string>
     <string name="home_dhizuku_title">Dhizuku\'yla Aktivasyon</string>
