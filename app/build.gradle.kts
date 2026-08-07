@@ -107,6 +107,8 @@ ksp {
 dependencies {
     compileOnly(project(":hidden-api"))
 
+    testImplementation("junit:junit:4.13.2")
+
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.activity.compose)
