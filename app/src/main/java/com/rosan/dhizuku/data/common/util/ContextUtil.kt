@@ -1,6 +1,8 @@
 package com.rosan.dhizuku.data.common.util
 
 import android.content.Context
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
@@ -13,6 +15,13 @@ fun Context.openUrlInBrowser(url: String) {
     val intent = Intent(Intent.ACTION_VIEW, url.toUri())
         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     startActivity(intent)
+}
+
+fun Context.copy(text: CharSequence) {
+    Handler(Looper.getMainLooper()).post {
+        val manager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        manager.setPrimaryClip(ClipData.newPlainText("Label", text))
+    }
 }
 
 fun Context.toast(text: CharSequence, duration: Int = Toast.LENGTH_SHORT) {

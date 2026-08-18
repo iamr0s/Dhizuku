@@ -12,6 +12,7 @@
     <!-- Home - Application Management -->
     <string name="home_app_management_title">应用管理</string>
     <string name="home_app_management_dsp">已申请或声明使用 Dhizuku 的应用将在此显示。</string>
+    <string name="home_user_management_dsp">管理系统用户及其账户。</string>
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">关闭</string>
     <string name="home_shutdown_dsp">除非 Dhizuku 自愿关闭，否则系统将无法关闭 Dhizuku。</string>
@@ -38,6 +39,21 @@
     <string name="permission_description">使用 Dhizuku 的 API</string>
     <string name="settings">设置</string>
     <string name="settings_desc">配置 Dhizuku 行为</string>
+    <string name="user_manager">用户管理</string>
+    <string name="user_name_default">未命名</string>
+    <string name="delete_user_warning">确定要删除此用户吗？\n所有处于此用户空间的应用和数据都会消失！！！</string>
+    <string name="delete_user_confirm">是的，我确定！</string>
+    <string name="delete_user_cancel">取消</string>
+    <string name="remove">移除</string>
+    <string name="account_manager">账号管理</string>
+    <string name="account_empty">没有账户存在</string>
+    <string name="copied_format_hail">复制成功，请在【雹】中导入！</string>
+    <string name="action_freeze">冷冻</string>
+    <string name="action_unfreeze">解冻</string>
+    <string name="action_open_sync_settings">打开同步设置</string>
+    <string name="action_freeze_all">一键冻结</string>
+    <string name="action_unfreeze_all">一键解冻</string>
+    <string name="error_open_sync_settings">无法打开系统账号设置界面</string>
     <string name="enable_dhizuku">启用 Dhizuku</string>
     <string name="enable_dhizuku_desc">允许其他应用使用 Dhizuku</string>
     <string name="whitelist_mode">白名单模式</string>
