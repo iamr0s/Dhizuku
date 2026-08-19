@@ -1,3 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="copy">Másolni</string>
+    <string name="cancel">Mégse</string>
+    <string name="retry">Megpróbálni újra</string>
+    <string name="home_status_owner_granted">Ön az %1$s!!!</string>
+    <string name="home_status_owner_denied">Az aktivációra vár</string>
+    <string name="home_app_management_title">Alkalmazás kezelés</string>
+    <string name="home_app_management_dsp">Az alkalmazások amelyek kérték vagy használni szeretnék a Dhizukut itt fognak megjelenni.</string>
+    <string name="home_dhizuku_title">Aktiváció Dhizukuval</string>
+    <string name="home_dhizuku_dsp">Hogy ha van más Dhizuku végrehajtód, akkor válthatsz közöttük amikor szeretnéd. Kérlek olvassa el a segítséget</string>
+    <string name="home_shizuku_title">Aktiváció Shizukuval</string>
+    <string name="home_shizuku_dsp">A Shizukuval, meg van a lehetőség, hogy futtasson ADB parancsokat egy számítógép nélkül. Kérlek olvassa el a segítséget</string>
+    <string name="home_adb_title">Aktiváció ADB használatával</string>
+    <string name="home_adb_dsp">Az ADB (Android Debug Bridge) használatával, futtathat kiváltságos parancsokat. Kérlek olvassa el a segítséget</string>
+    <string name="home_adb_btn_view_command">Nézze meg a parancsot</string>
+    <string name="home_shutdown_title">Leállítás</string>
+    <string name="home_shutdown_dsp">A rendszer nem tudja leállítani a Dhizukut kivéve ha a Dhizuku magától csinálja.</string>
+    <string name="home_deactivate_title">Deaktiválás</string>
+    <string name="home_deactivate_dsp">Biztos, hogy deaktiválja?</string>
+    <string name="confirm">OK</string>
+    <string name="confirm_device_owner">Eszköz tulajdonos</string>
+    <string name="confirm_profile_owner">Profil tulajdonos</string>
+    <string name="profile_owner_warning_title">Figyelmeztetés</string>
+    <string name="profile_owner_warning_dsp">Ez egy változtatás csak olyan felhasználóknak ajánlott, akik megértik a következményeket. A Dhizuku fejlesztői nem garantálnak semmit a váratlan viselkedéséről a mód váltásától.</string>
+    <string name="finish">Befejez</string>
+    <string name="donate">Adományoz</string>
+    <string name="donate_hide_action">Elrejt</string>
+    <string name="donate_hide_confirm_title">Az adományozás gomb elrejtése</string>
+    <string name="donate_hide_confirm_dsp">Ezt nem lehet visszacsinálni az alkalmazásból. Biztos, hogy véglegesen elrejti az adományozás gombot?</string>
+    <string name="request_permission_text">Engedi a(z) <b>%1$s</b> számára, hogy hozzáférjen a Dhizukuhoz?</string>
+    <string name="agree">Enged</string>
+    <string name="refuse">Tilt</string>
+    <string name="service_channel_name">Háttérbeli szolgáltatás</string>
+    <string name="service_running">A Dhizuku fut</string>
+    <string name="settings">Beállítások</string>
+    <string name="settings_desc">A Dhizuku viselkedésének beállítása</string>
+    <string name="enable_dhizuku">A Dhizuku engedélyezése</string>
+    <string name="enable_dhizuku_desc">Az appoknak megengedni a Dhizuku szolg. használatát</string>
+    <string name="whitelist_mode">Fehérlista mód</string>
+    <string name="whitelist_mode_desc">Csak az előre-ellenőrzött appoknak megengedni a Dhizuku használatát</string>
+    <string name="block_app">Az alkalmazás blokkolása</string>
+    <string name="auto_deny_in">Autómata megtiltás be</string>
+    <string name="block_app_desc">Teljesen megtiltani a hozzáférést a Dhizukuhoz</string>
+    <string name="app_blocked_notice">Ez az alkalmazás blokkolva van és nem használhatja a Dhizukut</string>
+    <string name="allow_dhizuku_access">A Dhizuku hozzáférést megengedni</string>
+    <string name="unblock_app">Az app blokkolásának kikapcsolása</string>
+    <string name="auto_deny_in_seconds">Autómata tiltás %d másodperc után</string>
+    <string name="denying_access">A hozzáférés megtagadása…</string>
+    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_text">Ez egy Dhizuku értesítés, hogy biztosítsa a szolg. elérhetőségét bármikor. Hosszan nyomhat az értesítésre, hogy elrejtse.</string>
+    <string name="agreement_title">Irányelvek</string>
+    <string name="agreement_text">Magyar fordítás Chungus Kuckó által - All your base are belong to us! Itt van az adatvédelmi irányelvünk, kérlek olvassa el és értsen egyet. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Terms of Use&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Privacy Policy&lt;/a&gt; Ez az üzenet többször nem fog megjelenni, ha egyetért.</string>
+    <string name="agree_text">Egyetért</string>
+    <string name="permission_description">A Dhizuku API használata</string>
+    <string name="home_status_owner_transferred">%1$s átt lett helyezve!!!</string>
 </resources>
