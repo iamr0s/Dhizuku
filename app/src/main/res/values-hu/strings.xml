@@ -8,7 +8,7 @@
     <string name="home_app_management_title">Alkalmazás kezelés</string>
     <string name="home_app_management_dsp">Az alkalmazások amelyek kérték vagy használni szeretnék a Dhizukut itt fognak megjelenni.</string>
     <string name="home_dhizuku_title">Aktiváció Dhizukuval</string>
-    <string name="home_dhizuku_dsp">Hogy ha van más Dhizuku végrehajtód, akkor válthatsz közöttük amikor szeretnéd. Kérlek olvassa el a segítséget</string>
+    <string name="home_dhizuku_dsp">Hogy ha van más Dhizuku végrehajtód, akkor válthatsz közöttük amikor szeretnéd. Kérlek&lt;a href=\"%1$s\"&gt; olvassa el a segítséget&lt;/a&gt;</string>
     <string name="home_shizuku_title">Aktiváció Shizukuval</string>
     <string name="home_shizuku_dsp">A Shizukuval, meg van a lehetőség, hogy futtasson ADB parancsokat egy számítógép nélkül. Kérlek olvassa el a segítséget</string>
     <string name="home_adb_title">Aktiváció ADB használatával</string>
@@ -53,5 +53,5 @@
     <string name="agreement_text">Magyar fordítás Chungus Kuckó által - All your base are belong to us! Itt van az adatvédelmi irányelvünk, kérlek olvassa el és értsen egyet. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Terms of Use&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Privacy Policy&lt;/a&gt; Ez az üzenet többször nem fog megjelenni, ha egyetért.</string>
     <string name="agree_text">Egyetért</string>
     <string name="permission_description">A Dhizuku API használata</string>
-    <string name="home_status_owner_transferred">%1$s átt lett helyezve!!!</string>
+    <string name="home_status_owner_transferred">%1$s átvitele kész!!!</string>
 </resources>
