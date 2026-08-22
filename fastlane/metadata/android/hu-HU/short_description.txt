@@ -1,0 +1,1 @@
+Egy eszköz, amely DeviceOwner engedélyeket tud megosztani más appokkal.

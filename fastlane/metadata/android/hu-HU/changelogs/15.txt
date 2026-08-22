@@ -1,0 +1,3 @@
+-Hozzáadva "felhasználási feltételek" és "adatvédelmi irányelvek"
+-Hozzáadva elfogadás párbeszédpanel
+-Fordítás frissítése

@@ -1,0 +1,14 @@
+Ez az alkalmazás delegálni tud DeviceOwner funkciókat.
+Ez az alkalmazás funkciókat képes hívni a DeviceOwner től.
+
+Alapból ez csak egy alkalmazásnál lehetséges, de Dhizukuval több alkalmazásnak meg lehet engedni.
+
+Egyszerű beállítani (pl. Shizuku, QR kód).
+
+Több információért nézze az <a href="https://github.com/iamr0s/Dhizuku/discussions/19">oktatóanyagot</a>
+
+Használati példa: hasznos amikor több appnak szeretnéd megadni a DeviceOwner engedélyt.
+
+Például japánban az Aurora Storet és Test DPC nek kell megadnod valamelyik korlátozott funkciós eszközökön.
+
+Még akkor is ha az app fejlesztő nem támogatja a Dhizukut, kényszerítheted a Dhizuku-API  XPosed modullal.
