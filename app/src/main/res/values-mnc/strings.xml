@@ -1,3 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">tacin</string>
+    <string name="agreement_text">ere be musei baitalasi kooli, hūla ume dahame. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Baitalara šajin&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Sulhūn kooli&lt;/a&gt; sini dahame manggi, ere gisun sarki deri ume dasame tuci.</string>
+    <string name="agree_text">dahame</string>
+    <string name="permission_description">Dhizuku i API be baitala</string>
+    <string name="copy">duplila</string>
+    <string name="cancel">nakū</string>
+    <string name="retry">dashūwa</string>
+    <string name="home_status_owner_granted">si %1$s inu!!!</string>
+    <string name="home_status_owner_transferred">%1$s be ubaliyambuha!!!</string>
+    <string name="home_status_owner_denied">aktibun alime</string>
+    <string name="home_app_management_title">Fiyelen i kadalan</string>
+    <string name="home_app_management_dsp">Dhizuku be baiha atau ilanaha fiyelen ubade tucihe.</string>
+    <string name="home_dhizuku_title">Dhizuku i aktibun</string>
+    <string name="home_dhizuku_dsp">ere gūwa Dhizuku i tob tebuhe oci, si teile bade ubaliyambume ombi. bai &lt;a href=\"%1$s\"&gt;aisilam be hūla&lt;/a&gt;.</string>
+    <string name="home_shizuku_title">Shizuku i aktibun</string>
+    <string name="home_shizuku_dsp">Shizuku i emgi, si komputere be baitalahakū ADB i hese be yabubume ombi. bai &lt;a href=\"%1$s\"&gt;aisilam be hūla&lt;/a&gt;.</string>
+    <string name="home_adb_title">ADB i aktibun</string>
+    <string name="home_adb_dsp">ADB i emgi, si ememu yasai hese be yabubume ombi. bai &lt;a href=\"%1$s\"&gt;aisilam be hūla&lt;/a&gt;.</string>
+    <string name="home_adb_btn_view_command">hese be tu</string>
+    <string name="home_shutdown_title">dahū</string>
+    <string name="home_shutdown_dsp">Dasan Dhizuku be dahūmbume muterakū, Dhizuku beye i cihai dahūmbume akū oci.</string>
+    <string name="home_deactivate_title">aktibun be nakū</string>
+    <string name="home_deactivate_dsp">Si unenggi aktibun be nakūrao?</string>
+    <string name="confirm">sain</string>
+    <string name="confirm_device_owner">tana i ejen</string>
+    <string name="confirm_profile_owner">fiyelen i ejen</string>
+    <string name="profile_owner_warning_title">targabun</string>
+    <string name="profile_owner_warning_dsp">ere halgan be, terei oyonggo be saha niyalma teile yabubuci acambi. Dhizuku i weiledesi ere arbun halgan ci tucike akdacun waka jalin umai yargiyalara yokire be muterakū.</string>
+    <string name="finish">mukiyen</string>
+    <string name="donate">buhun</string>
+    <string name="donate_hide_action">dabtūri</string>
+    <string name="donate_hide_confirm_title">Buhun i toki be dabtūri</string>
+    <string name="donate_hide_confirm_dsp">ere weilen be app i dorgi de nakūmbume muterakū. si unenggi buhun i toki be enteheme dabtūrao?</string>
+    <string name="request_permission_text"><b>%1$s</b> be Dhizuku de dosire oktombio?</string>
+    <string name="agree">buhu</string>
+    <string name="refuse">ume</string>
+    <string name="service_channel_name">amargi i jifisun</string>
+    <string name="service_running">Dhizuku dabmbime</string>
+    <string name="settings">dasangga</string>
+    <string name="settings_desc">Dhizuku i arbun be dasan</string>
+    <string name="enable_dhizuku">Dhizuku be okto</string>
+    <string name="enable_dhizuku_desc">Fiyelen be Dhizuku i jifisun be baitalara oktombu</string>
+    <string name="whitelist_mode">tob lista i arbun</string>
+    <string name="whitelist_mode_desc">Toktohu fiyelen teile Dhizuku be baitalara oktombu</string>
+    <string name="block_app">fiyelen be fafu</string>
+    <string name="auto_deny_in">beyen i fafu</string>
+    <string name="block_app_desc">Dhizuku de dosire be umesi fafu</string>
+    <string name="app_blocked_notice">Ere fiyelen be fafuha, Dhizuku de dosire muterakū</string>
+    <string name="allow_dhizuku_access">Dhizuku de dosire oktombu</string>
+    <string name="unblock_app">fiyelen be fafu nakū</string>
+    <string name="auto_deny_in_seconds">%d sekund de beyen i fafu</string>
+    <string name="denying_access">fafu dosire…</string>
+    <string name="daemon_service_notification_title">Dhizuku i amargi jifisun</string>
+    <string name="daemon_service_notification_text">Ere Dhizuku i selgiyesun, jifisun be eshun gocishūn i teburengge. Si golmin jafafi ere selgiyesun be dabtūri ombi.</string>
 </resources>
