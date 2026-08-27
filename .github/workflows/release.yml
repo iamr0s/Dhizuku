@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Build & Release
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Build Release APK
+        run: |
+          ./gradlew --no-daemon assembleRelease
+
+      - name: Rename APK
+        run: |
+          mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/Dhizuku-${{ github.ref_name }}.apk
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: app/build/outputs/apk/release/Dhizuku-${{ github.ref_name }}.apk
+          generate_release_notes: true
+          body: |
+            ## Dhizuku v2.13.0 (20) 正式优化版
+            
+            **更新日志 (Changelog):**
+            - **【核心新增】一键冻结与解冻**：新增账号管理器与用户管理面板，支持一键对全体账户进行冷冻/解冻，并在右上角锁图标处配备了加载等待提示。
+            - **【动效美化】Material 3 过渡与微交互**：
+              - 全局导航切换为标准的水平共享轴滑移 + 渐隐渐现动效。
+              - 冻结列表卡片不透明度与屏蔽列表底色升级为平滑插值渐变。
+              - 冻结成功后的小锁标志采用缩放弹性淡入淡出（Micro-animations）。
+            - **【漏洞修复】高并发与消失Bug**：
+              - 修复了连续快速解冻/冻结导致应用列表瞬间消失、闪烁或状态覆盖的底层竞态条件。
+              - 修复长包名应用（如 HMS Core）锁标志被挤出屏幕边缘的排版缺陷。
+            - **【激活修复】拒绝虚假成功**：
+              - 修复了在账户未清空状态下激活 Device Owner 出现“假成功”弹窗的问题，现在能准确拦截并提供重试。
+              - 补全了 Shizuku 激活成功后的状态即时同步刷新与后台自动授权。
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
