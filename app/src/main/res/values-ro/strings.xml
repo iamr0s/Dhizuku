@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="agreement_title">Politică</string>
+    <string name="agreement_text">Aici este politica noastră de utilizator, vă rugăm să o citiți și să o acceptați. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Termenii de folosire&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Politica de confidențialitate&lt;/a&gt; Acest mesaj nu va mai apărea după ce acceptați.</string>
+    <string name="agree_text">Acceptă</string>
+    <string name="permission_description">Folosește API-ul Dhizuku</string>
+    <string name="copy">Copiază</string>
+    <string name="cancel">Anulează</string>
+    <string name="retry">Reîncearcă</string>
+    <string name="home_status_owner_granted">Tu ești %1$s!!!</string>
+    <string name="home_status_owner_transferred">%1$s a fost transferat!!!</string>
+    <string name="home_status_owner_denied">Se așteaptă activarea</string>
+    <string name="home_app_management_title">Gestionare aplicație</string>
 </resources>
