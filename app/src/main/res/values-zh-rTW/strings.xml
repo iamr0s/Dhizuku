@@ -21,7 +21,7 @@
     <string name="home_shutdown_dsp">除非 Dhizuku 主動關閉，否則系統無法將其關閉。</string>
     <string name="home_status_owner_granted">您目前為 %1$s！</string>
     <string name="donate">捐贈</string>
-    <string name="request_permission_text">是否允許<b>%1$s</b>存取 Dhizuku?</string>
+    <string name="request_permission_text">是否允許 <b>%1$s</b> 存取 Dhizuku?</string>
     <string name="home_shizuku_dsp">透過 Shizuku，您無需透過電腦即可執行 ADB 指令。請 &lt;a href=\"%1$s\"&gt;參閱說明&lt;/a&gt;。</string>
     <string name="home_app_management_dsp">已請求或宣告使用 Dhizuku 的應用程式將會在此顯示。</string>
     <string name="home_dhizuku_dsp">若您安裝了其他 Dhizuku 實作，可隨時切換。請 &lt;a href=\"%1$s\"&gt;參閱說明&lt;/a&gt;。</string>
