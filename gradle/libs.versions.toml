@@ -12,7 +12,7 @@
 
 [versions]
 agp = "9.4.0"
-kotlin = "2.4.10"
+kotlin = "2.4.20"
 compose = "1.11.4"
 room = "2.8.4"
 accompanist = "0.36.0"
