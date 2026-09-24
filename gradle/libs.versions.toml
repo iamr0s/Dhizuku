@@ -11,10 +11,10 @@
 # https://androidx.dev/storage/compose-compiler/repository/
 
 [versions]
-agp = "9.4.0"
-kotlin = "2.4.10"
+agp = "9.4.1"
+kotlin = "2.4.20"
 compose = "1.11.4"
-room = "2.8.4"
+room = "2.8.5"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
 koin = "4.2.2"
@@ -26,7 +26,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 
 # KSP quickstart
 # https://kotlinlang.org/docs/ksp-quickstart.html
-ksp = { id = "com.google.devtools.ksp", version = "2.3.11" }
+ksp = { id = "com.google.devtools.ksp", version = "2.3.12" }
 
 [libraries]
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version = "1.10.0" }
