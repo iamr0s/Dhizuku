@@ -6,7 +6,7 @@
     <string name="permission_description">Χρήση Dhizuku\'s API</string>
     <string name="cancel">Ακύρωση</string>
     <string name="retry">Δοκιμάστε ξανά</string>
-    <string name="home_status_owner_granted">Είσαι Ιδιοκτήτης!!!</string>
+    <string name="home_status_owner_granted">Είσαι %1$s!!!</string>
     <string name="home_status_owner_denied">Αναμονή για ενεργοποίηση</string>
     <string name="home_app_management_title">Διαχείριση Εφαρμογών</string>
     <string name="home_app_management_dsp">Οι εφαρμογές που έχουν ζητήσει ή δηλώσει Dhizuku θα εμφανίζονται εδώ.</string>

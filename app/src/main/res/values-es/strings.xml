@@ -12,18 +12,18 @@
     <string name="request_permission_text">¿Permitir a <b>%1$s</b> el acceso a Dhizuku?</string>
     <string name="home_deactivate_title">Desactivar</string>
     <string name="retry">Reintentar</string>
-    <string name="home_status_owner_granted">¡Eres dueño!</string>
+    <string name="home_status_owner_granted">¡¡¡Eres %1$s!!!</string>
     <string name="home_status_owner_denied">Esperando activación</string>
     <string name="home_app_management_title">Gestión de aplicaciones</string>
     <string name="home_app_management_dsp">Las aplicaciones que soliciten o declaren Dhizuku se mostrarán aquí.</string>
     <string name="home_dhizuku_title">Activación por Dhizuku</string>
     <string name="home_shizuku_title">Activación por Shizuku</string>
     <string name="home_adb_title">Activación a través de ADB</string>
-    <string name="home_adb_dsp">A través de la conexión ADB (Android Debug Bridge), puedes ejecutar algunos comandos privilegiados. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">A través de la conexión ADB (Android Debug Bridge), puedes ejecutar algunos comandos privilegiados. Por favor &lt;a href=\"%1$s\"&gt;lee la ayuda&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Ver comando</string>
     <string name="home_shutdown_title">Detener</string>
-    <string name="home_dhizuku_dsp">Si tienes otras implementaciones de Dhizuku instaladas, puedes cambiar entre ellas a voluntad. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
-    <string name="home_shizuku_dsp">Con Shizuku, tienes la capacidad de ejecutar comandos ADB sin necesidad de un ordenador. Por favor &lt;a href=%1$s&gt;lee la ayuda&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">Si tienes otras implementaciones de Dhizuku instaladas, puedes cambiar entre ellas a voluntad. Por favor &lt;a href=\"%1$s\"&gt;lee la ayuda&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">Con Shizuku, tienes la capacidad de ejecutar comandos ADB sin necesidad de un equipo. Por favor &lt;a href=\"%1$s\"&gt;lee la ayuda&lt;/a&gt;.</string>
     <string name="home_shutdown_dsp">El sistema no podrá detener Dhizuku a menos que Dhizuku lo haga voluntariamente.</string>
     <string name="permission_description">Utilice la API de Dhizuku</string>
     <string name="settings">Ajustes</string>
@@ -42,7 +42,7 @@
     <string name="enable_dhizuku_desc">Permitir a aplicaciones el uso de servicios de Dhizuku</string>
     <string name="whitelist_mode_desc">Solo permitir el uso de Dhizuku a aplicaciones preaprobadas</string>
     <string name="auto_deny_in">Auto denegar en</string>
-    <string name="agreement_text">Esta es nuestra política de usuarios. Léala y acéptela. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;Condiciones de uso&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;Política de privacidad&lt;/a&gt;. Este mensaje no volverá a aparecer una vez la hayas aceptado.</string>
+    <string name="agreement_text">Esta es nuestra política de usuarios. Léala y acéptela. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Condiciones de Uso&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Política de privacidad&lt;/a&gt;. Este mensaje no volverá a aparecer una vez la hayas aceptado.</string>
     <string name="daemon_service_notification_title">Daemon de Dhizuku</string>
     <string name="daemon_service_notification_text">Esta es una notificación de Dhizuku para garantizar la disponibilidad del servicio en todo momento. Puedes mantener pulsado para ocultar esta notificación.</string>
     <string name="copy">Copiar</string>
@@ -53,5 +53,5 @@
     <string name="donate_hide_action">Ocultar</string>
     <string name="donate_hide_confirm_title">Ocultar botón de donación</string>
     <string name="donate_hide_confirm_dsp">Esto no se puede deshacer desde la aplicación. ¿Seguro que quieres ocultar permanentemente el botón de donación?</string>
-    <string name="home_status_owner_transferred">¡%1$s ha sido transferido!</string>
+    <string name="home_status_owner_transferred">¡¡¡%1$s ha sido transferido!!!</string>
 </resources>

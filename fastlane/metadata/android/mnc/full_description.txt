@@ -1,0 +1,16 @@
+Ere fiyelen, tana i ejen i juri be gūwa fiyelen de dende ombi.
+utai, ere fiyelen tana i ejen i juri be fiyelen sasa hūlame ombi.
+
+Temgetu, ere juri emu fiyelen teile de dende ombi,
+tuttu oci, Dhizuku si tana i ejen i juri be gūwa fiyelen de dende mutere.
+
+Iliburengge ja (misal: Shizuku, QR kod).
+Biretei bai <a href="https://github.com/iamr0s/Dhizuku/discussions/19">tacibun</a> be hūla.
+
+Baitalan misal, juwe fiyelen i tana ejen juri be emu erin de aisilame bio.
+
+Oiyo, Nihon de, Aurora Store i Test DPC be juwe fiyelen i tana ejen juri de aisilame ombi,
+emu fiyelen de teile akū.
+
+Fiyelen i weilede Dhizuku be alime gairakū seme,
+Dhizuku-API-Xposed i asargan be baitalafi, Dhizuku be kenehunjeme ombi.

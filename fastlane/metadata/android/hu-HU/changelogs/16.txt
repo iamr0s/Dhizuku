@@ -1,0 +1,6 @@
+-Android 16 támogatás
+-EdgeToEgde támogatás
+-Frissített adományozás link
+-A Shizuku kártya widget kijavítása
+-Hozzáadott nyelvek: Perzsa, Filippínó, Vietnámi
+-Frissített fordítások

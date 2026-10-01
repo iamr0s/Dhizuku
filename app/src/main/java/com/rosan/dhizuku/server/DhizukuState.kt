@@ -52,7 +52,12 @@ data object DhizukuState {
         val permissions = getAllRequestedPermissions(context, admin).filter {
             it ?: return@filter false
             val permission = getPermissionInfo(context, it) ?: return@filter false
-            return@filter permission.protectionFlags.has(PermissionInfo.PROTECTION_DANGEROUS)
+            return@filter if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                permission.protectionFlags.has(PermissionInfo.PROTECTION_DANGEROUS)
+            } else {
+                @Suppress("DEPRECATION")
+                (permission.protectionLevel and PermissionInfo.PROTECTION_MASK_BASE) == PermissionInfo.PROTECTION_DANGEROUS
+            }
         }
 
         permissions.forEach {

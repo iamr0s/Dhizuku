@@ -1,0 +1,8 @@
+A Dhizuku funkciói
+-EMM támogatás
+-Jobb viselkedés amikor DeviceOwner lesz
+-Javítja a szolgáltatást, hogy az előtérben fusson
+-Profil tulajdonosok is törölhetnek
+-Monokróm ikon támogatás
+-Fordítás frissítés
+-A LocaleConfig engedélyezése

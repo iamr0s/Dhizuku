@@ -1,0 +1,2 @@
+- Pridaná funkcia na podporu používania profilu vlastníka.
+- Vylepšená Dhizuku-API
