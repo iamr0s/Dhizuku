@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.konan.file.File
 import org.jetbrains.kotlin.konan.properties.loadProperties
 import java.util.Properties
 
@@ -28,7 +27,7 @@ android {
         targetSdk = compileSdk
         ndkVersion = "29.0.14206865"
 
-        val versionProps: Properties = File("$rootDir/version.properties").loadProperties()
+        val versionProps: Properties = org.jetbrains.kotlin.konan.file.File("$rootDir/version.properties").loadProperties()
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
 
