@@ -88,7 +88,7 @@ fun AccountManagerPage(
                             val intent = android.content.Intent(android.provider.Settings.ACTION_SYNC_SETTINGS)
                             intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
                             context.startActivity(intent)
-                        } catch (e: Exception) {
+                        } catch (_: Exception) {
                             context.toast(R.string.error_open_sync_settings)
                         }
                     }) {

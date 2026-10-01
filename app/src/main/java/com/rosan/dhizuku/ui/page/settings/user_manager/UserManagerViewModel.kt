@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.rosan.dhizuku.data.common.util.replace
 import com.rosan.dhizuku.data.account.entity.UserEntity
 import com.rosan.dhizuku.data.account.repo.UserService
+import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -49,7 +50,7 @@ class UserManagerViewModel : ViewModel(), KoinComponent {
                         state = state.copy(users = it, cause = null, loading = false)
                     }
                     first = false
-                    delay(1500)
+                    delay(1500.milliseconds)
                 }
             }
         }

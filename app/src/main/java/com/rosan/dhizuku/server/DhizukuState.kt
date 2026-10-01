@@ -91,7 +91,7 @@ data object DhizukuState {
 
     private fun getPermissionInfo(context: Context, permission: String) = try {
         context.packageManager.getPermissionInfo(permission, 0)
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         null
     }
 

@@ -10,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.rosan.dhizuku.data.common.util.replace
 import com.rosan.dhizuku.data.common.util.toast
 import com.rosan.dhizuku.data.account.repo.UserService
+import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -102,7 +103,7 @@ class AccountManagerViewModel(
                             e.printStackTrace()
                         }
                     }
-                    delay(800)
+                    delay(800.milliseconds)
                     load(showLoading = false)
                 } finally {
                     withContext(Dispatchers.Main) {
@@ -137,7 +138,7 @@ class AccountManagerViewModel(
                             e.printStackTrace()
                         }
                     }
-                    delay(800)
+                    delay(800.milliseconds)
                     load(showLoading = false)
                 } finally {
                     withContext(Dispatchers.Main) {
@@ -170,12 +171,12 @@ class AccountManagerViewModel(
                     userService.setPackageEnabled(packageName, currentFrozen, userId)
                     // Persist new frozen state
                     if (!currentFrozen) saveFrozenPackage(packageName, type, label)
-                    delay(800)
+                    delay(800.milliseconds)
                     load(showLoading = false)
                 } catch (e: Exception) {
-                    e.printStackTrace()
+                    //e.printStackTrace()
                     withContext(Dispatchers.Main) {
-                        context.toast("操作失败: ${e.localizedMessage ?: e.message}")
+                        context.toast("Error occurred: ${e.localizedMessage ?: e.message}")
                     }
                     load(showLoading = false)
                 } finally {

@@ -98,7 +98,7 @@ class ShizukuUserService(private val context: Context) : UserService {
             val dumpAccounts = getAccountsByDump(userId)
             val managerAccounts = try {
                 getAccountsByManager(userId)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 emptyList()
             }
 
@@ -119,7 +119,7 @@ class ShizukuUserService(private val context: Context) : UserService {
         return (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             val callingPackage = try {
                 basePackageManager.getPackagesForUid(Shizuku.getUid())?.firstOrNull() ?: "android"
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 "android"
             }
             accountManager.getAccountsAsUser(null, userId, callingPackage)
@@ -196,7 +196,7 @@ class ShizukuUserService(private val context: Context) : UserService {
 
     override suspend fun removeAccount(account: AccountEntity): Boolean = requireShizukuPermissionGranted(context) {
         val targetAccount = Account(account.name, account.type)
-        val result = suspendCancellableCoroutine<Boolean> { continuation ->
+        val result = suspendCancellableCoroutine { continuation ->
             val response = object : IAccountManagerResponse.Stub() {
                 override fun onResult(value: Bundle?) {
                     val intent = value?.getParcelableCompat<android.content.Intent>("intent")
@@ -238,7 +238,7 @@ class ShizukuUserService(private val context: Context) : UserService {
             2000 -> "com.android.shell"
             else -> try {
                 basePackageManager.getPackagesForUid(Shizuku.getUid())?.firstOrNull() ?: "android"
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 "android"
             }
         }

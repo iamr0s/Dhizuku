@@ -28,6 +28,8 @@ import com.rosan.dhizuku.data.common.util.requireShizukuPermissionGranted
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 
+import kotlin.time.Duration.Companion.milliseconds
+
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -77,7 +79,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         state = state.copy(loading = true)
         collectDataJob?.cancel()
         collectDataJob = viewModelScope.launch(Dispatchers.IO) {
-            // http://aospxref.com/android-14.0.0_r2/xref/packages/apps/Settings/src/com/android/settings/applications/specialaccess/deviceadmin/DeviceAdminListPreferenceController.java#271
+            // https://android.googlesource.com/platform/packages/apps/Settings/+/refs/heads/android14-release/src/com/android/settings/applications/specialaccess/deviceadmin/DeviceAdminListPreferenceController.java#271
 
             val flags = PackageManager.GET_META_DATA
 
@@ -88,8 +90,8 @@ class ActivateViewModel : ViewModel(), KoinComponent {
                 if (it == null) return@mapNotNull null
                 try {
                     return@mapNotNull DeviceAdminInfo(context, it)
-                } catch (ignored: XmlPullParserException) {
-                } catch (ignored: IOException) {
+                } catch (_: XmlPullParserException) {
+                } catch (_: IOException) {
                 }
                 return@mapNotNull null
             }.filter {
@@ -173,9 +175,9 @@ class ActivateViewModel : ViewModel(), KoinComponent {
 
     @SuppressLint("PrivateApi")
     private suspend fun activateAsDeviceOwnerByShizuku(who: ComponentName) =
-        requireShizukuPermissionGranted() {
+        requireShizukuPermissionGranted {
             // wait for the account cache be refreshed
-            delay(1500)
+            delay(1500.milliseconds)
             var success = false
             requireBinderWrapperDevicePolicyManager(wrapper = {
                 ShizukuBinderWrapper(it)
@@ -192,9 +194,9 @@ class ActivateViewModel : ViewModel(), KoinComponent {
 
     @SuppressLint("PrivateApi")
     private suspend fun activateAsProfileOwnerByShizuku(who: ComponentName) =
-        requireShizukuPermissionGranted() {
+        requireShizukuPermissionGranted {
             // wait for the account cache be refreshed
-            delay(1500)
+            delay(1500.milliseconds)
             var success = false
             requireBinderWrapperDevicePolicyManager(wrapper = {
                 ShizukuBinderWrapper(it)
@@ -287,7 +289,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             try {
                 if (field != null && iInterface != null)
                     field.set(manager, iInterface)
-            } catch (ignored: Throwable) {
+            } catch (_: Throwable) {
             }
         }
     }
