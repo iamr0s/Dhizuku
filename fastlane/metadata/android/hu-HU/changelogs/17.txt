@@ -1,0 +1,3 @@
+-A Shizuku kártya widget kijavítása
+-Fehérlista mód hozzáadva
+-Dhizuku állapot kapcsoló hozzáadva

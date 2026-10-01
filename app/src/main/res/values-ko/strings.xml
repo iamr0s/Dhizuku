@@ -9,25 +9,25 @@
     <string name="cancel">취소</string>
     <string name="confirm">확인</string>
     <string name="donate">후원</string>
-    <string name="request_permission_text"><b>%1$s</b>가 Dhizuku에 접근하도록 허용하시겠습니까?</string>
+    <string name="request_permission_text"><b>%1$s</b> 님이 Dhizuku에 접근하도록 허용하시겠습니까?</string>
     <string name="home_deactivate_title">비활성화</string>
     <string name="retry">재시도</string>
-    <string name="home_status_owner_granted">기기 소유자가 되었습니다！</string>
+    <string name="home_status_owner_granted">%1$s(이)가 되었습니다!</string>
     <string name="home_app_management_title">애플리케이션 관리</string>
     <string name="home_dhizuku_title">Dhizuku에 의한 활성화</string>
     <string name="home_shizuku_title">Shizuku에 의한 활성화</string>
-    <string name="home_shizuku_dsp">Shizuku를 사용하면 컴퓨터 없이도 ADB 명령을 실행할 수 있습니다. &lt;a href=%1$s&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">Shizuku를 사용하면 컴퓨터 없이도 ADB 명령을 실행할 수 있습니다. &lt;a href=\"%1$s\"&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
     <string name="home_adb_title">ADB에 의한 활성화</string>
-    <string name="home_adb_dsp">ADB(Android Debug Bridge) 연결을 통해 일부 특권 명령을 실행할 수 있습니다. &lt;a href=%1$s&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">ADB(Android Debug Bridge) 연결을 통해 일부 권한이 필요한 명령을 실행할 수 있습니다. &lt;a href=\"%1$s\"&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">명령 보기</string>
     <string name="home_shutdown_title">일시 휴업</string>
     <string name="home_shutdown_dsp">Dhizuku가 자발적으로 그렇게 하지 않는 한, 시스템은 Dhizuku를 종료할 수 없습니다.</string>
     <string name="home_app_management_dsp">Dhizuku를 요청하거나 선언한 앱이 여기에 표시됩니다.</string>
-    <string name="home_dhizuku_dsp">다른 Dhizuku 구현이 설치되어 있는 경우, 원하는 대로 전환할 수 있습니다. &lt;a href=%1$s&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">다른 Dhizuku 구현이 설치되어 있는 경우, 원하는 대로 전환할 수 있습니다. &lt;a href=\"%1$s\"&gt;도움말을 읽어보세요&lt;/a&gt;.</string>
     <string name="home_status_owner_denied">활성화를 기다리는 중</string>
     <string name="permission_description">Dhizuku의 API를 사용하세요</string>
     <string name="agreement_title">사용권</string>
-    <string name="agreement_text">다음은 사용자 정책입니다. 읽고 동의해 주세요. &lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;이용 약관&lt;/a&gt;, &lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;개인정보처리방침&lt;/a&gt; 동의하시면 이 메시지가 다시 표시되지 않습니다.</string>
+    <string name="agreement_text">다음은 사용자 정책입니다. 읽고 동의해 주세요. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;이용 약관&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;개인정보처리방침&lt;/a&gt; 동의하시면 이 메시지가 다시 표시되지 않습니다.</string>
     <string name="agree_text">동의하다</string>
     <string name="settings">설정</string>
     <string name="settings_desc">Dhizuku의 동작을 설정합니다</string>
@@ -46,12 +46,12 @@
     <string name="daemon_service_notification_title">Dhizuku 데몬</string>
     <string name="daemon_service_notification_text">이 알림은 서비스가 항상 사용 가능하도록 보장하기 위한 Dhizuku의 알림입니다. 길게 눌러 이 알림을 숨길 수 있습니다.</string>
     <string name="copy">복사</string>
-    <string name="confirm_device_owner">기기 소유자</string>
-    <string name="confirm_profile_owner">프로필 소유자</string>
+    <string name="confirm_device_owner">소유자</string>
+    <string name="confirm_profile_owner">프로필 관리자</string>
     <string name="profile_owner_warning_title">경고</string>
-    <string name="profile_owner_warning_dsp">이 변경은 그 영향을 이해하는 사용자만 수행해야 합니다. Dhizuku 개발자는 이 모드 변경으로 인해 발생하는 예기치 않은 동작에 대해 어떠한 보장도 할 수 없습니다.</string>
-    <string name="donate_hide_action">숨기기</string>
-    <string name="donate_hide_confirm_title">후원 버튼 숨기기</string>
-    <string name="donate_hide_confirm_dsp">앱 내에서는 이 작업을 되돌릴 수 없습니다. 후원 버튼을 영구적으로 숨기시겠습니까?</string>
-    <string name="home_status_owner_transferred">%1$s(이)가 이전되었습니다!!!</string>
+    <string name="profile_owner_warning_dsp">이 변경은 그 영향을 이해하는 사용자만 실행해야 합니다. Dhizuku 개발자는 이 모드 변경으로 인한 예기치 않은 동작에 대해 책임지지 않습니다.</string>
+    <string name="donate_hide_action">감추기</string>
+    <string name="donate_hide_confirm_title">후원 버튼 감추기</string>
+    <string name="donate_hide_confirm_dsp">앱 내에서 되돌릴 수 없는 작업입니다. 후원 버튼을 영구히 숨기시겠습니까?</string>
+    <string name="home_status_owner_transferred">%1$s 이전이 완료되었습니다!!!</string>
 </resources>
