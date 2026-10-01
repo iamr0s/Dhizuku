@@ -2,6 +2,7 @@ package com.rosan.dhizuku.ui.activity
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -88,12 +89,17 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
     fun requestIgnoreBatteryOptimization() {
         val powerManager = getSystemService(POWER_SERVICE) as PowerManager
         if (!powerManager.isIgnoringBatteryOptimizations(packageName)) {
-            startActivity(
-                Intent(
-                    Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
-                    ("package:$packageName").toUri()
+            try {
+                startActivity(
+                    Intent(
+                        Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                        ("package:$packageName").toUri()
+                    )
                 )
-            )
+            } catch (_: ActivityNotFoundException) {
+                // Some TV and embedded system images omit this optional settings activity.
+                return
+            }
         }
     }
 
