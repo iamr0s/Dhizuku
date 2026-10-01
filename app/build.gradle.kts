@@ -79,10 +79,6 @@ android {
         generateLocaleConfig = true
     }
 
-    testOptions {
-        unitTests.isIncludeAndroidResources = true
-    }
-
     packaging {
         jniLibs.excludes.add("lib/*/libandroidx.graphics.path.so")
         resources.excludes.addAll(arrayOf("META-INF/**", "DebugProbesKt.bin", "kotlin-tooling-metadata.json", "kotlin/**"))
@@ -142,26 +138,8 @@ dependencies {
     implementation(libs.rikka.shizuku.provider)
 
     implementation(libs.iamr0s.dhizuku.api)
-
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.robolectric:robolectric:4.17")
 }
 
 tasks.withType<JavaCompile> {
     options.compilerArgs.addAll(arrayOf("-Xlint:deprecation", "-Xlint:unchecked"))
-}
-
-// Robolectric 4.17 needs these opens when unit tests run on Java 21.
-tasks.withType<Test>().configureEach {
-    jvmArgs(
-        "--add-opens=java.base/java.lang=ALL-UNNAMED",
-        "--add-opens=java.base/java.util=ALL-UNNAMED",
-        "--add-opens=java.base/java.io=ALL-UNNAMED",
-        "--add-opens=java.base/java.net=ALL-UNNAMED",
-        "--add-opens=java.base/java.security=ALL-UNNAMED",
-        "--add-opens=java.base/java.text=ALL-UNNAMED",
-        "--add-opens=java.base/jdk.internal.access=ALL-UNNAMED",
-        "--add-opens=java.desktop/java.awt.font=ALL-UNNAMED",
-        "--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED"
-    )
 }
