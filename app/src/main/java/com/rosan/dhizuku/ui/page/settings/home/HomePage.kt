@@ -40,6 +40,7 @@ import androidx.compose.material.icons.twotone.SentimentVerySatisfied
 import androidx.compose.material.icons.twotone.Settings
 import androidx.compose.material.icons.twotone.SwapHorizontalCircle
 import androidx.compose.material.icons.twotone.Terminal
+import androidx.compose.material.icons.twotone.SupervisorAccount
 import androidx.compose.material.icons.twotone.Warning
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
@@ -140,6 +141,9 @@ fun HomePage(
             }
             if (dhizukuState.isOwner) item("app_management") {
                 AppManagementWidget(navController)
+            }
+            item("user_management") {
+                UserManagementWidget(navController)
             }
             if (dhizukuState.isOwner) item("dhizuku") {
                 DhizukuWidget(navController)
@@ -330,6 +334,19 @@ private fun LazyItemScope.AppManagementWidget(navController: NavController) {
         Text(stringResource(R.string.home_app_management_title))
     }, text = {
         Text(stringResource(R.string.home_app_management_dsp))
+    })
+}
+
+@Composable
+private fun LazyItemScope.UserManagementWidget(navController: NavController) {
+    CardWidget(onClick = {
+        navController.navigate(SettingsRoute.UserManagement.route)
+    }, icon = {
+        Icon(imageVector = Icons.TwoTone.SupervisorAccount, contentDescription = null)
+    }, title = {
+        Text(stringResource(R.string.user_manager))
+    }, text = {
+        Text(stringResource(R.string.home_user_management_dsp))
     })
 }
 

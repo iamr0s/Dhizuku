@@ -40,6 +40,23 @@
     <string name="permission_description">Dhizuku の API を使用します</string>
     <string name="settings">設定</string>
     <string name="settings_desc">Dhizuku の動作環境の設定を行います。</string>
+    <string name="user_manager">ユーザー管理</string>
+    <string name="user_name_default">規定</string>
+    <string name="delete_user_warning">このユーザースペースを削除してもよろしいですか？\nこのユーザースペース内のすべてのアプリとデータが失われます</string>
+    <string name="delete_user_confirm">はい</string>
+    <string name="delete_user_cancel">いいえ</string>
+    <string name="remove">削除</string>
+    
+    <string name="account_manager">アカウント管理</string>
+    <string name="account_empty">アカウントは存在しません</string>
+    <string name="copied_format_hail">コピーしました\nHailでインポートしてください。</string>
+    <string name="action_freeze">無効化</string>
+    <string name="action_unfreeze">再有効化</string>
+    <string name="action_open_sync_settings">同期の設定を開く</string>
+    <string name="action_freeze_all">全て無効化</string>
+    <string name="action_unfreeze_all">全て再有効化</string>
+    <string name="error_open_sync_settings">システムアカウントの設定を開けませんでした</string>
+    
     <string name="enable_dhizuku">Dhizuku を有効化</string>
     <string name="enable_dhizuku_desc">アプリが Dhizuku を利用できるようにします</string>
     <string name="whitelist_mode">除外モード</string>
