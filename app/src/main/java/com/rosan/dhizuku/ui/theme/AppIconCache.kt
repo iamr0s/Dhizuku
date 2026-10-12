@@ -4,6 +4,7 @@ import android.app.admin.DeviceAdminInfo
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 
 import androidx.collection.LruCache
 import androidx.compose.runtime.Composable
@@ -68,6 +69,29 @@ object AppIconCache : KoinComponent {
         LaunchedEffect(key) {
             val bitmap = withContext(Dispatchers.IO) {
                 lruCache[key] ?: admin.loadIcon(context.packageManager)?.toBitmap()?.also {
+                    lruCache.put(key, it)
+                }
+            }
+            bitmap?.let {
+                state.value = it.asImageBitmap()
+            }
+        }
+
+        return state
+    }
+
+    @Composable
+    fun rememberImageBitmapState(packageName: String, drawable: Drawable): MutableState<ImageBitmap> {
+        val key = packageName
+        val state = remember(key) { mutableStateOf(defaultImageBitMap) }
+
+        LaunchedEffect(key) {
+            val bitmap = withContext(Dispatchers.IO) {
+                lruCache[key] ?: try {
+                    drawable.toBitmap()
+                } catch (_: Exception) {
+                    null
+                }?.also {
                     lruCache.put(key, it)
                 }
             }

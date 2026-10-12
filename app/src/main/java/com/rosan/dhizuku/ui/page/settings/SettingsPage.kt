@@ -2,14 +2,18 @@ package com.rosan.dhizuku.ui.page.settings
 
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 
 import com.rosan.dhizuku.ui.page.settings.activate.ActivatePage
+import com.rosan.dhizuku.ui.page.settings.account_manager.AccountManagerPage
 import com.rosan.dhizuku.ui.page.settings.app_management.AppManagementPage
 import com.rosan.dhizuku.ui.page.settings.home.HomePage
 import com.rosan.dhizuku.ui.page.settings.settings.SettingsPage
+import com.rosan.dhizuku.ui.page.settings.user_manager.UserManagerPage
 
 @Composable
 fun SettingsPage(windowInsets: WindowInsets) {
@@ -29,6 +33,34 @@ fun SettingsPage(windowInsets: WindowInsets) {
             AppManagementPage(
                 windowInsets = windowInsets,
                 navController = navController
+            )
+        }
+        composable(route = SettingsRoute.UserManagement.route) {
+            UserManagerPage(
+                windowInsets = windowInsets,
+                onNavigateToAccount = { userId ->
+                    navController.navigate(SettingsRoute.AccountManagement.route(userId))
+                },
+                onBack = navController::navigateUp
+            )
+        }
+        composable(
+            route = SettingsRoute.AccountManagement.route,
+            arguments = listOf(
+                navArgument("id") {
+                    type = NavType.IntType
+                }
+            )
+        ) {
+            val userId = it.arguments?.getInt("id")
+            if (userId == null) {
+                navController.navigateUp()
+                return@composable
+            }
+            AccountManagerPage(
+                windowInsets = windowInsets,
+                userId = userId,
+                onBack = navController::navigateUp
             )
         }
         composable(route = SettingsRoute.Settings.route) {

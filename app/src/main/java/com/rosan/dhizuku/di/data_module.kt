@@ -1,5 +1,7 @@
 package com.rosan.dhizuku.di
 
+import com.rosan.dhizuku.data.account.model.ShizukuUserService
+import com.rosan.dhizuku.data.account.repo.UserService
 import com.rosan.dhizuku.data.settings.model.preferences.impl.SettingsRepoImpl
 import com.rosan.dhizuku.data.settings.model.room.DhizukuRoom
 import com.rosan.dhizuku.data.settings.model.room.impl.AppRepoImpl
@@ -7,6 +9,7 @@ import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 
 import org.koin.dsl.module
+import org.koin.android.ext.koin.androidContext
 
 val dataModule = module {
     single {
@@ -20,5 +23,9 @@ val dataModule = module {
 
     single<SettingsRepo> {
         SettingsRepoImpl()
+    }
+
+    single<UserService> {
+        ShizukuUserService(androidContext())
     }
 }
