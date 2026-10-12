@@ -23,8 +23,6 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
 
     override fun getVersionName(): String = "$versionCode"
 
-    private var signature: String? = null
-
     override fun checkCallingPermission(func: String?, callingUid: Int, callingPid: Int): Boolean {
         if (!settingsRepo.isDhizukuEnabled) {
             return false
@@ -43,13 +41,7 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
             return false
         }
 
-        val signature = this.signature
-            ?: context.packageManager.getPackageInfoForUid(callingUid)?.signature
-        if (signature == null) {
-            return false
-        }
-        this.signature = signature
-
+        val signature = context.packageManager.getPackageInfoForUid(callingUid)?.signature ?: return false
         if (signature != entity.signature) {
             return false
         }

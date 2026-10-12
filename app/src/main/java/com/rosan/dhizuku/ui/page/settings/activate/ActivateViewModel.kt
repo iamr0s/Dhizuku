@@ -28,6 +28,8 @@ import com.rosan.dhizuku.data.common.util.requireShizukuPermissionGranted
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 
+import kotlin.time.Duration.Companion.milliseconds
+
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -77,7 +79,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         state = state.copy(loading = true)
         collectDataJob?.cancel()
         collectDataJob = viewModelScope.launch(Dispatchers.IO) {
-            // http://aospxref.com/android-14.0.0_r2/xref/packages/apps/Settings/src/com/android/settings/applications/specialaccess/deviceadmin/DeviceAdminListPreferenceController.java#271
+            // https://android.googlesource.com/platform/packages/apps/Settings/+/refs/heads/android14-release/src/com/android/settings/applications/specialaccess/deviceadmin/DeviceAdminListPreferenceController.java#271
 
             val flags = PackageManager.GET_META_DATA
 
@@ -88,8 +90,8 @@ class ActivateViewModel : ViewModel(), KoinComponent {
                 if (it == null) return@mapNotNull null
                 try {
                     return@mapNotNull DeviceAdminInfo(context, it)
-                } catch (ignored: XmlPullParserException) {
-                } catch (ignored: IOException) {
+                } catch (_: XmlPullParserException) {
+                } catch (_: IOException) {
                 }
                 return@mapNotNull null
             }.filter {
@@ -173,30 +175,40 @@ class ActivateViewModel : ViewModel(), KoinComponent {
 
     @SuppressLint("PrivateApi")
     private suspend fun activateAsDeviceOwnerByShizuku(who: ComponentName) =
-        requireShizukuPermissionGranted() {
+        requireShizukuPermissionGranted {
             // wait for the account cache be refreshed
-            delay(1500)
+            delay(1500.milliseconds)
+            var success = false
             requireBinderWrapperDevicePolicyManager(wrapper = {
                 ShizukuBinderWrapper(it)
             }) {
                 val userId = Os.getuid() / 100000
                 it.setActiveAdmin(who, true, userId)
-                it.setDeviceOwner(who, null, userId)
+                success = it.setDeviceOwner(who, null, userId)
             }
+            if (!success) {
+                throw IllegalStateException("Failed to set Device Owner. Please make sure there are no accounts on the device.")
+            }
+            DhizukuState.sync(context)
         }
 
     @SuppressLint("PrivateApi")
     private suspend fun activateAsProfileOwnerByShizuku(who: ComponentName) =
-        requireShizukuPermissionGranted() {
+        requireShizukuPermissionGranted {
             // wait for the account cache be refreshed
-            delay(1500)
+            delay(1500.milliseconds)
+            var success = false
             requireBinderWrapperDevicePolicyManager(wrapper = {
                 ShizukuBinderWrapper(it)
             }) {
                 val userId = Os.getuid() / 100000
                 it.setActiveAdmin(who, true, userId)
-                it.setProfileOwner(who, null, userId)
+                success = it.setProfileOwner(who, null, userId)
             }
+            if (!success) {
+                throw IllegalStateException("Failed to set Profile Owner. Please check your system configuration.")
+            }
+            DhizukuState.sync(context)
         }
 
     private fun DevicePolicyManager.setActiveAdmin(
@@ -217,48 +229,44 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         who: ComponentName,
         ownerName: String?,
         userId: Int
-    ) {
+    ): Boolean {
         val clazz = this::class.java
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             clazz.getDeclaredMethod("setDeviceOwner", ComponentName::class.java, Int::class.java)
-                .also { it.isAccessible = true }.invoke(this, who, userId)
-            return
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                .also { it.isAccessible = true }.invoke(this, who, userId) as? Boolean ?: false
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             clazz.getDeclaredMethod(
                 "setDeviceOwner",
                 ComponentName::class.java,
                 String::class.java,
                 Int::class.java
-            ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId)
-            return
+            ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId) as? Boolean ?: false
+        } else {
+            clazz.getDeclaredMethod("setDeviceOwner", ComponentName::class.java, String::class.java)
+                .also { it.isAccessible = true }.invoke(this, who, ownerName) as? Boolean ?: false
         }
-        clazz.getDeclaredMethod("setDeviceOwner", ComponentName::class.java, String::class.java)
-            .also { it.isAccessible = true }.invoke(this, who, ownerName)
     }
 
     private fun DevicePolicyManager.setProfileOwner(
         who: ComponentName,
         ownerName: String?,
         userId: Int
-    ) {
+    ): Boolean {
         val clazz = this::class.java
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, Int::class.java)
-                .also { it.isAccessible = true }.invoke(this, who, userId)
-            return
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                .also { it.isAccessible = true }.invoke(this, who, userId) as? Boolean ?: false
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             clazz.getDeclaredMethod(
                 "setProfileOwner",
                 ComponentName::class.java,
                 String::class.java,
                 Int::class.java
-            ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId)
-            return
+            ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId) as? Boolean ?: false
+        } else {
+            clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, String::class.java)
+                .also { it.isAccessible = true }.invoke(this, who, ownerName) as? Boolean ?: false
         }
-        clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, String::class.java)
-            .also { it.isAccessible = true }.invoke(this, who, ownerName)
     }
 
     @SuppressLint("PrivateApi")
@@ -281,7 +289,7 @@ class ActivateViewModel : ViewModel(), KoinComponent {
             try {
                 if (field != null && iInterface != null)
                     field.set(manager, iInterface)
-            } catch (ignored: Throwable) {
+            } catch (_: Throwable) {
             }
         }
     }
