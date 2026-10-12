@@ -1,5 +1,9 @@
 package com.rosan.dhizuku.ui.page.settings
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
@@ -18,6 +22,30 @@ fun SettingsPage(windowInsets: WindowInsets) {
     NavHost(
         navController = navController,
         startDestination = SettingsRoute.Home.route,
+        enterTransition = {
+            slideIntoContainer(
+                towards = AnimatedContentTransitionScope.SlideDirection.Start,
+                animationSpec = tween(300)
+            ) + fadeIn(animationSpec = tween(300))
+        },
+        exitTransition = {
+            slideOutOfContainer(
+                towards = AnimatedContentTransitionScope.SlideDirection.Start,
+                animationSpec = tween(300)
+            ) + fadeOut(animationSpec = tween(300))
+        },
+        popEnterTransition = {
+            slideIntoContainer(
+                towards = AnimatedContentTransitionScope.SlideDirection.End,
+                animationSpec = tween(300)
+            ) + fadeIn(animationSpec = tween(300))
+        },
+        popExitTransition = {
+            slideOutOfContainer(
+                towards = AnimatedContentTransitionScope.SlideDirection.End,
+                animationSpec = tween(300)
+            ) + fadeOut(animationSpec = tween(300))
+        }
     ) {
         composable(route = SettingsRoute.Home.route) {
             HomePage(
