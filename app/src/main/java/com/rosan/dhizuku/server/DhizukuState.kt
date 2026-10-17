@@ -12,7 +12,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.rosan.dhizuku.BuildConfig
-import com.rosan.dhizuku.data.common.util.has
 
 data object DhizukuState {
     data class State(val isDeviceOwner: Boolean = false, val isProfileOwner: Boolean = false) {
@@ -52,12 +51,8 @@ data object DhizukuState {
         val permissions = getAllRequestedPermissions(context, admin).filter {
             it ?: return@filter false
             val permission = getPermissionInfo(context, it) ?: return@filter false
-            return@filter if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                permission.protectionFlags.has(PermissionInfo.PROTECTION_DANGEROUS)
-            } else {
-                @Suppress("DEPRECATION")
-                (permission.protectionLevel and PermissionInfo.PROTECTION_MASK_BASE) == PermissionInfo.PROTECTION_DANGEROUS
-            }
+            @Suppress("DEPRECATION")
+            (permission.protectionLevel and PermissionInfo.PROTECTION_MASK_BASE) == PermissionInfo.PROTECTION_DANGEROUS
         }
 
         permissions.forEach {
