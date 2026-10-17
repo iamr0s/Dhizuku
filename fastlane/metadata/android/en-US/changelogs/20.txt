@@ -1,0 +1,6 @@
+- Fix crash on Android 8.x
+- Fix error when battery optimization settings screen is unavailable
+- Fix a startup race condition that could prevent the service from starting on some devices
+- Improve permission granting compatibility and overall stability
+- Update dependencies
+- Update translations
