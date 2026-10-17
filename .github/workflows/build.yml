@@ -39,8 +39,8 @@ jobs:
         id: dhizuku-server-api
         uses: actions/cache@v6
         with:
-          path: ~/.m2/repository/Dhizuku-API/Dhizuku-SERVER_API/0.2.0
-          key: dhizuku-server-api-0.2.0
+          path: ~/.m2/repository/Dhizuku-API/
+          key: 202610180200JST
 
       - name: Checkout API
         if: steps.dhizuku-server-api.outputs.cache-hit != 'true'
