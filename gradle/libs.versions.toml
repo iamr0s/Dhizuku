@@ -61,7 +61,7 @@ accompanist-systemuicontroller = { group = "com.google.accompanist", name = "acc
 
 # AndroidHiddenApiBypass
 # https://github.com/LSPosed/AndroidHiddenApiBypass
-lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hiddenapibypass", version = "6.1" }
+lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hiddenapibypass", version = "6.2" }
 
 # Rikka Shizuku
 # https://github.com/RikkaApps/Shizuku-API
