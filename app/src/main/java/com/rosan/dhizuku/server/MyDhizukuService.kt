@@ -21,8 +21,6 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
     private val appRepo by inject<AppRepo>()
     private val settingsRepo by inject<SettingsRepo>()
 
-    override fun getVersionName(): String = "$versionCode"
-
     override fun checkCallingPermission(func: String?, callingUid: Int, callingPid: Int): Boolean {
         if (!settingsRepo.isDhizukuEnabled) {
             return false
@@ -34,10 +32,6 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
         }
 
         if (!entity.allowApi || entity.blocked) {
-            return false
-        }
-
-        if (settingsRepo.isWhitelistMode && !entity.allowApi) {
             return false
         }
 

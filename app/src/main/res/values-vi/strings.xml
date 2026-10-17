@@ -9,7 +9,7 @@
     <string name="retry">Thử lại</string>
     <string name="home_shutdown_title">Tắt</string>
     <string name="agreement_title">Chính sách</string>
-    <string name="home_status_owner_granted">Bạn đã là Owner!!!</string>
+    <string name="home_status_owner_granted">Bạn là %1$s!!!</string>
     <string name="agree_text">Đồng ý</string>
     <string name="permission_description">Sử dụng API của Dhizuku</string>
     <string name="cancel">Hủy bỏ</string>

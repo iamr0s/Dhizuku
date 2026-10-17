@@ -6,7 +6,7 @@
     <string name="permission_description">Bruk Dhizukus API</string>
     <string name="cancel">Avbryt</string>
     <string name="retry">Prøv igjen</string>
-    <string name="home_status_owner_granted">Dhizuku er eier!</string>
+    <string name="home_status_owner_granted">Du er %1$s!</string>
     <string name="home_status_owner_denied">Venter på aktivering</string>
     <string name="home_app_management_title">Administrer applikasjon(er)</string>
     <string name="home_app_management_dsp">Forespørsler og godtatte applikasjoner vises her.</string>

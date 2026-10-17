@@ -23,7 +23,7 @@ android {
     buildToolsVersion = "37.0.0"
 
     defaultConfig {
-        minSdk = 26
+        minSdk = 23
         targetSdk = compileSdk
         ndkVersion = "29.0.14206865"
 
@@ -67,6 +67,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
+        isCoreLibraryDesugaringEnabled = true
     }
 
     buildFeatures {
@@ -107,6 +108,8 @@ ksp {
 dependencies {
     compileOnly(project(":hidden-api"))
 
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
+
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.activity.compose)
@@ -141,5 +144,5 @@ dependencies {
 }
 
 tasks.withType<JavaCompile> {
-    options.compilerArgs.addAll(arrayOf("-Xlint:deprecation", "-Xlint:unchecked"))
+    //options.compilerArgs.addAll(arrayOf("-Xlint:deprecation", "-Xlint:unchecked"))
 }

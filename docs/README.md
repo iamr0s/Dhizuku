@@ -30,9 +30,12 @@ detailed guide.
 > If your device is already set up, you may need to remove these prior to enabling Dhizuku.
 > We may not be able to provide support if **any accounts are configured** on the device.
 
+> [!TIP]
+> For Android 12 and later, enabling via Shizuku can help avoid errors that occur due to the presence of an account (**experimental**).
+
 ## Supported Versions
 
-Android 8.0 ~ 17
+Android 6.0 ~ 17
 
 ## For Developers
 

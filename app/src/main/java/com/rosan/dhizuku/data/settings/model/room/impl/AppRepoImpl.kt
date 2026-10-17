@@ -2,6 +2,7 @@ package com.rosan.dhizuku.data.settings.model.room.impl
 
 import android.app.admin.DevicePolicyManager
 import android.content.Context
+import android.os.Build
 import com.rosan.dhizuku.data.settings.model.room.dao.AppDao
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
@@ -54,6 +55,7 @@ class AppRepoImpl(
 
     private fun clearDelegatedScopes(entity: AppEntity) {
         if (!DhizukuState.state.isOwner) return
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
         val packageNames = packageManager.getPackagesForUid(entity.uid) ?: emptyArray()
         packageNames.forEach {
             kotlin.runCatching {

@@ -25,6 +25,7 @@ import com.rosan.dhizuku.api.Dhizuku
 import com.rosan.dhizuku.data.common.util.has
 import com.rosan.dhizuku.data.common.util.requireDhizukuPermissionGranted
 import com.rosan.dhizuku.data.common.util.requireShizukuPermissionGranted
+import com.rosan.dhizuku.data.common.util.shizukuExec
 import com.rosan.dhizuku.server.DhizukuState
 import com.rosan.dhizuku.ui.page.settings.SettingsRoute
 
@@ -178,16 +179,21 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         requireShizukuPermissionGranted {
             // wait for the account cache be refreshed
             delay(1500.milliseconds)
-            var success = false
-            requireBinderWrapperDevicePolicyManager(wrapper = {
-                ShizukuBinderWrapper(it)
-            }) {
-                val userId = Os.getuid() / 100000
-                it.setActiveAdmin(who, true, userId)
-                success = it.setDeviceOwner(who, null, userId)
-            }
-            if (!success) {
-                throw IllegalStateException("Failed to set Device Owner. Please make sure there are no accounts on the device.")
+            val userId = Os.getuid() / 100000
+            val bypassed = bypassUserSetupComplete(userId)
+            try {
+                var success = false
+                requireBinderWrapperDevicePolicyManager(wrapper = {
+                    ShizukuBinderWrapper(it)
+                }) {
+                    it.setActiveAdmin(who, true, userId)
+                    success = it.setDeviceOwner(who, null, userId)
+                }
+                if (!success) {
+                    throw IllegalStateException("Failed to set Device Owner. Please make sure there are no accounts on the device.")
+                }
+            } finally {
+                if (bypassed) restoreUserSetupComplete(userId)
             }
             DhizukuState.sync(context)
         }
@@ -197,19 +203,68 @@ class ActivateViewModel : ViewModel(), KoinComponent {
         requireShizukuPermissionGranted {
             // wait for the account cache be refreshed
             delay(1500.milliseconds)
-            var success = false
-            requireBinderWrapperDevicePolicyManager(wrapper = {
-                ShizukuBinderWrapper(it)
-            }) {
-                val userId = Os.getuid() / 100000
-                it.setActiveAdmin(who, true, userId)
-                success = it.setProfileOwner(who, null, userId)
-            }
-            if (!success) {
-                throw IllegalStateException("Failed to set Profile Owner. Please check your system configuration.")
+            val userId = Os.getuid() / 100000
+            val bypassed = bypassUserSetupComplete(userId)
+            try {
+                var success = false
+                requireBinderWrapperDevicePolicyManager(wrapper = {
+                    ShizukuBinderWrapper(it)
+                }) {
+                    it.setActiveAdmin(who, true, userId)
+                    success = it.setProfileOwner(who, null, userId)
+                }
+                if (!success) {
+                    throw IllegalStateException("Failed to set Profile Owner. Please check your system configuration.")
+                }
+            } finally {
+                if (bypassed) restoreUserSetupComplete(userId)
             }
             DhizukuState.sync(context)
         }
+
+    private fun bypassUserSetupComplete(userId: Int): Boolean {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) return false
+        val current = shizukuExec(
+            "settings", "--user", "$userId", "get", "secure", "user_setup_complete"
+        )
+        if (current?.output?.trim() != "1") return false
+        val put = shizukuExec(
+            "settings", "--user", "$userId", "put", "secure", "user_setup_complete", "0"
+        )
+        if (put == null || put.code != 0) return false
+        refreshUserSetupComplete(userId)
+        return true
+    }
+
+    private fun restoreUserSetupComplete(userId: Int) {
+        shizukuExec(
+            "settings", "--user", "$userId", "put", "secure", "user_setup_complete", "1"
+        )
+        refreshUserSetupComplete(userId)
+    }
+
+    private fun refreshUserSetupComplete(userId: Int) {
+        runCatching {
+            requireBinderWrapperDevicePolicyManager(wrapper = {
+                ShizukuBinderWrapper(it)
+            }) {
+                it.forceUpdateUserSetupComplete(userId)
+            }
+        }
+    }
+
+    @SuppressLint("PrivateApi")
+    private fun DevicePolicyManager.forceUpdateUserSetupComplete(userId: Int) {
+        // https://android.googlesource.com/platform/frameworks/base/+/android-12.0.0_r1/services/devicepolicy/java/com/android/server/devicepolicy/DevicePolicyManagerService.java#14727
+        val clazz = this::class.java
+        runCatching {
+            clazz.getDeclaredMethod("forceUpdateUserSetupComplete", Int::class.javaPrimitiveType!!)
+                .also { it.isAccessible = true }.invoke(this, userId)
+        }.onFailure {
+            clazz.getDeclaredMethod("forceUpdateUserSetupComplete")
+                .also { it.isAccessible = true }.invoke(this)
+        }
+    }
 
     private fun DevicePolicyManager.setActiveAdmin(
         policyReceiver: ComponentName,

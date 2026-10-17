@@ -3,6 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ExportedContentProvider,ForegroundServicesPolicy,ScopedStorage,QueryAllPackagesPermission,PackageVisibilityPolicy,ProtectedPermissions,SystemPermissionTypo,UnusedAttribute">
 
+    <uses-sdk
+        tools:overrideLibrary="
+        androidx.navigation,
+        androidx.navigation.common,
+        androidx.navigation.compose,
+        rikka.shizuku.api"
+        tools:ignore="UsesSdkOverrideLibrary" />
+
     <permission
         android:name="${applicationId}.permission.API"
         android:description="@string/permission_description"
@@ -37,7 +45,7 @@
 
     <application
         android:name=".App"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:appCategory="productivity"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

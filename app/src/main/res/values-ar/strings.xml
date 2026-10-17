@@ -17,7 +17,7 @@
     <string name="home_shizuku_title">التنشيط بواسطة Shizuku</string>
     <string name="home_shizuku_dsp">مع Shizuku، لديك القدرة على تشغيل أوامر ADB دون الحاجة إلى جهاز كمبيوتر. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
     <string name="home_adb_title">التنشيط بواسطة ADB</string>
-    <string name="home_status_owner_granted">أنت المالك!!!</string>
+    <string name="home_status_owner_granted">أنت %1$s!!!</string>
     <string name="retry">إعادة المحاولة</string>
     <string name="home_app_management_title">إدارة التطبيقات</string>
     <string name="home_dhizuku_dsp">إذا كان لديك تطبيقات أخرى من Dhizuku مثبتة، يمكنك التبديل بينها كما تشاء. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>

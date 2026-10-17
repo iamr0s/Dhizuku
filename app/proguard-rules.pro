@@ -22,13 +22,6 @@
     public static void main(java.lang.String[]);
 }
 
-#-keep public class com.rosan.installer.data.process.model.impl.** extends com.rosan.dhizuku.data.process.repo.ProcessRepo {
-#    public static void main(java.lang.String[]);
-#}
-#-keep public class com.rosan.installer.** extends android.app.Service
-#-keep public class com.rosan.installer.** extends android.content.BroadcastReceiver
-#-keep public class com.rosan.installer.** extends android.content.ContentProvider
-
 -keep class androidx.core.content.FileProvider { *; }
 -keep interface androidx.core.content.FileProvider$PathStrategy { *; }
 

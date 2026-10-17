@@ -7,7 +7,7 @@
     <string name="cancel">取消</string>
     <string name="retry">重试</string>
     <!-- Home - Status -->
-    <string name="home_status_owner_granted">已获得所有者权限！</string>
+    <string name="home_status_owner_granted">您是%1$s！</string>
     <string name="home_status_owner_denied">等待激活</string>
     <!-- Home - Application Management -->
     <string name="home_app_management_title">应用管理</string>

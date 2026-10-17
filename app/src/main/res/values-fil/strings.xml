@@ -11,7 +11,7 @@
     <string name="home_deactivate_dsp">Sigurado ka ba gusto mong i-deactivate?</string>
     <string name="agree_text">Sumang-ayon</string>
     <string name="permission_description">Gamitin ang API ng Dhizuku</string>
-    <string name="home_status_owner_granted">Ikaw ang May-ari!!!</string>
+    <string name="home_status_owner_granted">Ikaw ay %1$s!!!</string>
     <string name="home_app_management_dsp">Makikita rito ang mga app na humiling o ipinahayag ang Dhizuku.</string>
     <string name="home_dhizuku_title">Pag-activate sa pamamagitan ng Dhizuku</string>
     <string name="home_shizuku_title">Pag-activate sa pamamagitan ng Shizuku</string>

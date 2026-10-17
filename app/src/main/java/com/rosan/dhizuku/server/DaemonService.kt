@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationCompat
@@ -31,9 +32,10 @@ class DaemonService : Service(), KoinComponent {
             if (intent == null) return
             val uid = intent.getIntExtra(Intent.EXTRA_UID, -1)
             if (uid < 0) return
+            if (intent.getBooleanExtra(Intent.EXTRA_REPLACING, false)) return
             scope.launch {
                 val entity = repo.findByUID(uid) ?: return@launch
-                if (verify(entity)) return@launch
+                if (!isStale(entity)) return@launch
                 repo.delete(entity)
             }
         }
@@ -66,7 +68,7 @@ class DaemonService : Service(), KoinComponent {
 
     private fun registerPackageReceiver() {
         scope.launch {
-            repo.all().filter { !verify(it) }.forEach { repo.delete(it) }
+            repo.all().filter { isStale(it) }.forEach { repo.delete(it) }
         }
 
         val filter = IntentFilter()
@@ -77,19 +79,19 @@ class DaemonService : Service(), KoinComponent {
         registerReceiver(packageReceiver, filter)
     }
 
-    private fun verify(entity: AppEntity): Boolean {
-        val packageInfo = packageManager.getPackageInfoForUid(entity.uid) ?: return false
-
-        if (!entity.allowApi || entity.blocked) return false
-
-        if (entity.signature != packageInfo.signature) return false
-
-        return true
+    private fun isStale(entity: AppEntity): Boolean {
+        val packageInfo = packageManager.getPackageInfoForUid(entity.uid) ?: return true
+        return entity.signature != packageInfo.signature
     }
 
     private fun foreground(enabled: Boolean) {
         if (!enabled) {
-            stopForeground(STOP_FOREGROUND_REMOVE)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                stopForeground(STOP_FOREGROUND_REMOVE)
+            } else {
+                @Suppress("DEPRECATION")
+                stopForeground(true)
+            }
             return
         }
         val manager = NotificationManagerCompat.from(this)

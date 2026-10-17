@@ -3,6 +3,7 @@ package com.rosan.dhizuku.ui.page.settings.home
 import android.app.admin.DevicePolicyManager
 import android.content.ClipData
 import android.content.Context
+import android.os.Build
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
@@ -363,7 +364,6 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
     })
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun LazyItemScope.AdbWidget() {
     val deviceOwnerCommand =
@@ -502,11 +502,13 @@ private fun LazyItemScope.DeactivateWidget() {
             Text(stringResource(R.string.cancel))
         }
         TextButton(onClick = {
-            try {
-                @Suppress("DEPRECATION")
-                manager.clearProfileOwner(DhizukuState.admin)
-            } catch (e: Throwable) {
-                e.printStackTrace()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                try {
+                    @Suppress("DEPRECATION")
+                    manager.clearProfileOwner(DhizukuState.admin)
+                } catch (e: Throwable) {
+                    e.printStackTrace()
+                }
             }
             try {
                 @Suppress("DEPRECATION")

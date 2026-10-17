@@ -54,8 +54,10 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.math.cos
 import kotlin.math.sin
+import kotlin.time.Duration.Companion.milliseconds
 
 class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     companion object {
@@ -74,6 +76,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     )
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
+    private val finishing = AtomicBoolean(false)
     private val appRepo by inject<AppRepo>()
     private val settingsRepo by inject<SettingsRepo>()
     private var state by mutableStateOf(ViewState())
@@ -86,6 +89,30 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
         }
 
         // Check if dhizuku is enabled and app is not blocked
+        checkExistingPermission()
+
+        setContent {
+            DhizukuTheme {
+                if (state.shouldShowDialog) {
+                    LaunchedEffect(state.uid) {
+                        repeat(AUTO_DENY_SECONDS) { second ->
+                            delay(1000.milliseconds)
+                            state = state.copy(timeLeft = AUTO_DENY_SECONDS - second - 1)
+                        }
+                        if (!state.timedOut) {
+                            state = state.copy(allowApi = false, timedOut = true)
+                            finish()
+                        }
+                    }
+                }
+
+                if (state.shouldShowDialog && !showDialog()) finish()
+                if (!state.shouldShowDialog) finish()
+            }
+        }
+    }
+
+    private fun checkExistingPermission() {
         coroutineScope.launch {
             if (!settingsRepo.isDhizukuEnabled) {
                 state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
@@ -113,31 +140,18 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
                 return@launch
             }
         }
-
-        setContent {
-            DhizukuTheme {
-                if (state.shouldShowDialog) {
-                    LaunchedEffect(Unit) {
-                        repeat(AUTO_DENY_SECONDS) { second ->
-                            delay(1000)
-                            state = state.copy(timeLeft = AUTO_DENY_SECONDS - second - 1)
-                        }
-                        if (!state.timedOut) {
-                            state = state.copy(allowApi = false, timedOut = true)
-                            finish()
-                        }
-                    }
-                }
-
-                if (state.shouldShowDialog && !showDialog()) finish()
-                if (!state.shouldShowDialog) finish()
-            }
-        }
     }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        if (registerAppEntity(intent)) return
+        // singleInstance なので同じインスタンスが再利用される。前回の許可状態を
+        // 残したまま次のアプリに答えると誤った判定になるため、完全にリセットする。
+        state = ViewState()
+        finishing.set(false)
+        if (registerAppEntity(intent)) {
+            checkExistingPermission()
+            return
+        }
         finish()
     }
 
@@ -149,9 +163,13 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     override fun finish() {
         super.finish()
 
+        if (!finishing.compareAndSet(false, true)) return
+
+        val uid = state.uid
+        val allowApi = state.allowApi
+        val listener = state.listener
+
         coroutineScope.launch {
-            val uid = state.uid
-            val allowApi = state.allowApi
             val packageInfo = packageManager.getPackageInfoForUid(uid) ?: return@launch
             val signature = packageInfo.signature ?: return@launch
 
@@ -161,9 +179,9 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
             else
                 appRepo.update(entity.copy(uid = uid, signature = signature, allowApi = allowApi))
         }.invokeOnCompletion {
-            val result = if (state.allowApi) PackageManager.PERMISSION_GRANTED
+            val result = if (allowApi) PackageManager.PERMISSION_GRANTED
             else PackageManager.PERMISSION_DENIED
-            state.listener?.onRequestPermission(result)
+            listener?.onRequestPermission(result)
         }
     }
 

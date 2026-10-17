@@ -3,6 +3,7 @@ package com.rosan.dhizuku.data.settings.model.room.dao
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 
@@ -33,7 +34,7 @@ interface AppDao {
     @Update
     suspend fun update(entity: AppEntity)
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(entity: AppEntity)
 
     @Delete

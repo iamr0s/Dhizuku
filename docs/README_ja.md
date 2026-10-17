@@ -23,9 +23,13 @@
 
 - [GitHub Discussions](https://github.com/iamr0s/Dhizuku/discussions/19)
 
+> [!TIP]
+> リリースノートのQRコードからセットアップ可能  
+> また、Android 12 以降の場合は、Shizuku 経由で有効化すると、既存アカウントが故に発生するエラーを回避できます（試験的）。
+
 ## 対応バージョン
 
-Android 8.0 ~ 17
+Android 6.0 ~ 17
 
 ## 開発者向け
 

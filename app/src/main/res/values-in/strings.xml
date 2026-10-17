@@ -15,7 +15,7 @@
     <string name="home_status_owner_denied">Menunggu Aktivasi</string>
     <string name="home_shizuku_dsp">Dengan Shizuku, Anda dapat menjalankan perintah ADB tanpa memerlukan komputer. Silakan &lt;a href=\"%1$s\"&gt;baca bantuan&lt;/a&gt;.</string>
     <string name="retry">Coba lagi</string>
-    <string name="home_status_owner_granted">Anda adalah Pemilik !!!</string>
+    <string name="home_status_owner_granted">Anda adalah %1$s!!!</string>
     <string name="home_app_management_title">Manajemen Aplikasi</string>
     <string name="home_app_management_dsp">Aplikasi yang telah meminta atau mendeklarasikan Dhizuku akan ditampilkan di sini.</string>
     <string name="home_dhizuku_title">Aktivasi oleh Dhizuku</string>

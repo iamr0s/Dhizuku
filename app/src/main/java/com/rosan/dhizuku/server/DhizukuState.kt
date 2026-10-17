@@ -91,15 +91,18 @@ data object DhizukuState {
 
     private fun getPermissionInfo(context: Context, permission: String) = try {
         context.packageManager.getPermissionInfo(permission, 0)
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         null
     }
 
     private fun autoDaemonService(context: Context) {
         val intent = Intent(context, DaemonService::class.java)
-         if (state.isOwner) {
-            context.startService(intent)
-            context.startForegroundService(intent)
+        if (state.isOwner) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.startForegroundService(intent)
+            } else {
+                context.startService(intent)
+            }
         } else context.stopService(intent)
     }
 }

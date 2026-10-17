@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="cancel">Annulla</string>
-    <string name="home_status_owner_granted">Sei il Proprietario!!!</string>
+    <string name="home_status_owner_granted">Sei %1$s!!!</string>
     <string name="home_status_owner_denied">In attesa di attivazione</string>
     <string name="home_app_management_title">Gestione Applicazioni</string>
     <string name="home_app_management_dsp">Le App che hanno richiesto o hanno dichiarato di usare Dhizuku verranno mostrate qui.</string>

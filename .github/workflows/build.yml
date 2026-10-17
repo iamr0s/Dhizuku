@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
-          java-version: 21
+          java-version: 25
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
@@ -35,7 +35,17 @@ jobs:
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
           } >> $GITHUB_ENV
 
-      - name: Build
+      - name: Checkout API
+        uses: actions/checkout@v6
+        with:
+          repository: iamr0s/Dhizuku-API
+          path: api
+
+      - name: Build AAR
+        working-directory: api
+        run: ./gradlew --no-daemon publishToMavenLocal
+
+      - name: Build APK
         run: |
           ./gradlew --no-daemon --warning-mode=all --scan assembleDebug
           cp -f app/build/outputs/apk/debug/app-debug.apk ${{ env.repo }}-${{ env.version }}@${{ env.commit }}.apk

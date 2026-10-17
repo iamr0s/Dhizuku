@@ -8,6 +8,8 @@ import android.content.Intent
 import android.widget.Toast
 import com.rosan.dhizuku.BuildConfig
 import com.rosan.dhizuku.R
+import com.rosan.dhizuku.server_api.LockTaskModeListeners
+
 import org.koin.core.component.KoinComponent
 
 class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
@@ -15,6 +17,14 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
         DaemonReceiver().onReceive(context, intent)
+    }
+
+    override fun onLockTaskModeEntering(context: Context, intent: Intent, pkg: String) {
+        LockTaskModeListeners.notifyLockTaskModeChanged(true, pkg)
+    }
+
+    override fun onLockTaskModeExiting(context: Context, intent: Intent) {
+        LockTaskModeListeners.notifyLockTaskModeChanged(false, null)
     }
 
     override fun onEnabled(context: Context, intent: Intent) {
