@@ -297,8 +297,8 @@ class ActivateViewModel : ViewModel(), KoinComponent {
                 Int::class.java
             ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId) as? Boolean ?: false
         } else {
-            clazz.getDeclaredMethod("setDeviceOwner", ComponentName::class.java, String::class.java)
-                .also { it.isAccessible = true }.invoke(this, who, ownerName) as? Boolean ?: false
+            clazz.getDeclaredMethod("setDeviceOwner", String::class.java, String::class.java)
+                .also { it.isAccessible = true }.invoke(this, who.packageName, ownerName) as? Boolean ?: false
         }
     }
 
@@ -319,8 +319,8 @@ class ActivateViewModel : ViewModel(), KoinComponent {
                 Int::class.java
             ).also { it.isAccessible = true }.invoke(this, who, ownerName, userId) as? Boolean ?: false
         } else {
-            clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, String::class.java)
-                .also { it.isAccessible = true }.invoke(this, who, ownerName) as? Boolean ?: false
+            clazz.getDeclaredMethod("setProfileOwner", ComponentName::class.java, String::class.java, Int::class.java)
+                .also { it.isAccessible = true }.invoke(this, who, ownerName, userId) as? Boolean ?: false
         }
     }
 

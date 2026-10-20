@@ -127,8 +127,8 @@ fun ActivatePage(
             val comp by compState
             AnimatedVisibility(
                 visible = comp != null,
-                enter = scaleIn(),
-                exit = scaleOut()
+                enter = scaleIn(initialScale = 0.01f),
+                exit = scaleOut(targetScale = 0.01f)
             ) {
                 if (mode == SettingsRoute.Activate.Mode.Shizuku) {
                     var ownerType by remember { mutableStateOf(ActivateViewModel.OwnerType.Device) }

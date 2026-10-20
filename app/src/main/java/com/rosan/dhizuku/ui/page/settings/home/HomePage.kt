@@ -142,9 +142,10 @@ fun HomePage(
             if (dhizukuState.isOwner) item("app_management") {
                 AppManagementWidget(navController)
             }
-            if (dhizukuState.isOwner) item("dhizuku") {
-                DhizukuWidget(navController)
-            }
+            if (dhizukuState.isOwner && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                item("dhizuku") {
+                    DhizukuWidget(navController)
+                }
             if (!dhizukuState.isOwner) item("shizuku") {
                 ShizukuWidget(navController)
             }
