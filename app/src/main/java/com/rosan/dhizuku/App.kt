@@ -21,10 +21,6 @@ import rikka.sui.Sui
 class App : Application(), KoinComponent {
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)
-        // MyDhizukuProvider is published before Application.onCreate() runs, so binder
-        // calls can arrive while the process is still starting up. Start Koin as early
-        // as possible, otherwise any call into MyDhizukuService fails (or crashes) with
-        // "KoinApplication has not been started" (#205).
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@App)

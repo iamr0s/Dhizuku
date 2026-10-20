@@ -144,8 +144,6 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        // singleInstance なので同じインスタンスが再利用される。前回の許可状態を
-        // 残したまま次のアプリに答えると誤った判定になるため、完全にリセットする。
         state = ViewState()
         finishing.set(false)
         if (registerAppEntity(intent)) {
