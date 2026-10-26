@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache@v6
         with:
           path: ~/.m2/repository/
-          key: 202610270815JST
+          key: 202610270847JST
 
       - name: Checkout AppProcess
         if: steps.r0s-api.outputs.cache-hit != 'true'
