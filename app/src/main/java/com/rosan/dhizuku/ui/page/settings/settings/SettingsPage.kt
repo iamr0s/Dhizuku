@@ -125,6 +125,27 @@ fun SettingsPage(
                                 onCheckedChange = viewModel::setWhitelistMode
                             )
                         }
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    stringResource(R.string.allow_ownership_changes),
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                                Text(
+                                    stringResource(R.string.allow_ownership_changes_desc),
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                            }
+                            Switch(
+                                checked = viewModel.state.allowOwnershipChanges,
+                                onCheckedChange = viewModel::setAllowOwnershipChanges
+                            )
+                        }
                     }
                 }
             }

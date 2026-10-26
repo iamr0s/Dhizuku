@@ -54,6 +54,9 @@
     <string name="enable_dhizuku_desc">Allow apps to use Dhizuku services</string>
     <string name="whitelist_mode">Whitelist Mode</string>
     <string name="whitelist_mode_desc">Only allow pre-approved apps to use Dhizuku</string>
+    <string name="allow_ownership_changes">Allow ownership changes</string>
+    <string name="allow_ownership_changes_desc">Allow clients to change ownership (transfer or clear).\nThis is a security risk.</string>
+    <string name="ownership_change_blocked">Ownership changes are disabled by Dhizuku</string>
     <string name="block_app">Block App</string>
     <string name="auto_deny_in">Auto-deny in</string>
     <string name="block_app_desc">Completely deny access to Dhizuku</string>

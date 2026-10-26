@@ -44,6 +44,9 @@
     <string name="enable_dhizuku_desc">アプリが Dhizuku を利用できるようにします</string>
     <string name="whitelist_mode">除外モード</string>
     <string name="whitelist_mode_desc">あらかじめ許可したアプリのみ Dhizuku を使用できるようにします</string>
+    <string name="allow_ownership_changes">オーナー権限の変更を許可</string>
+    <string name="allow_ownership_changes_desc">クライアントによるオーナー権限の変更（譲渡・解除）を許可します。\nセキュリティ上のリスクがあります。</string>
+    <string name="ownership_change_blocked">Dhizuku の設定によりオーナー権限の変更は禁止されています</string>
     <string name="block_app">アプリをブロック</string>
     <string name="auto_deny_in">自動で却下：</string>
     <string name="block_app_desc">Dhizuku へのアクセスを拒否しました</string>

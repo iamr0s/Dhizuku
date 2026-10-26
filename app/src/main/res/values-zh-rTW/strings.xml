@@ -35,6 +35,9 @@
     <string name="enable_dhizuku_desc">允許其他應用使用 Dhizuku</string>
     <string name="whitelist_mode">白名單模式</string>
     <string name="whitelist_mode_desc">僅允許白名單中的應用程式使用 Dhizuku</string>
+    <string name="allow_ownership_changes">允許變更擁有者</string>
+    <string name="allow_ownership_changes_desc">允許用戶端變更擁有者權限（轉移或解除）。\n這存在安全性風險。</string>
+    <string name="ownership_change_blocked">Dhizuku 已禁止變更擁有者</string>
     <string name="block_app">屏蔽應用</string>
     <string name="auto_deny_in">自動拒絕:</string>
     <string name="block_app_desc">完全拒絕存取 Dhizuku</string>

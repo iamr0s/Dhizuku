@@ -31,6 +31,11 @@ class SettingsViewModel : ViewModel(), KoinComponent {
                 state = state.copy(dhizukuEnabled = dhizukuEnabled)
             }
         }
+        viewModelScope.launch(Dispatchers.IO) {
+            settingsRepo.flowAllowOwnershipChanges().collect { allowOwnershipChanges ->
+                state = state.copy(allowOwnershipChanges = allowOwnershipChanges)
+            }
+        }
     }
 
     fun setWhitelistMode(enabled: Boolean) {
@@ -42,6 +47,12 @@ class SettingsViewModel : ViewModel(), KoinComponent {
     fun setDhizukuEnabled(enabled: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
             settingsRepo.isDhizukuEnabled = enabled
+        }
+    }
+
+    fun setAllowOwnershipChanges(enabled: Boolean) {
+        viewModelScope.launch(Dispatchers.IO) {
+            settingsRepo.isAllowOwnershipChanges = enabled
         }
     }
 }

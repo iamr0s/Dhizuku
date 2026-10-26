@@ -6,7 +6,9 @@ interface SettingsRepo {
     fun flowWhitelistMode(): Flow<Boolean>
     fun flowDhizukuEnabled(): Flow<Boolean>
     fun flowDonateButtonHidden(): Flow<Boolean>
+    fun flowAllowOwnershipChanges(): Flow<Boolean>
     var isWhitelistMode: Boolean
     var isDhizukuEnabled: Boolean
     var isDonateButtonHidden: Boolean
+    var isAllowOwnershipChanges: Boolean
 }
