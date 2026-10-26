@@ -1,6 +1,5 @@
 package com.rosan.dhizuku.server
 
-import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
 import android.content.BroadcastReceiver
@@ -100,7 +99,7 @@ class DaemonService : Service(), KoinComponent {
 
 
         val channel = NotificationChannelCompat.Builder(
-            NOTIFICATION_CHANNEL_ID, NotificationManager.IMPORTANCE_LOW
+            NOTIFICATION_CHANNEL_ID, NotificationManagerCompat.IMPORTANCE_LOW
         ).setName(getString(R.string.daemon_service_notification_title))
             .setDescription(getString(R.string.daemon_service_notification_text)).build()
         manager.createNotificationChannel(channel)

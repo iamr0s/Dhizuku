@@ -10,9 +10,9 @@
     <string name="home_dhizuku_title">Aktiváció Dhizukuval</string>
     <string name="home_dhizuku_dsp">Hogy ha van más Dhizuku végrehajtód, akkor válthatsz közöttük amikor szeretnéd. Kérlek&lt;a href=\"%1$s\"&gt; olvassa el a segítséget&lt;/a&gt;</string>
     <string name="home_shizuku_title">Aktiváció Shizukuval</string>
-    <string name="home_shizuku_dsp">A Shizukuval, meg van a lehetőség, hogy futtasson ADB parancsokat egy számítógép nélkül. Kérlek olvassa el a segítséget</string>
+    <string name="home_shizuku_dsp">A Shizukuval, meg van a lehetőség, hogy futtasson ADB parancsokat egy számítógép nélkül. Kérlek olvassa el a &lt;a href="%1$s"&gt;segítséget&lt;/a&gt;.</string>
     <string name="home_adb_title">Aktiváció ADB használatával</string>
-    <string name="home_adb_dsp">Az ADB (Android Debug Bridge) használatával, futtathat kiváltságos parancsokat. Kérlek olvassa el a segítséget</string>
+    <string name="home_adb_dsp">Az ADB (Android Debug Bridge) használatával, futtathat kiváltságos parancsokat. Kérlek olvassa el a &lt;a href="%1$s"&gt;segítséget&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">Nézze meg a parancsot</string>
     <string name="home_shutdown_title">Leállítás</string>
     <string name="home_shutdown_dsp">A rendszer nem tudja leállítani a Dhizukut kivéve ha a Dhizuku magától csinálja.</string>

@@ -1,6 +1,6 @@
 package com.rosan.dhizuku.server
 
-import android.app.NotificationManager
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
@@ -32,6 +32,7 @@ import kotlinx.coroutines.runBlocking
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+@SuppressLint("PrivateApi")
 class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizukuClient?) :
     DhizukuService(context, admin, client), KoinComponent {
     companion object {
@@ -88,11 +89,12 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
         return super.onRemoteTransact(binder, code, data, reply, flags)
     }
 
+    @SuppressLint("MissingPermission")
     private fun notifyOwnershipBlocked() {
         val manager = NotificationManagerCompat.from(context)
         val channel = NotificationChannelCompat.Builder(
             OWNERSHIP_BLOCKED_CHANNEL_ID,
-            NotificationManager.IMPORTANCE_DEFAULT
+            NotificationManagerCompat.IMPORTANCE_DEFAULT
         ).setName(context.getString(R.string.allow_ownership_changes)).build()
         manager.createNotificationChannel(channel)
 

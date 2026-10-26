@@ -16,6 +16,7 @@
 
 package android.content.pm;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -30,6 +31,7 @@ import java.util.List;
  * @hide
  * @see BaseParceledListSlice
  */
+@SuppressLint("ParcelCreator")
 public class ParceledListSlice<T extends Parcelable> extends BaseParceledListSlice<T> {
     public ParceledListSlice(List<T> list) {
     }
