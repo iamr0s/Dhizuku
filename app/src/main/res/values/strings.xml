@@ -1,53 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!-- General -->
     <string name="app_name" translatable="false">Dhizuku</string>
+    <string name="permission_description">Use Dhizuku\'s API</string>
+
+    <!-- Agreement -->
     <string name="agreement_title">Policy</string>
     <string name="agreement_text">Here is our user policy, Please read and agree to it. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Terms of Use&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Privacy Policy&lt;/a&gt; This message won\'t show up again after you agree.</string>
     <string name="agree_text">Agree</string>
-    <string name="permission_description">Use Dhizuku\'s API</string>
-    <!-- Commonly  used characters -->
+
+    <!-- Common -->
     <string name="copy">Copy</string>
     <string name="cancel">Cancel</string>
+    <string name="confirm">OK</string>
     <string name="retry">Retry</string>
+    <string name="finish">Finish</string>
+
     <!-- Home - Status -->
     <string name="home_status_owner_granted">You are %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s has been transferred!!!</string>
     <string name="home_status_owner_denied">Waiting for activation</string>
+
     <!-- Home - Application Management -->
     <string name="home_app_management_title">Application Management</string>
     <string name="home_app_management_dsp">Apps that has requested or declared Dhizuku will show here.</string>
+
     <!-- Home - Dhizuku -->
     <string name="home_dhizuku_title">Activation by Dhizuku</string>
     <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
+
     <!-- Home - Shizuku -->
     <string name="home_shizuku_title">Activation by Shizuku</string>
     <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
-    <!-- Home - Adb -->
+
+    <!-- Home - ADB -->
     <string name="home_adb_title">Activation by ADB</string>
     <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">View command</string>
-    <!-- Home - PvsD -->
+
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
     <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
-    <!-- Home - Deactivate-->
+
+    <!-- Home - Deactivate -->
     <string name="home_deactivate_title">Deactivate</string>
     <string name="home_deactivate_dsp">Are you sure you want to deactivate?</string>
-    <string name="confirm">OK</string>
+
+    <!-- Owner -->
     <string name="confirm_device_owner">Device Owner</string>
     <string name="confirm_profile_owner">Profile Owner</string>
     <string name="profile_owner_warning_title">Warning</string>
     <string name="profile_owner_warning_dsp">This is a change that should only be made by users who understand its implications. The developers of Dhizuku cannot guarantee anything about unexpected behavior caused by this mode change.</string>
-    <string name="finish">Finish</string>
+
+    <!-- Donate -->
     <string name="donate">Donate</string>
     <string name="donate_hide_action">Hide</string>
     <string name="donate_hide_confirm_title">Hide Donate Button</string>
     <string name="donate_hide_confirm_dsp">This cannot be undone from within the app. Are you sure you want to permanently hide the donate button?</string>
+
+    <!-- Permission request -->
     <string name="request_permission_text">Allow <b>%1$s</b> to access Dhizuku?</string>
     <string name="agree">Grant</string>
     <string name="refuse">Deny</string>
-    <string name="service_channel_name">Background service</string>
-    <string name="service_running">Dhizuku is running</string>
+    <string name="block_app">Block App</string>
+    <string name="block_app_desc">Completely deny access to Dhizuku</string>
+    <string name="app_blocked_notice">This app is blocked and cannot access Dhizuku</string>
+    <string name="allow_dhizuku_access">Allow Dhizuku Access</string>
+    <string name="unblock_app">Unblock App</string>
+    <string name="auto_deny_in">Auto-deny in</string>
+    <string name="auto_deny_in_seconds">Auto-deny in %d seconds</string>
+    <string name="denying_access">Denying access…</string>
+
+    <!-- Settings -->
     <string name="settings">Settings</string>
     <string name="settings_desc">Configure Dhizuku behavior</string>
     <string name="enable_dhizuku">Enable Dhizuku</string>
@@ -57,15 +81,10 @@
     <string name="allow_ownership_changes">Allow ownership changes</string>
     <string name="allow_ownership_changes_desc">Allow clients to change ownership (transfer or clear).\nThis is a security risk.</string>
     <string name="ownership_change_blocked">Ownership changes are disabled by Dhizuku</string>
-    <string name="block_app">Block App</string>
-    <string name="auto_deny_in">Auto-deny in</string>
-    <string name="block_app_desc">Completely deny access to Dhizuku</string>
-    <string name="app_blocked_notice">This app is blocked and cannot access Dhizuku</string>
-    <string name="allow_dhizuku_access">Allow Dhizuku Access</string>
-    <string name="unblock_app">Unblock App</string>
-    <string name="auto_deny_in_seconds">Auto-deny in %d seconds</string>
-    <string name="denying_access">Denying access…</string>
 
+    <!-- Service -->
+    <string name="service_channel_name">Background service</string>
+    <string name="service_running">Dhizuku is running</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">This is a Dhizuku notification to ensure service availability at any time.</string>
 </resources>
