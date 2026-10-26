@@ -8,12 +8,15 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.pm.PermissionInfo
 import android.os.Build
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.rosan.dhizuku.BuildConfig
 
 data object DhizukuState {
+    private const val TAG = "DhizukuState"
+
     data class State(val isDeviceOwner: Boolean = false, val isProfileOwner: Boolean = false) {
         val isOwner = isDeviceOwner || isProfileOwner
     }
@@ -55,13 +58,17 @@ data object DhizukuState {
             (permission.protectionLevel and PermissionInfo.PROTECTION_MASK_BASE) == PermissionInfo.PROTECTION_DANGEROUS
         }
 
-        permissions.forEach {
-            dpm.setPermissionGrantState(
-                admin,
-                admin.packageName,
-                it,
-                DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
-            )
+        permissions.forEach { permission ->
+            runCatching {
+                dpm.setPermissionGrantState(
+                    admin,
+                    admin.packageName,
+                    permission,
+                    DevicePolicyManager.PERMISSION_GRANT_STATE_GRANTED
+                )
+            }.onFailure {
+                Log.w(TAG, "Failed to grant $permission", it)
+            }
         }
     }
 

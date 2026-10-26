@@ -50,6 +50,7 @@ import com.rosan.dhizuku.shared.DhizukuVariables
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
@@ -63,6 +64,8 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     companion object {
         const val UID_ERR = -1
         const val AUTO_DENY_SECONDS = 15
+
+        private val requestScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     }
 
     data class ViewState(
@@ -75,7 +78,6 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
         val shouldShowDialog: Boolean = true
     )
 
-    private val coroutineScope = CoroutineScope(Dispatchers.IO)
     private val finishing = AtomicBoolean(false)
     private val appRepo by inject<AppRepo>()
     private val settingsRepo by inject<SettingsRepo>()
@@ -113,7 +115,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     }
 
     private fun checkExistingPermission() {
-        coroutineScope.launch {
+        requestScope.launch {
             if (!settingsRepo.isDhizukuEnabled) {
                 state = state.copy(allowApi = false, timedOut = true, shouldShowDialog = false)
                 finish()
@@ -167,7 +169,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
         val allowApi = state.allowApi
         val listener = state.listener
 
-        coroutineScope.launch {
+        requestScope.launch {
             val packageInfo = packageManager.getPackageInfoForUid(uid) ?: return@launch
             val signature = packageInfo.signature ?: return@launch
 

@@ -30,8 +30,9 @@ class DhizukuDAReceiver : DeviceAdminReceiver(), KoinComponent {
     override fun onEnabled(context: Context, intent: Intent) {
         val dpm = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as? DevicePolicyManager
         super.onEnabled(context, intent)
+        if (dpm == null) return
         val ownerTypeRes = when {
-            dpm!!.isDeviceOwnerApp(BuildConfig.APPLICATION_ID) -> R.string.confirm_device_owner
+            dpm.isDeviceOwnerApp(BuildConfig.APPLICATION_ID) -> R.string.confirm_device_owner
             dpm.isProfileOwnerApp(BuildConfig.APPLICATION_ID) -> R.string.confirm_profile_owner
             else -> null
         }

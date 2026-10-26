@@ -64,7 +64,7 @@ class DaemonService : Service(), KoinComponent {
 
     override fun onDestroy() {
         foreground(false)
-        unregisterReceiver(packageReceiver)
+        runCatching { unregisterReceiver(packageReceiver) }
         super.onDestroy()
     }
 
