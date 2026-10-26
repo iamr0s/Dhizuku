@@ -39,8 +39,8 @@ jobs:
         id: dhizuku-server-api
         uses: actions/cache@v6
         with:
-          path: ~/.m2/repository/Dhizuku-API/
-          key: 202610180200JST
+          path: ~/.m2/repository/
+          key: 202610270630JST
 
       - name: Checkout API
         if: steps.dhizuku-server-api.outputs.cache-hit != 'true'
@@ -62,5 +62,5 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ env.repo }}-${{ env.version }}@${{ env.commit }}
+          archive: false
           path: ${{ env.repo }}-${{ env.version }}@${{ env.commit }}.apk
