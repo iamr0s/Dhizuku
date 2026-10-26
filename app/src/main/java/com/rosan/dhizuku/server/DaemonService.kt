@@ -1,6 +1,7 @@
 package com.rosan.dhizuku.server
 
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -16,6 +17,7 @@ import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
+import com.rosan.dhizuku.ui.activity.SettingsActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -103,9 +105,19 @@ class DaemonService : Service(), KoinComponent {
             .setDescription(getString(R.string.daemon_service_notification_text)).build()
         manager.createNotificationChannel(channel)
 
+        val contentIntent = PendingIntent.getActivity(
+            this,
+            0,
+            Intent(this, SettingsActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            },
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
         val notification = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle(getString(R.string.daemon_service_notification_title))
             .setContentText(getString(R.string.daemon_service_notification_text))
+            .setContentIntent(contentIntent)
             .setSmallIcon(R.drawable.round_hourglass_empty_black_24).setSilent(true).setSound(null)
             .setPriority(NotificationCompat.PRIORITY_LOW).build()
         startForeground(NOTIFICATION_ID, notification)

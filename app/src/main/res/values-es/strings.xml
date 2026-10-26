@@ -44,7 +44,7 @@
     <string name="auto_deny_in">Auto denegar en</string>
     <string name="agreement_text">Esta es nuestra política de usuarios. Léala y acéptela. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Condiciones de Uso&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Política de privacidad&lt;/a&gt;. Este mensaje no volverá a aparecer una vez la hayas aceptado.</string>
     <string name="daemon_service_notification_title">Daemon de Dhizuku</string>
-    <string name="daemon_service_notification_text">Esta es una notificación de Dhizuku para garantizar la disponibilidad del servicio en todo momento. Puedes mantener pulsado para ocultar esta notificación.</string>
+    <string name="daemon_service_notification_text">Esta es una notificación de Dhizuku para garantizar la disponibilidad del servicio en todo momento.</string>
     <string name="copy">Copiar</string>
     <string name="confirm_device_owner">Propietario del dispositivo</string>
     <string name="confirm_profile_owner">Propietario del perfil</string>

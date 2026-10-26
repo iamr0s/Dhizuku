@@ -44,7 +44,7 @@
     <string name="auto_deny_in_seconds">Automatische Ablehnung in %d Sekunden</string>
     <string name="denying_access">Zugang verweigert…</string>
     <string name="daemon_service_notification_title">Dhizuku-Daemon</string>
-    <string name="daemon_service_notification_text">Dies ist eine Dhizuku-Benachrichtigung, um die Verfügbarkeit des Dienstes jederzeit sicherzustellen. Sie können lange drücken, um diese Benachrichtigung auszublenden.</string>
+    <string name="daemon_service_notification_text">Dies ist eine Dhizuku-Benachrichtigung, um die Verfügbarkeit des Dienstes jederzeit sicherzustellen.</string>
     <string name="copy">Kopieren</string>
     <string name="confirm_device_owner">Geräteinhaber</string>
     <string name="confirm_profile_owner">Profilinhaber</string>

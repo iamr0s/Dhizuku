@@ -51,7 +51,7 @@
     <string name="auto_deny_in_seconds">将在 %d 秒后自动拒绝</string>
     <string name="denying_access">拒绝访问…</string>
     <string name="daemon_service_notification_title">Dhizuku 守护进程</string>
-    <string name="daemon_service_notification_text">这是一个Dhizuku的通知，用于保证随时提供服务，你可以长按隐藏此通知。</string>
+    <string name="daemon_service_notification_text">这是一个Dhizuku的通知，用于保证随时提供服务。</string>
     <string name="copy">复制</string>
     <string name="confirm_device_owner">设备所有者</string>
     <string name="confirm_profile_owner">资料所有者</string>

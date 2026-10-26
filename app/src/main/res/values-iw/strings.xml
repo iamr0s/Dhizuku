@@ -44,7 +44,7 @@
     <string name="unblock_app">ביטול חסימת יישום</string>
     <string name="denying_access">דוחה גישה…</string>
     <string name="daemon_service_notification_title">שירות הרקע של Dhizuku</string>
-    <string name="daemon_service_notification_text">זוהי התראה של Dhizuku שמטרתה להבטיח את זמינות השירות בכל עת. ניתן ללחוץ לחיצה ארוכה כדי להסתיר התראה זו.</string>
+    <string name="daemon_service_notification_text">זוהי התראה של Dhizuku שמטרתה להבטיח את זמינות השירות בכל עת.</string>
     <string name="copy">העתקה</string>
     <string name="confirm_device_owner">בעלים של המכשיר</string>
     <string name="confirm_profile_owner">בעלים של הפרופיל</string>

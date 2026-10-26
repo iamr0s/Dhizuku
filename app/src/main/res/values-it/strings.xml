@@ -44,7 +44,7 @@
     <string name="unblock_app">Sblocca app</string>
     <string name="denying_access">Negazione dell\'accesso…</string>
     <string name="daemon_service_notification_title">Demone Dhizuku</string>
-    <string name="daemon_service_notification_text">Questa è una notifica di Dhizuku per garantire la disponibilità del servizio in qualsiasi momento. Puoi tenere premuto per nascondere questa notifica.</string>
+    <string name="daemon_service_notification_text">Questa è una notifica di Dhizuku per garantire la disponibilità del servizio in qualsiasi momento.</string>
     <string name="copy">Copia</string>
     <string name="confirm_device_owner">Proprietario del dispositivo</string>
     <string name="confirm_profile_owner">Proprietario del profilo</string>

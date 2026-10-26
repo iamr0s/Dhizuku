@@ -48,7 +48,7 @@
     <string name="auto_deny_in_seconds">Autómata tiltás %d másodperc után</string>
     <string name="denying_access">A hozzáférés megtagadása…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
-    <string name="daemon_service_notification_text">Ez egy Dhizuku értesítés, hogy biztosítsa a szolg. elérhetőségét bármikor. Hosszan nyomhat az értesítésre, hogy elrejtse.</string>
+    <string name="daemon_service_notification_text">Ez egy Dhizuku értesítés, hogy biztosítsa a szolg. elérhetőségét bármikor.</string>
     <string name="agreement_title">Irányelvek</string>
     <string name="agreement_text">Magyar fordítás Chungus Kuckó által - All your base are belong to us! Itt van az adatvédelmi irányelvünk, kérlek olvassa el és értsen egyet. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Terms of Use&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Privacy Policy&lt;/a&gt; Ez az üzenet többször nem fog megjelenni, ha egyetért.</string>
     <string name="agree_text">Egyetért</string>

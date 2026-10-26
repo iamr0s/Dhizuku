@@ -44,7 +44,7 @@
     <string name="auto_deny_in_seconds">Автоотклонение через %d сек.</string>
     <string name="denying_access">Отклонение доступа…</string>
     <string name="daemon_service_notification_title">Демон Дхизуку</string>
-    <string name="daemon_service_notification_text">Это уведомление Dhizuku, обеспечивающее доступность сервиса в любое время. Вы можете нажать и удерживать, чтобы скрыть это уведомление.</string>
+    <string name="daemon_service_notification_text">Это уведомление Dhizuku, обеспечивающее доступность сервиса в любое время.</string>
     <string name="copy">Копировать</string>
     <string name="confirm_device_owner">Владельцем Устройства</string>
     <string name="confirm_profile_owner">Владельцем Профиля</string>
