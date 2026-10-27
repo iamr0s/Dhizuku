@@ -86,4 +86,9 @@
     <string name="service_running">Dhizuku 正在運行</string>
     <string name="daemon_service_notification_title">Dhizuku 守護程式</string>
     <string name="daemon_service_notification_text">這是 Dhizuku 發送的通知，用於確保服務隨時可用。</string>
+    <string name="oss_licenses">開源授權條款</string>
+    <string name="source">原始碼</string>
+    <string name="license">授權條款</string>
+    <string name="search">搜尋</string>
+    <string name="used_by">被以下依賴使用：%1$s</string>
 </resources>

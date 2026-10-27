@@ -86,4 +86,11 @@
     <string name="service_running">Dhizuku は動作中です</string>
     <string name="daemon_service_notification_title">Dhizuku デーモン</string>
     <string name="daemon_service_notification_text">これは Dhizuku のサービスを常時利用可能にするための通知です。</string>
+
+    <!-- OSS ライセンス -->
+    <string name="oss_licenses">オープンソースライセンス</string>
+    <string name="source">ソース</string>
+    <string name="license">ライセンス</string>
+    <string name="search">検索</string>
+    <string name="used_by">使用元：%1$s</string>
 </resources>

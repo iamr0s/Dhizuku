@@ -1,10 +1,11 @@
-import org.jetbrains.kotlin.konan.properties.loadProperties
+import java.io.File
 import java.util.Properties
 
 plugins {
     alias(libs.plugins.agp.app)
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
+    id("license")
 }
 
 val keystoreDir: String = "$rootDir/keystore"
@@ -27,7 +28,9 @@ android {
         targetSdk = compileSdk
         ndkVersion = "29.0.14206865"
 
-        val versionProps: Properties = org.jetbrains.kotlin.konan.file.File("$rootDir/version.properties").loadProperties()
+        val versionProps = Properties().apply {
+            File("$rootDir/version.properties").inputStream().use { load(it) }
+        }
         versionCode = versionProps.getProperty("versionCode").toInt()
         versionName = versionProps.getProperty("versionName")
 

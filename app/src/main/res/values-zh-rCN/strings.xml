@@ -83,7 +83,12 @@
 
     <!-- 服务 -->
     <string name="service_channel_name">后台服务</string>
-    <string name="service_running">Dhizuku正在运行</string>
+    <string name="service_running">Dhizuku 正在运行</string>
     <string name="daemon_service_notification_title">Dhizuku 守护进程</string>
     <string name="daemon_service_notification_text">这是一个Dhizuku的通知，用于保证随时提供服务。</string>
+    <string name="oss_licenses">开源许可证</string>
+    <string name="source">源代码</string>
+    <string name="license">许可证</string>
+    <string name="search">搜索</string>
+    <string name="used_by">被以下依赖使用：%1$s</string>
 </resources>

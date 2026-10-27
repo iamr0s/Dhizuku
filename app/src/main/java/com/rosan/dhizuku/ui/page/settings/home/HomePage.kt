@@ -35,6 +35,7 @@ import androidx.compose.material.icons.twotone.AttachMoney
 import androidx.compose.material.icons.twotone.Cancel
 import androidx.compose.material.icons.twotone.Code
 import androidx.compose.material.icons.twotone.DoNotDisturbOn
+import androidx.compose.material.icons.twotone.Policy
 import androidx.compose.material.icons.twotone.RoomPreferences
 import androidx.compose.material.icons.twotone.SentimentVeryDissatisfied
 import androidx.compose.material.icons.twotone.SentimentVerySatisfied
@@ -122,7 +123,7 @@ fun HomePage(
                     Text(stringResource(R.string.app_name))
                 },
                 actions = {
-                    TopBarActions()
+                    TopBarActions(navController)
                 }
             )
         }) {
@@ -161,7 +162,7 @@ fun HomePage(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun TopBarActions() {
+private fun TopBarActions(navController: NavController) {
     val context = LocalContext.current
     val settingsRepo = koinInject<SettingsRepo>()
 
@@ -206,6 +207,18 @@ private fun TopBarActions() {
                     }
                 )
             }
+        }
+    }
+
+    TooltipBox(
+        positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Below),
+        tooltip = { PlainTooltip { Text(stringResource(R.string.oss_licenses)) } },
+        state = rememberTooltipState()
+    ) {
+        IconButton(onClick = {
+            navController.navigate(SettingsRoute.OssLicenses.route)
+        }) {
+            Icon(Icons.TwoTone.Policy, contentDescription = stringResource(R.string.oss_licenses))
         }
     }
 
