@@ -44,7 +44,7 @@
     <string name="auto_deny_in_seconds">Автоматично відхилити через %d секунд</string>
     <string name="denying_access">Відмова в доступі…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
-    <string name="daemon_service_notification_text">Це сповіщення Dhizuku для забезпечення доступності послуги в будь-який час. Ви можете довго натискати, щоб приховати це сповіщення.</string>
+    <string name="daemon_service_notification_text">Це сповіщення від Dhizuku, щоб забезпечити доступність послуги в будь-який час.</string>
     <string name="copy">Копіювати</string>
     <string name="confirm_device_owner">Власником Пристрою</string>
     <string name="confirm_profile_owner">Власником Профілю</string>
@@ -54,4 +54,12 @@
     <string name="donate_hide_confirm_title">Приховати кнопку \"Пожертвувати\"</string>
     <string name="donate_hide_confirm_dsp">Цю дію неможливо скасувати в додатку. Ви впевнені, що хочете назавжди приховати кнопку пожертвування?</string>
     <string name="home_status_owner_transferred">%1$s був перекладений!!!</string>
+    <string name="allow_ownership_changes">Дозволити зміну власника</string>
+    <string name="allow_ownership_changes_desc">Дозволити клієнтам змінювати право власності (передавати або очищувати).\nЦе ризик для безпеки.</string>
+    <string name="ownership_change_blocked">У Dhizuku вимкнено можливість зміни власника</string>
+    <string name="oss_licenses">Ліцензії з відкритим кодом</string>
+    <string name="source">Джерело</string>
+    <string name="license">Ліцензія</string>
+    <string name="search">Пошук</string>
+    <string name="used_by">Використовується: %1$s</string>
 </resources>
