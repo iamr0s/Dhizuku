@@ -6,7 +6,7 @@
     <string name="permission_description">Použít Dhizuku API</string>
     <string name="cancel">Zrušit</string>
     <string name="retry">Zkusit znovu</string>
-    <string name="home_status_owner_granted">Jste %1$s!!!</string>
+    <string name="home_status_owner_granted">Jste vlastník!!!</string>
     <string name="home_status_owner_denied">Čekání na aktivaci</string>
     <string name="home_app_management_title">Správa Aplikací</string>
     <string name="home_app_management_dsp">Aplikace, které požádaly o Dhizuku nebo je deklarovaly, se objeví zde.</string>
