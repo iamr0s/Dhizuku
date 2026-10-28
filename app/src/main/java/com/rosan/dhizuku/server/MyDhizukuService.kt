@@ -5,13 +5,11 @@ import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.os.Binder
 import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.os.Parcel
 import android.os.Process
-import android.util.Log
 import android.widget.Toast
 
 import androidx.core.app.NotificationChannelCompat
@@ -36,7 +34,6 @@ import org.koin.core.component.inject
 class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizukuClient?) :
     DhizukuService(context, admin, client), KoinComponent {
     companion object {
-        private const val TAG = "MyDhizukuService"
         private const val OWNERSHIP_BLOCKED_NOTIFICATION_ID = 1002
         private const val OWNERSHIP_BLOCKED_CHANNEL_ID = "ownership_blocked"
     }
@@ -60,8 +57,6 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
                     stub.getDeclaredField(name).apply { isAccessible = true }.getInt(null)
                 }.getOrNull()?.let { it to returnsBoolean }
             }.toMap()
-        }.onFailure {
-            Log.w(TAG, "Unable to resolve ownership transaction codes", it)
         }.getOrDefault(emptyMap())
     }
 
@@ -74,7 +69,6 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
     ): Boolean {
         if (!settingsRepo.isAllowOwnershipChanges && isOwnershipChange(binder, code)) {
             enforceCallingPermission("remote_transact")
-            Log.i(TAG, "Blocked ownership change from uid=${Binder.getCallingUid()}")
             Handler(Looper.getMainLooper()).post {
                 Toast.makeText(context, R.string.ownership_change_blocked, Toast.LENGTH_LONG).show()
                 notifyOwnershipBlocked()
