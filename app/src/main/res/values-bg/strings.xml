@@ -54,5 +54,4 @@
     <string name="denying_access">Отказване на достъп…</string>
     <string name="daemon_service_notification_title">Демон на Dhizuku</string>
     <string name="daemon_service_notification_text">Това е известие от Dhizuku, гарантиращо наличността на услугата по всяко време. Можете да задържите натиснато, за да скриете това известие.</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

@@ -54,5 +54,4 @@
     <string name="donate_hide_confirm_title">நன்கொடை பட்டனை மறை</string>
     <string name="donate_hide_confirm_dsp">பயன்பாட்டிற்குள் இருந்து இதைச் செயல்தவிர்க்க முடியாது. அரே you sure you want பெறுநர் permanently மறை the நன்கொடை button?</string>
     <string name="home_status_owner_transferred">%1$s மாற்றப்பட்டது!!!</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

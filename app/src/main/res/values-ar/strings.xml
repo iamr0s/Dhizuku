@@ -54,5 +54,4 @@
     <string name="donate_hide_confirm_title">إخفاء زر التبرع</string>
     <string name="donate_hide_confirm_dsp">لا يمكن التراجع عن هذا من داخل التطبيق. هل أنت متأكد أنك تريد إخفاء زر التبرع نهائيًا؟</string>
     <string name="home_status_owner_transferred">تم نقل %1$s!!!</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

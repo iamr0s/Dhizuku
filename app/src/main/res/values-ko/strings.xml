@@ -54,5 +54,4 @@
     <string name="donate_hide_confirm_title">후원 버튼 감추기</string>
     <string name="donate_hide_confirm_dsp">앱 내에서 되돌릴 수 없는 작업입니다. 후원 버튼을 영구히 숨기시겠습니까?</string>
     <string name="home_status_owner_transferred">%1$s 이전이 완료되었습니다!!!</string>
-    <string name="app_name" translatable="false"></string>
 </resources>
