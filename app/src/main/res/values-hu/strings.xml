@@ -10,9 +10,9 @@
     <string name="home_dhizuku_title">Aktiváció Dhizukuval</string>
     <string name="home_dhizuku_dsp">Hogy ha van más Dhizuku végrehajtód, akkor válthatsz közöttük amikor szeretnéd. Kérlek&lt;a href=\"%1$s\"&gt; olvassa el a segítséget&lt;/a&gt;</string>
     <string name="home_shizuku_title">Aktiváció Shizukuval</string>
-    <string name="home_shizuku_dsp">A Shizukuval, meg van a lehetőség, hogy futtasson ADB parancsokat egy számítógép nélkül. Kérlek olvassa el a &lt;a href="%1$s"&gt;segítséget&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">A Shizukuval, meg van a lehetőség, hogy futtasson ADB parancsokat egy számítógép nélkül. Kérlek olvassa el a segítséget</string>
     <string name="home_adb_title">Aktiváció ADB használatával</string>
-    <string name="home_adb_dsp">Az ADB (Android Debug Bridge) használatával, futtathat kiváltságos parancsokat. Kérlek olvassa el a &lt;a href="%1$s"&gt;segítséget&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Az ADB (Android Debug Bridge) használatával, futtathat kiváltságos parancsokat. Kérlek olvassa el a segítséget</string>
     <string name="home_adb_btn_view_command">Nézze meg a parancsot</string>
     <string name="home_shutdown_title">Leállítás</string>
     <string name="home_shutdown_dsp">A rendszer nem tudja leállítani a Dhizukut kivéve ha a Dhizuku magától csinálja.</string>
@@ -48,7 +48,7 @@
     <string name="auto_deny_in_seconds">Autómata tiltás %d másodperc után</string>
     <string name="denying_access">A hozzáférés megtagadása…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
-    <string name="daemon_service_notification_text">Ez egy Dhizuku értesítés, hogy biztosítsa a szolg. elérhetőségét bármikor.</string>
+    <string name="daemon_service_notification_text">Ez egy Dhizuku értesítés, hogy biztosítsa a szolg. elérhetőségét bármikor. Hosszan nyomhat az értesítésre, hogy elrejtse.</string>
     <string name="agreement_title">Irányelvek</string>
     <string name="agreement_text">Magyar fordítás Chungus Kuckó által - All your base are belong to us! Itt van az adatvédelmi irányelvünk, kérlek olvassa el és értsen egyet. &lt;a href=\"https://iamr0s.github.io/Dhizuku/TERMS.html\"&gt;Terms of Use&lt;/a&gt;, &lt;a href=\"https://iamr0s.github.io/Dhizuku/PRIVACY.html\"&gt;Privacy Policy&lt;/a&gt; Ez az üzenet többször nem fog megjelenni, ha egyetért.</string>
     <string name="agree_text">Egyetért</string>
