@@ -8,7 +8,7 @@
     <string name="agree_text">پذیرش</string>
     <string name="cancel">لغو</string>
     <string name="retry">تلاش مجدد</string>
-    <string name="home_status_owner_granted">شما %1$s هستید!!!</string>
+    <string name="home_status_owner_granted">شما مالک هستید!!!</string>
     <string name="home_app_management_title">مدیریت برنامه‌ها</string>
     <string name="home_dhizuku_title">فعال‌سازی توسط Dhizuku</string>
     <string name="home_shizuku_title">فعالسازی توسط Shizuku</string>
