@@ -43,7 +43,7 @@
     <string name="unblock_app">إلغاء حظر التطبيق</string>
     <string name="auto_deny_in_seconds">الرفض التلقائي في %d ثواني</string>
     <string name="denying_access">منع الوصول …</string>
-    <string name="daemon_service_notification_text">هذا إشعار من Dhizuku لضمان توفر الخدمة في أي وقت.</string>
+    <string name="daemon_service_notification_text">هذا إشعار من Dhizuku لضمان توفر الخدمة في أي وقت. يمكنك الضغط مطولاً لإخفاء هذا الإشعار.</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="copy">نسخ</string>
     <string name="confirm_device_owner">مالك الجهاز</string>
