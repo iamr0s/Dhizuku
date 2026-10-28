@@ -1,11 +1,6 @@
 package com.rosan.dhizuku.ui.page.settings.app_management
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -37,7 +32,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
@@ -57,6 +51,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
@@ -172,173 +167,152 @@ private fun LazyItemScope.ItemWidget(
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                val applicationInfo = data.applicationInfo
-                val imageBitmap = AppIconCache.rememberImageBitmapState(applicationInfo)
-                val packageName = applicationInfo.packageName
-                val label = applicationInfo.loadLabel(LocalContext.current.packageManager).toString()
-
-                Image(
-                    bitmap = imageBitmap.value,
-                    modifier = Modifier
-                        .size(48.dp)
-                        .clip(RoundedCornerShape(8.dp)),
-                    contentDescription = null
-                )
-
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        label,
-                        style = MaterialTheme.typography.titleMedium.copy(
-                            fontWeight = FontWeight.Medium
-                        ),
-                        color = if (data.blocked) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
-                        else MaterialTheme.colorScheme.onSurface
-                    )
-                    Text(
-                        packageName,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = if (data.blocked) MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
-                        else MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-
-            AnimatedVisibility(
-                visible = !data.blocked,
-                enter = fadeIn() + slideInVertically(),
-                exit = fadeOut() + slideOutVertically()
-            ) {
-                Surface(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(8.dp),
-                    color = MaterialTheme.colorScheme.surface,
-                    tonalElevation = 1.dp,
-                    border = androidx.compose.foundation.BorderStroke(
-                        1.dp,
-                        MaterialTheme.colorScheme.outline.copy(alpha = 0.3f)
-                    )
+        AnimatedContent(
+            targetState = data.blocked,
+            label = "blocked_item"
+        ) { isBlocked ->
+            if (isBlocked) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 8.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(
-                            stringResource(R.string.allow_dhizuku_access),
-                            style = MaterialTheme.typography.bodyMedium.copy(
-                                fontWeight = FontWeight.Medium
-                            ),
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Switch(
-                            checked = data.enabled,
-                            onCheckedChange = { enabled ->
-                                viewModel.setEnabled(data.applicationInfo.uid, enabled)
-                            },
-                            colors = SwitchDefaults.colors(
-                                checkedThumbColor = MaterialTheme.colorScheme.primary,
-                                checkedTrackColor = MaterialTheme.colorScheme.primaryContainer,
-                                uncheckedThumbColor = MaterialTheme.colorScheme.outline,
-                                uncheckedTrackColor = MaterialTheme.colorScheme.surfaceVariant,
-                                uncheckedBorderColor = MaterialTheme.colorScheme.outline
-                            )
-                        )
+                        AppIcon(data)
+                        AppLabels(data, Modifier.weight(1f))
                     }
-                }
-            }
 
-            AnimatedContent(
-                targetState = data.blocked,
-                label = "block_button"
-            ) { isBlocked ->
-                if (isBlocked) {
-                    Column(
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    Surface(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
+                        tonalElevation = 1.dp
                     ) {
-                        Surface(
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(8.dp),
-                            color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.3f),
-                            tonalElevation = 1.dp
-                        ) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(8.dp),
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(
-                                    imageVector = Icons.TwoTone.Block,
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.error,
-                                    modifier = Modifier.size(16.dp)
-                                )
-                                Text(
-                                    stringResource(R.string.app_blocked_notice),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.error
-                                )
-                            }
-                        }
-
-                        Button(
-                            onClick = {
-                                viewModel.setBlocked(data.applicationInfo.uid, false)
-                            },
-                            modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = MaterialTheme.colorScheme.primary,
-                                contentColor = MaterialTheme.colorScheme.onPrimary
-                            ),
-                            shape = RoundedCornerShape(8.dp)
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
                         ) {
                             Icon(
-                                imageVector = Icons.TwoTone.CheckCircle,
+                                imageVector = Icons.TwoTone.Block,
                                 contentDescription = null,
-                                modifier = Modifier.size(18.dp)
+                                tint = MaterialTheme.colorScheme.error,
+                                modifier = Modifier.size(16.dp)
                             )
-                            Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
                             Text(
-                                stringResource(R.string.unblock_app),
-                                style = MaterialTheme.typography.labelLarge
+                                stringResource(R.string.app_blocked_notice),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.error
                             )
                         }
                     }
-                } else {
-                    OutlinedButton(
+
+                    Button(
                         onClick = {
-                            viewModel.setBlocked(data.applicationInfo.uid, true)
+                            viewModel.setBlocked(data.applicationInfo.uid, false)
                         },
                         modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = MaterialTheme.colorScheme.error
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            contentColor = MaterialTheme.colorScheme.onPrimary
                         ),
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Icon(
-                            imageVector = Icons.TwoTone.Block,
+                            imageVector = Icons.TwoTone.CheckCircle,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
                         Text(
-                            stringResource(R.string.block_app),
+                            stringResource(R.string.unblock_app),
                             style = MaterialTheme.typography.labelLarge
+                        )
+                    }
+                }
+            } else {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    AppIcon(data)
+                    AppLabels(data, Modifier.weight(1f))
+
+                    Switch(
+                        checked = data.enabled,
+                        onCheckedChange = { enabled ->
+                            viewModel.setEnabled(data.applicationInfo.uid, enabled)
+                        },
+                        colors = SwitchDefaults.colors(
+                            checkedThumbColor = MaterialTheme.colorScheme.primary,
+                            checkedTrackColor = MaterialTheme.colorScheme.primaryContainer,
+                            uncheckedThumbColor = MaterialTheme.colorScheme.outline,
+                            uncheckedTrackColor = MaterialTheme.colorScheme.surfaceVariant,
+                            uncheckedBorderColor = MaterialTheme.colorScheme.outline
+                        )
+                    )
+
+                    IconButton(
+                        onClick = {
+                            viewModel.setBlocked(data.applicationInfo.uid, true)
+                        }
+                    ) {
+                        Icon(
+                            imageVector = Icons.TwoTone.Block,
+                            contentDescription = stringResource(R.string.block_app),
+                            tint = MaterialTheme.colorScheme.error
                         )
                     }
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun AppIcon(data: AppManagementViewData) {
+    val imageBitmap = AppIconCache.rememberImageBitmapState(data.applicationInfo)
+    Image(
+        bitmap = imageBitmap.value,
+        modifier = Modifier
+            .size(48.dp)
+            .clip(RoundedCornerShape(8.dp)),
+        contentDescription = null
+    )
+}
+
+@Composable
+private fun AppLabels(
+    data: AppManagementViewData,
+    modifier: Modifier = Modifier
+) {
+    val applicationInfo = data.applicationInfo
+    val label = applicationInfo.loadLabel(LocalContext.current.packageManager).toString()
+    Column(modifier = modifier) {
+        Text(
+            label,
+            style = MaterialTheme.typography.titleMedium.copy(
+                fontWeight = FontWeight.Medium
+            ),
+            color = if (data.blocked) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+            else MaterialTheme.colorScheme.onSurface,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        Text(
+            applicationInfo.packageName,
+            style = MaterialTheme.typography.bodySmall,
+            color = if (data.blocked) MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+            else MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
     }
 }
