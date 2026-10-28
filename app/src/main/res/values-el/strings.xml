@@ -44,7 +44,7 @@
     <string name="denying_access">Άρνηση πρόσβασης…</string>
     <string name="unblock_app">Άρση αποκλεισμού Εφαρμογής</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
-    <string name="daemon_service_notification_text">Αυτή είναι μια ειδοποίηση Dhizuku για να διασφαλιστεί η διαθεσιμότητα της υπηρεσίας ανά πάσα στιγμή.</string>
+    <string name="daemon_service_notification_text">Αυτή είναι μια ειδοποίηση Dhizuku για να διασφαλιστεί η διαθεσιμότητα της υπηρεσίας ανά πάσα στιγμή. Μπορείτε να πατήσετε παρατεταμένα για να αποκρύψετε αυτήν την ειδοποίηση.</string>
     <string name="copy">Αντιγραφή</string>
     <string name="confirm_device_owner">Κάτοχος Συσκευής</string>
     <string name="confirm_profile_owner">Κάτοχος Προφίλ</string>
