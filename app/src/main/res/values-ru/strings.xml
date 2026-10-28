@@ -40,9 +40,7 @@
     <string name="agree">Разрешить</string>
     <string name="refuse">Отклонить</string>
     <string name="block_app">Заблокировать приложение</string>
-    <string name="block_app_desc">Полностью запретить доступ к Dhizuku</string>
     <string name="app_blocked_notice">Это приложение заблокировано и не может получить доступ к Dhizuku</string>
-    <string name="allow_dhizuku_access">Разрешить доступ к Dhizuku</string>
     <string name="unblock_app">Разблокировать приложение</string>
     <string name="auto_deny_in">Автоотклонение через</string>
     <string name="auto_deny_in_seconds">Автоотклонение через %d сек.</string>
@@ -56,13 +54,9 @@
     <string name="allow_ownership_changes">Разрешить смену владельца</string>
     <string name="allow_ownership_changes_desc">Разрешить клиентам изменять права владельца (передавать или снимать).\nЭто риск для безопасности.</string>
     <string name="ownership_change_blocked">В Dhizuku отключена возможность смены владельца</string>
-    <string name="service_channel_name">Фоновая служба</string>
-    <string name="service_running">Dhizuku запущен</string>
     <string name="daemon_service_notification_title">Демон Dhizuku</string>
     <string name="daemon_service_notification_text">Это уведомление Dhizuku, необходимое для того, чтобы сервис был доступен в любое время.</string>
     <string name="oss_licenses">Лицензии с открытым исходным кодом</string>
-    <string name="source">Источник</string>
-    <string name="license">Лицензия</string>
     <string name="search">Поиск</string>
     <string name="used_by">Используется: %1$s</string>
 </resources>

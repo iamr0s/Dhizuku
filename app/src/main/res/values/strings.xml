@@ -66,9 +66,7 @@
     <string name="agree">Grant</string>
     <string name="refuse">Deny</string>
     <string name="block_app">Block App</string>
-    <string name="block_app_desc">Completely deny access to Dhizuku</string>
     <string name="app_blocked_notice">This app is blocked and cannot access Dhizuku</string>
-    <string name="allow_dhizuku_access">Allow Dhizuku Access</string>
     <string name="unblock_app">Unblock App</string>
     <string name="auto_deny_in">Auto-deny in</string>
     <string name="auto_deny_in_seconds">Auto-deny in %d seconds</string>
@@ -86,15 +84,11 @@
     <string name="ownership_change_blocked">Ownership changes are disabled by Dhizuku</string>
 
     <!-- Service -->
-    <string name="service_channel_name">Background service</string>
-    <string name="service_running">Dhizuku is running</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
     <string name="daemon_service_notification_text">This is a Dhizuku notification to ensure service availability at any time.</string>
 
     <!-- OSS Licenses -->
     <string name="oss_licenses">Open source licenses</string>
-    <string name="source">Source</string>
-    <string name="license">License</string>
     <string name="search">Search</string>
     <string name="used_by">Used by: %1$s</string>
 </resources>

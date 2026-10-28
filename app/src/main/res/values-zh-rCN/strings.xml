@@ -53,9 +53,7 @@
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>
     <string name="block_app">屏蔽应用</string>
-    <string name="block_app_desc">拒绝访问 Dhizuku</string>
     <string name="app_blocked_notice">此应用已被屏蔽，无法访问 Dhizuku</string>
-    <string name="allow_dhizuku_access">允许访问 Dhizuku</string>
     <string name="unblock_app">取消屏蔽应用</string>
     <string name="auto_deny_in">自动拒绝：</string>
     <string name="auto_deny_in_seconds">将在 %d 秒后自动拒绝</string>
@@ -71,13 +69,9 @@
     <string name="allow_ownership_changes_desc">允许客户端更改所有者权限（转让或解除）。\n这存在安全风险。</string>
     <string name="ownership_change_blocked">Dhizuku 已禁止更改所有者</string>
     <!-- 服务 -->
-    <string name="service_channel_name">后台服务</string>
-    <string name="service_running">Dhizuku正在运行</string>
     <string name="daemon_service_notification_title">Dhizuku 守护进程</string>
     <string name="daemon_service_notification_text">这是一个 Dhizuku 的通知，用于确保服务随时可用。</string>
     <string name="oss_licenses">开源许可证</string>
-    <string name="source">源代码</string>
-    <string name="license">许可证</string>
     <string name="search">搜索</string>
     <string name="used_by">被以下依赖使用：%1$s</string>
 </resources>
