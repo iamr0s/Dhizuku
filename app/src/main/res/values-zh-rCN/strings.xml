@@ -2,61 +2,49 @@
 <resources>
     <!-- 通用 -->
     <string name="permission_description">使用 Dhizuku 的 API</string>
-
     <!-- 使用协议 -->
     <string name="agreement_title">温馨提示</string>
     <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;《用户条款》&lt;/a&gt;与&lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
     <string name="agree_text">同意</string>
-
     <!-- 常用 -->
     <string name="copy">复制</string>
     <string name="cancel">取消</string>
     <string name="confirm">确认</string>
     <string name="retry">重试</string>
     <string name="finish">完成</string>
-
     <!-- 主页 - 状态 -->
     <string name="home_status_owner_granted">您是%1$s！</string>
     <string name="home_status_owner_transferred">%1$s已转移！！！</string>
     <string name="home_status_owner_denied">等待激活</string>
-
     <!-- 主页 - 应用管理 -->
     <string name="home_app_management_title">应用管理</string>
     <string name="home_app_management_dsp">已申请或声明使用 Dhizuku 的应用将在此显示。</string>
-
     <!-- 主页 - Dhizuku -->
     <string name="home_dhizuku_title">激活（通过 Dhizuku）</string>
     <string name="home_dhizuku_dsp">如果您安装了其他的Dhizuku实现，您可以随意在它们之间切换。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
-
     <!-- 主页 - Shizuku -->
     <string name="home_shizuku_title">激活（通过 Shizuku）</string>
     <string name="home_shizuku_dsp">使用Shizuku，您无需电脑就可以运行ADB命令。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
-
     <!-- 主页 - ADB -->
     <string name="home_adb_title">激活（通过 ADB）</string>
     <string name="home_adb_dsp">通过ADB（Android Debug Bridge）连接，可以执行一些特权命令。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
     <string name="home_adb_btn_view_command">查看命令</string>
-
     <!-- 主页 - 关机 -->
     <string name="home_shutdown_title">关闭</string>
     <string name="home_shutdown_dsp">除非 Dhizuku 自愿关闭，否则系统将无法关闭 Dhizuku。</string>
-
     <!-- 主页 - 停用 -->
     <string name="home_deactivate_title">取消激活</string>
     <string name="home_deactivate_dsp">确认要取消激活吗？</string>
-
     <!-- 所有者 -->
     <string name="confirm_device_owner">设备所有者</string>
     <string name="confirm_profile_owner">资料所有者</string>
     <string name="profile_owner_warning_title">警告</string>
     <string name="profile_owner_warning_dsp">此更改只应由了解其影响的用户进行。Dhizuku 的开发者无法对此模式更改导致的任何意外行为做出任何保证。</string>
-
     <!-- 捐赠 -->
     <string name="donate">捐赠</string>
     <string name="donate_hide_action">隐藏</string>
     <string name="donate_hide_confirm_title">隐藏捐赠按钮</string>
     <string name="donate_hide_confirm_dsp">此操作无法在应用内撤销。确定要永久隐藏捐赠按钮吗？</string>
-
     <!-- 权限请求 -->
     <string name="request_permission_text">是否允许<b>%1$s</b>访问Dhizuku?</string>
     <string name="agree">同意</string>
@@ -69,7 +57,6 @@
     <string name="auto_deny_in">自动拒绝：</string>
     <string name="auto_deny_in_seconds">将在 %d 秒后自动拒绝</string>
     <string name="denying_access">拒绝访问…</string>
-
     <!-- 设置 -->
     <string name="settings">设置</string>
     <string name="settings_desc">配置 Dhizuku 行为</string>
@@ -80,10 +67,9 @@
     <string name="allow_ownership_changes">允许更改所有者</string>
     <string name="allow_ownership_changes_desc">允许客户端更改所有者权限（转让或解除）。\n这存在安全风险。</string>
     <string name="ownership_change_blocked">Dhizuku 已禁止更改所有者</string>
-
     <!-- 服务 -->
     <string name="service_channel_name">后台服务</string>
-    <string name="service_running">Dhizuku 正在运行</string>
+    <string name="service_running">Dhizuku正在运行</string>
     <string name="daemon_service_notification_title">Dhizuku 守护进程</string>
     <string name="daemon_service_notification_text">这是一个Dhizuku的通知，用于保证随时提供服务。</string>
     <string name="oss_licenses">开源许可证</string>
@@ -91,4 +77,5 @@
     <string name="license">许可证</string>
     <string name="search">搜索</string>
     <string name="used_by">被以下依赖使用：%1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
