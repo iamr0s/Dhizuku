@@ -4,7 +4,10 @@
     <string name="permission_description">使用 Dhizuku 的 API</string>
     <!-- 使用协议 -->
     <string name="agreement_title">温馨提示</string>
-    <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=https://iamr0s.github.io/Dhizuku/TERMS.html&gt;《用户条款》&lt;/a&gt;与&lt;a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
+    <string name="agreement_text">根据相关政策规定，您需要先阅读并同意%1$s与%2$s后才能开始使用本软件。同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
+    <string name="agreement_terms">《用户条款》</string>
+    <string name="agreement_privacy">《隐私政策》</string>
+    <string name="link_read_help">阅读帮助</string>
     <string name="agree_text">同意</string>
     <!-- 常用 -->
     <string name="copy">复制</string>
@@ -21,13 +24,13 @@
     <string name="home_app_management_dsp">已申请或声明使用 Dhizuku 的应用将在此显示。</string>
     <!-- 主页 - Dhizuku -->
     <string name="home_dhizuku_title">激活（通过 Dhizuku）</string>
-    <string name="home_dhizuku_dsp">如果您安装了其他的Dhizuku实现，您可以随意在它们之间切换。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">如果您安装了其他的Dhizuku实现，您可以随意在它们之间切换。请%1$s.</string>
     <!-- 主页 - Shizuku -->
     <string name="home_shizuku_title">激活（通过 Shizuku）</string>
-    <string name="home_shizuku_dsp">使用Shizuku，您无需电脑就可以运行ADB命令。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">使用Shizuku，您无需电脑就可以运行ADB命令。请%1$s.</string>
     <!-- 主页 - ADB -->
     <string name="home_adb_title">激活（通过 ADB）</string>
-    <string name="home_adb_dsp">通过ADB（Android Debug Bridge）连接，可以执行一些特权命令。请&lt;a href=%1$s&gt;阅读帮助&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">通过ADB（Android Debug Bridge）连接，可以执行一些特权命令。请%1$s.</string>
     <string name="home_adb_btn_view_command">查看命令</string>
     <!-- 主页 - 关机 -->
     <string name="home_shutdown_title">关闭</string>

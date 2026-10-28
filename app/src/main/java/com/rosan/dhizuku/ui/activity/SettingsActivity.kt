@@ -33,10 +33,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import androidx.core.content.edit
-import androidx.core.text.HtmlCompat
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.data.common.util.asFlow
 import com.rosan.dhizuku.ui.page.settings.SettingsPage
+import com.rosan.dhizuku.data.common.util.linkText
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
 import org.koin.core.component.KoinComponent
 import androidx.core.net.toUri
@@ -112,14 +112,24 @@ class SettingsActivity : ComponentActivity(), KoinComponent {
             Text(text = stringResource(id = R.string.agreement_title))
         }, text = {
             val textColor = AlertDialogDefaults.textContentColor.toArgb()
+            val termsLabel = getString(R.string.agreement_terms)
+            val privacyLabel = getString(R.string.agreement_privacy)
+            var linked: CharSequence = getString(
+                R.string.agreement_text, termsLabel, privacyLabel
+            )
+            linked = linkText(
+                this@SettingsActivity, linked, termsLabel,
+                "https://iamr0s.github.io/Dhizuku/TERMS.html"
+            )
+            linked = linkText(
+                this@SettingsActivity, linked, privacyLabel,
+                "https://iamr0s.github.io/Dhizuku/PRIVACY.html"
+            )
             AndroidView(factory = {
                 TextView(it).apply {
                     setTextColor(textColor)
                     movementMethod = LinkMovementMethod.getInstance()
-                    text = HtmlCompat.fromHtml(
-                        context.getString(R.string.agreement_text),
-                        HtmlCompat.FROM_HTML_MODE_COMPACT
-                    )
+                    text = linked
                 }
             })
         }, dismissButton = {

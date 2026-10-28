@@ -82,11 +82,11 @@ import androidx.compose.ui.platform.ClipEntry
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -357,7 +357,12 @@ private fun LazyItemScope.DhizukuWidget(navController: NavController) {
     }, title = {
         Text(stringResource(R.string.home_dhizuku_title))
     }, text = {
-        HtmlText(stringResource(R.string.home_dhizuku_dsp, "https://github.com/iamr0s/Dhizuku"))
+        val help = stringResource(R.string.link_read_help)
+        LinkedText(
+            stringResource(R.string.home_dhizuku_dsp, help),
+            help,
+            "https://github.com/iamr0s/Dhizuku"
+        )
     })
 }
 
@@ -374,7 +379,12 @@ private fun LazyItemScope.ShizukuWidget(navController: NavController) {
     }, title = {
         Text(stringResource(R.string.home_shizuku_title))
     }, text = {
-        HtmlText(stringResource(R.string.home_shizuku_dsp, "https://shizuku.rikka.app/"))
+        val help = stringResource(R.string.link_read_help)
+        LinkedText(
+            stringResource(R.string.home_shizuku_dsp, help),
+            help,
+            "https://shizuku.rikka.app/"
+        )
     })
 }
 
@@ -395,11 +405,11 @@ private fun LazyItemScope.AdbWidget() {
     }, title = {
         Text(stringResource(R.string.home_adb_title))
     }, content = {
-        HtmlText(
-            stringResource(
-                R.string.home_adb_dsp,
-                "https://developer.android.com/tools/adb"
-            )
+        val help = stringResource(R.string.link_read_help)
+        LinkedText(
+            stringResource(R.string.home_adb_dsp, help),
+            help,
+            "https://developer.android.com/tools/adb"
         )
         TextButton(onClick = { commandDialogShow = true }) {
             Icon(imageVector = Icons.TwoTone.Code, contentDescription = null)
@@ -542,19 +552,28 @@ private fun LazyItemScope.DeactivateWidget() {
 }
 
 @Composable
-private fun HtmlText(text: String) {
-    Text(
-        AnnotatedString.fromHtml(
-            text,
-            TextLinkStyles(
-                SpanStyle(
-                    color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.Bold,
-                    textDecoration = TextDecoration.Underline
-                )
+private fun LinkedText(text: String, label: String, url: String) {
+    val annotated = buildAnnotatedString {
+        append(text)
+        val start = text.indexOf(label)
+        if (start >= 0) {
+            addLink(
+                LinkAnnotation.Url(
+                    url,
+                    TextLinkStyles(
+                        SpanStyle(
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold,
+                            textDecoration = TextDecoration.Underline
+                        )
+                    )
+                ),
+                start,
+                start + label.length
             )
-        )
-    )
+        }
+    }
+    Text(annotated)
 }
 
 @Composable

@@ -6,7 +6,10 @@
 
     <!-- Agreement -->
     <string name="agreement_title">Policy</string>
-    <string name="agreement_text">Here is our user policy, Please read and agree to it. &lt;a href="https://iamr0s.github.io/Dhizuku/TERMS.html"&gt;Terms of Use&lt;/a&gt;, &lt;a href="https://iamr0s.github.io/Dhizuku/PRIVACY.html"&gt;Privacy Policy&lt;/a&gt; This message won\'t show up again after you agree.</string>
+    <string name="agreement_text">Here is our user policy. Please read and agree to it. %1$s, %2$s This message won\'t show up again after you agree.</string>
+    <string name="agreement_terms">Terms of Use</string>
+    <string name="agreement_privacy">Privacy Policy</string>
+    <string name="link_read_help">read the help</string>
     <string name="agree_text">Agree</string>
 
     <!-- Common -->
@@ -23,24 +26,24 @@
 
     <!-- Home - Application Management -->
     <string name="home_app_management_title">Application Management</string>
-    <string name="home_app_management_dsp">Apps that has requested or declared Dhizuku will show here.</string>
+    <string name="home_app_management_dsp">Apps that have requested or declared Dhizuku will appear here.</string>
 
     <!-- Home - Dhizuku -->
     <string name="home_dhizuku_title">Activation by Dhizuku</string>
-    <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
+    <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please %1$s.</string>
 
     <!-- Home - Shizuku -->
     <string name="home_shizuku_title">Activation by Shizuku</string>
-    <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
+    <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please %1$s.</string>
 
     <!-- Home - ADB -->
     <string name="home_adb_title">Activation by ADB</string>
-    <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please &lt;a href="%1$s"&gt;read the help&lt;/a&gt;.</string>
+    <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please %1$s.</string>
     <string name="home_adb_btn_view_command">View command</string>
 
     <!-- Home - Shutdown -->
     <string name="home_shutdown_title">Shutdown</string>
-    <string name="home_shutdown_dsp">The system will not be able to shut down Dhizuku unless Dhizuku does so voluntarily.</string>
+    <string name="home_shutdown_dsp">The system cannot shut down Dhizuku unless Dhizuku does so voluntarily.</string>
 
     <!-- Home - Deactivate -->
     <string name="home_deactivate_title">Deactivate</string>
