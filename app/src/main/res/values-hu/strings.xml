@@ -54,4 +54,5 @@
     <string name="agree_text">Egyetért</string>
     <string name="permission_description">A Dhizuku API használata</string>
     <string name="home_status_owner_transferred">%1$s átvitele kész!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
