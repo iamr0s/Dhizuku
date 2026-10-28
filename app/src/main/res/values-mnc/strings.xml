@@ -54,4 +54,5 @@
     <string name="denying_access">fafu dosire…</string>
     <string name="daemon_service_notification_title">Dhizuku i amargi jifisun</string>
     <string name="daemon_service_notification_text">Ere Dhizuku i selgiyesun, jifisun be eshun gocishūn i teburengge. Si golmin jafafi ere selgiyesun be dabtūri ombi.</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
