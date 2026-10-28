@@ -44,7 +44,7 @@
     <string name="auto_deny_in_seconds">Automatické odmietnutie za %d sekúnd</string>
     <string name="denying_access">Odmietnutie prístupu…</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
-    <string name="daemon_service_notification_text">Toto je oznámenie Dhizuku, ktoré zabezpečuje dostupnosť služby kedykoľvek.</string>
+    <string name="daemon_service_notification_text">Toto je oznámenie Dhizuku, ktoré zabezpečuje dostupnosť služby kedykoľvek. Dlhým stlačením môžete toto oznámenie skryť.</string>
     <string name="copy">Kopírovať</string>
     <string name="confirm_device_owner">Vlastník zariadenia</string>
     <string name="confirm_profile_owner">Vlastník profilu</string>
