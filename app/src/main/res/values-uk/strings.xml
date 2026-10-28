@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Приховати кнопку \"Пожертвувати\"</string>
     <string name="donate_hide_confirm_dsp">Цю дію неможливо скасувати в додатку. Ви впевнені, що хочете назавжди приховати кнопку пожертвування?</string>
     <string name="home_status_owner_transferred">%1$s був перекладений!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
