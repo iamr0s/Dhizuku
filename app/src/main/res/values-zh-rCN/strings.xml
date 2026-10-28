@@ -30,7 +30,7 @@
     <string name="home_shizuku_dsp">使用Shizuku，您无需电脑就可以运行ADB命令。请%1$s.</string>
     <!-- 主页 - ADB -->
     <string name="home_adb_title">激活（通过 ADB）</string>
-    <string name="home_adb_dsp">通过ADB（Android Debug Bridge）连接，可以执行一些特权命令。请%1$s.</string>
+    <string name="home_adb_dsp">通过 ADB（USB 调试）连接，可以执行一些特权命令。请%1$s。</string>
     <string name="home_adb_btn_view_command">查看命令</string>
     <!-- 主页 - 关机 -->
     <string name="home_shutdown_title">关闭</string>

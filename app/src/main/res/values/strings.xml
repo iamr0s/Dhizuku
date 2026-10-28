@@ -38,7 +38,7 @@
 
     <!-- Home - ADB -->
     <string name="home_adb_title">Activation by ADB</string>
-    <string name="home_adb_dsp">Through the ADB (Android Debug Bridge) connection, you can execute some privileged commands. Please %1$s.</string>
+    <string name="home_adb_dsp">Through ADB (USB debugging), you can execute some privileged commands. Please %1$s.</string>
     <string name="home_adb_btn_view_command">View command</string>
 
     <!-- Home - Shutdown -->

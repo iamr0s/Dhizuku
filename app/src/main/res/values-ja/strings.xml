@@ -30,7 +30,7 @@
     <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは%1$sをお読みください。</string>
     <!-- ホーム - ADB -->
     <string name="home_adb_title">ADB による有効化</string>
-    <string name="home_adb_dsp">ADB (Android Debug Bridge) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは%1$sをお読みください。</string>
+    <string name="home_adb_dsp">ADB (USB デバッグ) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは%1$sをお読みください。</string>
     <string name="home_adb_btn_view_command">コマンドを表示</string>
     <!-- ホーム - シャットダウン -->
     <string name="home_shutdown_title">停止</string>

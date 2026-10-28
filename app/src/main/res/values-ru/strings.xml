@@ -22,7 +22,7 @@
     <string name="home_shizuku_title">Активация через Shizuku</string>
     <string name="home_shizuku_dsp">С помощью Shizuku вы можете выполнять команды ADB без компьютера. Пожалуйста, %1$s.</string>
     <string name="home_adb_title">Активация через ADB</string>
-    <string name="home_adb_dsp">Через подключение ADB (Android Debug Bridge) можно выполнять некоторые привилегированные команды. Пожалуйста, %1$s.</string>
+    <string name="home_adb_dsp">Через ADB (отладка по USB) можно выполнять некоторые привилегированные команды. Пожалуйста, %1$s.</string>
     <string name="home_adb_btn_view_command">Просмотреть команду</string>
     <string name="home_shutdown_title">Завершение работы</string>
     <string name="home_shutdown_dsp">Система не сможет завершить Dhizuku, если Dhizuku не сделает этого добровольно.</string>
