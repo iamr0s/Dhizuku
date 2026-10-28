@@ -44,7 +44,7 @@
     <string name="unblock_app">Bỏ chặn ứng dụng</string>
     <string name="denying_access">Đang từ chối quyền truy cập…</string>
     <string name="daemon_service_notification_title">Trình nền Dhizuku</string>
-    <string name="daemon_service_notification_text">Đây là thông báo của Dhizuku nhằm đảm bảo dịch vụ luôn sẵn sàng.</string>
+    <string name="daemon_service_notification_text">Đây là thông báo của Dhizuku nhằm đảm bảo dịch vụ luôn sẵn sàng. Bạn có thể nhấn giữ để ẩn thông báo này.</string>
     <string name="copy">Sao chép</string>
     <string name="confirm_device_owner">Chủ sở hữu thiết bị</string>
     <string name="confirm_profile_owner">Chủ sở hữu hồ sơ</string>
@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Ẩn nút ủng hộ</string>
     <string name="donate_hide_confirm_dsp">Hành động này không thể hoàn tác trong ứng dụng. Bạn có chắc chắn muốn ẩn vĩnh viễn nút ủng hộ không?</string>
     <string name="home_status_owner_transferred">%1$s đã được chuyển giao!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
