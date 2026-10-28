@@ -74,7 +74,7 @@
     <string name="service_channel_name">バックグラウンド サービス</string>
     <string name="service_running">Dhizuku は動作中です</string>
     <string name="daemon_service_notification_title">Dhizuku デーモン</string>
-    <string name="daemon_service_notification_text">これは Dhizuku のサービスを常時利用可能にするための通知です。長押しするとこの通知を非表示にできます。</string>
+    <string name="daemon_service_notification_text">これは Dhizuku のサービスを常時利用可能にするための通知です。</string>
     <!-- OSS ライセンス -->
     <string name="oss_licenses">オープンソースライセンス</string>
     <string name="source">ソース</string>
