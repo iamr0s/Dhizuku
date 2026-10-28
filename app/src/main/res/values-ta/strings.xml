@@ -44,7 +44,7 @@
     <string name="unblock_app">பயன்பாட்டின் தடையை நீக்கு</string>
     <string name="denying_access">அணுகல் மறுக்கப்படுகிறது…</string>
     <string name="daemon_service_notification_title">Dhizuku டீமன்</string>
-    <string name="daemon_service_notification_text">இது சேவை எப்போதும் கிடைக்கும் என்பதை உறுதிசெய்ய Dhizuku அனுப்பும் அறிவிப்பு.</string>
+    <string name="daemon_service_notification_text">இது சேவை எப்போதும் கிடைக்கும் என்பதை உறுதிசெய்ய Dhizuku அனுப்பும் அறிவிப்பு. இந்த அறிவிப்பை மறைக்க அழுத்திப் பிடிக்கலாம்.</string>
     <string name="copy">நகலெடு</string>
     <string name="confirm_device_owner">சாதன உரிமையாளர்</string>
     <string name="confirm_profile_owner">சுயவிவர உரிமையாளர்</string>
@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">நன்கொடை பட்டனை மறை</string>
     <string name="donate_hide_confirm_dsp">பயன்பாட்டிற்குள் இருந்து இதைச் செயல்தவிர்க்க முடியாது. அரே you sure you want பெறுநர் permanently மறை the நன்கொடை button?</string>
     <string name="home_status_owner_transferred">%1$s மாற்றப்பட்டது!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
