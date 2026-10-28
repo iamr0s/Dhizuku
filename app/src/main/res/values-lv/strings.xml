@@ -44,7 +44,7 @@
     <string name="unblock_app">Atbloķēt lietotni</string>
     <string name="denying_access">Piekļuve tiek liegta…</string>
     <string name="daemon_service_notification_title">Dhizuku dēmons</string>
-    <string name="daemon_service_notification_text">Šis ir Dhizuku paziņojums, kas nodrošina pakalpojuma pieejamību jebkurā laikā.</string>
+    <string name="daemon_service_notification_text">Šis ir Dhizuku paziņojums, kas nodrošina pakalpojuma pieejamību jebkurā laikā. Varat to noturēt nospiestu, lai paslēptu šo paziņojumu.</string>
     <string name="copy">Kopēt</string>
     <string name="confirm_device_owner">Ierīces īpašnieks</string>
     <string name="confirm_profile_owner">Profila īpašnieks</string>
@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">Slēpt ziedojumu pogu</string>
     <string name="donate_hide_confirm_dsp">Šo darbību lietotnē nevar atsaukt. Vai tiešām vēlaties neatgriezeniski paslēpt ziedojumu pogu?</string>
     <string name="home_status_owner_transferred">%1$s ir pārsūtīts!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
