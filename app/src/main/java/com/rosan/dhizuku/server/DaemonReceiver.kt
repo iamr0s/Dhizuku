@@ -17,7 +17,7 @@ class DaemonReceiver : BroadcastReceiver() {
             action != DeviceAdminReceiver.ACTION_DEVICE_ADMIN_DISABLED &&
             action != DevicePolicyManager.ACTION_DEVICE_OWNER_CHANGED &&
             action != DevicePolicyManager.ACTION_PROFILE_OWNER_CHANGED &&
-            action != "android.app.action.PROFILE_PROVISIONING_COMPLETE"
+            action != DeviceAdminReceiver.ACTION_PROFILE_PROVISIONING_COMPLETE
         ) return
         DhizukuState.sync(context)
     }

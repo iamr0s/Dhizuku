@@ -21,7 +21,7 @@ import rikka.sui.Sui
 private suspend fun blockingRequestShizukuPermission() = callbackFlow {
     val requestCode = (Int.MIN_VALUE..Int.MAX_VALUE).random()
     val listener =
-        Shizuku.OnRequestPermissionResultListener { _requestCode, grantResult ->
+        Shizuku.OnRequestPermissionResultListener { _requestCode, _ ->
             if (_requestCode != requestCode) return@OnRequestPermissionResultListener
             if (Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED)
                 trySend(Unit)

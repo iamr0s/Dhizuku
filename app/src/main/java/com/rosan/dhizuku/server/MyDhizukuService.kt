@@ -119,7 +119,7 @@ class MyDhizukuService(context: Context, admin: ComponentName?, client: IDhizuku
     private fun isOwnershipChange(binder: IBinder?, code: Int): Boolean {
         if (binder == null) return false
         // The Dhizuku UI itself runs with the server UID; keep its activation flow working.
-        if (Binder.getCallingUid() == Process.myUid()) return false
+        if (getCallingUid() == Process.myUid()) return false
         val descriptor = runCatching { binder.interfaceDescriptor }.getOrNull() ?: return false
         if (descriptor != "android.app.admin.IDevicePolicyManager") return false
         return code in ownershipTransactions

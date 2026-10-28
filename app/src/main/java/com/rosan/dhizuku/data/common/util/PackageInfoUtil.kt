@@ -20,7 +20,6 @@ fun PackageManager.getPackageInfoForUid(
     getPackageInfo(getPackageNameForUid(uid) ?: return null, flags)
 }.getOrNull()
 
-@OptIn(ExperimentalStdlibApi::class)
 val PackageInfo.signature: String?
     get() = (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) signingInfo?.apkContentsSigners
     else signatures)?.firstOrNull()?.toByteArray()?.digest("sha256")
