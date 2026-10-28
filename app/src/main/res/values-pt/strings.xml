@@ -12,7 +12,7 @@
     <string name="request_permission_text">Concordar com a solicitação de permissão Dhizuku de <b>%1$s</b>\?</string>
     <string name="home_deactivate_title">Desativar</string>
     <string name="retry">Tentar novamente</string>
-    <string name="home_status_owner_granted">Você é %1$s!!!</string>
+    <string name="home_status_owner_granted">Você é o Dono!!!</string>
     <string name="home_status_owner_denied">Aguardando ativação</string>
     <string name="home_app_management_title">Gerenciamento de aplicativos</string>
     <string name="home_dhizuku_title">Ativação por Dhizuku</string>
