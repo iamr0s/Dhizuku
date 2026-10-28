@@ -11,7 +11,7 @@
     <string name="donate">Darowizna</string>
     <string name="request_permission_text">Czy wyrażasz zgodę na prośbę o pozwolenie Dhizuku od <b>%1$s</b>\?</string>
     <string name="home_deactivate_title">Dezaktywuj</string>
-    <string name="home_status_owner_granted">Jesteś %1$s!!!</string>
+    <string name="home_status_owner_granted">Jesteś Właścicielem!!!</string>
     <string name="retry">Ponów</string>
     <string name="home_status_owner_denied">Czekam na aktywację</string>
     <string name="home_app_management_title">Zarządzanie aplikacją</string>
