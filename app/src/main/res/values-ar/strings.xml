@@ -17,7 +17,7 @@
     <string name="home_shizuku_title">التنشيط بواسطة Shizuku</string>
     <string name="home_shizuku_dsp">مع Shizuku، لديك القدرة على تشغيل أوامر ADB دون الحاجة إلى جهاز كمبيوتر. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
     <string name="home_adb_title">التنشيط بواسطة ADB</string>
-    <string name="home_status_owner_granted">أنت %1$s!!!</string>
+    <string name="home_status_owner_granted">أنت المالك!!!</string>
     <string name="retry">إعادة المحاولة</string>
     <string name="home_app_management_title">إدارة التطبيقات</string>
     <string name="home_dhizuku_dsp">إذا كان لديك تطبيقات أخرى من Dhizuku مثبتة، يمكنك التبديل بينها كما تشاء. يرجى &lt;a href=%1$s&gt;قراءة المساعدة&lt;/a&gt;.</string>
@@ -41,7 +41,7 @@
     <string name="app_blocked_notice">هذا التطبيق محظور ولا يمكنه الوصول إلى Dhizuku</string>
     <string name="allow_dhizuku_access">السماح بالوصول لـ Dhizuku</string>
     <string name="unblock_app">إلغاء حظر التطبيق</string>
-    <string name="auto_deny_in_seconds">الرفض التلقائي في %d ثواني</string>
+    <string name="auto_deny_in_seconds">الرفض التلقائي في d% ثواني</string>
     <string name="denying_access">منع الوصول …</string>
     <string name="daemon_service_notification_text">هذا إشعار من Dhizuku لضمان توفر الخدمة في أي وقت. يمكنك الضغط مطولاً لإخفاء هذا الإشعار.</string>
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
