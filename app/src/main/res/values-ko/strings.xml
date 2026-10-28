@@ -44,7 +44,7 @@
     <string name="unblock_app">앱 차단 해제</string>
     <string name="denying_access">접근을 거부하는 중…</string>
     <string name="daemon_service_notification_title">Dhizuku 데몬</string>
-    <string name="daemon_service_notification_text">이 알림은 서비스가 항상 사용 가능하도록 보장하기 위한 Dhizuku의 알림입니다.</string>
+    <string name="daemon_service_notification_text">이 알림은 서비스가 항상 사용 가능하도록 보장하기 위한 Dhizuku의 알림입니다. 길게 눌러 이 알림을 숨길 수 있습니다.</string>
     <string name="copy">복사</string>
     <string name="confirm_device_owner">소유자</string>
     <string name="confirm_profile_owner">프로필 관리자</string>
@@ -54,4 +54,5 @@
     <string name="donate_hide_confirm_title">후원 버튼 감추기</string>
     <string name="donate_hide_confirm_dsp">앱 내에서 되돌릴 수 없는 작업입니다. 후원 버튼을 영구히 숨기시겠습니까?</string>
     <string name="home_status_owner_transferred">%1$s 이전이 완료되었습니다!!!</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
