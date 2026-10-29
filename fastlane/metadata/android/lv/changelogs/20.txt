@@ -1,0 +1,8 @@
+- Novērst avāriju operētājsistēmā Android 8.x
+- Novērst baterijas optimizācijas ekrāna trūkumu
+- Novērst palaišanas sacensības stāvokli
+- Uzlabot atļauju saderību un stabilitāti
+- Pievienot īpašumtiesību nodošanas iestatījumu (pēc noklusējuma izslēgts)
+- Atvērt lietotni no dēmona paziņojuma; noņemt gara nospieduma norādi
+- Atjaunināt atkarības
+- Atjaunināt tulkojumus

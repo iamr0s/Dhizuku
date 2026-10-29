@@ -1,0 +1,13 @@
+Šī lietotne var deleģēt funkcijas no ierīces īpašnieka.
+Tas nozīmē, ka šī lietotne darbojas kā starpnieks, lai izsauktu funkcijas no ierīces īpašnieka.
+
+Parasti šīs pilnvaras var deleģēt tikai vienai lietotnei, taču Dhizuku ļauj deleģēt visas ierīces īpašnieka pilnvaras citām lietotnēm.
+
+To ir viegli iestatīt (piemēram, Shizuku, QR kods).
+Lai iegūtu plašāku informāciju, lūdzu, skatiet <a href="https://github.com/iamr0s/Dhizuku/discussions/19">pamācību</a>.
+
+Lietošanas piemērs: tas ir ideāli piemērots, ja vienlaikus jāatbalsta divas vai vairākas ierīces īpašnieka atļaujas.
+
+Konkrēti, Japānā ierīcē ar ierobežotu funkcionalitāti ir jāatbalsta gan Aurora Store, gan Test DPC.
+
+Pat ja lietotnes izstrādātājs neatbalsta Dhizuku, varat piespiest Dhizuku atbalstu, izmantojot Dhizuku-API-Xposed moduli.
