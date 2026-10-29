@@ -36,7 +36,7 @@
     <string name="donate_hide_action">隐藏</string>
     <string name="donate_hide_confirm_title">隐藏捐赠按钮</string>
     <string name="donate_hide_confirm_dsp">此操作无法在应用内撤销。确定要永久隐藏捐赠按钮吗？</string>
-    <string name="request_permission_text">是否允许<b>%1$s</b>访问Dhizuku?</string>
+    <string name="request_permission_text">是否允许 <b>%1$s</b> 访问Dhizuku?</string>
     <string name="agree">同意</string>
     <string name="refuse">拒绝</string>
     <string name="block_app">屏蔽应用</string>
