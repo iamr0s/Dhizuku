@@ -5,4 +5,3 @@
 – Přidejte nastavení, které klientům umožní převést nebo vymazat vlastnictví (ve výchozím nastavení zakázáno)
 - Otevřete aplikaci po klepnutí na oznámení démona a odstraňte nápovědu pro dlouhé stisknutí
 - Aktualizujte závislosti
-- Aktualizace překladů

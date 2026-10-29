@@ -3,6 +3,3 @@
 - Ayusin ang kundisyon ng startup race na maaaring pumigil sa serbisyo sa pagsisimula sa ilang device
 - Pagbutihin ang pagbibigay ng pahintulot sa pagiging tugma at pangkalahatang katatagan
 - Magdagdag ng setting upang payagan ang mga kliyente na ilipat o i-clear ang pagmamay-ari (naka-disable bilang default)
-- Buksan ang app kapag na-tap ang abiso ng daemon at alisin ang hint nang matagal
-- I-update ang mga dependency
-- I-update ang mga pagsasalin

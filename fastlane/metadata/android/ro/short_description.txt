@@ -1,0 +1,1 @@
+Un instrument care poate partaja permisiunile proprietarului dispozitivului

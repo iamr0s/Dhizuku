@@ -3,6 +3,3 @@
 - Javítson ki egy indítási versenyfeltételt, amely megakadályozhatja a szolgáltatás elindítását egyes eszközökön
 - A kompatibilitást és az általános stabilitást biztosító engedélyek javítása
 - Adjon hozzá egy beállítást, amely lehetővé teszi az ügyfelek számára a tulajdonjog átruházását vagy törlését (alapértelmezés szerint le van tiltva)
-- Nyissa meg az alkalmazást, amikor megérinti a démon értesítést, és távolítsa el a hosszan lenyomott utalást
-- Függőségek frissítése
-- Frissítse a fordításokat

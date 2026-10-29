@@ -3,6 +3,3 @@
 - Correction d'une condition de concurrence critique au démarrage qui pourrait empêcher le service de démarrer sur certains appareils
 - Améliorer la compatibilité des autorisations et la stabilité globale
 - Ajouter un paramètre pour permettre aux clients de transférer ou d'effacer la propriété (désactivé par défaut)
-- Ouvrez l'application lorsque la notification du démon est enfoncée et supprimez l'indice d'appui long
-- Mettre à jour les dépendances
-- Mettre à jour les traductions

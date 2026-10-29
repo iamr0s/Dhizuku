@@ -4,5 +4,3 @@
 - Meningkatkan kompatibilitas pemberian izin dan stabilitas secara keseluruhan
 - Tambahkan pengaturan untuk memungkinkan klien mentransfer atau menghapus kepemilikan (dinonaktifkan secara default)
 - Buka aplikasi saat notifikasi daemon diketuk dan hapus petunjuk tekan lama
-- Perbarui dependensi
-- Perbarui terjemahan

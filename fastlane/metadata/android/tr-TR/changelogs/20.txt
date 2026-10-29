@@ -5,4 +5,3 @@
 - İstemcilerin sahipliği devretmesine veya temizlemesine izin veren bir ayar ekleyin (varsayılan olarak devre dışıdır)
 - Daemon bildirimine dokunulduğunda uygulamayı açın ve uzun basma ipucunu kaldırın
 - Bağımlılıkları güncelleyin
-- Çevirileri güncelleyin

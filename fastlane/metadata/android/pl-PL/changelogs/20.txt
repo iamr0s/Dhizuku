@@ -4,5 +4,3 @@
 — Popraw zgodność udzielania uprawnień i ogólną stabilność
 - Dodaj ustawienie umożliwiające klientom przeniesienie lub wyczyszczenie własności (domyślnie wyłączone)
 - Otwórz aplikację po dotknięciu powiadomienia o demonie i usuń wskazówkę dotyczącą długiego naciśnięcia
-- Zaktualizuj zależności
-- Aktualizuj tłumaczenia

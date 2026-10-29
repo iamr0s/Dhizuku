@@ -3,6 +3,3 @@
 - Correção de uma condição de corrida de inicialização que poderia impedir a inicialização do serviço em alguns dispositivos
 - Melhorar a compatibilidade de concessão de permissão e a estabilidade geral
 - Adicione uma configuração para permitir que os clientes transfiram ou limpem a propriedade (desativada por padrão)
-- Abra o aplicativo quando a notificação do daemon for tocada e remova a dica de toque longo
-- Atualizar dependências
-- Atualizar traduções

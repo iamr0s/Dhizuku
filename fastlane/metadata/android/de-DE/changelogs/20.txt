@@ -3,6 +3,3 @@
 – Behebung einer Start-Race-Bedingung, die den Start des Dienstes auf einigen Geräten verhindern konnte
 - Verbessern Sie die Kompatibilität der Berechtigungserteilung und die allgemeine Stabilität
 – Fügen Sie eine Einstellung hinzu, die es Clients ermöglicht, den Besitz zu übertragen oder zu löschen (standardmäßig deaktiviert).
-- Öffnen Sie die App, wenn auf die Daemon-Benachrichtigung getippt wird, und entfernen Sie den Hinweis zum langen Drücken
-- Abhängigkeiten aktualisieren
-- Übersetzungen aktualisieren

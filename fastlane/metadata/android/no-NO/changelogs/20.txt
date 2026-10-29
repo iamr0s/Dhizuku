@@ -5,4 +5,3 @@
 - Legg til en innstilling for å tillate klienter å overføre eller fjerne eierskap (deaktivert som standard)
 - Åpne appen når demonvarslingen trykkes, og fjern hintet med lang trykk
 - Oppdater avhengigheter
-- Oppdater oversettelser

@@ -3,6 +3,3 @@
 - Se corrigió una condición de carrera de inicio que podría impedir que el servicio se iniciara en algunos dispositivos
 - Mejorar la compatibilidad con la concesión de permisos y la estabilidad general.
 - Agregue una configuración para permitir a los clientes transferir o borrar la propiedad (deshabilitado de forma predeterminada)
-- Abra la aplicación cuando se toque la notificación del demonio y elimine la sugerencia de pulsación larga
-- Actualizar dependencias
-- Actualizar traducciones
