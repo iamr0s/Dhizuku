@@ -5,7 +5,7 @@
     <string name="agreement_text">Ознакомьтесь с нашей политикой и согласитесь с ней: %1$s, %2$s. После согласия это сообщение больше не появится.</string>
     <string name="agreement_terms">Условия использования</string>
     <string name="agreement_privacy">Политика конфиденциальности</string>
-    <string name="link_read_help">прочитайте справку</string>
+    <string name="link_read_help">прочтите справку</string>
     <string name="agree_text">Принять</string>
     <string name="copy">Копировать</string>
     <string name="cancel">Отмена</string>
