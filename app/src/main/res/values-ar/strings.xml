@@ -59,4 +59,5 @@
     <string name="oss_licenses">تراخيص مفتوحة المصدر</string>
     <string name="search">يبحث</string>
     <string name="used_by">يستخدم بواسطة: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
