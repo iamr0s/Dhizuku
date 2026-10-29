@@ -59,4 +59,5 @@
     <string name="oss_licenses">Giấy phép nguồn mở</string>
     <string name="search">Tìm kiếm</string>
     <string name="used_by">Được sử dụng bởi: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
