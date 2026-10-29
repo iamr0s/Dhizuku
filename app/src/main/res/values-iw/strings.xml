@@ -36,7 +36,7 @@
     <string name="donate_hide_action">הסתרה</string>
     <string name="donate_hide_confirm_title">הסתרת כפתור התרומה</string>
     <string name="donate_hide_confirm_dsp">לא ניתן לבטל פעולה זו מתוך היישום. האם אתם בטוחים שברצונכם להסתיר לצמיתות את כפתור התרומה?</string>
-    <string name="request_permission_text">לאפשר ל<b>%1$s</b> לגשת לDhizuku?</string>
+    <string name="request_permission_text">לאפשר ל <b>%1$s</b> לגשת לDhizuku?</string>
     <string name="agree">הענקה</string>
     <string name="refuse">דחייה</string>
     <string name="block_app">חסימת יישום</string>
