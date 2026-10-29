@@ -59,5 +59,4 @@
     <string name="oss_licenses">Άδειες ανοιχτού κώδικα</string>
     <string name="search">Ερευνα</string>
     <string name="used_by">Χρησιμοποιείται από: %1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

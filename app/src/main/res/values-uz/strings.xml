@@ -59,5 +59,4 @@
     <string name="oss_licenses">Ochiq kodli litsenziyalar</string>
     <string name="search">Qidiruv</string>
     <string name="used_by">Foydalanilgan: %1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

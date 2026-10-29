@@ -74,5 +74,4 @@
     <string name="oss_licenses">開源授權條款</string>
     <string name="search">搜尋</string>
     <string name="used_by">被以下依賴使用：%1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

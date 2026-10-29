@@ -59,5 +59,4 @@
     <string name="oss_licenses">오픈소스 라이선스</string>
     <string name="search">찾다</string>
     <string name="used_by">사용자: %1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

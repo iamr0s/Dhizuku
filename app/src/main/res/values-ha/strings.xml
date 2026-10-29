@@ -59,5 +59,4 @@
     <string name="oss_licenses">Bude lasisin tushe</string>
     <string name="search">Bincika</string>
     <string name="used_by">Amfani da: %1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>
