@@ -12,7 +12,7 @@
     <string name="confirm">موافق</string>
     <string name="retry">إعادة المحاولة</string>
     <string name="finish">إنهاء</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">أنت %1$s!!!</string>
     <string name="home_status_owner_transferred">تم نقل %1$s!!!</string>
     <string name="home_status_owner_denied">في انتظار التنشيط</string>
     <string name="home_app_management_title">إدارة التطبيقات</string>
@@ -43,7 +43,7 @@
     <string name="app_blocked_notice">هذا التطبيق محظور ولا يمكنه الوصول إلى Dhizuku</string>
     <string name="unblock_app">إلغاء حظر التطبيق</string>
     <string name="auto_deny_in">الرفض التلقائي</string>
-    <string name="auto_deny_in_seconds">Auto-deny in %d seconds</string>
+    <string name="auto_deny_in_seconds">الرفض التلقائي خلال %d ثانية</string>
     <string name="denying_access">منع الوصول …</string>
     <string name="settings">الإعدادات</string>
     <string name="settings_desc">ضبط سلوك Dhizuku</string>
@@ -54,7 +54,7 @@
     <string name="allow_ownership_changes">السماح بتغييرات الملكية</string>
     <string name="allow_ownership_changes_desc">السماح للعملاء بتغيير الملكية (نقل أو مسح).\nهذا خطر أمني.</string>
     <string name="ownership_change_blocked">تم تعطيل تغييرات الملكية بواسطة Dhizuku</string>
-    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_title">خادم Dhizuku</string>
     <string name="daemon_service_notification_text">هذا إشعار Dhizuku لضمان توفر الخدمة في أي وقت.</string>
     <string name="oss_licenses">تراخيص مفتوحة المصدر</string>
     <string name="search">يبحث</string>

@@ -1,54 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 全般 -->
     <string name="permission_description">Dhizuku の API を使用します</string>
-    <!-- 使用許諾 -->
     <string name="agreement_title">使用許諾</string>
     <string name="agreement_text">このアプリを利用するには、%1$sと%2$sに同意する必要があります。一度同意すると、この画面は以後表示されません。</string>
     <string name="agreement_terms">利用規約</string>
     <string name="agreement_privacy">個人情報保護方針</string>
     <string name="link_read_help">ヘルプ</string>
     <string name="agree_text">同意</string>
-    <!-- 共通 -->
     <string name="copy">コピー</string>
     <string name="cancel">中止</string>
-    <string name="confirm">OK</string>
+    <string name="confirm">حسنًا</string>
     <string name="retry">再試行</string>
     <string name="finish">完了</string>
-    <!-- ホーム - ステータス -->
     <string name="home_status_owner_granted">%1$sです！</string>
     <string name="home_status_owner_transferred">%1$sを譲渡しました！</string>
     <string name="home_status_owner_denied">有効化を待機中</string>
-    <!-- ホーム - アプリ管理 -->
     <string name="home_app_management_title">アプリの管理</string>
     <string name="home_app_management_dsp">Dhizuku の使用を宣言したアプリがここに表示されます。</string>
-    <!-- ホーム - Dhizuku -->
     <string name="home_dhizuku_title">Dhizuku による有効化</string>
     <string name="home_dhizuku_dsp">他のアプリに所有権を譲渡できます。</string>
-    <!-- ホーム - Shizuku -->
     <string name="home_shizuku_title">Shizuku による有効化</string>
     <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは%1$sをお読みください。</string>
-    <!-- ホーム - ADB -->
     <string name="home_adb_title">ADB による有効化</string>
     <string name="home_adb_dsp">ADB (USB デバッグ) 接続を通じて、いくつかの特権コマンドを実行できます。詳しくは%1$sをお読みください。</string>
     <string name="home_adb_btn_view_command">コマンドを表示</string>
-    <!-- ホーム - シャットダウン -->
     <string name="home_shutdown_title">停止</string>
     <string name="home_shutdown_dsp">Dhizuku は手動で停止しない限り、システムは Dhizuku を停止できません。</string>
-    <!-- ホーム - 無効化 -->
     <string name="home_deactivate_title">無効化</string>
     <string name="home_deactivate_dsp">本当に無効化してもよろしいですか？</string>
-    <!-- オーナー -->
     <string name="confirm_device_owner">デバイスオーナー</string>
     <string name="confirm_profile_owner">プロファイルオーナー</string>
     <string name="profile_owner_warning_title">警告</string>
     <string name="profile_owner_warning_dsp">これは意図を理解したユーザーのみがおこなえる変更です。Dhizukuの開発者はこのモード変更により生じた想定外の動作について一切の保証をいたしかねます。</string>
-    <!-- 寄付 -->
     <string name="donate">寄付</string>
     <string name="donate_hide_action">非表示にする</string>
     <string name="donate_hide_confirm_title">寄付ボタンを非表示</string>
     <string name="donate_hide_confirm_dsp">アプリ内からは元に戻せません。寄付ボタンを完全に非表示にしますか？</string>
-    <!-- 権限リクエスト -->
     <string name="request_permission_text"><b>%1$s</b> による Dhizuku へのアクセスを許可しますか？</string>
     <string name="agree">許可</string>
     <string name="refuse">拒否</string>
@@ -58,7 +45,6 @@
     <string name="auto_deny_in">自動で却下：</string>
     <string name="auto_deny_in_seconds">残り %d 秒で自動拒否</string>
     <string name="denying_access">アクセスを拒否しています…</string>
-    <!-- 設定 -->
     <string name="settings">設定</string>
     <string name="settings_desc">Dhizuku の動作環境の設定を行います。</string>
     <string name="enable_dhizuku">Dhizuku を有効化</string>
@@ -68,10 +54,8 @@
     <string name="allow_ownership_changes">オーナー権限の変更を許可</string>
     <string name="allow_ownership_changes_desc">クライアントによるオーナー権限の変更（譲渡・解除）を許可します。\nセキュリティ上のリスクがあります。</string>
     <string name="ownership_change_blocked">Dhizuku の設定によりオーナー権限の変更は禁止されています</string>
-    <!-- サービス -->
     <string name="daemon_service_notification_title">Dhizuku デーモン</string>
     <string name="daemon_service_notification_text">これは Dhizuku のサービスを常時利用可能にするための通知です。</string>
-    <!-- OSS ライセンス -->
     <string name="oss_licenses">オープンソースライセンス</string>
     <string name="search">検索</string>
     <string name="used_by">使用元：%1$s</string>

@@ -10,9 +10,9 @@
     <string name="copy">Kopēt</string>
     <string name="cancel">Atcelt</string>
     <string name="confirm">Labi</string>
-    <string name="retry">…„\t\n„­­“»«…Mēģināt vēlreiz</string>
+    <string name="retry">Mēģināt vēlreiz</string>
     <string name="finish">Pabeigts</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">Jūs esat %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s ir pārsūtīts!!!</string>
     <string name="home_status_owner_denied">Gaida aktivizāciju</string>
     <string name="home_app_management_title">Lietotņu pārvaldība</string>

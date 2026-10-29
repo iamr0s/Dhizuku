@@ -9,10 +9,10 @@
     <string name="agree_text">Đồng ý</string>
     <string name="copy">Sao chép</string>
     <string name="cancel">Hủy bỏ</string>
-    <string name="confirm">OK</string>
+    <string name="confirm">Đồng ý</string>
     <string name="retry">Thử lại</string>
     <string name="finish">Đã xong</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">Bạn là %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s đã được chuyển giao!!!</string>
     <string name="home_status_owner_denied">Đang chờ kích hoạt</string>
     <string name="home_app_management_title">Quản lý ứng dụng</string>

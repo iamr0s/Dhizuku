@@ -10,5 +10,4 @@ Több információért nézze az <a href="https://github.com/iamr0s/Dhizuku/disc
 Használati példa: hasznos amikor több appnak szeretnéd megadni a DeviceOwner engedélyt.
 
 Például japánban az Aurora Storet és Test DPC nek kell megadnod valamelyik korlátozott funkciós eszközökön.
-
 Még akkor is ha az app fejlesztő nem támogatja a Dhizukut, kényszerítheted a Dhizuku-API  XPosed modullal.

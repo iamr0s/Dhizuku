@@ -12,7 +12,7 @@
     <string name="confirm">בסדר</string>
     <string name="retry">נסה שוב</string>
     <string name="finish">סיום</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">אתה %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s הועבר!!!</string>
     <string name="home_status_owner_denied">מחכה להפעלה</string>
     <string name="home_app_management_title">ניהול יישומים</string>

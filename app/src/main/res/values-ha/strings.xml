@@ -37,7 +37,7 @@
     <string name="donate_hide_confirm_title">Ɓoye Maɓallin Donate</string>
     <string name="donate_hide_confirm_dsp">Ba za a iya soke wannan daga cikin app ɗin ba. Shin kun tabbata kuna son ɓoye maɓallin bayar da gudummawa ta dindindin?</string>
     <string name="request_permission_text">Bada <b>%1$s</b> don samun damar Dhizuku?</string>
-    <string name="agree">Grant</string>
+    <string name="agree">Bada</string>
     <string name="refuse">Karyata</string>
     <string name="block_app">Toshe App</string>
     <string name="app_blocked_notice">An katange wannan app ɗin kuma ba zai iya samun damar Dhizuku ba</string>
@@ -54,7 +54,7 @@
     <string name="allow_ownership_changes">Bada izinin ikon mallakar</string>
     <string name="allow_ownership_changes_desc">Ba da damar abokan ciniki su canza ikon mallaka (canjawa ko sharewa).\nWannan hatsarin tsaro ne.</string>
     <string name="ownership_change_blocked">Dhizuku ya kashe canjin ikon mallaka</string>
-    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_title">Daemon Dhizuku</string>
     <string name="daemon_service_notification_text">Wannan sanarwar Dhizuku ce don tabbatar da samuwan sabis a kowane lokaci.</string>
     <string name="oss_licenses">Bude lasisin tushe</string>
     <string name="search">Bincika</string>

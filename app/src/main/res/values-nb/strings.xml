@@ -12,7 +12,7 @@
     <string name="confirm">Greit</string>
     <string name="retry">Prøv igjen</string>
     <string name="finish">Ferdig</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">Du er %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s har blitt overført!!!</string>
     <string name="home_status_owner_denied">Venter på aktivering</string>
     <string name="home_app_management_title">Administrer applikasjon(er)</string>

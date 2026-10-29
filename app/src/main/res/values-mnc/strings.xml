@@ -2,10 +2,10 @@
 <resources>
     <string name="permission_description">Dhizuku i API be baitala</string>
     <string name="agreement_title">tacin</string>
-    <string name="agreement_text">Here is our user policy. Please read and agree to it. %1$s, %2$s This message won\'t show up again after you agree.</string>
-    <string name="agreement_terms">Terms of Use</string>
-    <string name="agreement_privacy">Privacy Policy</string>
-    <string name="link_read_help">read the help</string>
+    <string name="agreement_text">Энд манай хэрэглэгчийн бодлого байна. Уншаад зөвшөөрнө үү. %1$s, %2$s Таныг зөвшөөрсний дараа энэ зурвас дахин гарч ирэхгүй.</string>
+    <string name="agreement_terms">Хэрэглэх нөхцөл</string>
+    <string name="agreement_privacy">Нууцлалын бодлого</string>
+    <string name="link_read_help">тусламжийг уншина уу</string>
     <string name="agree_text">dahame</string>
     <string name="copy">duplila</string>
     <string name="cancel">nakū</string>
@@ -18,11 +18,11 @@
     <string name="home_app_management_title">Fiyelen i kadalan</string>
     <string name="home_app_management_dsp">Dhizuku be baiha atau ilanaha fiyelen ubade tucihe.</string>
     <string name="home_dhizuku_title">Dhizuku i aktibun</string>
-    <string name="home_dhizuku_dsp">This feature allows ownership to be transferred to other apps.</string>
+    <string name="home_dhizuku_dsp">Энэ функц нь өмчлөлийг бусад програм руу шилжүүлэх боломжийг олгодог.</string>
     <string name="home_shizuku_title">Shizuku i aktibun</string>
-    <string name="home_shizuku_dsp">With Shizuku, you have the ability to run ADB commands without the need for a computer. Please %1$s.</string>
+    <string name="home_shizuku_dsp">Шизүкүгийн тусламжтайгаар та компьютер ашиглахгүйгээр АХБ-ны командуудыг ажиллуулах чадвартай болно. %1$s уу.</string>
     <string name="home_adb_title">ADB i aktibun</string>
-    <string name="home_adb_dsp">Through ADB (USB debugging), you can execute some privileged commands. Please %1$s.</string>
+    <string name="home_adb_dsp">ADB (USB дибаг хийх)-ээр дамжуулан та зарим давуу эрхтэй командуудыг гүйцэтгэх боломжтой. %1$s уу.</string>
     <string name="home_adb_btn_view_command">hese be tu</string>
     <string name="home_shutdown_title">dahū</string>
     <string name="home_shutdown_dsp">Dasan Dhizuku be dahūmbume muterakū, Dhizuku beye i cihai dahūmbume akū oci.</string>
@@ -51,12 +51,12 @@
     <string name="enable_dhizuku_desc">Fiyelen be Dhizuku i jifisun be baitalara oktombu</string>
     <string name="whitelist_mode">tob lista i arbun</string>
     <string name="whitelist_mode_desc">Toktohu fiyelen teile Dhizuku be baitalara oktombu</string>
-    <string name="allow_ownership_changes">Allow ownership changes</string>
-    <string name="allow_ownership_changes_desc">Allow clients to change ownership (transfer or clear).\nThis is a security risk.</string>
-    <string name="ownership_change_blocked">Ownership changes are disabled by Dhizuku</string>
+    <string name="allow_ownership_changes">Өмчлөлийн өөрчлөлтийг зөвшөөрөх</string>
+    <string name="allow_ownership_changes_desc">Үйлчлүүлэгчид өмчлөлийг өөрчлөхийг зөвшөөрөх (шилжүүлэх эсвэл арилгах).\nЭнэ нь аюулгүй байдлын эрсдэл юм.</string>
+    <string name="ownership_change_blocked">Өмчлөлийн өөрчлөлтийг Dhizuku идэвхгүй болгосон</string>
     <string name="daemon_service_notification_title">Dhizuku i amargi jifisun</string>
-    <string name="daemon_service_notification_text">This is a Dhizuku notification to ensure service availability at any time.</string>
-    <string name="oss_licenses">Open source licenses</string>
-    <string name="search">Search</string>
-    <string name="used_by">Used by: %1$s</string>
+    <string name="daemon_service_notification_text">Энэ нь ямар ч үед үйлчилгээ авах боломжтой байхын тулд Dhizuku мэдэгдэл юм.</string>
+    <string name="oss_licenses">Нээлттэй эхийн лицензүүд</string>
+    <string name="search">Хайх</string>
+    <string name="used_by">Ашигласан: %1$s</string>
 </resources>

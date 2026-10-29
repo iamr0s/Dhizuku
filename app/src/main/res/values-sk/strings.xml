@@ -9,7 +9,7 @@
     <string name="agree_text">Súhlasím</string>
     <string name="copy">Kopírovať</string>
     <string name="cancel">Zrušiť</string>
-    <string name="confirm">OK</string>
+    <string name="confirm">حسنًا</string>
     <string name="retry">Znovu</string>
     <string name="finish">Dokončiť</string>
     <string name="home_status_owner_granted">Si %1$s!!!</string>
@@ -54,7 +54,7 @@
     <string name="allow_ownership_changes">Povoliť zmeny vlastníctva</string>
     <string name="allow_ownership_changes_desc">Umožnite klientom zmeniť vlastníctvo (previesť alebo vymazať).\nIde o bezpečnostné riziko.</string>
     <string name="ownership_change_blocked">Zmeny vlastníctva sú zakázané službou Dhizuku</string>
-    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_title">Démon Dhizuku</string>
     <string name="daemon_service_notification_text">Toto je upozornenie Dhizuku, aby sa zabezpečila dostupnosť služby kedykoľvek.</string>
     <string name="oss_licenses">Licencie s otvoreným zdrojom</string>
     <string name="search">Hľadať</string>

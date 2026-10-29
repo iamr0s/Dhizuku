@@ -10,5 +10,4 @@ Para sa karagdagang impormasyon, mangyaring tignan ang <a href="https://github.c
 Halimbawa ng paggamit, mainam ito kapag kailangan mong suportahan ang dalawa o higit pang mga pahintulot ng may-ari ng device sa parehong oras.
 
 Sa partikular, sa Japan, kailangan mong suportahan ang Aurora Store at Test DPC sa isang device na may ilang limitadong functionality.
-
 Kahit na hindi sinusuportahan ng app developer ang Dhizuku, maaari mong pilitin ang support para sa Dhizuku sa pamamagitan ng Dhizuku-API-Xposed module.

@@ -12,7 +12,7 @@
     <string name="confirm">Oke</string>
     <string name="retry">Coba lagi</string>
     <string name="finish">Selesai</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">Anda adalah %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s telah dipindahkan!!!</string>
     <string name="home_status_owner_denied">Menunggu Aktivasi</string>
     <string name="home_app_management_title">Manajemen Aplikasi</string>
@@ -54,7 +54,7 @@
     <string name="allow_ownership_changes">Izinkan perubahan kepemilikan</string>
     <string name="allow_ownership_changes_desc">Izinkan klien untuk mengubah kepemilikan (transfer atau hapus).\nIni adalah risiko keamanan.</string>
     <string name="ownership_change_blocked">Perubahan kepemilikan dinonaktifkan oleh Dhizuku</string>
-    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_title">Daemon Dhizuku</string>
     <string name="daemon_service_notification_text">Ini adalah notifikasi Dhizuku untuk memastikan ketersediaan layanan setiap saat.</string>
     <string name="oss_licenses">Lisensi sumber terbuka</string>
     <string name="search">Mencari</string>

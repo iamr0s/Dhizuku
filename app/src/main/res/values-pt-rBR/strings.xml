@@ -9,7 +9,7 @@
     <string name="agree_text">Concordar</string>
     <string name="copy">Copiar</string>
     <string name="cancel">Cancelar</string>
-    <string name="confirm">OK</string>
+    <string name="confirm">حسنًا</string>
     <string name="retry">Repetir</string>
     <string name="finish">Concluir</string>
     <string name="home_status_owner_granted">Você é %1$s!!!</string>
@@ -54,7 +54,7 @@
     <string name="allow_ownership_changes">Permitir alterações de propriedade</string>
     <string name="allow_ownership_changes_desc">Permitir que os clientes alterem a propriedade (transferir ou compensar).\nEste é um risco de segurança.</string>
     <string name="ownership_change_blocked">As alterações de propriedade são desativadas por Dhizuku</string>
-    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_title">Daemon do Dhizuku</string>
     <string name="daemon_service_notification_text">Esta é uma notificação Dhizuku para garantir a disponibilidade do serviço a qualquer momento.</string>
     <string name="oss_licenses">Licenças de código aberto</string>
     <string name="search">Procurar</string>

@@ -37,7 +37,7 @@
     <string name="donate_hide_confirm_title">Xayriya tugmasini yashirish</string>
     <string name="donate_hide_confirm_dsp">Buni ilova ichidan ortga qaytarib bo‘lmaydi. Haqiqatan ham xayriya tugmasini butunlay berkitmoqchimisiz?</string>
     <string name="request_permission_text"><b>%1$s</b>ga Dxizukuga kirishga ruxsat berilsinmi?</string>
-    <string name="agree">Grant</string>
+    <string name="agree">Ruxsat berish</string>
     <string name="refuse">Rad etish</string>
     <string name="block_app">Ilovani bloklash</string>
     <string name="app_blocked_notice">Bu ilova bloklangan va Dhizukuga kira olmaydi</string>
@@ -54,7 +54,7 @@
     <string name="allow_ownership_changes">Egalikni o\'zgartirishga ruxsat bering</string>
     <string name="allow_ownership_changes_desc">Mijozlarga egalikni o\'zgartirishga ruxsat bering (o\'tkazish yoki tozalash).\nBu xavfsizlik xavfi.</string>
     <string name="ownership_change_blocked">Egalik huquqini o\'zgartirish Dhizuku tomonidan o\'chirib qo\'yilgan</string>
-    <string name="daemon_service_notification_title">Dhizuku Daemon</string>
+    <string name="daemon_service_notification_title">Dhizuku demoni</string>
     <string name="daemon_service_notification_text">Bu istalgan vaqtda xizmat mavjudligini ta\'minlash uchun Dhizuku bildirishnomasidir.</string>
     <string name="oss_licenses">Ochiq kodli litsenziyalar</string>
     <string name="search">Qidiruv</string>

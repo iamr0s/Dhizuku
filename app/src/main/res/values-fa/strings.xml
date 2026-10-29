@@ -12,7 +12,7 @@
     <string name="confirm">تأیید</string>
     <string name="retry">تلاش مجدد</string>
     <string name="finish">پایان</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">شما %1$s هستید!!!</string>
     <string name="home_status_owner_transferred">%1$s منتقل شد!!!</string>
     <string name="home_status_owner_denied">در انتظار فعال‌سازی</string>
     <string name="home_app_management_title">مدیریت برنامه‌ها</string>

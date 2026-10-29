@@ -9,10 +9,10 @@
     <string name="agree_text">Zaakceptuj</string>
     <string name="copy">Kopiuj</string>
     <string name="cancel">Anuluj</string>
-    <string name="confirm">OK</string>
+    <string name="confirm">حسنًا</string>
     <string name="retry">Ponów</string>
     <string name="finish">Skończone</string>
-    <string name="home_status_owner_granted">You are %1$s!!!</string>
+    <string name="home_status_owner_granted">Jesteś %1$s!!!</string>
     <string name="home_status_owner_transferred">%1$s został przeniesiony!!!</string>
     <string name="home_status_owner_denied">Czekam na aktywację</string>
     <string name="home_app_management_title">Zarządzanie aplikacją</string>

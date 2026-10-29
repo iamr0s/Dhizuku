@@ -10,5 +10,4 @@ Untuk informasi selengkapnya, silakan lihat <a href="https://github.com/iamr0s/D
 Contoh penggunaan, ini ideal ketika Anda perlu mendukung dua atau lebih izin pemilik perangkat pada saat yang bersamaan.
 
 Khususnya, di Jepang, Anda perlu mendukung Aurora Store dan Test DPC pada perangkat dengan beberapa fungsi terbatas.
-
 Bahkan jika pengembang aplikasi tidak mendukung Dhizuku, Anda dapat memaksakan dukungan untuk Dhizuku dengan menggunakan modul Dhizuku-API-Xposed.

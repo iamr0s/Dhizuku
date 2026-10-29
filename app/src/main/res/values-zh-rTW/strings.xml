@@ -1,54 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 通用 -->
     <string name="permission_description">使用 Dhizuku 的API</string>
-    <!-- 使用協議 -->
     <string name="agreement_title">隱私政策</string>
     <string name="agreement_text">這裡是我們的使用者政策, 請閱讀並表示同意 %1$s・%2$s 你同意後,這一資訊沒有再次顯示隱私權.</string>
     <string name="agreement_terms">使用條款</string>
     <string name="agreement_privacy">政策</string>
     <string name="link_read_help">參閱說明</string>
     <string name="agree_text">同意</string>
-    <!-- 常用 -->
     <string name="copy">複製</string>
     <string name="cancel">取消</string>
     <string name="confirm">確認</string>
     <string name="retry">重試</string>
     <string name="finish">完成</string>
-    <!-- 主頁 - 狀態 -->
     <string name="home_status_owner_granted">您目前為 %1$s！</string>
     <string name="home_status_owner_transferred">%1$s已轉移！！！</string>
     <string name="home_status_owner_denied">等待啟用</string>
-    <!-- 主頁 - 應用程式管理 -->
     <string name="home_app_management_title">應用管理</string>
     <string name="home_app_management_dsp">已請求或宣告使用 Dhizuku 的應用程式將會在此顯示。</string>
-    <!-- 主頁 - Dhizuku -->
     <string name="home_dhizuku_title">透過 Dhizuku 啟用</string>
     <string name="home_dhizuku_dsp">可以將所有權轉移給其他應用程式。</string>
-    <!-- 主頁 - Shizuku -->
     <string name="home_shizuku_title">透過 Shizuku 啟用</string>
     <string name="home_shizuku_dsp">透過 Shizuku，您無需透過電腦即可執行 ADB 指令。請 %1$s。</string>
-    <!-- 主頁 - ADB -->
     <string name="home_adb_title">透過 ADB 啟用</string>
     <string name="home_adb_dsp">透過 ADB（USB 偵錯）連線，可執行部分具系統權限的指令。請%1$s。</string>
     <string name="home_adb_btn_view_command">查看命令</string>
-    <!-- 主頁 - 關機 -->
     <string name="home_shutdown_title">關機</string>
     <string name="home_shutdown_dsp">除非 Dhizuku 主動關閉，否則系統無法將其關閉。</string>
-    <!-- 主頁 - 停用 -->
     <string name="home_deactivate_title">停用</string>
     <string name="home_deactivate_dsp">確認要停用嗎？</string>
-    <!-- 擁有者 -->
     <string name="confirm_device_owner">裝置擁有者</string>
     <string name="confirm_profile_owner">設定檔擁有者</string>
     <string name="profile_owner_warning_title">警告</string>
     <string name="profile_owner_warning_dsp">此項變更僅供了解其影響的使用者進行。Dhizuku 的開發者無法對因切換此模式所導致的非預期行為提供保證。</string>
-    <!-- 捐贈 -->
     <string name="donate">捐贈</string>
     <string name="donate_hide_action">隱藏</string>
     <string name="donate_hide_confirm_title">隱藏捐贈按鈕</string>
     <string name="donate_hide_confirm_dsp">此操作無法在應用程式內復原。您確定要永久隱藏捐贈按鈕嗎？</string>
-    <!-- 權限請求 -->
     <string name="request_permission_text">是否允許 <b>%1$s</b> 存取 Dhizuku?</string>
     <string name="agree">同意</string>
     <string name="refuse">拒絕</string>
@@ -58,7 +45,6 @@
     <string name="auto_deny_in">自動拒絕:</string>
     <string name="auto_deny_in_seconds">將在 %d 秒後自動拒絕</string>
     <string name="denying_access">拒絕存取…</string>
-    <!-- 設定 -->
     <string name="settings">設定</string>
     <string name="settings_desc">設定 Dhizuku 行為</string>
     <string name="enable_dhizuku">啟用 Dhizuku</string>
@@ -68,7 +54,6 @@
     <string name="allow_ownership_changes">允許變更擁有者</string>
     <string name="allow_ownership_changes_desc">允許用戶端變更擁有者權限（轉移或解除）。\n這存在安全性風險。</string>
     <string name="ownership_change_blocked">Dhizuku 已禁止變更擁有者</string>
-    <!-- 服務 -->
     <string name="daemon_service_notification_title">Dhizuku 守護程式</string>
     <string name="daemon_service_notification_text">這是 Dhizuku 發送的通知，用於確保服務隨時可用。</string>
     <string name="oss_licenses">開源授權條款</string>
