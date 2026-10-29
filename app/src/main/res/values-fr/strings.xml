@@ -58,5 +58,6 @@
     <string name="daemon_service_notification_text">Il s\'agit d\'une notification Dhizuku pour garantir la disponibilité du service à tout moment.</string>
     <string name="oss_licenses">Licences open source</string>
     <string name="search">Recherche</string>
-    <string name="used_by">Utilisé par : %1$s</string>
+    <string name="used_by">Utilisé par : %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
