@@ -59,4 +59,5 @@
     <string name="oss_licenses">Licencias de código abierto</string>
     <string name="search">Buscar</string>
     <string name="used_by">Utilizado por: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
