@@ -59,4 +59,5 @@
     <string name="oss_licenses">Açık kaynak lisansları</string>
     <string name="search">Aramak</string>
     <string name="used_by">Kullanan: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
