@@ -1,6 +1,8 @@
 - Napraw awarię w systemie Android 8.x
 - Napraw błąd, gdy ekran ustawień optymalizacji baterii jest niedostępny
-- Napraw warunek wyścigu uruchamiania, który może uniemożliwić uruchomienie usługi na niektórych urządzeniach
-— Popraw zgodność udzielania uprawnień i ogólną stabilność
-- Dodaj ustawienie umożliwiające klientom przeniesienie lub wyczyszczenie własności (domyślnie wyłączone)
-- Otwórz aplikację po dotknięciu powiadomienia o demonie i usuń wskazówkę dotyczącą długiego naciśnięcia
+- Napraw warunek wyścigu uruchamiania, który może uniemożliwić uruchomienie usługi na
+- Popraw zgodność udzielania uprawnień i ogólną stabilność
+- Dodaj ustawienie umożliwiające klientom przeniesienie lub wyczyszczenie własności (domyślnie
+- Otwórz aplikację po dotknięciu powiadomienia o demonie i usuń wskazówkę dotyczącą długiego
+- Zaktualizuj zależności
+- Aktualizuj tłumaczenia

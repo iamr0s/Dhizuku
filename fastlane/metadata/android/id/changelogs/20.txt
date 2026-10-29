@@ -1,6 +1,8 @@
 - Memperbaiki kerusakan pada Android 8.x
 - Memperbaiki kesalahan saat layar pengaturan pengoptimalan baterai tidak tersedia
-- Memperbaiki kondisi balapan startup yang dapat mencegah layanan dimulai pada beberapa perangkat
+- Memperbaiki kondisi balapan startup yang dapat mencegah layanan dimulai pada beberapa
 - Meningkatkan kompatibilitas pemberian izin dan stabilitas secara keseluruhan
-- Tambahkan pengaturan untuk memungkinkan klien mentransfer atau menghapus kepemilikan (dinonaktifkan secara default)
+- Tambahkan pengaturan untuk memungkinkan klien mentransfer atau menghapus kepemilikan
 - Buka aplikasi saat notifikasi daemon diketuk dan hapus petunjuk tekan lama
+- Perbarui dependensi
+- Perbarui terjemahan

@@ -1,5 +1,8 @@
 - Absturz unter Android 8.x behoben
-- Fehler behoben, wenn der Bildschirm mit den Batterieoptimierungseinstellungen nicht verfügbar ist
-– Behebung einer Start-Race-Bedingung, die den Start des Dienstes auf einigen Geräten verhindern konnte
-- Verbessern Sie die Kompatibilität der Berechtigungserteilung und die allgemeine Stabilität
-– Fügen Sie eine Einstellung hinzu, die es Clients ermöglicht, den Besitz zu übertragen oder zu löschen (standardmäßig deaktiviert).
+- Fehler behoben, wenn der Bildschirm mit den Batterieoptimierungseinstellungen
+- Behebung einer Start-Race-Bedingung, die den Start des Dienstes auf einigen Geräten
+- Verbessern Sie die Kompatibilität der Berechtigungserteilung und die allgemeine
+- Fügen Sie eine Einstellung hinzu, die es Clients ermöglicht, den Besitz zu
+- Öffnen Sie die App, wenn auf die Daemon-Benachrichtigung getippt wird, und
+- Abhängigkeiten aktualisieren
+- Übersetzungen aktualisieren

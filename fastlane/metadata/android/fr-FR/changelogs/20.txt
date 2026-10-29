@@ -1,5 +1,8 @@
 - Correction d'un crash sur Android 8.x
-- Correction d'une erreur lorsque l'écran des paramètres d'optimisation de la batterie n'est pas disponible
-- Correction d'une condition de concurrence critique au démarrage qui pourrait empêcher le service de démarrer sur certains appareils
+- Correction d'une erreur lorsque l'écran des paramètres d'optimisation de la
+- Correction d'une condition de concurrence critique au démarrage qui pourrait
 - Améliorer la compatibilité des autorisations et la stabilité globale
-- Ajouter un paramètre pour permettre aux clients de transférer ou d'effacer la propriété (désactivé par défaut)
+- Ajouter un paramètre pour permettre aux clients de transférer ou d'effacer la
+- Ouvrez l'application lorsque la notification du démon est enfoncée et supprimez
+- Mettre à jour les dépendances
+- Mettre à jour les traductions

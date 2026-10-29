@@ -1,7 +1,8 @@
 - Rett opp krasj på Android 8.x
-- Rett opp feil når skjermbildet for batterioptimaliseringsinnstillinger ikke er tilgjengelig
+- Rett opp feil når skjermbildet for batterioptimaliseringsinnstillinger ikke er
 - Rett opp en oppstartsløpstilstand som kan forhindre at tjenesten starter på enkelte enheter
 - Forbedre tillatelse som gir kompatibilitet og generell stabilitet
-- Legg til en innstilling for å tillate klienter å overføre eller fjerne eierskap (deaktivert som standard)
+- Legg til en innstilling for å tillate klienter å overføre eller fjerne eierskap (deaktivert
 - Åpne appen når demonvarslingen trykkes, og fjern hintet med lang trykk
 - Oppdater avhengigheter
+- Oppdater oversettelser

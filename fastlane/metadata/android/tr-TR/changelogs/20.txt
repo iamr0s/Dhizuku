@@ -2,6 +2,7 @@
 - Pil optimizasyon ayarları ekranı kullanılamadığında oluşan hatayı düzeltin
 - Bazı cihazlarda hizmetin başlatılmasını engelleyebilecek başlatma yarışı durumunu düzeltin
 - İzin verme uyumluluğunu ve genel kararlılığı iyileştirin
-- İstemcilerin sahipliği devretmesine veya temizlemesine izin veren bir ayar ekleyin (varsayılan olarak devre dışıdır)
+- İstemcilerin sahipliği devretmesine veya temizlemesine izin veren bir ayar ekleyin (varsayılan
 - Daemon bildirimine dokunulduğunda uygulamayı açın ve uzun basma ipucunu kaldırın
 - Bağımlılıkları güncelleyin
+- Çevirileri güncelleyin

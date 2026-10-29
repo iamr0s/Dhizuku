@@ -1,5 +1,8 @@
 - Corrigir falha no Android 8.x
-- Correção de erro quando a tela de configurações de otimização da bateria não está disponível
-- Correção de uma condição de corrida de inicialização que poderia impedir a inicialização do serviço em alguns dispositivos
+- Correção de erro quando a tela de configurações de otimização da bateria não está
+- Correção de uma condição de corrida de inicialização que poderia impedir a inicialização
 - Melhorar a compatibilidade de concessão de permissão e a estabilidade geral
-- Adicione uma configuração para permitir que os clientes transfiram ou limpem a propriedade (desativada por padrão)
+- Adicione uma configuração para permitir que os clientes transfiram ou limpem a
+- Abra o aplicativo quando a notificação do daemon for tocada e remova a dica de toque
+- Atualizar dependências
+- Atualizar traduções
