@@ -36,7 +36,7 @@
     <string name="donate_hide_action">Masquer</string>
     <string name="donate_hide_confirm_title">Masquer le bouton de don</string>
     <string name="donate_hide_confirm_dsp">Cette action est irréversible depuis l\'application. Êtes-vous sûr de vouloir masquer définitivement le bouton de don ?</string>
-    <string name="request_permission_text">Autoriser<b>%1$s</b> à accéder à Dhizuku ?</string>
+    <string name="request_permission_text">Autoriser <b>%1$s</b> à accéder à Dhizuku ?</string>
     <string name="agree">Autoriser</string>
     <string name="refuse">Refuser</string>
     <string name="block_app">Bloquer l\'application</string>
