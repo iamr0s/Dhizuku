@@ -53,7 +53,7 @@
     <string name="whitelist_mode_desc">사전에 승인된 앱만 Dhizuku를 사용하도록 허용합니다</string>
     <string name="allow_ownership_changes">소유권 변경 허용</string>
     <string name="allow_ownership_changes_desc">클라이언트가 소유권을 변경하도록 허용합니다(이전 또는 삭제).\n이는 보안 위험입니다.</string>
-    <string name="ownership_change_blocked">Dhizuku에 의해 소유권 변경이 비활성화되었습니다.</string>
+    <string name="ownership_change_blocked">Dhizuku 에 의해 소유권 변경이 비활성화되었습니다</string>
     <string name="daemon_service_notification_title">Dhizuku 데몬</string>
     <string name="daemon_service_notification_text">이는 언제든지 서비스 가용성을 보장하기 위한 Dhizuku 알림입니다.</string>
     <string name="oss_licenses">오픈소스 라이선스</string>
