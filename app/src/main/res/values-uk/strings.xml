@@ -59,4 +59,5 @@
     <string name="oss_licenses">Ліцензії з відкритим вихідним кодом</string>
     <string name="search">Пошук</string>
     <string name="used_by">Використовується: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
