@@ -44,7 +44,7 @@
     <string name="unblock_app">Deblocați aplicația</string>
     <string name="auto_deny_in">Renegare automată în</string>
     <string name="auto_deny_in_seconds">Respingere automată în %d secunde</string>
-    <string name="denying_access">Se interzice accesul...</string>
+    <string name="denying_access">Se interzice accesul…</string>
     <string name="settings">Setări</string>
     <string name="settings_desc">Configurați comportamentul Dhizuku</string>
     <string name="enable_dhizuku">Activați Dhizuku</string>
