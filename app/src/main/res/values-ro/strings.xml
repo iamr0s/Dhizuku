@@ -36,7 +36,7 @@
     <string name="donate_hide_action">Ascunde</string>
     <string name="donate_hide_confirm_title">Ascundeți butonul Donați</string>
     <string name="donate_hide_confirm_dsp">Acest lucru nu poate fi anulat din cadrul aplicației. Sigur vrei să ascunzi definitiv butonul de donare?</string>
-    <string name="request_permission_text">Permiteți &lt;b&gt;%1$s&lt;/b&gt; să acceseze Dhizuku?</string>
+    <string name="request_permission_text">Permiteți <b>%1$s</b> să acceseze Dhizuku?</string>
     <string name="agree">Acorda</string>
     <string name="refuse">Negați</string>
     <string name="block_app">Blocați aplicația</string>
@@ -59,4 +59,5 @@
     <string name="oss_licenses">Licențe open source</string>
     <string name="search">Căutare</string>
     <string name="used_by">Folosit de: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
