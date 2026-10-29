@@ -1,0 +1,8 @@
+- Oprava zlyhania v systéme Android 8.x
+- Opravte chybu, keď obrazovka nastavení optimalizácie batérie nie je k dispozícii
+- Opravte podmienku štartu, ktorá by mohla brániť spusteniu služby na niektorých zariadeniach
+- Zlepšite kompatibilitu udeľovania povolení a celkovú stabilitu
+- Pridajte nastavenie, ktoré umožní klientom preniesť alebo vymazať vlastníctvo (v predvolenom nastavení zakázané)
+- Po klepnutí na upozornenie démona otvorte aplikáciu a odstráňte nápovedu na dlhé stlačenie
+- Aktualizujte závislosti
+- Aktualizujte preklady

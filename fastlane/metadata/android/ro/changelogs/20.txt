@@ -1,0 +1,8 @@
+- Remediați blocarea pe Android 8.x
+- Remediați eroarea când ecranul de setări de optimizare a bateriei nu este disponibil
+- Remediați o condiție de cursă de pornire care ar putea împiedica pornirea serviciului pe unele dispozitive
+- Îmbunătățiți permisiunea acordând compatibilitate și stabilitatea generală
+- Adăugați o setare pentru a permite clienților să transfere sau să elibereze dreptul de proprietate (dezactivat implicit)
+- Deschideți aplicația când este apăsată notificarea demon și eliminați indicația de apăsare lungă
+- Actualizați dependențe
+- Actualizați traducerile

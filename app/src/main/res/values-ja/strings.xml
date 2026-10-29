@@ -24,7 +24,7 @@
     <string name="home_app_management_dsp">Dhizuku の使用を宣言したアプリがここに表示されます。</string>
     <!-- ホーム - Dhizuku -->
     <string name="home_dhizuku_title">Dhizuku による有効化</string>
-    <string name="home_dhizuku_dsp">他の Dhizuku 統合アプリがインストールされている場合、それらを自由に切り替えることができます。詳しくは%1$sをお読みください。</string>
+    <string name="home_dhizuku_dsp">他のアプリに所有権を譲渡できます。</string>
     <!-- ホーム - Shizuku -->
     <string name="home_shizuku_title">Shizuku による有効化</string>
     <string name="home_shizuku_dsp">Shizuku を使用すると、PC を使用せずに ADB コマンドを実行できます。詳しくは%1$sをお読みください。</string>

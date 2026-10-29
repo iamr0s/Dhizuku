@@ -1,0 +1,8 @@
+- Android 8.x-dagi nosozlikni tuzatish
+- Batareyani optimallashtirish sozlamalari ekrani mavjud bo'lmaganda xatolikni tuzating
+- Xizmatni ba'zi qurilmalarda ishga tushirishga xalaqit beradigan start-poyga holatini tuzating
+- Muvofiqlik va umumiy barqarorlikni beruvchi ruxsatnomani yaxshilash
+- Mijozlarga egalik huquqini o'tkazish yoki tozalashga ruxsat berish uchun sozlamani qo'shing (sukut bo'yicha o'chirilgan)
+- Demon bildirishnomasi bosilganda ilovani oching va uzoq bosib turish maslahatini olib tashlang
+- Bog'liqlarni yangilang
+- Tarjimalarni yangilang

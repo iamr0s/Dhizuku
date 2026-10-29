@@ -1,0 +1,8 @@
+- Sửa lỗi treo trên Android 8.x
+- Sửa lỗi không hiển thị được màn hình cài đặt tối ưu hóa pin
+- Khắc phục tình trạng chạy đua khởi động có thể ngăn dịch vụ khởi động trên một số thiết bị
+- Cải thiện khả năng tương thích cấp phép và độ ổn định tổng thể
+- Thêm cài đặt cho phép khách hàng chuyển nhượng hoặc xóa quyền sở hữu (mặc định bị tắt)
+- Mở ứng dụng khi nhấn vào thông báo daemon và xóa gợi ý nhấn và giữ
+- Cập nhật phụ thuộc
+- Cập nhật bản dịch

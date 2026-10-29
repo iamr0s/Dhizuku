@@ -1,0 +1,8 @@
+- Gyara hadarin akan Android 8.x
+- Gyara kuskure lokacin da babu allon saitunan inganta baturi
+- Gyara yanayin tseren farawa wanda zai iya hana sabis ɗin farawa akan wasu na'urori
+- Inganta izini bada dacewa da kwanciyar hankali gabaɗaya
+- Ƙara saiti don bawa abokan ciniki damar canja wuri ko share ikon mallaka (an kashe su ta tsohuwa)
+- Bude app lokacin da aka danna sanarwar daemon kuma cire alamar dogon latsawa
+- Sabunta abubuwan dogaro
+- Sabunta fassarori

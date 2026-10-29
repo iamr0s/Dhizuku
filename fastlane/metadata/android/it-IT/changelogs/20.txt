@@ -1,0 +1,8 @@
+- Risolto il problema relativo al crash su Android 8.x
+- Correzione dell'errore quando la schermata delle impostazioni di ottimizzazione della batteria non è disponibile
+- Risolvere una race condition all'avvio che potrebbe impedire l'avvio del servizio su alcuni dispositivi
+- Migliorare la concessione delle autorizzazioni per la compatibilità e la stabilità generale
+- Aggiungi un'impostazione per consentire ai clienti di trasferire o cancellare la proprietà (disabilitato per impostazione predefinita)
+- Apri l'app quando viene toccata la notifica del demone e rimuovi il suggerimento di pressione prolungata
+- Aggiorna le dipendenze
+- Aggiorna le traduzioni

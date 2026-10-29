@@ -30,7 +30,7 @@
 
     <!-- Home - Dhizuku -->
     <string name="home_dhizuku_title">Activation by Dhizuku</string>
-    <string name="home_dhizuku_dsp">If you have other Dhizuku implementations installed, you can switch between them at will. Please %1$s.</string>
+    <string name="home_dhizuku_dsp">This feature allows ownership to be transferred to other apps.</string>
 
     <!-- Home - Shizuku -->
     <string name="home_shizuku_title">Activation by Shizuku</string>

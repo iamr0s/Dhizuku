@@ -18,7 +18,7 @@
     <string name="home_app_management_title">Керування додатками</string>
     <string name="home_app_management_dsp">Тут відображатимуться додатки, які запросили або оголосили Dhizuku.</string>
     <string name="home_dhizuku_title">Активація через Dhizuku</string>
-    <string name="home_dhizuku_dsp">Якщо у вас встановлені інші реалізації Dhizuku, ви можете перемикатися між ними за власним бажанням. Будь ласка, %1$s.</string>
+    <string name="home_dhizuku_dsp">Ця функція дозволяє передавати право власності іншим програмам.</string>
     <string name="home_shizuku_title">Активація через Shizuku</string>
     <string name="home_shizuku_dsp">За допомогою Shizuku ви можете виконувати команди ADB без комп’ютера. Будь ласка, %1$s.</string>
     <string name="home_adb_title">Активація через ADB</string>

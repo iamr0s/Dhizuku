@@ -1,0 +1,8 @@
+- Oprava pádu na Androidu 8.x
+- Oprava chyby, když obrazovka nastavení optimalizace baterie není k dispozici
+- Oprava sporu při spuštění, který by mohl bránit spuštění služby na některých zařízeních
+- Vylepšete kompatibilitu udělování oprávnění a celkovou stabilitu
+– Přidejte nastavení, které klientům umožní převést nebo vymazat vlastnictví (ve výchozím nastavení zakázáno)
+- Otevřete aplikaci po klepnutí na oznámení démona a odstraňte nápovědu pro dlouhé stisknutí
+- Aktualizujte závislosti
+- Aktualizace překladů

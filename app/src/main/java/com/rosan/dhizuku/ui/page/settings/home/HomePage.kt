@@ -357,12 +357,7 @@ private fun LazyItemScope.DhizukuWidget(navController: NavController) {
     }, title = {
         Text(stringResource(R.string.home_dhizuku_title))
     }, text = {
-        val help = stringResource(R.string.link_read_help)
-        LinkedText(
-            stringResource(R.string.home_dhizuku_dsp, help),
-            help,
-            "https://github.com/iamr0s/Dhizuku"
-        )
+        Text(stringResource(R.string.home_dhizuku_dsp))
     })
 }
 

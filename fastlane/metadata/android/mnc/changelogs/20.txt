@@ -1,0 +1,8 @@
+- Fix crash on Android 8.x
+- Fix error when battery optimization settings screen is unavailable
+- Fix a startup race condition that could prevent the service from starting on some devices
+- Improve permission granting compatibility and overall stability
+- Add a setting to allow clients to transfer or clear ownership (disabled by default)
+- Open the app when the daemon notification is tapped and remove the long-press hint
+- Update dependencies
+- Update translations
