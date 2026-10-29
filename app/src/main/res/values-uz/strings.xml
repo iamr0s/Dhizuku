@@ -36,7 +36,7 @@
     <string name="donate_hide_action">Yashirish</string>
     <string name="donate_hide_confirm_title">Xayriya tugmasini yashirish</string>
     <string name="donate_hide_confirm_dsp">Buni ilova ichidan ortga qaytarib bo‘lmaydi. Haqiqatan ham xayriya tugmasini butunlay berkitmoqchimisiz?</string>
-    <string name="request_permission_text"><b>%1$s</b>ga Dxizukuga kirishga ruxsat berilsinmi?</string>
+    <string name="request_permission_text"><b>%1$s</b> ga Dxizukuga kirishga ruxsat berilsinmi?</string>
     <string name="agree">Ruxsat berish</string>
     <string name="refuse">Rad etish</string>
     <string name="block_app">Ilovani bloklash</string>
