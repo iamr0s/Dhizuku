@@ -59,4 +59,5 @@
     <string name="oss_licenses">مجوزهای منبع باز</string>
     <string name="search">جستجو کنید</string>
     <string name="used_by">استفاده شده توسط: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
