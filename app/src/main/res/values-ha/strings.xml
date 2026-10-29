@@ -36,7 +36,7 @@
     <string name="donate_hide_action">Boye</string>
     <string name="donate_hide_confirm_title">Ɓoye Maɓallin Donate</string>
     <string name="donate_hide_confirm_dsp">Ba za a iya soke wannan daga cikin app ɗin ba. Shin kun tabbata kuna son ɓoye maɓallin bayar da gudummawa ta dindindin?</string>
-    <string name="request_permission_text">Bada &lt;b&gt;%1$s&lt;/b&gt; don samun damar Dhizuku?</string>
+    <string name="request_permission_text">Bada <b>%1$s</b> don samun damar Dhizuku?</string>
     <string name="agree">Grant</string>
     <string name="refuse">Karyata</string>
     <string name="block_app">Toshe App</string>
@@ -59,4 +59,5 @@
     <string name="oss_licenses">Bude lasisin tushe</string>
     <string name="search">Bincika</string>
     <string name="used_by">Amfani da: %1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
