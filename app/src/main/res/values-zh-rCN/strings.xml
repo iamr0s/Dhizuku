@@ -74,4 +74,5 @@
     <string name="oss_licenses">开源许可证</string>
     <string name="search">搜索</string>
     <string name="used_by">被以下依赖使用：%1$s</string>
+    <string name="app_name" translatable="false"></string>
 </resources>
