@@ -75,5 +75,4 @@
     <string name="oss_licenses">オープンソースライセンス</string>
     <string name="search">検索</string>
     <string name="used_by">使用元：%1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

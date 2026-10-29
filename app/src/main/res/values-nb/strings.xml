@@ -59,5 +59,4 @@
     <string name="oss_licenses">Åpen kildekode-lisenser</string>
     <string name="search">Søk</string>
     <string name="used_by">Brukt av: %1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>

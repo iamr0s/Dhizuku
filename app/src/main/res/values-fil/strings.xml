@@ -59,5 +59,4 @@
     <string name="oss_licenses">Mga lisensyang open source</string>
     <string name="search">Maghanap</string>
     <string name="used_by">Ginamit ni: %1$s</string>
-    <string name="app_name" translatable="false"></string>
 </resources>
