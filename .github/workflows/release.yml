@@ -26,8 +26,8 @@ jobs:
 
       - name: Set environments
         run: |
-          repo=$(echo ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/})
-          version=v$(grep versionName version.properties | awk -F\= '{print $2}')
+          repo="$(echo ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/})"
+          version="v$(grep versionName version.properties | awk -F\= '{print $2}')"
           {
             echo "repo=$repo"
             echo "version=$version"
