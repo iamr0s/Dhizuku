@@ -9,7 +9,7 @@
     <string name="agree_text">Accepter</string>
     <string name="copy">Copier</string>
     <string name="cancel">Annuler</string>
-    <string name="confirm">حسنًا</string>
+    <string name="confirm">Valider</string>
     <string name="retry">Réessayer</string>
     <string name="finish">Terminer</string>
     <string name="home_status_owner_granted">Vous êtes %1$s !!!</string>

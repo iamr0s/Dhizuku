@@ -9,7 +9,7 @@
     <string name="agree_text">同意</string>
     <string name="copy">コピー</string>
     <string name="cancel">中止</string>
-    <string name="confirm">حسنًا</string>
+    <string name="confirm">OK</string>
     <string name="retry">再試行</string>
     <string name="finish">完了</string>
     <string name="home_status_owner_granted">%1$sです！</string>

@@ -9,7 +9,7 @@
     <string name="agree_text">Souhlasím</string>
     <string name="copy">Kopírovat</string>
     <string name="cancel">Zrušit</string>
-    <string name="confirm">حسنًا</string>
+    <string name="confirm">Potvrdit</string>
     <string name="retry">Zkusit znovu</string>
     <string name="finish">Dokončit</string>
     <string name="home_status_owner_granted">Jste %1$s!!!</string>
