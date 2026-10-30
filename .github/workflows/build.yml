@@ -2,6 +2,10 @@ name: Build
 
 on:
   push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*'
     paths-ignore:
       - docs/**
       - fastlane/**
@@ -35,40 +39,9 @@ jobs:
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
           } >> $GITHUB_ENV
 
-      - name: Cache R0S API
-        id: r0s-api
-        uses: actions/cache@v6
-        with:
-          path: ~/.m2/repository/
-          key: 202610270847JST
-
-      - name: Checkout AppProcess
-        if: steps.r0s-api.outputs.cache-hit != 'true'
-        uses: actions/checkout@v6
-        with:
-          repository: iamr0s/AndroidAppProcess
-          path: app_process
-
-      - name: Build AppProcess
-        if: steps.r0s-api.outputs.cache-hit != 'true'
-        working-directory: app_process
-        run: ./gradlew --no-daemon publishToMavenLocal
-
-      - name: Checkout Dhizuku-API
-        if: steps.r0s-api.outputs.cache-hit != 'true'
-        uses: actions/checkout@v6
-        with:
-          repository: iamr0s/Dhizuku-API
-          path: api
-
-      - name: Build Dhizuku-API
-        if: steps.r0s-api.outputs.cache-hit != 'true'
-        working-directory: api
-        run: ./gradlew --no-daemon publishToMavenLocal
-
-      - name: Build APK
+      - name: Build
         run: |
-          ./gradlew --no-daemon --warning-mode=all assembleDebug
+          ./gradlew --warning-mode=all assembleDebug
           cp -f app/build/outputs/apk/debug/app-debug.apk ${{ env.repo }}-${{ env.version }}@${{ env.commit }}.apk
 
       - name: Upload

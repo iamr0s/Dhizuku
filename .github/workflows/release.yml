@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-24.04
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: 'temurin'
+          java-version: 25
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Set environments
+        run: |
+          repo=$(echo ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/})
+          version=v$(grep versionName version.properties | awk -F\= '{print $2}')
+          {
+            echo "repo=$repo"
+            echo "version=$version"
+            echo "artifact=$repo-$version"
+          } >> $GITHUB_ENV
+
+      - name: Set signing config
+        run: |
+            printf '%s' '${{ secrets.STORE_FILE }}' | base64 -d > keystore/r0s.jks
+            {
+              echo "storeFile=r0s.jks"
+              echo "storePassword=${{ secrets.STORE_PASS }}"
+              echo "keyAlias=${{ secrets.KEY_ALIAS }}"
+              echo "keyPassword=${{ secrets.KEY_PASS }}"
+            } > keystore/r0s.properties
+
+      - name: Build APK
+        run: |
+          ./gradlew assembleRelease
+          cp -f app/build/outputs/apk/release/app-release.apk "${{ env.artifact }}.apk"
+
+      - name: Build AAB
+        run: |
+          ./gradlew bundleRelease
+          cp -f app/build/outputs/bundle/release/app-release.aab "${{ env.artifact }}.aab" 
+
+      - name: Build APKS
+        run: |
+          keytool -changealias -keystore keystore/r0s.jks -alias "${{ secrets.KEY_ALIAS }}" -destalias "${GITHUB_REPOSITORY_OWNER}" -storepass "${{ secrets.STORE_PASS }}" -keypass "${{ secrets.KEY_PASS }}"
+          curl -sL --fail-with-body https://github.com/google/bundletool/releases/download/1.18.3/bundletool-all-1.18.3.jar -o bundletool.jar
+          java -jar bundletool.jar build-apks --bundle="${{ env.artifact }}.aab" --output="${{ env.artifact }}.apks" --ks="keystore/r0s.jks" --ks-pass="pass:${{ secrets.STORE_PASS }}" --ks-key-alias="${GITHUB_REPOSITORY_OWNER}" --key-pass="pass:${{ secrets.KEY_PASS }}"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          path: ${{ env.artifact }}.apk
+
+      - name: Upload AAB
+        uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          path: ${{ env.artifact }}.aab
+
+      - name: Upload APKS
+        uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          path: ${{ env.artifact }}.apks
+
+      - name: Build with testkey
+        run: |
+          rm -f keystore/r0s.*
+          ./gradlew clean assembleRelease
+          cp -f app/build/outputs/apk/release/app-release.apk "${{ env.artifact }}-testkey.apk"
+
+      - name: Upload with testkey
+        uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          path: ${{ env.artifact }}-testkey.apk
