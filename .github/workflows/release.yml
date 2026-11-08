@@ -31,7 +31,7 @@ jobs:
           {
             echo "repo=$repo"
             echo "version=$version"
-            echo "artifact=$repo-$version"
+            echo "artifact=$repo_$version"
           } >> $GITHUB_ENV
 
       - name: Set signing config
