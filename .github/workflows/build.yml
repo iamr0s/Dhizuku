@@ -40,7 +40,7 @@ jobs:
             echo "repo=$repo"
             echo "version=$version"
             echo "commit=$commit"
-            echo "artifact=$repo-$version@$commit"
+            echo "artifact=$repo_$version@$commit"
           } >> $GITHUB_ENV
 
       - name: Build
