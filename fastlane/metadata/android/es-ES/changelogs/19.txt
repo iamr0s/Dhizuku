@@ -1,0 +1,2 @@
+- Añadir funcionalidad para soportar el uso por el propietario del perfil.
+- Mejorar Dhizuku-API
