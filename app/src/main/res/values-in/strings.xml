@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Izinkan perubahan kepemilikan</string>
     <string name="allow_ownership_changes_desc">Izinkan klien untuk mengubah kepemilikan (transfer atau hapus).\nIni adalah risiko keamanan.</string>
     <string name="ownership_change_blocked">Perubahan kepemilikan dinonaktifkan oleh Dhizuku</string>
+    <string name="biometric_protection">Perlindungan biometrik</string>
+    <string name="biometric_protection_desc">Minta biometrik atau kredensial perangkat untuk membuka Dhizuku dan memberikan akses ke aplikasi.\nJika kredensial tidak tersedia, Dhizuku tetap dapat diakses agar Anda tidak terkunci di luar.</string>
+    <string name="biometric_title">Buka kunci Dhizuku</string>
+    <string name="biometric_subtitle">Autentikasi untuk melanjutkan</string>
+    <string name="biometric_consent_text">Jika Anda kehilangan akses ke biometrik atau kredensial perangkat setelah mengaktifkannya, Anda tidak akan bisa membuka Dhizuku.\nDhizuku tidak dapat memulihkan kredensial untuk Anda. Menghapus data aplikasi atau mengatur ulang perangkat mungkin diperlukan.\n\nAnda mengaktifkannya sepenuhnya dengan risiko sendiri. Lanjutkan?</string>
+    <string name="biometric_unavailable">Belum ada biometrik atau kredensial perangkat yang disiapkan.\nSetel kunci layar di pengaturan sistem untuk menggunakan fitur ini.</string>
+    <string name="hide_daemon_notification">Sembunyikan notifikasi daemon</string>
+    <string name="hide_daemon_notification_desc">Berjalan tanpa notifikasi permanen.\nAndroid dapat menghentikan layanan di latar belakang dan Dhizuku mungkin berhenti merespons hingga dimulai ulang.</string>
     <string name="daemon_service_notification_title">Daemon Dhizuku</string>
     <string name="daemon_service_notification_text">Ini adalah notifikasi Dhizuku untuk memastikan ketersediaan layanan setiap saat.</string>
     <string name="oss_licenses">Lisensi sumber terbuka</string>

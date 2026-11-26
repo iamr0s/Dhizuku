@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Autoriser les changements de propriétaire</string>
     <string name="allow_ownership_changes_desc">Autoriser les clients à changer de propriétaire (transfert ou effacement).\nIl s’agit d’un risque pour la sécurité.</string>
     <string name="ownership_change_blocked">Les changements de propriété sont désactivés par Dhizuku</string>
+    <string name="biometric_protection">Protection biométrique</string>
+    <string name="biometric_protection_desc">Exiger la biométrie ou le verrouillage de l\'appareil pour ouvrir Dhizuku et accorder l\'accès aux applications.\nSi le verrouillage n\'est pas disponible, Dhizuku reste accessible pour éviter tout blocage.</string>
+    <string name="biometric_title">Déverrouiller Dhizuku</string>
+    <string name="biometric_subtitle">Authentifiez-vous pour continuer</string>
+    <string name="biometric_consent_text">Si vous perdez l\'accès à votre biométrie ou au verrouillage de l\'appareil après activation, vous ne pourrez plus ouvrir Dhizuku.\nDhizuku ne peut pas récupérer le verrouillage à votre place. Effacer les données de l\'application ou réinitialiser l\'appareil peut être nécessaire.\n\nVous l\'activez à vos propres risques. Continuer ?</string>
+    <string name="biometric_unavailable">Aucune biométrie ni verrouillage d\'appareil n\'est configuré.\nDéfinissez un verrouillage d\'écran dans les paramètres système pour utiliser cette fonction.</string>
+    <string name="hide_daemon_notification">Masquer la notification du démon</string>
+    <string name="hide_daemon_notification_desc">Fonctionner sans la notification permanente.\nAndroid peut arrêter le service en arrière-plan et Dhizuku peut ne plus répondre jusqu\'à son redémarrage.</string>
     <string name="daemon_service_notification_title">Démon Dhizuku</string>
     <string name="daemon_service_notification_text">Il s\'agit d\'une notification Dhizuku pour garantir la disponibilité du service à tout moment.</string>
     <string name="oss_licenses">Licences open source</string>

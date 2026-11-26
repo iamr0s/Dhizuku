@@ -1,0 +1,4 @@
+- Android 8.x da foydalanuvchi xizmatining ishga tushmasligi tuzatildi
+- Xizmat ishga tushmasligi sababi cheksiz kutish o'rniga bildiriladi
+- Demon bildirishnomasini yashirish sozlamasi qo'shildi
+- Biometrik himoya qo'shildi

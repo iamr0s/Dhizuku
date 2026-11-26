@@ -1,0 +1,4 @@
+- Remediată problema pornirii serviciului de utilizator pe Android 8.x
+- Motivul eșuării pornirii serviciului este raportat în loc să se aștepte la nesfârșit
+- Adăugată o setare pentru ascunderea notificării demonului
+- Adăugată protecția biometrică

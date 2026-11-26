@@ -1,0 +1,4 @@
+- Opraveno spouštění uživatelské služby na Androidu 8.x
+- Místo nekonečného čekání se hlásí důvod selhání spuštění služby
+- Přidáno nastavení pro skrytí oznámení démona
+- Přidána biometrická ochrana

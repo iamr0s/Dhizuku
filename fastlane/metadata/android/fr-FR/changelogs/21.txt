@@ -1,0 +1,4 @@
+- Correction du démarrage du service utilisateur sur Android 8.x
+- La raison d'un échec de démarrage du service est signalée au lieu d'attendre indéfiniment
+- Ajout d'un réglage pour masquer la notification du démon
+- Ajout de la protection biométrique

@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">اجازه تغییرات مالکیت را بدهید</string>
     <string name="allow_ownership_changes_desc">به مشتریان اجازه تغییر مالکیت (انتقال یا پاکسازی) را بدهید.\nاین یک خطر امنیتی است.</string>
     <string name="ownership_change_blocked">تغییرات مالکیت توسط Dhizuku غیرفعال شده است</string>
+    <string name="biometric_protection">محافظت با زیست‌سنجی</string>
+    <string name="biometric_protection_desc">درخواست زیست‌سنجی یا اطلاعات ورود دستگاه برای باز کردن Dhizuku و اعطای دسترسی به برنامه‌ها.\nاگر اطلاعات ورود در دسترس نباشد، Dhizuku قابل دسترسی می‌ماند تا بیرون از برنامه قفل نشوید.</string>
+    <string name="biometric_title">باز کردن قفل Dhizuku</string>
+    <string name="biometric_subtitle">برای ادامه احراز هویت کنید</string>
+    <string name="biometric_consent_text">اگر پس از فعال‌سازی دسترسی به زیست‌سنجی یا اطلاعات ورود دستگاه را از دست بدهید، نمی‌توانید Dhizuku را باز کنید.\nDhizuku نمی‌تواند اطلاعات ورود را برای شما بازیابی کند. ممکن است پاک کردن داده‌های برنامه یا بازنشانی دستگاه لازم شود.\n\nشما این را کاملاً با مسئولیت خود فعال می‌کنید. ادامه می‌دهید؟</string>
+    <string name="biometric_unavailable">هیچ زیست‌سنجی یا اطلاعات ورود دستگاهی تنظیم نشده است.\nبرای استفاده از این ویژگی، در تنظیمات سیستم قفل صفحه تنظیم کنید.</string>
+    <string name="hide_daemon_notification">پنهان کردن اعلان سرویس دیمون</string>
+    <string name="hide_daemon_notification_desc">اجرا بدون اعلان دائمی.\nAndroid ممکن است سرویس را در پس‌زمینه متوقف کند و Dhizuku تا راه‌اندازی مجدد پاسخگو نباشد.</string>
     <string name="daemon_service_notification_title">سرویس دیمون Dhizuku</string>
     <string name="daemon_service_notification_text">این یک اعلان Dhizuku برای اطمینان از در دسترس بودن سرویس در هر زمان است.</string>
     <string name="oss_licenses">مجوزهای منبع باز</string>

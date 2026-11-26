@@ -1,0 +1,4 @@
+- Memperbaiki kegagalan layanan pengguna untuk dimulai di Android 8.x
+- Alasan kegagalan memulai layanan kini dilaporkan alih-alih menunggu tanpa batas
+- Menambahkan pengaturan untuk menyembunyikan notifikasi daemon
+- Menambahkan perlindungan biometrik

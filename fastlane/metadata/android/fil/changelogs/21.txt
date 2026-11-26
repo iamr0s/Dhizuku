@@ -1,0 +1,4 @@
+- Naayos ang hindi pag-start ng user service sa Android 8.x
+- Iniuulat ang dahilan ng pagkabigo sa pag-start ng service kaysa maghintay nang walang hanggan
+- Nagdagdag ng setting para itago ang notification ng daemon
+- Nagdagdag ng proteksyong biometric

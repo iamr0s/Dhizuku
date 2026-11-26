@@ -1,0 +1,4 @@
+- Novērsta lietotāja pakalpojuma nepalaišanās uz Android 8.x
+- Pakalpojuma palaišanas kļūmes iemesls tagad tiek paziņots, nevis bezgalīgi gaidīts
+- Pievienots iestatījums dēmona paziņojuma paslēpšanai
+- Pievienota biometriskā aizsardzība

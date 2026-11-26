@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Atļaut īpašumtiesību izmaiņas</string>
     <string name="allow_ownership_changes_desc">Ļaujiet klientiem mainīt īpašumtiesības (nodot vai notīrīt).\nTas ir drošības risks.</string>
     <string name="ownership_change_blocked">Dhizuku ir atspējojis īpašumtiesību izmaiņas</string>
+    <string name="biometric_protection">Biometriskā aizsardzība</string>
+    <string name="biometric_protection_desc">Pieprasīt biometriju vai ierīces akreditācijas datus, lai atvērtu Dhizuku un piešķirtu lietotnēm piekļuvi.\nJa akreditācijas dati nav pieejami, Dhizuku paliek pieejams, lai jūs neieslēgtos ārpusē.</string>
+    <string name="biometric_title">Atbloķēt Dhizuku</string>
+    <string name="biometric_subtitle">Autentificējieties, lai turpinātu</string>
+    <string name="biometric_consent_text">Ja pēc iespējošanas zaudēsiet piekļuvi biometrijai vai ierīces akreditācijas datiem, jūs nevarēsiet atvērt Dhizuku.\nDhizuku nevar atjaunot akreditācijas datus jūsu vietā. Var būt nepieciešams notīrīt lietotnes datus vai atiestatīt ierīci.\n\nJūs to iespējojat uz savu risku. Turpināt?</string>
+    <string name="biometric_unavailable">Nav iestatīta biometrija vai ierīces akreditācijas dati.\nIestatiet ekrāna bloķēšanu sistēmas iestatījumos, lai izmantotu šo funkciju.</string>
+    <string name="hide_daemon_notification">Paslēpt dēmona paziņojumu</string>
+    <string name="hide_daemon_notification_desc">Darboties bez pastāvīgā paziņojuma.\nAndroid var apturēt pakalpojumu fonā, un Dhizuku var pārstāt reaģēt līdz restartēšanai.</string>
     <string name="daemon_service_notification_title">Dhizuku dēmons</string>
     <string name="daemon_service_notification_text">Šis ir Dhizuku paziņojums, lai nodrošinātu pakalpojuma pieejamību jebkurā laikā.</string>
     <string name="oss_licenses">Atvērtā pirmkoda licences</string>

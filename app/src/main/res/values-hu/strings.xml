@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Tulajdonosi változtatások engedélyezése</string>
     <string name="allow_ownership_changes_desc">Lehetővé teszi az ügyfelek számára a tulajdonjog megváltoztatását (átruházás vagy törlés).\nEz biztonsági kockázatot jelent.</string>
     <string name="ownership_change_blocked">Dhizuku letiltja a tulajdonjog módosításait</string>
+    <string name="biometric_protection">Biometrikus védelem</string>
+    <string name="biometric_protection_desc">Biometria vagy eszközhitelesítő adat kérése a Dhizuku megnyitásához és az alkalmazások hozzáférésének engedélyezéséhez.\nHa a hitelesítő adat nem elérhető, a Dhizuku elérhető marad, hogy ne zárja ki magát.</string>
+    <string name="biometric_title">Dhizuku feloldása</string>
+    <string name="biometric_subtitle">Hitelesítse magát a folytatáshoz</string>
+    <string name="biometric_consent_text">Ha az engedélyezés után elveszíti a hozzáférést a biometriához vagy az eszközhitelesítő adathoz, nem tudja megnyitni a Dhizukut.\nA Dhizuku nem tudja helyette helyreállítani a hitelesítő adatot. Szükség lehet az alkalmazásadatok törlésére vagy az eszköz visszaállítására.\n\nSaját felelősségére engedélyezi. Folytatja?</string>
+    <string name="biometric_unavailable">Nincs beállítva biometria vagy eszközhitelesítő adat.\nA funkció használatához állítson be képernyőzárat a rendszerbeállításokban.</string>
+    <string name="hide_daemon_notification">Démon értesítés elrejtése</string>
+    <string name="hide_daemon_notification_desc">Futtatás állandó értesítés nélkül.\nAz Android leállíthatja a szolgáltatást a háttérben, és a Dhizuku újraindulásáig nem válaszolhat.</string>
     <string name="daemon_service_notification_title">Dhizuku-démon</string>
     <string name="daemon_service_notification_text">Ez egy Dhizuku értesítés, amely biztosítja a szolgáltatás bármikori elérhetőségét.</string>
     <string name="oss_licenses">Nyílt forráskódú licencek</string>

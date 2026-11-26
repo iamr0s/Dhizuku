@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Eigentümerwechsel zulassen</string>
     <string name="allow_ownership_changes_desc">Erlauben Sie Kunden, den Eigentümer zu ändern (Übertragung oder Löschung).\nDies ist ein Sicherheitsrisiko.</string>
     <string name="ownership_change_blocked">Eigentümerwechsel werden von Dhizuku deaktiviert</string>
+    <string name="biometric_protection">Biometrischer Schutz</string>
+    <string name="biometric_protection_desc">Biometrie oder Geräteanmeldedaten verlangen, um Dhizuku zu öffnen und Apps Zugriff zu gewähren.\nIst keine Anmeldeinformation verfügbar, bleibt Dhizuku zugänglich, damit du nicht ausgesperrt wirst.</string>
+    <string name="biometric_title">Dhizuku entsperren</string>
+    <string name="biometric_subtitle">Zur Fortsetzung authentifizieren</string>
+    <string name="biometric_consent_text">Wenn du nach dem Aktivieren keinen Zugriff mehr auf deine Biometrie oder Geräteanmeldedaten hast, kannst du Dhizuku nicht mehr öffnen.\nDhizuku kann die Anmeldedaten nicht für dich wiederherstellen. App-Daten löschen oder Zurücksetzen des Geräts kann nötig sein.\n\nDu aktivierst dies auf eigenes Risiko. Fortfahren?</string>
+    <string name="biometric_unavailable">Es sind keine Biometrie und keine Geräteanmeldedaten eingerichtet.\nRichte in den Systemeinstellungen eine Displaysperre ein, um diese Funktion zu nutzen.</string>
+    <string name="hide_daemon_notification">Daemon-Benachrichtigung ausblenden</string>
+    <string name="hide_daemon_notification_desc">Ohne dauerhafte Benachrichtigung ausführen.\nAndroid kann den Dienst im Hintergrund stoppen und Dhizuku reagiert möglicherweise nicht mehr, bis er neu startet.</string>
     <string name="daemon_service_notification_title">Dhizuku-Daemon</string>
     <string name="daemon_service_notification_text">Dies ist eine Dhizuku-Benachrichtigung, um die jederzeitige Verfügbarkeit des Dienstes sicherzustellen.</string>
     <string name="oss_licenses">Open-Source-Lizenzen</string>

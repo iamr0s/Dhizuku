@@ -1,0 +1,4 @@
+- Corregido el fallo de inicio del servicio de usuario en Android 8.x
+- Se informa del motivo del fallo de inicio del servicio en lugar de esperar indefinidamente
+- Añadido un ajuste para ocultar la notificación del daemon
+- Añadida la protección biométrica

@@ -1,0 +1,4 @@
+- Behoben: Der Benutzerdienst startete unter Android 8.x nicht
+- Der Grund für einen fehlgeschlagenen Dienststart wird gemeldet, statt endlos zu warten
+- Einstellung zum Ausblenden der Daemon-Benachrichtigung hinzugefügt
+- Biometrischer Schutz hinzugefügt

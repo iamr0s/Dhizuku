@@ -1,0 +1,4 @@
+- Corretto l'avvio del servizio utente su Android 8.x
+- Viene segnalato il motivo dell'avvio non riuscito del servizio invece di attendere all'infinito
+- Aggiunta un'impostazione per nascondere la notifica del demone
+- Aggiunta la protezione biometrica

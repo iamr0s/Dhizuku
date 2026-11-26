@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Permitir alterações de propriedade</string>
     <string name="allow_ownership_changes_desc">Permitir que os clientes alterem a propriedade (transferir ou compensar).\nEste é um risco de segurança.</string>
     <string name="ownership_change_blocked">As alterações de propriedade são desativadas por Dhizuku</string>
+    <string name="biometric_protection">Proteção biométrica</string>
+    <string name="biometric_protection_desc">Exigir biometria ou credencial do dispositivo para abrir o Dhizuku e conceder acesso às aplicações.\nSe a credencial não estiver disponível, o Dhizuku continua acessível para não ficar bloqueado.</string>
+    <string name="biometric_title">Desbloquear o Dhizuku</string>
+    <string name="biometric_subtitle">Autentique-se para continuar</string>
+    <string name="biometric_consent_text">Se perder o acesso à biometria ou à credencial do dispositivo após ativar isto, não conseguirá abrir o Dhizuku.\nO Dhizuku não pode recuperar a credencial por si. Pode ser necessário limpar os dados da aplicação ou repor o dispositivo.\n\nAtiva isto por sua conta e risco. Continuar?</string>
+    <string name="biometric_unavailable">Não está configurada nenhuma biometria ou credencial do dispositivo.\nDefina um bloqueio de ecrã nas definições do sistema para usar esta funcionalidade.</string>
+    <string name="hide_daemon_notification">Ocultar notificação do daemon</string>
+    <string name="hide_daemon_notification_desc">Funcionar sem a notificação permanente.\nO Android pode parar o serviço em segundo plano e o Dhizuku pode deixar de responder até reiniciar.</string>
     <string name="daemon_service_notification_title">Daemon do Dhizuku</string>
     <string name="daemon_service_notification_text">Esta é uma notificação Dhizuku para garantir a disponibilidade do serviço a qualquer momento.</string>
     <string name="oss_licenses">Licenças de código aberto</string>

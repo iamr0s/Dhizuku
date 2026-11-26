@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Өмчлөлийн өөрчлөлтийг зөвшөөрөх</string>
     <string name="allow_ownership_changes_desc">Үйлчлүүлэгчид өмчлөлийг өөрчлөхийг зөвшөөрөх (шилжүүлэх эсвэл арилгах).\nЭнэ нь аюулгүй байдлын эрсдэл юм.</string>
     <string name="ownership_change_blocked">Өмчлөлийн өөрчлөлтийг Dhizuku идэвхгүй болгосон</string>
+    <string name="biometric_protection">Biometrik i gubci</string>
+    <string name="biometric_protection_desc">Dhizuku be neilefi baitalara biometrik e jaka i gubci be baitalara.\nJaka i gubci akū, Dhizuku baitalara sain be tulembime.</string>
+    <string name="biometric_title">Dhizuku be neilefi</string>
+    <string name="biometric_subtitle">Baitalara jaka i gubci</string>
+    <string name="biometric_consent_text">Ere be neilefi baitalara biometrik e jaka i gubci be bahafi akū, si Dhizuku be neilefi baitalara mutere.\nDhizuku si jaka i gubci be dasutara mutere. App data be efulefi e jaka be dasutara baibure.\n\nSi ere be beye. Dulimbu?</string>
+    <string name="biometric_unavailable">Biometrik e jaka i gubci akū.\nEre be baitalara, sistem i gubci de ekilen be kadalara.</string>
+    <string name="hide_daemon_notification">Daemon i mede be somi</string>
+    <string name="hide_daemon_notification_desc">Entehe mede akū i baitalara.\nAndroid si baitalara be amala de ilibu, Dhizuku si dasutara mutere.</string>
     <string name="daemon_service_notification_title">Dhizuku i amargi jifisun</string>
     <string name="daemon_service_notification_text">Энэ нь ямар ч үед үйлчилгээ авах боломжтой байхын тулд Dhizuku мэдэгдэл юм.</string>
     <string name="oss_licenses">Нээлттэй эхийн лицензүүд</string>

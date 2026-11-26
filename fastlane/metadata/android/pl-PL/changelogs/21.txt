@@ -1,0 +1,4 @@
+- Naprawiono brak uruchamiania usługi użytkownika na Androidzie 8.x
+- Zamiast nieskończonego oczekiwania zgłaszana jest przyczyna niepowodzenia uruchomienia usługi
+- Dodano ustawienie ukrywania powiadomienia demona
+- Dodano ochronę biometryczną

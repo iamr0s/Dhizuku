@@ -1,0 +1,4 @@
+- Fikset at brukertjenesten ikke startet på Android 8.x
+- Årsaken til at tjenesten ikke starter rapporteres i stedet for å vente i det uendelige
+- Lagt til innstilling for å skjule daemonvarselet
+- Lagt til biometrisk beskyttelse

@@ -1,0 +1,4 @@
+- An gyara gazawar fara sabis ɗin mai amfani a Android 8.x
+- Ana sanar da dalilin gazawar fara sabis maimakon jira marar iyaka
+- An ƙara saitin ɓoye sanarwar daemon
+- An ƙara kariya ta biometric

@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Sahiplik değişikliklerine izin ver</string>
     <string name="allow_ownership_changes_desc">Müşterilerin sahipliği değiştirmesine izin verin (aktarın veya temizleyin).\nBu bir güvenlik riskidir.</string>
     <string name="ownership_change_blocked">Sahiplik değişiklikleri Dhizuku tarafından devre dışı bırakıldı</string>
+    <string name="biometric_protection">Biyometrik koruma</string>
+    <string name="biometric_protection_desc">Dhizuku\'yu açmak ve uygulamalara erişim vermek için biyometri veya cihaz kimlik bilgisi iste.\nKimlik bilgisi kullanılamıyorsa Dhizuku erişilebilir kalır, böylece kilitli kalmazsınız.</string>
+    <string name="biometric_title">Dhizuku kilidini aç</string>
+    <string name="biometric_subtitle">Devam etmek için kimlik doğrula</string>
+    <string name="biometric_consent_text">Bunu etkinleştirdikten sonra biyometriye veya cihaz kimlik bilgisine erişiminizi kaybederseniz Dhizuku\'yu açamazsınız.\nDhizuku kimlik bilgisini sizin için kurtaramaz. Uygulama verilerini temizlemek veya cihazı sıfırlamak gerekebilir.\n\nBunu tamamen kendi riskinizle etkinleştiriyorsunuz. Devam edilsin mi?</string>
+    <string name="biometric_unavailable">Biyometri veya cihaz kimlik bilgisi ayarlanmamış.\nBu özelliği kullanmak için sistem ayarlarında ekran kilidi ayarlayın.</string>
+    <string name="hide_daemon_notification">Servis bildirimini gizle</string>
+    <string name="hide_daemon_notification_desc">Kalıcı bildirim olmadan çalıştır.\nAndroid hizmeti arka planda durdurabilir ve Dhizuku yeniden başlayana kadar yanıt vermeyebilir.</string>
     <string name="daemon_service_notification_title">Dhizuku Servisi</string>
     <string name="daemon_service_notification_text">Bu, herhangi bir zamanda hizmet kullanılabilirliğini sağlamak için bir Dhizuku bildirimidir.</string>
     <string name="oss_licenses">Açık kaynak lisansları</string>

@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Povolit změny vlastnictví</string>
     <string name="allow_ownership_changes_desc">Umožněte klientům změnit vlastnictví (převést nebo vymazat).\nTo je bezpečnostní riziko.</string>
     <string name="ownership_change_blocked">Změny vlastnictví jsou zakázány službou Dhizuku</string>
+    <string name="biometric_protection">Biometrická ochrana</string>
+    <string name="biometric_protection_desc">Vyžadovat biometrii nebo přihlašovací údaj zařízení pro otevření Dhizuku a pro udělení přístupu aplikacím.\nPokud údaj není k dispozici, Dhizuku zůstane přístupný, abyste se neuzamkli.</string>
+    <string name="biometric_title">Odemknout Dhizuku</string>
+    <string name="biometric_subtitle">Ověřte se pro pokračování</string>
+    <string name="biometric_consent_text">Pokud po zapnutí ztratíte přístup k biometrii nebo údaji zařízení, nebudete moci Dhizuku otevřít.\nDhizuku za vás údaj nemůže obnovit. Může být nutné vymazat data aplikace nebo resetovat zařízení.\n\nZapínáte to zcela na vlastní riziko. Pokračovat?</string>
+    <string name="biometric_unavailable">Není nastavena biometrie ani údaj zařízení.\nPro použití této funkce nastavte v systémovém nastavení zámek obrazovky.</string>
+    <string name="hide_daemon_notification">Skrýt oznámení démona</string>
+    <string name="hide_daemon_notification_desc">Běh bez trvalého oznámení.\nAndroid může službu na pozadí zastavit a Dhizuku může přestat reagovat, dokud se znovu nespustí.</string>
     <string name="daemon_service_notification_title">Démon Dhizuku</string>
     <string name="daemon_service_notification_text">Toto je oznámení Dhizuku, aby byla zajištěna dostupnost služby kdykoli.</string>
     <string name="oss_licenses">Open source licence</string>

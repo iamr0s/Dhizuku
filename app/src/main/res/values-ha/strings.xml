@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Bada izinin ikon mallakar</string>
     <string name="allow_ownership_changes_desc">Ba da damar abokan ciniki su canza ikon mallaka (canjawa ko sharewa).\nWannan hatsarin tsaro ne.</string>
     <string name="ownership_change_blocked">Dhizuku ya kashe canjin ikon mallaka</string>
+    <string name="biometric_protection">Kariya ta biometric</string>
+    <string name="biometric_protection_desc">Buƙatar biometric ko bayanan shiga na\'ura don buɗe Dhizuku da ba da izini ga manhajoji.\nIdan babu bayanan shiga, Dhizuku zai kasance ana iya shiga don kada a kulle ku waje.</string>
+    <string name="biometric_title">Buɗe Dhizuku</string>
+    <string name="biometric_subtitle">Tabbatar don ci gaba</string>
+    <string name="biometric_consent_text">Idan kun rasa damar yin amfani da biometric ko bayanan shiga na\'ura bayan kun kunna wannan, ba za ku iya buɗe Dhizuku ba.\nDhizuku ba zai iya dawo da bayanan shiga a madadinku ba. Ana iya buƙatar share bayanan manhaja ko sake saita na\'urar.\n\nKuna kunna wannan da kanku. Ci gaba?</string>
+    <string name="biometric_unavailable">Ba a saita biometric ko bayanan shiga na\'ura ba.\nSaita kulle allo a cikin saitunan tsarin don amfani da wannan fasalin.</string>
+    <string name="hide_daemon_notification">Ɓoye sanarwar daemon</string>
+    <string name="hide_daemon_notification_desc">Aiki ba tare da sanarwa ta dindindin ba.\nAndroid na iya dakatar da sabis ɗin a bango kuma Dhizuku na iya daina amsawa har sai ya sake farawa.</string>
     <string name="daemon_service_notification_title">Daemon Dhizuku</string>
     <string name="daemon_service_notification_text">Wannan sanarwar Dhizuku ce don tabbatar da samuwan sabis a kowane lokaci.</string>
     <string name="oss_licenses">Bude lasisin tushe</string>

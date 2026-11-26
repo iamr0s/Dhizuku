@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Tillat eierskapsendringer</string>
     <string name="allow_ownership_changes_desc">Tillat klienter å endre eierskap (overføre eller fjerne).\nDette er en sikkerhetsrisiko.</string>
     <string name="ownership_change_blocked">Eierskapsendringer er deaktivert av Dhizuku</string>
+    <string name="biometric_protection">Biometrisk beskyttelse</string>
+    <string name="biometric_protection_desc">Krev biometri eller enhetslegitimasjon for å åpne Dhizuku og gi apper tilgang.\nHvis legitimasjonen ikke er tilgjengelig, forblir Dhizuku tilgjengelig slik at du ikke låses ute.</string>
+    <string name="biometric_title">Lås opp Dhizuku</string>
+    <string name="biometric_subtitle">Autentiser for å fortsette</string>
+    <string name="biometric_consent_text">Hvis du mister tilgangen til biometrien eller enhetslegitimasjonen etter at du har aktivert dette, kan du ikke åpne Dhizuku.\nDhizuku kan ikke gjenopprette legitimasjonen for deg. Det kan være nødvendig å slette appdata eller tilbakestille enheten.\n\nDu aktiverer dette på egen risiko. Fortsette?</string>
+    <string name="biometric_unavailable">Ingen biometri eller enhetslegitimasjon er satt opp.\nAngi skjermlås i systeminnstillingene for å bruke denne funksjonen.</string>
+    <string name="hide_daemon_notification">Skjul daemonvarsel</string>
+    <string name="hide_daemon_notification_desc">Kjør uten det vedvarende varselet.\nAndroid kan stoppe tjenesten i bakgrunnen, og Dhizuku kan slutte å svare til den startes på nytt.</string>
     <string name="daemon_service_notification_title">Dhizuku-daemon</string>
     <string name="daemon_service_notification_text">Dette er et Dhizuku-varsel for å sikre tjenestetilgjengelighet når som helst.</string>
     <string name="oss_licenses">Åpen kildekode-lisenser</string>

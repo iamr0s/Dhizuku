@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">السماح بتغييرات الملكية</string>
     <string name="allow_ownership_changes_desc">السماح للعملاء بتغيير الملكية (نقل أو مسح).\nهذا خطر أمني.</string>
     <string name="ownership_change_blocked">تم تعطيل تغييرات الملكية بواسطة Dhizuku</string>
+    <string name="biometric_protection">الحماية بالبصمة</string>
+    <string name="biometric_protection_desc">اطلب البصمة أو بيانات اعتماد الجهاز لفتح Dhizuku ومنح التطبيقات حق الوصول.\nإذا لم تتوفر بيانات الاعتماد، يبقى Dhizuku متاحًا حتى لا تُحظر خارج التطبيق.</string>
+    <string name="biometric_title">فتح قفل Dhizuku</string>
+    <string name="biometric_subtitle">تحقق للمتابعة</string>
+    <string name="biometric_consent_text">إذا فقدت إمكانية الوصول إلى البصمة أو بيانات اعتماد الجهاز بعد التفعيل، فلن تتمكن من فتح Dhizuku.\nلا يمكن لـ Dhizuku استعادة بيانات الاعتماد نيابة عنك. قد يلزم مسح بيانات التطبيق أو إعادة ضبط الجهاز.\n\nأنت تفعّل ذلك على مسؤوليتك الكاملة. هل تريد المتابعة؟</string>
+    <string name="biometric_unavailable">لم يتم إعداد بصمة أو بيانات اعتماد للجهاز.\nقم بتعيين قفل الشاشة في إعدادات النظام لاستخدام هذه الميزة.</string>
+    <string name="hide_daemon_notification">إخفاء إشعار خادم Dhizuku</string>
+    <string name="hide_daemon_notification_desc">العمل بدون الإشعار الدائم.\nقد يوقف Android الخدمة في الخلفية، وقد يصبح Dhizuku غير مستجيب حتى يُعاد تشغيله.</string>
     <string name="daemon_service_notification_title">خادم Dhizuku</string>
     <string name="daemon_service_notification_text">هذا إشعار Dhizuku لضمان توفر الخدمة في أي وقت.</string>
     <string name="oss_licenses">تراخيص مفتوحة المصدر</string>

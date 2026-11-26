@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">소유권 변경 허용</string>
     <string name="allow_ownership_changes_desc">클라이언트가 소유권을 변경하도록 허용합니다(이전 또는 삭제).\n이는 보안 위험입니다.</string>
     <string name="ownership_change_blocked">Dhizuku 에 의해 소유권 변경이 비활성화되었습니다</string>
+    <string name="biometric_protection">생체 인증 보호</string>
+    <string name="biometric_protection_desc">Dhizuku를 열고 앱에 권한을 부여할 때 생체 인증 또는 기기 자격 증명을 요구합니다.\n자격 증명을 사용할 수 없으면 잠기지 않도록 Dhizuku를 계속 사용할 수 있습니다.</string>
+    <string name="biometric_title">Dhizuku 잠금 해제</string>
+    <string name="biometric_subtitle">계속하려면 인증하세요</string>
+    <string name="biometric_consent_text">이 기능을 켠 후 생체 인증이나 기기 자격 증명에 접근할 수 없게 되면 Dhizuku를 열 수 없습니다.\nDhizuku가 자격 증명을 복구해 드릴 수 없습니다. 앱 데이터를 지우거나 기기를 초기화해야 할 수 있습니다.\n\n본인 책임으로 켜는 것입니다. 계속하시겠습니까?</string>
+    <string name="biometric_unavailable">생체 인증 또는 기기 자격 증명이 설정되어 있지 않습니다.\n이 기능을 사용하려면 시스템 설정에서 화면 잠금을 설정하세요.</string>
+    <string name="hide_daemon_notification">데몬 알림 숨기기</string>
+    <string name="hide_daemon_notification_desc">상시 알림 없이 실행합니다.\nAndroid가 백그라운드에서 서비스를 중지할 수 있으며 다시 시작할 때까지 Dhizuku가 응답하지 않을 수 있습니다.</string>
     <string name="daemon_service_notification_title">Dhizuku 데몬</string>
     <string name="daemon_service_notification_text">이는 언제든지 서비스 가용성을 보장하기 위한 Dhizuku 알림입니다.</string>
     <string name="oss_licenses">오픈소스 라이선스</string>

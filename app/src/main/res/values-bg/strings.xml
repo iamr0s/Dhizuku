@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Разрешаване на промени в собствеността</string>
     <string name="allow_ownership_changes_desc">Позволете на клиентите да променят собствеността си (прехвърляне или изчистване).\nТова е риск за сигурността.</string>
     <string name="ownership_change_blocked">Промените в собствеността са деактивирани от Dhizuku</string>
+    <string name="biometric_protection">Защита с биометрия</string>
+    <string name="biometric_protection_desc">Изискване на биометрия или идентификационни данни на устройството за отваряне на Dhizuku и за предоставяне на достъп на приложения.\nАко данните не са налични, Dhizuku остава достъпен, за да не бъдете заключени навън.</string>
+    <string name="biometric_title">Отключване на Dhizuku</string>
+    <string name="biometric_subtitle">Удостоверете се, за да продължите</string>
+    <string name="biometric_consent_text">Ако след включване загубите достъп до биометрията или данните за устройството, няма да можете да отворите Dhizuku.\nDhizuku не може да възстанови данните вместо вас. Може да се наложи изчистване на данните на приложението или нулиране на устройството.\n\nВключвате това изцяло на свой риск. Да продължи ли?</string>
+    <string name="biometric_unavailable">Не са настроени биометрия или данни за устройството.\nЗадайте заключване на екрана в системните настройки, за да използвате тази функция.</string>
+    <string name="hide_daemon_notification">Скриване на известието на демона</string>
+    <string name="hide_daemon_notification_desc">Работа без постоянното известие.\nAndroid може да спре услугата във фонов режим и Dhizuku може да спре да отговаря до рестартирането ѝ.</string>
     <string name="daemon_service_notification_title">Демон на Dhizuku</string>
     <string name="daemon_service_notification_text">Това е известие от Dhizuku, за да се гарантира наличност на услугата по всяко време.</string>
     <string name="oss_licenses">Лицензи с отворен код</string>

@@ -1,0 +1,4 @@
+- Corrigida a falha de arranque do serviço de utilizador no Android 8.x
+- O motivo da falha de arranque do serviço é comunicado em vez de esperar indefinidamente
+- Adicionada opção para ocultar a notificação do daemon
+- Adicionada proteção biométrica

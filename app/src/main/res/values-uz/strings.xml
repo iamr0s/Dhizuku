@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Egalikni o\'zgartirishga ruxsat bering</string>
     <string name="allow_ownership_changes_desc">Mijozlarga egalikni o\'zgartirishga ruxsat bering (o\'tkazish yoki tozalash).\nBu xavfsizlik xavfi.</string>
     <string name="ownership_change_blocked">Egalik huquqini o\'zgartirish Dhizuku tomonidan o\'chirib qo\'yilgan</string>
+    <string name="biometric_protection">Biometrik himoya</string>
+    <string name="biometric_protection_desc">Dhizuku\'ni ochish va ilovalarga ruxsat berish uchun biometrika yoki qurilma hisob ma\'lumotlarini talab qilish.\nHisob ma\'lumotlari mavjud bo\'lmasa, Dhizuku foydalanish uchun ochiq qoladi, shunda siz tashqarida qulflanmaysiz.</string>
+    <string name="biometric_title">Dhizuku qulfini ochish</string>
+    <string name="biometric_subtitle">Davom etish uchun tasdiqlang</string>
+    <string name="biometric_consent_text">Buni yoqqaningizdan so\'ng biometrika yoki qurilma hisob ma\'lumotlariga kirishni yo\'qotsangiz, Dhizuku\'ni ocha olmaysiz.\nDhizuku hisob ma\'lumotlarini siz uchun tiklay olmaydi. Ilova ma\'lumotlarini tozalash yoki qurilmani tiklash talab qilinishi mumkin.\n\nBuni o\'z xavf-xataringiz bilan yoqasiz. Davom etilsinmi?</string>
+    <string name="biometric_unavailable">Biometrika yoki qurilma hisob ma\'lumotlari sozlanmagan.\nBu funksiyadan foydalanish uchun tizim sozlamalarida ekran qulfini o\'rnating.</string>
+    <string name="hide_daemon_notification">Demon bildirishnomasini yashirish</string>
+    <string name="hide_daemon_notification_desc">Doimiy bildirishnomasiz ishlash.\nAndroid xizmatni fonda to\'xtatishi mumkin va Dhizuku qayta ishga tushguncha javob bermasligi mumkin.</string>
     <string name="daemon_service_notification_title">Dhizuku demoni</string>
     <string name="daemon_service_notification_text">Bu istalgan vaqtda xizmat mavjudligini ta\'minlash uchun Dhizuku bildirishnomasidir.</string>
     <string name="oss_licenses">Ochiq kodli litsenziyalar</string>

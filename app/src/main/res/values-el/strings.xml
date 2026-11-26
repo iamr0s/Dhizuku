@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Επιτρέψτε τις αλλαγές ιδιοκτησίας</string>
     <string name="allow_ownership_changes_desc">Επιτρέψτε στους πελάτες να αλλάξουν ιδιοκτησία (μεταβίβαση ή εκκαθάριση).\nΑυτό είναι ένας κίνδυνος για την ασφάλεια.</string>
     <string name="ownership_change_blocked">Οι αλλαγές ιδιοκτησίας απενεργοποιήθηκαν από τον Dhizuku</string>
+    <string name="biometric_protection">Βιομετρική προστασία</string>
+    <string name="biometric_protection_desc">Απαίτηση βιομετρικών ή διαπιστευτηρίων συσκευής για το άνοιγμα του Dhizuku και την παραχώρηση πρόσβασης σε εφαρμογές.\nΑν το διαπιστευτήριο δεν είναι διαθέσιμο, το Dhizuku παραμένει προσβάσιμο ώστε να μην κλειδωθείτε έξω.</string>
+    <string name="biometric_title">Ξεκλείδωμα Dhizuku</string>
+    <string name="biometric_subtitle">Επαληθεύστε για να συνεχίσετε</string>
+    <string name="biometric_consent_text">Αν μετά την ενεργοποίηση χάσετε την πρόσβαση στα βιομετρικά ή στο διαπιστευτήριο της συσκευής, δεν θα μπορείτε να ανοίξετε το Dhizuku.\nΤο Dhizuku δεν μπορεί να ανακτήσει το διαπιστευτήριο για εσάς. Μπορεί να χρειαστεί εκκαθάριση δεδομένων εφαρμογής ή επαναφορά της συσκευής.\n\nΤο ενεργοποιείτε με δική σας ευθύνη. Συνέχεια;</string>
+    <string name="biometric_unavailable">Δεν έχει ρυθμιστεί βιομετρικό ή διαπιστευτήριο συσκευής.\nΟρίστε κλείδωμα οθόνης στις ρυθμίσεις συστήματος για να χρησιμοποιήσετε αυτή τη λειτουργία.</string>
+    <string name="hide_daemon_notification">Απόκρυψη ειδοποίησης δαίμονα</string>
+    <string name="hide_daemon_notification_desc">Λειτουργία χωρίς τη μόνιμη ειδοποίηση.\nΤο Android μπορεί να σταματήσει την υπηρεσία στο παρασκήνιο και το Dhizuku μπορεί να μην αποκρίνεται μέχρι να επανεκκινήσει.</string>
     <string name="daemon_service_notification_title">Δαίμονας Dhizuku</string>
     <string name="daemon_service_notification_text">Αυτή είναι μια ειδοποίηση Dhizuku για τη διασφάλιση της διαθεσιμότητας της υπηρεσίας ανά πάσα στιγμή.</string>
     <string name="oss_licenses">Άδειες ανοιχτού κώδικα</string>

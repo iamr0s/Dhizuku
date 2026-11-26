@@ -1,0 +1,4 @@
+- Javítva a felhasználói szolgáltatás indítási hibája Android 8.x-en
+- A szolgáltatás indítási hibájának oka most jelentésre kerül a végtelen várakozás helyett
+- Beállítás a démon értesítésének elrejtéséhez
+- Biometrikus védelem hozzáadva

@@ -1,0 +1,4 @@
+- Android 8.x de baitalara sabis be ilibu be dasutara
+- Baitalara sabis ilibu akū de entehe akū i tulembime
+- Daemon i mede be somi i kadalara be nonggime
+- Biometrik i gubci be nonggime

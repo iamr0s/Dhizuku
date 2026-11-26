@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Permite modificări de proprietate</string>
     <string name="allow_ownership_changes_desc">Permiteți clienților să-și schimbe proprietatea (transferă sau șterge).\nAcesta este un risc de securitate.</string>
     <string name="ownership_change_blocked">Modificările de proprietate sunt dezactivate de Dhizuku</string>
+    <string name="biometric_protection">Protecție biometrică</string>
+    <string name="biometric_protection_desc">Solicită biometria sau acreditările dispozitivului pentru a deschide Dhizuku și a acorda acces aplicațiilor.\nDacă acreditările nu sunt disponibile, Dhizuku rămâne accesibil ca să nu fii blocat afară.</string>
+    <string name="biometric_title">Deblochează Dhizuku</string>
+    <string name="biometric_subtitle">Autentifică-te pentru a continua</string>
+    <string name="biometric_consent_text">Dacă pierzi accesul la biometrie sau la acreditările dispozitivului după activare, nu vei mai putea deschide Dhizuku.\nDhizuku nu poate recupera acreditările în locul tău. Poate fi necesar să ștergi datele aplicației sau să resetezi dispozitivul.\n\nActivezi acest lucru pe propriul risc. Continui?</string>
+    <string name="biometric_unavailable">Nu sunt configurate biometrie sau acreditări ale dispozitivului.\nSetează un blocaj de ecran în setările sistemului pentru a folosi această funcție.</string>
+    <string name="hide_daemon_notification">Ascunde notificarea demonului</string>
+    <string name="hide_daemon_notification_desc">Rulează fără notificarea permanentă.\nAndroid poate opri serviciul în fundal, iar Dhizuku poate înceta să răspundă până la repornire.</string>
     <string name="daemon_service_notification_title">Daemonul Dhizuku</string>
     <string name="daemon_service_notification_text">Aceasta este o notificare Dhizuku pentru a asigura disponibilitatea serviciului în orice moment.</string>
     <string name="oss_licenses">Licențe open source</string>

@@ -1,0 +1,4 @@
+- Opravené spúšťanie používateľskej služby na Androide 8.x
+- Namiesto nekonečného čakania sa hlási dôvod zlyhania spustenia služby
+- Pridané nastavenie na skrytie oznámenia démona
+- Pridaná biometrická ochrana

@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">אפשר שינויי בעלות</string>
     <string name="allow_ownership_changes_desc">אפשר ללקוחות לשנות בעלות (העברה או נקה).\nזהו סיכון ביטחוני.</string>
     <string name="ownership_change_blocked">שינויי בעלות מושבתים על ידי Dhizuku</string>
+    <string name="biometric_protection">הגנה ביומטרית</string>
+    <string name="biometric_protection_desc">דרוש ביומטריה או אמצעי אימות של המכשיר כדי לפתוח את Dhizuku ולהעניק גישה לאפליקציות.\nאם אמצעי האימות אינו זמין, Dhizuku יישאר נגיש כדי שלא תינעל בחוץ.</string>
+    <string name="biometric_title">שחרור Dhizuku</string>
+    <string name="biometric_subtitle">אמת כדי להמשיך</string>
+    <string name="biometric_consent_text">אם לאחר ההפעלה תאבד גישה לביומטריה או לאמצעי האימות של המכשיר, לא תוכל לפתוח את Dhizuku.\nDhizuku אינה יכולה לשחזר את אמצעי האימות עבורך. ייתכן שיהיה צורך למחוק את נתוני האפליקציה או לאפס את המכשיר.\n\nאתה מפעיל זאת באחריותך בלבד. להמשיך?</string>
+    <string name="biometric_unavailable">לא הוגדרה ביומטריה או אמצעי אימות של המכשיר.\nהגדר נעילת מסך בהגדרות המערכת כדי להשתמש בתכונה זו.</string>
+    <string name="hide_daemon_notification">הסתר התראת שירות הרקע</string>
+    <string name="hide_daemon_notification_desc">פעל ללא ההתראה הקבועה.\nייתכן ש-Android יעצור את השירות ברקע ו-Dhizuku לא יגיב עד שיופעל מחדש.</string>
     <string name="daemon_service_notification_title">שירות הרקע של Dhizuku</string>
     <string name="daemon_service_notification_text">זוהי הודעת Dhizuku כדי להבטיח זמינות שירות בכל עת.</string>
     <string name="oss_licenses">רישיונות קוד פתוח</string>

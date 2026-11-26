@@ -1,0 +1,4 @@
+- Android 8.x'te kullanıcı hizmetinin başlamaması düzeltildi
+- Hizmet başlatma hatasının nedeni sonsuz beklemek yerine bildiriliyor
+- Servis bildirimini gizleme ayarı eklendi
+- Biyometrik koruma eklendi

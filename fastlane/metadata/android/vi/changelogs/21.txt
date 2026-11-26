@@ -1,0 +1,4 @@
+- Sửa lỗi dịch vụ người dùng không khởi động được trên Android 8.x
+- Thông báo lý do dịch vụ khởi động thất bại thay vì chờ vô hạn
+- Thêm tùy chọn ẩn thông báo trình nền
+- Thêm bảo vệ bằng sinh trắc học

@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Разрешить смену владельца</string>
     <string name="allow_ownership_changes_desc">Разрешить клиентам изменять права владельца (передавать или снимать).\nЭто риск для безопасности.</string>
     <string name="ownership_change_blocked">В Dhizuku отключена возможность смены владельца</string>
+    <string name="biometric_protection">Биометрическая защита</string>
+    <string name="biometric_protection_desc">Требовать биометрию или учётные данные устройства для открытия Dhizuku и предоставления доступа приложениям.\nЕсли учётные данные недоступны, Dhizuku остаётся доступным, чтобы вы не оказались заблокированы.</string>
+    <string name="biometric_title">Разблокировать Dhizuku</string>
+    <string name="biometric_subtitle">Подтвердите личность, чтобы продолжить</string>
+    <string name="biometric_consent_text">Если после включения вы потеряете доступ к биометрии или учётным данным устройства, вы не сможете открыть Dhizuku.\nDhizuku не может восстановить учётные данные за вас. Может потребоваться очистка данных приложения или сброс устройства.\n\nВы включаете это на свой страх и риск. Продолжить?</string>
+    <string name="biometric_unavailable">Биометрия или учётные данные устройства не настроены.\nУстановите блокировку экрана в системных настройках, чтобы использовать эту функцию.</string>
+    <string name="hide_daemon_notification">Скрыть уведомление демона</string>
+    <string name="hide_daemon_notification_desc">Работа без постоянного уведомления.\nAndroid может остановить службу в фоне, и Dhizuku может перестать отвечать до перезапуска.</string>
     <string name="daemon_service_notification_title">Демон Dhizuku</string>
     <string name="daemon_service_notification_text">Это уведомление Dhizuku, необходимое для того, чтобы сервис был доступен в любое время.</string>
     <string name="oss_licenses">Лицензии с открытым исходным кодом</string>

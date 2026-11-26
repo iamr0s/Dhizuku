@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">உரிமை மாற்றங்களை அனுமதிக்கவும்</string>
     <string name="allow_ownership_changes_desc">உரிமையை மாற்ற வாடிக்கையாளர்களை அனுமதிக்கவும் (பரிமாற்றம் அல்லது தெளிவு).\nஇது ஒரு பாதுகாப்பு அபாயம்.</string>
     <string name="ownership_change_blocked">Dhizku மூலம் உரிமை மாற்றங்கள் முடக்கப்பட்டுள்ளன</string>
+    <string name="biometric_protection">உயிரியல் பாதுகாப்பு</string>
+    <string name="biometric_protection_desc">Dhizuku திறக்கவும் பயன்பாடுகளுக்கு அனுமதி வழங்கவும் உயிரியல் அல்லது சாதனச் சான்றுகளைக் கோரும்.\nசான்று கிடைக்காவிட்டால், நீங்கள் வெளியே பூட்டப்படாமல் இருக்க Dhizuku அணுகக்கூடியதாக இருக்கும்.</string>
+    <string name="biometric_title">Dhizuku பூட்டைத் திற</string>
+    <string name="biometric_subtitle">தொடர அங்கீகரிக்கவும்</string>
+    <string name="biometric_consent_text">இதை இயக்கிய பிறகு உயிரியல் அல்லது சாதனச் சான்றுக்கான அணுகலை இழந்தால், Dhizuku திறக்க முடியாது.\nDhizuku உங்களுக்காகச் சான்றை மீட்டெடுக்க முடியாது. பயன்பாட்டுத் தரவை அழிக்க அல்லது சாதனத்தை மீட்டமைக்க வேண்டியிருக்கலாம்.\n\nஇதை உங்கள் பொறுப்பில் இயக்குகிறீர்கள். தொடரவா?</string>
+    <string name="biometric_unavailable">உயிரியல் அல்லது சாதனச் சான்று அமைக்கப்படவில்லை.\nஇந்த அம்சத்தைப் பயன்படுத்த கணினி அமைப்புகளில் திரைப் பூட்டை அமைக்கவும்.</string>
+    <string name="hide_daemon_notification">டீமன் அறிவிப்பை மறை</string>
+    <string name="hide_daemon_notification_desc">நிரந்தர அறிவிப்பு இல்லாமல் இயக்கு.\nAndroid பின்னணியில் சேவையை நிறுத்தக்கூடும், மீண்டும் தொடங்கும் வரை Dhizuku பதிலளிக்காமல் போகலாம்.</string>
     <string name="daemon_service_notification_title">Dhizuku டீமன்</string>
     <string name="daemon_service_notification_text">இது எந்த நேரத்திலும் சேவை கிடைப்பதை உறுதி செய்வதற்கான திசுக்கு அறிவிப்பு.</string>
     <string name="oss_licenses">திறந்த மூல உரிமங்கள்</string>

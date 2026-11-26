@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">Cho phép thay đổi quyền sở hữu</string>
     <string name="allow_ownership_changes_desc">Cho phép khách hàng thay đổi quyền sở hữu (chuyển nhượng hoặc xóa).\nĐây là một rủi ro bảo mật.</string>
     <string name="ownership_change_blocked">Thay đổi quyền sở hữu bị vô hiệu hóa bởi Dhizuku</string>
+    <string name="biometric_protection">Bảo vệ bằng sinh trắc học</string>
+    <string name="biometric_protection_desc">Yêu cầu sinh trắc học hoặc thông tin đăng nhập thiết bị để mở Dhizuku và cấp quyền truy cập cho ứng dụng.\nNếu thông tin đăng nhập không khả dụng, Dhizuku vẫn truy cập được để bạn không bị khóa ngoài.</string>
+    <string name="biometric_title">Mở khóa Dhizuku</string>
+    <string name="biometric_subtitle">Xác thực để tiếp tục</string>
+    <string name="biometric_consent_text">Nếu sau khi bật, bạn mất quyền truy cập vào sinh trắc học hoặc thông tin đăng nhập thiết bị, bạn sẽ không thể mở Dhizuku.\nDhizuku không thể khôi phục thông tin đăng nhập thay bạn. Có thể cần xóa dữ liệu ứng dụng hoặc đặt lại thiết bị.\n\nBạn bật tính năng này hoàn toàn tự chịu rủi ro. Tiếp tục?</string>
+    <string name="biometric_unavailable">Chưa thiết lập sinh trắc học hoặc thông tin đăng nhập thiết bị.\nHãy đặt khóa màn hình trong cài đặt hệ thống để dùng tính năng này.</string>
+    <string name="hide_daemon_notification">Ẩn thông báo trình nền</string>
+    <string name="hide_daemon_notification_desc">Chạy mà không có thông báo thường trực.\nAndroid có thể dừng dịch vụ trong nền và Dhizuku có thể ngừng phản hồi cho đến khi khởi động lại.</string>
     <string name="daemon_service_notification_title">Trình nền Dhizuku</string>
     <string name="daemon_service_notification_text">Đây là thông báo Dhizuku để đảm bảo dịch vụ luôn sẵn sàng bất cứ lúc nào.</string>
     <string name="oss_licenses">Giấy phép nguồn mở</string>
