@@ -54,4 +54,4 @@ If you like this app, please consider [**donating**](DONATE.md)!
 
 ## License
 
-Dhizuku is licensed under the [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html), and will remain open-source in the future.
+Dhizuku is licensed under the [**GNU General Public License v3 (GPL-3)**](https://github.com/iamr0s/Dhizuku/blob/main/LICENSE), and will remain open-source in the future.

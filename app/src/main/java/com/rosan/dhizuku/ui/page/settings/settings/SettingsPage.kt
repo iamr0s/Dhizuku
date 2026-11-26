@@ -55,6 +55,8 @@ fun SettingsPage(
 
     var showOwnershipDialog by remember { mutableStateOf(false) }
 
+    var showBiometricDialog by remember { mutableStateOf(false) }
+
     Scaffold(
         modifier = Modifier
             .windowInsetsPadding(windowInsets.exclude(WindowInsetsSides.Bottom))
@@ -157,10 +159,89 @@ fun SettingsPage(
                                 }
                             )
                         }
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    stringResource(R.string.hide_daemon_notification),
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                                Text(
+                                    stringResource(R.string.hide_daemon_notification_desc),
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                            }
+                            Switch(
+                                checked = viewModel.state.daemonNotificationHidden,
+                                onCheckedChange = viewModel::setDaemonNotificationHidden
+                            )
+                        }
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    stringResource(R.string.biometric_protection),
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                                Text(
+                                    stringResource(R.string.biometric_protection_desc),
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                            }
+                            Switch(
+                                checked = viewModel.state.biometricEnabled,
+                                onCheckedChange = { checked ->
+                                    if (checked) showBiometricDialog = true
+                                    else viewModel.setBiometricEnabled(false)
+                                }
+                            )
+                        }
                     }
                 }
             }
         }
+    }
+
+    if (showBiometricDialog) {
+        AlertDialog(
+            onDismissRequest = { showBiometricDialog = false },
+            title = { Text(stringResource(R.string.biometric_protection)) },
+            text = { Text(stringResource(R.string.biometric_consent_text)) },
+            confirmButton = {
+                TextButton(onClick = {
+                    showBiometricDialog = false
+                    viewModel.setBiometricEnabled(true)
+                }) {
+                    Text(stringResource(R.string.confirm))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showBiometricDialog = false }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            }
+        )
+    }
+
+    if (viewModel.state.biometricUnavailable) {
+        AlertDialog(
+            onDismissRequest = { viewModel.clearBiometricUnavailable() },
+            title = { Text(stringResource(R.string.biometric_protection)) },
+            text = { Text(stringResource(R.string.biometric_unavailable)) },
+            confirmButton = {
+                TextButton(onClick = { viewModel.clearBiometricUnavailable() }) {
+                    Text(stringResource(R.string.confirm))
+                }
+            }
+        )
     }
 
     if (showOwnershipDialog) {

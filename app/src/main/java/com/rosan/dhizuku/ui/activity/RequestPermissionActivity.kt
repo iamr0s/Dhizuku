@@ -3,7 +3,8 @@ package com.rosan.dhizuku.ui.activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import android.util.Log
+
 import androidx.activity.compose.setContent
 import androidx.annotation.StringRes
 import androidx.compose.animation.core.LinearEasing
@@ -38,9 +39,13 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.fragment.app.FragmentActivity
+
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
+
 import com.rosan.dhizuku.R
 import com.rosan.dhizuku.aidl.IDhizukuRequestPermissionListener
+import com.rosan.dhizuku.data.common.util.BiometricAuth
 import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
@@ -48,22 +53,32 @@ import com.rosan.dhizuku.data.settings.repo.AppRepo
 import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 import com.rosan.dhizuku.shared.DhizukuVariables
 import com.rosan.dhizuku.ui.theme.DhizukuTheme
+
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicBoolean
+
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
-import java.util.concurrent.atomic.AtomicBoolean
+
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.time.Duration.Companion.milliseconds
 
-class RequestPermissionActivity : ComponentActivity(), KoinComponent {
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
+
+class RequestPermissionActivity : FragmentActivity(), KoinComponent {
     companion object {
+        private const val TAG = "RequestPermission"
+
         const val UID_ERR = -1
         const val AUTO_DENY_SECONDS = 15
+
+        const val AUTHENTICATION_GRACE_SECONDS = 5
 
         private val requestScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     }
@@ -79,6 +94,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
     )
 
     private val finishing = AtomicBoolean(false)
+    private val authenticating = AtomicBoolean(false)
     private val appRepo by inject<AppRepo>()
     private val settingsRepo by inject<SettingsRepo>()
     private var state by mutableStateOf(ViewState())
@@ -144,6 +160,31 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
         }
     }
 
+    private fun requestAuthentication(): Boolean {
+        if (!settingsRepo.isBiometricEnabled) return true
+        if (!BiometricAuth.canProtect(this)) return true
+
+        val latch = CountDownLatch(1)
+        val granted = AtomicBoolean(false)
+        authenticating.set(true)
+        runOnUiThread {
+            BiometricAuth.prompt(this) { result ->
+                if (result == BiometricAuth.RESULT_AUTHENTICATED) granted.set(true)
+                authenticating.set(false)
+                latch.countDown()
+            }
+        }
+        val finished = latch.await(
+            (AUTO_DENY_SECONDS + AUTHENTICATION_GRACE_SECONDS).toLong(),
+            TimeUnit.SECONDS
+        )
+        if (!finished) {
+            authenticating.set(false)
+            Log.w(TAG, "authentication did not finish in time")
+        }
+        return finished && granted.get()
+    }
+
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         state = ViewState()
@@ -157,6 +198,7 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
 
     override fun onPause() {
         super.onPause()
+        if (authenticating.get()) return
         finish()
     }
 
@@ -359,8 +401,11 @@ class RequestPermissionActivity : ComponentActivity(), KoinComponent {
                     }
                 }
                 MyTextButton(onClick = {
-                    state = state.copy(allowApi = true, timedOut = true)
-                    finish()
+                    requestScope.launch {
+                        val allowed = requestAuthentication()
+                        state = state.copy(allowApi = allowed, timedOut = true)
+                        finish()
+                    }
                 }, textResId = R.string.agree, isPrimary = true)
                 MyTextButton(onClick = {
                     state = state.copy(allowApi = false, timedOut = true)

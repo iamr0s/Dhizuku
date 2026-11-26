@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">オーナー権限の変更を許可</string>
     <string name="allow_ownership_changes_desc">クライアントによるオーナー権限の変更（譲渡・解除）を許可します。\nセキュリティ上のリスクがあります。</string>
     <string name="ownership_change_blocked">Dhizuku の設定によりオーナー権限の変更は禁止されています</string>
+    <string name="biometric_protection">生体認証で保護</string>
+    <string name="biometric_protection_desc">Dhizuku を開くとき、およびアプリに権限を付与するときに生体認証または端末の資格情報を要求します。\n資格情報が利用できない場合は、締め出されないよう Dhizuku はそのまま利用できます。</string>
+    <string name="biometric_title">Dhizuku のロックを解除</string>
+    <string name="biometric_subtitle">続行するには認証してください</string>
+    <string name="biometric_consent_text">有効にした後に生体認証や端末の資格情報を利用できなくなると、Dhizuku を開けなくなります。\nDhizuku が資格情報を復旧することはできません。アプリのデータ消去や端末のリセットが必要になる場合があります。\n\n自己責任でのご利用となります。続行しますか？</string>
+    <string name="biometric_unavailable">生体認証も端末の資格情報も設定されていません。\nこの機能を使うには、端末の設定で画面ロックを設定してください。</string>
+    <string name="hide_daemon_notification">デーモン通知を非表示</string>
+    <string name="hide_daemon_notification_desc">常駐通知なしで動作します。\nAndroid がバックグラウンドでサービスを停止し、再起動するまで Dhizuku が応答しなくなる場合があります。</string>
     <string name="daemon_service_notification_title">Dhizuku デーモン</string>
     <string name="daemon_service_notification_text">これは Dhizuku のサービスを常時利用可能にするための通知です。</string>
     <string name="oss_licenses">オープンソースライセンス</string>

@@ -33,6 +33,7 @@ androidx-annotation = { group = "androidx.annotation", name = "annotation", vers
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.19.1" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.11.0" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.13.0" }
+androidx-biometric = { group = "androidx.biometric", name = "biometric", version = "1.1.0" }
 
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
@@ -70,7 +71,7 @@ rikka-shizuku-provider = { group = "dev.rikka.shizuku", name = "provider", versi
 
 # Dhizuku-API
 # https://github.com/iamr0s/Dhizuku-API
-iamr0s-dhizuku-api = { group = "io.github.iamr0s", name = "Dhizuku-SERVER_API", version = "0.2.0" }
+iamr0s-dhizuku-api = { group = "io.github.iamr0s", name = "Dhizuku-SERVER_API", version = "0.3.0" }
 
 # Core library desugaring
 # https://developer.android.com/studio/write/java8-support#library-desugaring

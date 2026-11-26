@@ -54,6 +54,14 @@
     <string name="allow_ownership_changes">允許變更擁有者</string>
     <string name="allow_ownership_changes_desc">允許用戶端變更擁有者權限（轉移或解除）。\n這存在安全性風險。</string>
     <string name="ownership_change_blocked">Dhizuku 已禁止變更擁有者</string>
+    <string name="biometric_protection">生物辨識保護</string>
+    <string name="biometric_protection_desc">開啟 Dhizuku 以及向應用程式授予權限時，要求生物辨識或裝置憑證。\n若憑證無法使用，Dhizuku 仍可存取，以免將您鎖定在外。</string>
+    <string name="biometric_title">解鎖 Dhizuku</string>
+    <string name="biometric_subtitle">請驗證以繼續</string>
+    <string name="biometric_consent_text">啟用後若無法使用生物辨識或裝置憑證，您將無法開啟 Dhizuku。\nDhizuku 無法為您復原憑證。可能需要清除應用程式資料或重設裝置。\n\n您需自行承擔風險。是否繼續？</string>
+    <string name="biometric_unavailable">未設定生物辨識或裝置憑證。\n請在系統設定中設定螢幕鎖定以使用此功能。</string>
+    <string name="hide_daemon_notification">隱藏守護程式通知</string>
+    <string name="hide_daemon_notification_desc">在不顯示常駐通知的情況下執行。\nAndroid 可能會在背景停止該服務，Dhizuku 在重新啟動前可能無回應。</string>
     <string name="daemon_service_notification_title">Dhizuku 守護程式</string>
     <string name="daemon_service_notification_text">這是 Dhizuku 發送的通知，用於確保服務隨時可用。</string>
     <string name="oss_licenses">開源授權條款</string>

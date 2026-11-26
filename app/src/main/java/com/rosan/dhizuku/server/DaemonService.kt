@@ -16,6 +16,7 @@ import com.rosan.dhizuku.data.common.util.getPackageInfoForUid
 import com.rosan.dhizuku.data.common.util.signature
 import com.rosan.dhizuku.data.settings.model.room.entity.AppEntity
 import com.rosan.dhizuku.data.settings.repo.AppRepo
+import com.rosan.dhizuku.data.settings.repo.SettingsRepo
 import com.rosan.dhizuku.ui.activity.SettingsActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -27,6 +28,8 @@ class DaemonService : Service(), KoinComponent {
     private val scope = CoroutineScope(Dispatchers.IO)
 
     private val repo by inject<AppRepo>()
+
+    private val settingsRepo by inject<SettingsRepo>()
 
     private val packageReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -48,21 +51,30 @@ class DaemonService : Service(), KoinComponent {
         private const val NOTIFICATION_ID = 1001
 
         private const val NOTIFICATION_CHANNEL_ID = "daemon_service"
+
+        fun refresh(context: Context) {
+            if (!DhizukuState.state.isOwner) return
+            context.startService(Intent(context, DaemonService::class.java))
+        }
     }
 
     override fun onCreate() {
         super.onCreate()
         registerPackageReceiver()
-        foreground(DhizukuState.state.isOwner)
+        foreground(shouldShowNotification())
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        foreground(DhizukuState.state.isOwner)
+        foreground(shouldShowNotification())
         return START_STICKY
     }
 
+    private fun shouldShowNotification(): Boolean {
+        return !settingsRepo.isDaemonNotificationHidden
+    }
+
     override fun onDestroy() {
-        foreground(false)
+        stopForegroundNotification()
         runCatching { unregisterReceiver(packageReceiver) }
         super.onDestroy()
     }
@@ -85,14 +97,9 @@ class DaemonService : Service(), KoinComponent {
         return entity.signature != packageInfo.signature
     }
 
-    private fun foreground(enabled: Boolean) {
-        if (!enabled) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                stopForeground(STOP_FOREGROUND_REMOVE)
-            } else {
-                @Suppress("DEPRECATION")
-                stopForeground(true)
-            }
+    private fun foreground(showNotification: Boolean) {
+        if (!DhizukuState.state.isOwner) {
+            stopForegroundNotification()
             return
         }
         val manager = NotificationManagerCompat.from(this)
@@ -120,5 +127,15 @@ class DaemonService : Service(), KoinComponent {
             .setSmallIcon(R.drawable.round_hourglass_empty_black_24).setSilent(true).setSound(null)
             .setPriority(NotificationCompat.PRIORITY_LOW).build()
         startForeground(NOTIFICATION_ID, notification)
+        if (!showNotification) stopForegroundNotification()
+    }
+
+    private fun stopForegroundNotification() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            stopForeground(STOP_FOREGROUND_REMOVE)
+        } else {
+            @Suppress("DEPRECATION")
+            stopForeground(true)
+        }
     }
 }

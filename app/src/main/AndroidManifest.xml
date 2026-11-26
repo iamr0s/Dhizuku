@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="ExportedContentProvider,ForegroundServicesPolicy,ScopedStorage,QueryAllPackagesPermission,PackageVisibilityPolicy,ProtectedPermissions,SystemPermissionTypo,UnusedAttribute">
+    tools:ignore="ExportedContentProvider,ForegroundServicesPolicy,ScopedStorage,QueryAllPackagesPermission,PackageVisibilityPolicy,ProtectedPermissions,SystemPermissionTypo,UnusedAttribute,UsesSdkOverrideLibrary">
 
-    <uses-sdk
-        tools:overrideLibrary="
+    <uses-sdk tools:overrideLibrary="
         androidx.navigation,
         androidx.navigation.common,
         androidx.navigation.compose,
-        rikka.shizuku.api"
-        tools:ignore="UsesSdkOverrideLibrary" />
+        rikka.shizuku.api" />
 
     <permission
         android:name="${applicationId}.permission.API"

@@ -1,5 +1,6 @@
 # Gradle
 .gradle/
+/gradle/gradle-daemon-jvm.properties
 # Android SDK
 /local.properties
 # Kotlin

@@ -1,0 +1,4 @@
+- Fix the user service failing to start on Android 8.x
+- Report why a user service failed to start instead of waiting forever
+- Add an option to hide the daemon notification
+- Add biometric protection

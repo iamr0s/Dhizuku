@@ -82,6 +82,14 @@
     <string name="allow_ownership_changes">Allow ownership changes</string>
     <string name="allow_ownership_changes_desc">Allow clients to change ownership (transfer or clear).\nThis is a security risk.</string>
     <string name="ownership_change_blocked">Ownership changes are disabled by Dhizuku</string>
+    <string name="biometric_protection">Biometric protection</string>
+    <string name="biometric_protection_desc">Require biometrics or the device credential to open Dhizuku and to grant access to apps.\nIf the credential is unavailable, Dhizuku stays accessible so you are not locked out.</string>
+    <string name="biometric_title">Unlock Dhizuku</string>
+    <string name="biometric_subtitle">Authenticate to continue</string>
+    <string name="biometric_consent_text">If you lose access to your biometrics or device credential after enabling this, you will no longer be able to open Dhizuku.\nDhizuku cannot recover the credential for you. Clearing app data or resetting the device may be required.\n\nYou enable this entirely at your own risk. Continue?</string>
+    <string name="biometric_unavailable">No biometric or device credential is set up.\nSet a screen lock in system settings to use this feature.</string>
+    <string name="hide_daemon_notification">Hide daemon notification</string>
+    <string name="hide_daemon_notification_desc">Run without the persistent notification.\nAndroid may stop the service in the background, and Dhizuku may become unresponsive until it restarts.</string>
 
     <!-- Service -->
     <string name="daemon_service_notification_title">Dhizuku Daemon</string>
